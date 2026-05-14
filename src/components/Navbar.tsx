@@ -29,7 +29,7 @@ export default function Navbar({}: NavbarProps) {
                     <NavLink href="/about" $active={isActive('/about')}>
                         Werdegang
                     </NavLink>
-                    <NavLink href="/bildung" $active={isActive('/bildung')}>
+                    <NavLink href="/education" $active={isActive('/education')}>
                         Bildung
                     </NavLink>
                     <ContactButton href="mailto:mail@melanie-busse.de">
