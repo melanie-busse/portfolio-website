@@ -26,7 +26,7 @@ export default function Navbar({}: NavbarProps) {
                     <NavLink href="#projects" $active={isActive('/projekte')}>
                         Projekte
                     </NavLink>
-                    <NavLink href="/werdegang" $active={isActive('/werdegang')}>
+                    <NavLink href="/about" $active={isActive('/about')}>
                         Werdegang
                     </NavLink>
                     <NavLink href="/bildung" $active={isActive('/bildung')}>
