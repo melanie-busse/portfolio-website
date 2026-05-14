@@ -11,21 +11,39 @@ export const petrolTheme = {
 };
 
 export const GlobalStyle = createGlobalStyle`
-  body {
-    margin: 0;
-    padding: 0;
-    background-color: ${props => props.theme.colors.bgDark};
-    color: ${props => props.theme.colors.textMain};
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-    -webkit-font-smoothing: antialiased;
-  }
+    body {
+        margin: 0;
+        padding: 0;
+        background-color: #0d1520;
+        background-image: repeating-linear-gradient(
+                12deg,
+                transparent,
+                transparent 3px,
+                rgba(255, 255, 255, 0.015) 3px,
+                rgba(255, 255, 255, 0.015) 4px
+        ),
+        linear-gradient(
+                180deg,
+                #1f2937 0%,
+                #111827 20%,
+                #0d1520 50%,
+                #111827 80%,
+                #1a2535 100%
+        );
+        background-attachment: fixed;
+        border-top: 2px solid #2a8f86;
 
-  a {
-    color: inherit;
-    text-decoration: none;
-  }
+        color: ${props => props.theme.colors.textMain};
+        font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+        -webkit-font-smoothing: antialiased;
+    }
 
-  * {
-    box-sizing: border-box;
-  }
+    a {
+        color: inherit;
+        text-decoration: none;
+    }
+
+    * {
+        box-sizing: border-box;
+    }
 `;
