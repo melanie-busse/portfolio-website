@@ -3,7 +3,7 @@ export const educationData = [
         period: "10/1998 – 09/2004",
         institution: "Universität Paderborn",
         degree: "Diplom-Wirtschaftsinformatik",
-        details: "Schwerpunkte: Softwaretechnik, Informationssysteme und Betriebswirtschaftslehre."
+        details: "Schwerpunkte: Softwaretechnik, Datenbanken, Informationssysteme und Betriebswirtschaftslehre."
     },
     {
         period: "08/1990 – 07/1992",
