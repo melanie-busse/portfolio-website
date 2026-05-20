@@ -2,21 +2,18 @@ import styled from "styled-components";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { useTranslations } from "next-intl";
+import LanguageSwitcher from "@/components/LanguageSwitcher";
 
-interface NavbarProps {}
-
-export default function Navbar({}: NavbarProps) {
+export default function Navbar() {
   const router = useRouter();
   const { locale } = router;
   const t = useTranslations("nav");
 
-  // Prüft, ob der Pfad aktiv ist
   const isActive = (path: string) => router.pathname === path;
 
   return (
     <Nav>
       <NavContainer>
-        {/* locale sorgt dafür, dass wir auf der richtigen Sprachebene bleiben */}
         <Logo href="/" locale={locale}>
           Melanie<span>Busse</span>
         </Logo>
@@ -34,13 +31,13 @@ export default function Navbar({}: NavbarProps) {
             {t("education")}
           </NavLink>
           <ContactButton href="mailto:mail@melanie-busse.de">{t("contact")}</ContactButton>
+
+          <LanguageSwitcher />
         </NavLinks>
       </NavContainer>
     </Nav>
   );
 }
-
-// --- Styled Components ---
 
 const Nav = styled.nav`
   position: fixed;
