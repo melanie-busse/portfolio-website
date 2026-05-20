@@ -1,4 +1,6 @@
 import styled from "styled-components";
+import { GetStaticProps } from "next";
+import { useTranslations } from "next-intl";
 
 import { timelineData } from "@/data/timelineData";
 import { HeaderSection } from "@/components/HeaderSection";
@@ -10,38 +12,43 @@ import { CardContent } from "@/components/CardContent";
 import { TagGroup } from "@/components/TagGroup";
 
 export default function About() {
+  const t = useTranslations("about");
+
   return (
     <PageContainer>
-      <HeaderSection
-        headline="Turning coffee into code since 2005."
-        text="Vom Diplom in Wirtschaftsinformatik an der Universität Paderborn bis zur
-                   Entwicklung von Enterprise-Lösungen für die Bundesagentur für Arbeit:
-                   Meine Leidenschaft gehört stabilen Backends und performanten Frontends."
-      />
+      <HeaderSection headline={t("headline")} text={t("introText")} />
+
       <Grid>
         <Card>
-          <StatValue>19+</StatValue>
-          <StatLabel>Jahre Erfahrung</StatLabel>
+          <StatValue>{t("stats.expValue")}</StatValue>
+          <StatLabel>{t("stats.expLabel")}</StatLabel>
         </Card>
         <Card>
-          <StatValue>2005</StatValue>
-          <StatLabel>First Line of Code</StatLabel>
+          <StatValue>{t("stats.codeValue")}</StatValue>
+          <StatLabel>{t("stats.codeLabel")}</StatLabel>
         </Card>
         <Card>
-          <StatValue>Fullstack</StatValue>
-          <StatLabel>Fokus</StatLabel>
+          <StatValue>{t("stats.focusValue")}</StatValue>
+          <StatLabel>{t("stats.focusLabel")}</StatLabel>
         </Card>
         <Card>
-          <StatValue>VServer</StatValue>
-          <StatLabel>Infrastructure</StatLabel>
+          <StatValue>{t("stats.infraValue")}</StatValue>
+          <StatLabel>{t("stats.infraLabel")}</StatLabel>
         </Card>
       </Grid>
 
       <TimelineWrapper>
-        {timelineData.map((item, index) => (
-          <TimelineItem key={index}>
+        {timelineData.map((item) => (
+          <TimelineItem key={item.id}>
+            {" "}
+            {/* 💡 Eindeutige ID statt Index */}
             <Period text={item.year} />
-            <CardContent title={item.title} company={item.company} description={item.description}>
+            <CardContent
+              title={t(`timeline.${item.id}.title`)}
+              company={t(`timeline.${item.id}.company`)}
+              description={t(`timeline.${item.id}.description`)}
+            >
+              {/* 💡 Direkt das strukturierte Objekt übergeben – Typenkonflikt gelöst! */}
               <TagGroup tags={item.tags} />
             </CardContent>
           </TimelineItem>
@@ -50,6 +57,15 @@ export default function About() {
     </PageContainer>
   );
 }
+
+export const getStaticProps: GetStaticProps = async ({ locale }) => {
+  const messages = (await import(`../../messages/${locale || "de"}.json`)).default;
+  return {
+    props: {
+      messages,
+    },
+  };
+};
 
 const TimelineWrapper = styled.div`
   position: relative;

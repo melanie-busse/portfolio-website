@@ -65,5 +65,66 @@
         "description": "Development of highly available casino solutions. Setting up declarative CI/CD pipelines and implementing new marketing microservices."
       }
     }
+  },
+  "about": {
+    "headline": "Turning coffee into code since 2005.",
+    "introText": "From a diploma in Business Informatics at the University of Paderborn to developing enterprise solutions for the Federal Employment Agency: My passion belongs to stable backends and high-performance frontends.",
+    "stats": {
+      "expValue": "19+",
+      "expLabel": "Years of Experience",
+      "codeValue": "2005",
+      "codeLabel": "First Line of Code",
+      "focusValue": "Fullstack",
+      "focusLabel": "Focus",
+      "infraValue": "VServer",
+      "infraLabel": "Infrastructure"
+    },
+    "timeline": {
+      "bootcamp": {
+        "title": "Intensive Bootcamp Fullstack Development",
+        "company": "neuefische GmbH",
+        "description": "Deepening modern web technologies: From architecture with Next.js (App & Pages Router) to cloud deployment and modern backend structures with Node.js."
+      },
+      "teccon": {
+        "title": "Senior Fullstack Developer",
+        "company": "TECCON (Research Project)",
+        "description": "Concept and redevelopment of a cloud microservices architecture for innovative charging infrastructures."
+      },
+      "ba_amm": {
+        "title": "Fullstack Developer (Labor Market Monitor)",
+        "company": "Federal Employment Agency",
+        "description": "Further development of an analytical instrument for regional labor market structures. Implementation of interactive charts."
+      },
+      "ba_education": {
+        "title": "Backend Developer (Information System Education & Profession)",
+        "company": "Federal Employment Agency",
+        "description": "Maintenance of central online platforms (ELAN, Entgeldatlas). Focus on accessible PDF generation."
+      },
+      "edict": {
+        "title": "Software Developer",
+        "company": "edict egaming GmbH",
+        "description": "Development of highly available casino solutions and setting up declarative CI/CD pipelines."
+      },
+      "hmmh": {
+        "title": "E-Commerce Software Engineer",
+        "company": "hmmh multimediahaus AG",
+        "description": "Multi-tenant e-commerce platform based on Hybris and maintenance of Intershop systems. Creation of proof-of-concepts for acquisition."
+      },
+      "areva": {
+        "title": "Java Component Expert",
+        "company": "AREVA NP GmbH",
+        "description": "Requirements analysis, data modeling in UML, and implementation of applications in Java, Struts, and Python."
+      },
+      "isweb": {
+        "title": "The Web Begins",
+        "company": "is@web GmbH",
+        "description": "Creation of dynamic websites with HTML/CSS and JavaScript. Extracting data from CMS and creating workflows."
+      },
+      "paderborn": {
+        "title": "Pioneering Tech",
+        "company": "University of Paderborn",
+        "description": "Research on XML documents for PDAs and cross-domain architectures in the SIRENA project."
+      }      }
+    }
   }
 }
