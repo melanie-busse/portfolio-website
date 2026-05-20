@@ -1,43 +1,46 @@
 import styled from "styled-components";
 import Link from "next/link";
 import { useRouter } from "next/router";
+import { useTranslations } from "next-intl";
 
-// Falls du Props übergeben möchtest, kannst du hier ein Interface definieren
-interface NavbarProps {
-  // z.B. customLinks?: string[];
-}
+interface NavbarProps {}
 
 export default function Navbar({}: NavbarProps) {
   const router = useRouter();
+  const { locale } = router;
+  const t = useTranslations("nav");
 
-  // Prüft, ob der Pfad exakt übereinstimmt oder (bei Unterseiten) damit beginnt
+  // Prüft, ob der Pfad aktiv ist
   const isActive = (path: string) => router.pathname === path;
 
   return (
     <Nav>
       <NavContainer>
-        <Logo href="/">
+        {/* locale sorgt dafür, dass wir auf der richtigen Sprachebene bleiben */}
+        <Logo href="/" locale={locale}>
           Melanie<span>Busse</span>
         </Logo>
         <NavLinks>
-          <NavLink href="/" $active={isActive("/")}>
-            Skills
+          <NavLink href="/" locale={locale} $active={isActive("/")}>
+            {t("skills")}
           </NavLink>
-          <NavLink href="/projects" $active={isActive("/projects")}>
-            Projekte
+          <NavLink href="/projects" locale={locale} $active={isActive("/projects")}>
+            {t("projects")}
           </NavLink>
-          <NavLink href="/about" $active={isActive("/about")}>
-            Werdegang
+          <NavLink href="/about" locale={locale} $active={isActive("/about")}>
+            {t("about")}
           </NavLink>
-          <NavLink href="/education" $active={isActive("/education")}>
-            Bildung
+          <NavLink href="/education" locale={locale} $active={isActive("/education")}>
+            {t("education")}
           </NavLink>
-          <ContactButton href="mailto:mail@melanie-busse.de">Kontakt</ContactButton>
+          <ContactButton href="mailto:mail@melanie-busse.de">{t("contact")}</ContactButton>
         </NavLinks>
       </NavContainer>
     </Nav>
   );
 }
+
+// --- Styled Components ---
 
 const Nav = styled.nav`
   position: fixed;
@@ -83,11 +86,9 @@ interface NavLinkStylesProps {
   $active?: boolean;
 }
 
+// Fehlerkorrektur in der Farbabfrage (Verschachtelung entfernt)
 const NavLink = styled(Link)<NavLinkStylesProps>`
-  color: ${(props) =>
-    props.$active
-      ? "${(props) => props.theme.colors.h4}"
-      : "${(props) => props.theme.colors.textMute}"};
+  color: ${(props) => (props.$active ? props.theme.colors.h4 : props.theme.colors.textMuted)};
   text-decoration: none;
   font-size: 0.95rem;
   font-weight: 500;

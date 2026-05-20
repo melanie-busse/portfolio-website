@@ -154,5 +154,12 @@
   "privacy": {
     "title": "Datenschutz",
     "headline": "Datenschutzerklärung"
+  },
+  "nav": {
+    "skills": "Skills",
+    "projects": "Projekte",
+    "about": "Werdegang",
+    "education": "Bildung",
+    "contact": "Kontakt"
   }
 }

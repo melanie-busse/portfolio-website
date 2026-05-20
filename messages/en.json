@@ -154,5 +154,12 @@
   "privacy": {
     "title": "Privacy Policy",
     "headline": "Privacy Policy"
+  },
+  "nav": {
+    "skills": "Skills",
+    "projects": "Projects",
+    "about": "Experience",
+    "education": "Education",
+    "contact": "Contact"
   }
 }

@@ -153,5 +153,12 @@
   "privacy": {
     "title": "Privatlivspolitik",
     "headline": "Privatlivspolitik"
+  },
+  "nav": {
+    "skills": "Skills",
+    "projects": "Projekter",
+    "about": "Erfaring",
+    "education": "Uddannelse",
+    "contact": "Kontakt"
   }
 }
