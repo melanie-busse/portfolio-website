@@ -7,11 +7,6 @@ import { petrolTheme, GlobalStyle } from "@/styles/theme";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
-import de from "../../messages/de.json";
-import en from "../../messages/en.json";
-import dk from "../../messages/da.json";
-
-const messages: Record<string, any> = { de, en, dk };
 export default function App({ Component, pageProps }: AppProps) {
   const router = useRouter();
   const locale = router.locale || "de";

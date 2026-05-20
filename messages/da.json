@@ -1,4 +1,10 @@
 {
+  "hero": {
+    "title": "Melanie Busse",
+    "subTitle": "Senior Fullstack-udvikler",
+    "description": "Over 19 års erfaring med konceptualisering og udvikling af komplekse softwaresystemer. Ekspert i Java-backends og moderne web-frontends med Angular og TypeScript.",
+    "badge": "Softwareudvikling siden 2005"
+  },
   "skills": {
     "backend": {
       "title": "Backend Core",

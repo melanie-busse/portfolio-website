@@ -1,7 +1,10 @@
 import styled from "styled-components";
 import Image from "next/image";
+import { useTranslations } from "next-intl";
 
 export default function Hero() {
+  const t = useTranslations("hero");
+
   return (
     <HeroContainer>
       <HeroContent>
@@ -17,13 +20,10 @@ export default function Hero() {
         </ImageWrapper>
 
         <TextWrapper>
-          <NameTitle>Melanie Busse</NameTitle>
-          <SubTitle>Senior Fullstack-Entwicklerin</SubTitle>
-          <Description>
-            Über 19 Jahre Erfahrung in der Konzeption und Entwicklung komplexer Softwaresysteme.
-            Expertin für Java-Backends und moderne Web-Frontends mit Angular und TypeScript.
-          </Description>
-          <HighlightBadge>Softwareentwicklung seit 2005</HighlightBadge>
+          <NameTitle>{t("title")}</NameTitle>
+          <SubTitle>{t("subTitle")}</SubTitle>
+          <Description>{t("description")}</Description>
+          <HighlightBadge>{t("badge")}</HighlightBadge>
         </TextWrapper>
       </HeroContent>
     </HeroContainer>
@@ -56,6 +56,7 @@ const SubTitle = styled.h2`
 
 const Description = styled.p`
   max-width: 600px;
+  margin-bottom: 30px;
 `;
 
 const HighlightBadge = styled.span`
@@ -96,15 +97,14 @@ const ImageWrapper = styled.div`
   overflow: hidden;
   border: ${(props) => props.theme.borders.image};
   box-shadow: ${(props) => props.theme.shadows.box};
+  margin-top: 40px;
 
   img {
     object-fit: contain;
-    /* translateX(-15px) schiebt es nach links */
-    /* translateY(25px) schiebt es nach unten */
+    /* translateX schiebt es nach links */
+    /* translateY schiebt es nach unten */
     /* scale(1.1) sorgt dafür, dass keine leeren Ränder entstehen */
     transform: scale(1.1) translateX(-5px) translateY(25px);
-
-    /* Dein aktueller Filter für den stimmigen Look */
     filter: grayscale(100%) brightness(0.8) contrast(1.1);
   }
 `;
