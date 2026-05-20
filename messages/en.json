@@ -161,5 +161,10 @@
     "about": "Experience",
     "education": "Education",
     "contact": "Contact"
+  },
+  "footer": {
+    "role": "Senior Fullstack Developer",
+    "imprint": "Legal Notice",
+    "privacy": "Privacy Policy"
   }
 }

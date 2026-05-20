@@ -1,21 +1,33 @@
 import styled from "styled-components";
 import Link from "next/link";
+import { useRouter } from "next/router";
+import { useTranslations } from "next-intl";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
+  const { locale } = useRouter();
+  const t = useTranslations("footer");
 
   return (
     <FooterContainer>
       <FooterContent>
-        <Copyright>© {currentYear} Melanie Busse – Senior Fullstack-Entwicklerin</Copyright>
+        <Copyright>
+          © {currentYear} Melanie Busse – {t("role")}
+        </Copyright>
         <FooterLinks>
-          <FooterLink href="/imprint">Impressum</FooterLink>
-          <FooterLink href="/privacy">Datenschutz</FooterLink>
+          <FooterLink href="/imprint" locale={locale}>
+            {t("imprint")}
+          </FooterLink>
+          <FooterLink href="/privacy" locale={locale}>
+            {t("privacy")}
+          </FooterLink>
         </FooterLinks>
       </FooterContent>
     </FooterContainer>
   );
 }
+
+// --- Styled Components ---
 
 const FooterContainer = styled.footer`
   width: 100%;
@@ -41,6 +53,7 @@ const FooterContent = styled.div`
 
 const Copyright = styled.p`
   font-size: 0.9rem;
+  color: ${(props) => props.theme.colors.textMuted}; /* Farbanbindung für besseren Kontrast */
 `;
 
 const FooterLinks = styled.nav`

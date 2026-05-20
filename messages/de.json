@@ -161,5 +161,10 @@
     "about": "Werdegang",
     "education": "Bildung",
     "contact": "Kontakt"
+  },
+  "footer": {
+    "role": "Senior Fullstack-Entwicklerin",
+    "imprint": "Impressum",
+    "privacy": "Datenschutz"
   }
 }

@@ -160,5 +160,10 @@
     "about": "Erfaring",
     "education": "Uddannelse",
     "contact": "Kontakt"
+  },
+  "footer": {
+    "role": "Senior Fullstack-udvikler",
+    "imprint": "Juridisk meddelelse",
+    "privacy": "Privatlivspolitik"
   }
 }
