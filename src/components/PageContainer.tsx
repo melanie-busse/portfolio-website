@@ -6,8 +6,8 @@ export function PageContainer({ children }: { children: React.ReactNode }) {
 }
 
 const Container = styled.div`
-  max-width: 1000px;
+  max-width: ${(props) => props.theme.widths.container};
   margin: 0 auto;
   padding: 6rem 2rem;
-  color: #f5f5f5;
+  color: ${(props) => props.theme.colors.textMain};
 `;

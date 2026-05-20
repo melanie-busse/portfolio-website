@@ -1,20 +1,20 @@
 import styled from "styled-components";
 import React from "react";
 
-export function Card({children}: { children: React.ReactNode}) {
-    return <StyledCard>{children}</StyledCard>
+export function Card({ children }: { children: React.ReactNode }) {
+  return <StyledCard>{children}</StyledCard>;
 }
 
 const StyledCard = styled.div`
-    background: rgba(0, 242, 255, 0.05);
-    border: 1px solid rgba(0, 242, 255, 0.1);
-    padding: 1.5rem;
-    border-radius: 16px;
-    text-align: center;
-    transition: transform 0.3s ease;
+  background: ${(props) => props.theme.colors.backgrounds.card};
+  border: ${(props) => props.theme.borders.border};
+  padding: 1.5rem;
+  border-radius: ${(props) => props.theme.borders.borderRadius};
+  text-align: center;
+  transition: transform 0.3s ease;
 
-    &:hover {
-        transform: translateY(-5px);
-        background: rgba(0, 242, 255, 0.1);
-    }
+  &:hover {
+    transform: translateY(-5px);
+    background: ${(props) => props.theme.colors.backgrounds.hovers.card};
+  }
 `;
