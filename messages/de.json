@@ -146,5 +146,9 @@
         "details": "Höhere Handelsschule, Schwerpunkt: Bürowirtschaft."
       }
     }
+  },
+  "imprint": {
+    "title": "Impressum",
+    "hostingText": "Diese Webseite wird gehostet bei:"
   }
 }

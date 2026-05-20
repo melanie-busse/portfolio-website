@@ -146,5 +146,9 @@
         "details": "Higher commercial school, specialization: Office Management."
       }
     }
+  },
+  "imprint": {
+    "title": "Legal Notice",
+    "hostingText": "This website is hosted by:"
   }
 }

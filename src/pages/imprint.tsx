@@ -3,17 +3,21 @@ import Head from "next/head";
 
 import { PageContainer } from "@/components/PageContainer";
 import { ContentBox } from "@/components/ContentBox";
+import { useTranslations } from "next-intl";
+import { GetStaticProps } from "next";
 
 export default function Imprint() {
+  const t = useTranslations("imprint");
+
   return (
     <>
       <Head>
-        <title>Impressum | Melanie Busse</title>
+        <title>{t("title")} | Melanie Busse</title>
         <meta name="robots" content="noindex" />
       </Head>
       <PageContainer>
         <ContentBox>
-          <Title>Impressum</Title>
+          <Title>{t("title")}</Title>
 
           <Section>
             <SectionTitle>Angaben gemäß § 5 TMG</SectionTitle>
@@ -28,11 +32,7 @@ export default function Imprint() {
 
           <Section>
             <SectionTitle>Kontakt</SectionTitle>
-            <Text>
-              E-Mail: mail@melanie-busse.de
-              <br />
-              Telefon: [Deine Telefonnummer]
-            </Text>
+            <Text>E-Mail: mail@melanie-busse.de</Text>
           </Section>
 
           <Section>
@@ -49,11 +49,12 @@ export default function Imprint() {
           <Section>
             <SectionTitle>Hosting</SectionTitle>
             <Text>
-              Diese Webseite wird gehostet bei:
+              {t("hostingText")}
               <br />
-              STRATO AG
+              <strong>STRATO AG</strong>
               <br />
-              Otto-Ostrowski-Straße 7<br />
+              Otto-Ostrowski-Straße 7
+              <br />
               10249 Berlin
             </Text>
           </Section>
@@ -62,7 +63,7 @@ export default function Imprint() {
             <SectionTitle>Streitbeilegung</SectionTitle>
             <Text>
               Die Europäische Kommission stellt eine Plattform zur Online-Streitbeilegung (OS)
-              bereit:
+              bereit:{" "}
               <a
                 href="https://ec.europa.eu/consumers/odr/"
                 target="_blank"
@@ -80,6 +81,15 @@ export default function Imprint() {
     </>
   );
 }
+
+export const getStaticProps: GetStaticProps = async ({ locale }) => {
+  const messages = (await import(`../../messages/${locale || "de"}.json`)).default;
+  return {
+    props: {
+      messages,
+    },
+  };
+};
 
 const Title = styled.h1`
   margin-bottom: 2rem;
