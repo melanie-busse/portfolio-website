@@ -1,23 +1,26 @@
 import styled from "styled-components";
 import Head from "next/head";
+import { GetStaticProps } from "next";
+import { useTranslations } from "next-intl";
 
 import { educationData } from "@/data/educationData";
 
 export default function Education() {
+  const t = useTranslations("education");
   return (
     <>
       <Head>
-        <title>Education | Melanie Busse</title>
+        <title>{t("title")} | Melanie Busse</title>
       </Head>
       <PageContainer>
-        <Title>Educational Path</Title>
+        <Title>{t("title")}</Title>
         <Grid>
-          {educationData.map((item, index) => (
-            <EduCard key={index}>
+          {educationData.map((item) => (
+            <EduCard key={item.id}>
               <Period>{item.period}</Period>
-              <Institution>{item.institution}</Institution>
-              <Degree>{item.degree}</Degree>
-              <Details>{item.details}</Details>
+              <Institution>{t(`items.${item.id}.institution`)}</Institution>
+              <Degree>{t(`items.${item.id}.degree`)}</Degree>
+              <Details>{t(`items.${item.id}.details`)}</Details>
             </EduCard>
           ))}
         </Grid>
@@ -25,6 +28,15 @@ export default function Education() {
     </>
   );
 }
+
+export const getStaticProps: GetStaticProps = async ({ locale }) => {
+  const messages = (await import(`../../messages/${locale || "de"}.json`)).default;
+  return {
+    props: {
+      messages,
+    },
+  };
+};
 
 const PageContainer = styled.div`
   max-width: ${(props) => props.theme.widths.container};

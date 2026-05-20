@@ -1,20 +1,23 @@
-export const educationData = [
-    {
-        period: "10/1998 – 09/2004",
-        institution: "Universität Paderborn",
-        degree: "Diplom-Wirtschaftsinformatik",
-        details: "Schwerpunkte: Softwaretechnik, Datenbanken, Informationssysteme und Betriebswirtschaftslehre."
-    },
-    {
-        period: "08/1990 – 07/1992",
-        institution: "Milchwerke Westfalen eG, Herford",
-        degree: "Ausbildung zur Industriekauffrau",
-        details: "Abschluss: Industriekauffrau. Grundstein für das Verständnis wirtschaftlicher Prozesse."
-    },
-    {
-        period: "08/1988 – 07/1990",
-        institution: "Erich-Gutenberg-Schule, Bünde",
-        degree: "Fachhochschulreife",
-        details: "Höhere Handelsschule, Schwerpunkt: Bürowirtschaft."
-    }
+export interface EducationEntry {
+  id: string;
+  period: string;
+  tags?: string[]; // Optional, falls du Tech-Stacks oder Skills anzeigen willst
+}
+
+export const educationData: EducationEntry[] = [
+  {
+    id: "university",
+    period: "10/1998 – 09/2004",
+    tags: ["Softwaretechnik", "Datenbanken", "Wirtschaftsinformatik"],
+  },
+  {
+    id: "milchwerke",
+    period: "08/1990 – 07/1992",
+    tags: ["Ausbildung", "Wirtschaftsprozesse"],
+  },
+  {
+    id: "erich_gutenberg",
+    period: "08/1988 – 07/1990",
+    tags: ["Fachhochschulreife", "Bürowirtschaft"],
+  },
 ];

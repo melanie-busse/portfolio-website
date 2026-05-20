@@ -126,5 +126,25 @@
         "description": "Forschung an XML-Dokumenten für PDAs und domänenübergreifenden Architekturen im Projekt SIRENA. [cite: 33]"
       }
     }
+  },
+  "education": {
+    "title": "Bildungsweg",
+    "items": {
+      "university": {
+        "institution": "Universität Paderborn",
+        "degree": "Diplom-Wirtschaftsinformatik",
+        "details": "Schwerpunkte: Softwaretechnik, Datenbanken, Informationssysteme und Betriebswirtschaftslehre."
+      },
+      "milchwerke": {
+        "institution": "Milchwerke Westfalen eG, Herford",
+        "degree": "Ausbildung zur Industriekauffrau",
+        "details": "Abschluss: Industriekauffrau. Grundstein für das Verständnis wirtschaftlicher Prozesse."
+      },
+      "erich_gutenberg": {
+        "institution": "Erich-Gutenberg-Schule, Bünde",
+        "degree": "Fachhochschulreife",
+        "details": "Höhere Handelsschule, Schwerpunkt: Bürowirtschaft."
+      }
+    }
   }
 }

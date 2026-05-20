@@ -125,5 +125,25 @@
         "description": "Forskning i XML-dokumenter til PDA'er og tværgående arkitekturer i SIRENA-projektet."
       }
     }
+  },
+  "education": {
+    "title": "Uddannelsesforløb",
+    "items": {
+      "university": {
+        "institution": "Universitetet i Paderborn",
+        "degree": "Diplomuddannelse i Erhvervsinformatik",
+        "details": "Hovedområder: Softwareteknologi, databaser, informationssystemer og virksomhedsøkonomi."
+      },
+      "milchwerke": {
+        "institution": "Milchwerke Westfalen eG, Herford",
+        "degree": "Erhvervsuddannelse inden for industri og handel",
+        "details": "Eksamen: Industriekauffrau. Grundstenen for forståelsen af økonomiske processer."
+      },
+      "erich_gutenberg": {
+        "institution": "Erich-Gutenberg-Schule, Bünde",
+        "degree": "Erhvervsfaglig studentereksamen (adgangskvalifikation til universitetet)",
+        "details": "Højere handelsskole, speciale: Kontoradministration."
+      }
+    }
   }
 }
