@@ -38,5 +38,31 @@
       "title": "Architecture",
       "description": "Konzeption wartbarer Systeme durch <strong>Domain-Driven Design (DDD)</strong> und hexagonale Architekturen."
     }
+  },
+  "projects": {
+    "headline": "Featured Projects",
+    "introText": "Eine Auswahl meiner Arbeiten aus den Bereichen E-Commerce, öffentliche Verwaltung und industrielle Softwareentwicklung.",
+    "items": {
+      "emobility": {
+        "title": "Verwaltungssoftware E-Mobilität",
+        "company": "TECCON (Forschungsprojekt)",
+        "description": "Konzeption und Neuentwicklung einer Cloud-Microservices-Architektur für innovative Ladeinfrastrukturen. Fokus auf skalierbare Systeme und automatisierte Qualitätssicherung."
+      },
+      "amm": {
+        "title": "Arbeitsmarktmonitor (AMM)",
+        "company": "Bundesagentur für Arbeit",
+        "description": "Weiterentwicklung eines Analyse-Instruments für regionale Arbeitsmarktstrukturen. Implementierung interaktiver Grafiken und Umstellung auf moderne Bibliotheken."
+      },
+      "education": {
+        "title": "Informationssystem Bildung und Beruf",
+        "company": "Bundesagentur für Arbeit",
+        "description": "Betreuung zentraler Online-Angebote (ELAN, Entgeldatlas). Fokus auf barrierefreie PDF-Generierung und komplexe Datenaufbereitung."
+      },
+      "casino": {
+        "title": "Online-Casino Plattform",
+        "company": "edict egaming GmbH",
+        "description": "Entwicklung hochverfügbarer Casinolösungen. Aufbau deklarativer CI/CD-Pipelines und Implementierung neuer Marketing-Microservices."
+      }
+    }
   }
 }

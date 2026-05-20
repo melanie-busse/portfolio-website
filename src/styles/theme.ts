@@ -41,7 +41,7 @@ export const petrolTheme = {
     },
     tools: {
       text: "#2cb67d",
-      bg: "rgba(44, 182, 125, 0.1)",
+      background: "rgba(44, 182, 125, 0.1)",
       border: "rgba(44, 182, 125, 0.3)",
     },
   },

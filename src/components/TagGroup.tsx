@@ -30,24 +30,6 @@ export function TagGroup({ tags }: TagGroupProps) {
   );
 }
 
-const CATEGORY_COLORS = {
-  frontend: {
-    text: "${props => props.theme.categories.frontend.text}",
-    bg: "${props => props.theme.categories.frontend.background}",
-    border: "${props => props.theme.categories.frontend.border}",
-  },
-  backend: {
-    text: "${props => props.theme.categories.backend.text}",
-    bg: "${props => props.theme.categories.backend.background}",
-    border: "${props => props.theme.categories.backend.border}",
-  },
-  tools: {
-    text: "${props => props.theme.categories.tools.text}",
-    bg: "${props => props.theme.categories.tools.background}",
-    border: "${props => props.theme.categories.tools.border}",
-  },
-};
-
 const StyledTagGroup = styled.div`
   display: flex;
   flex-wrap: wrap;
@@ -62,12 +44,13 @@ const Tag = styled.span<{ $type: "frontend" | "backend" | "tools" }>`
   border-radius: 6px;
   transition: all 0.3s ease;
 
-  color: ${(props) => CATEGORY_COLORS[props.$type].text};
-  background: ${(props) => CATEGORY_COLORS[props.$type].bg};
-  border: 1px solid ${(props) => CATEGORY_COLORS[props.$type].border};
+  /* Dynamische Farben basierend auf $type und deinem Theme */
+  color: ${({ theme, $type }) => theme.categories[$type].text};
+  background: ${({ theme, $type }) => theme.categories[$type].background};
+  border: 1px solid ${({ theme, $type }) => theme.categories[$type].border};
 
   &:hover {
     transform: translateY(-2px);
-    border-color: ${(props) => CATEGORY_COLORS[props.$type].text};
+    border-color: ${({ theme, $type }) => theme.categories[$type].text};
   }
 `;

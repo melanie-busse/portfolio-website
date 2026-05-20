@@ -38,5 +38,31 @@
       "title": "Architecture",
       "description": "Konceptualisering af vedligeholdelsesvenlige systemer gennem <strong>Domain-Driven Design (DDD)</strong> og hexagonale arkitekturer."
     }
+  },
+  "projects": {
+    "headline": "Featured Projects",
+    "introText": "Et udvalg af mine arbejder inden for e-handel, offentlig administration og industriel softwareudvikling.",
+    "items": {
+      "emobility": {
+        "title": "Administrationssoftware til E-Mobilitet",
+        "company": "TECCON (Forskningsprojekt)",
+        "description": "Konceptualisering og nyudvikling af en cloud-microservices-arkitektur til innovative ladeinfrastrukturer. Fokus på skalerbare systemer og automatiseret kvalitetssikring."
+      },
+      "amm": {
+        "title": "Arbejdsmarkedsmonitor (AMM)",
+        "company": "Bundesagentur für Arbeit",
+        "description": "Videreudvikling af et analyseinstrument til regionale arbejdsmarkedsstrukturer. Implementering af interaktive grafer og migrering til moderne biblioteker."
+      },
+      "education": {
+        "title": "Informationssystem for Uddannelse og Erhverv",
+        "company": "Bundesagentur für Arbeit",
+        "description": "Vedligeholdelse af centrale online-tjenester (ELAN, Entgeldatlas). Fokus på tilgængelig PDF-generering og kompleks databehandling."
+      },
+      "casino": {
+        "title": "Online Casino Platform",
+        "company": "edict egaming GmbH",
+        "description": "Udvikling af højtilgængelige casinoløsninger. Opbygning af deklarative CI/CD-pipelines og implementering af nye marketing-microservices."
+      }
+    }
   }
 }

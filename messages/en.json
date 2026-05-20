@@ -38,5 +38,32 @@
       "title": "Architecture",
       "description": "Design of maintainable systems through <strong>Domain-Driven Design (DDD)</strong> and hexagonal architectures."
     }
+  },
+
+  "projects": {
+    "headline": "Featured Projects",
+    "introText": "A selection of my work in e-commerce, public administration, and industrial software development.",
+    "items": {
+      "emobility": {
+        "title": "E-Mobility Management Software",
+        "company": "TECCON (Research Project)",
+        "description": "Concept and redevelopment of a cloud microservices architecture for innovative charging infrastructures. Focus on scalable systems and automated quality assurance."
+      },
+      "amm": {
+        "title": "Labor Market Monitor (AMM)",
+        "company": "Federal Employment Agency",
+        "description": "Further development of an analytical instrument for regional labor market structures. Implementation of interactive charts and migration to modern libraries."
+      },
+      "education": {
+        "title": "Information System for Education and Profession",
+        "company": "Federal Employment Agency",
+        "description": "Maintenance of central online platforms (ELAN, Entgeldatlas). Focus on accessible PDF generation and complex data processing."
+      },
+      "casino": {
+        "title": "Online Casino Platform",
+        "company": "edict egaming GmbH",
+        "description": "Development of highly available casino solutions. Setting up declarative CI/CD pipelines and implementing new marketing microservices."
+      }
+    }
   }
 }

@@ -1,39 +1,46 @@
-import styled from 'styled-components';
-import { projectsData } from '@/data/projectsData';
-import {HeaderSection} from "@/components/HeaderSection";
-import {PageContainer} from "@/components/PageContainer";
+import styled from "styled-components";
+import { projectsData } from "@/data/projectsData";
+import { HeaderSection } from "@/components/HeaderSection";
+import { PageContainer } from "@/components/PageContainer";
 
-import {Period} from "@/components/Period";
-import {CardContent} from "@/components/CardContent";
-import {TagGroup} from "@/components/TagGroup";
+import { Period } from "@/components/Period";
+import { CardContent } from "@/components/CardContent";
+import { TagGroup } from "@/components/TagGroup";
+import { useTranslations } from "next-intl";
+import { GetStaticProps } from "next";
 
 export default function Projects() {
-    return (
-        <PageContainer>
-            <HeaderSection
-                headline="Featured Projects"
-                text="Eine Auswahl meiner Arbeiten aus den Bereichen E-Commerce,
-                        öffentliche Verwaltung und industrielle Softwareentwicklung."
-            />
+  const t = useTranslations("projects");
+  return (
+    <PageContainer>
+      <HeaderSection headline={t("headline")} text={t("introText")} />
 
-                {projectsData.map((project, index) => (
-                    <CardContainer key={index}>
-                        <Period text={project.period}/>
-                        <CardContent
-                            title={project.title}
-                            company={project.company}
-                            description={project.description}
-                        >
-                            <TagGroup tags={project.tags} />
-                        </CardContent>
-                    </CardContainer>
-                ))}
-
-        </PageContainer>
-    );
+      {projectsData.map((project) => (
+        <CardContainer key={project.id}>
+          <Period text={project.period} />
+          <CardContent
+            title={t(`items.${project.id}.title`)}
+            company={t(`items.${project.id}.company`)}
+            description={t(`items.${project.id}.description`)}
+          >
+            <TagGroup tags={project.tags} />
+          </CardContent>
+        </CardContainer>
+      ))}
+    </PageContainer>
+  );
 }
 
+export const getStaticProps: GetStaticProps = async ({ locale }) => {
+  const messages = (await import(`../../messages/${locale || "de"}.json`)).default;
+  return {
+    props: {
+      messages,
+    },
+  };
+};
+
 const CardContainer = styled.div`
-    position: relative;
-    margin-bottom: 4rem;
+  position: relative;
+  margin-bottom: 4rem;
 `;
