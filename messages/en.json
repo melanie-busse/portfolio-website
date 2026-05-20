@@ -150,5 +150,9 @@
   "imprint": {
     "title": "Legal Notice",
     "hostingText": "This website is hosted by:"
+  },
+  "privacy": {
+    "title": "Privacy Policy",
+    "headline": "Privacy Policy"
   }
 }

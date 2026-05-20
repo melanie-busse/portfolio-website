@@ -1,18 +1,22 @@
 import styled from "styled-components";
 import Head from "next/head";
+import { GetStaticProps } from "next";
+import { useTranslations } from "next-intl";
 import { PageContainer } from "@/components/PageContainer";
 import { ContentBox } from "@/components/ContentBox";
 
 export default function Datenschutz() {
+  const t = useTranslations("privacy");
+
   return (
     <>
       <Head>
-        <title>Datenschutz | Melanie Busse</title>
+        <title>{t("title")} | Melanie Busse</title>
         <meta name="robots" content="noindex" />
       </Head>
       <PageContainer>
         <ContentBox>
-          <Title>Datenschutzerklärung</Title>
+          <Title>{t("headline")}</Title>
 
           <Section>
             <SectionTitle>1. Datenschutz auf einen Blick</SectionTitle>
@@ -45,7 +49,7 @@ export default function Datenschutz() {
               Ich hoste meine Website bei der STRATO AG. Anbieter ist die Strato AG,
               Otto-Ostrowski-Straße 7, 10249 Berlin. Wenn Sie meine Website besuchen, erfasst Strato
               verschiedene Logfiles inklusive Ihrer IP-Adressen. Details entnehmen Sie der
-              Datenschutzerklärung von Strato:
+              Datenschutzerklärung von Strato:{" "}
               <a
                 href="https://www.strato.de/datenschutz/"
                 target="_blank"
@@ -76,17 +80,33 @@ export default function Datenschutz() {
   );
 }
 
+export const getStaticProps: GetStaticProps = async ({ locale }) => {
+  const messages = (await import(`../../messages/${locale || "de"}.json`)).default;
+  return {
+    props: {
+      messages,
+    },
+  };
+};
+
+// --- Styled Components ---
 const Title = styled.h1`
   margin-bottom: 2rem;
+  color: ${(props) => props.theme.colors.textMain};
 `;
 
 const Section = styled.div`
   margin-bottom: 2.5rem;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
 `;
 
 const SectionTitle = styled.h2`
   margin-bottom: 1rem;
-  border-left: ${(props) => props.theme.borders.section};
+  color: ${(props) => props.theme.colors.textMain};
+  border-left: ${(props) => props.theme.borders.section || `3px solid ${props.theme.colors.h4}`};
   padding-left: 1rem;
 `;
 
@@ -98,6 +118,8 @@ const SubTitle = styled.h3`
 
 const Text = styled.p`
   margin-bottom: 1rem;
+  color: ${(props) => props.theme.colors.details};
+  line-height: 1.6;
 
   a {
     color: ${(props) => props.theme.colors.h4};

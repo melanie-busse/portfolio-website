@@ -149,5 +149,9 @@
   "imprint": {
     "title": "Juridisk meddelelse",
     "hostingText": "Denne hjemmeside er hosted af:"
+  },
+  "privacy": {
+    "title": "Privatlivspolitik",
+    "headline": "Privatlivspolitik"
   }
 }
