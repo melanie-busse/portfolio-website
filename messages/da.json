@@ -1,0 +1,36 @@
+{
+  "skills": {
+    "backend": {
+      "title": "Backend Core",
+      "description": "Over 19 års erfaring med Java. Specialist i <strong>Spring Boot</strong> og <strong>Quarkus</strong>. Arkitektur af skalerbare enterprise-systemer og microservices. Udvikling af modulære, testbare backend-systemer med NestJS."
+    },
+    "frontend": {
+      "title": "Frontend Engineering",
+      "description": "Moderne SPA'er med <strong>Angular</strong> og <strong>TypeScript</strong>. Fokus på performance, state management og intuitiv UX."
+    },
+    "infrastructure": {
+      "title": "Infrastructure & Hosting",
+      "description": "Opsætning og administration af <strong>vServer-miljøer</strong> (Strato). Deployment af webprojekter via Docker og Nginx."
+    },
+    "aiAutomation": {
+      "title": "AI & Automation",
+      "description": "Integration af <strong>LLM'er</strong> i software-workflows. Udvikling af AI-baserede værktøjer og automatisering af processer. Realtidskommunikation og eventstyrede arkitekturer."
+    },
+    "data": {
+      "title": "Data",
+      "description": "Design og optimering af relationelle og NoSQL-databaser. Fokus på dataintegritet og performance-tuning."
+    },
+    "devops": {
+      "title": "DevOps",
+      "description": "Automatisering af deployment-processer og container-orkestrering til skalerbare cloud-infrastrukturer."
+    },
+    "workflow": {
+      "title": "Workflow & Tools",
+      "description": "Sikker håndtering af moderne udviklingsmiljøer og agile metoder. Ekspertviden inden for modellering og transformation af komplekse dataformater."
+    },
+    "architecture": {
+      "title": "Architecture",
+      "description": "Konceptualisering af vedligeholdelsesvenlige systemer gennem <strong>Domain-Driven Design (DDD)</strong> og hexagonale arkitekturer."
+    }
+  }
+}
