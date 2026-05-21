@@ -6,7 +6,7 @@ import {
   FaDocker,
   FaCode,
   FaCodeBranch,
-} from "react-icons/fa";
+} from "react-icons/fa6";
 
 export const skillsData = [
   {

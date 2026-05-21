@@ -65,6 +65,7 @@ const HighlightBadge = styled.span`
   color: ${(props) => props.theme.colors.accentAqua};
   padding: 0.5rem 1rem;
   border-radius: 50px;
+  font-family: ${(props) => props.theme.fonts.tech};
   font-size: 0.9rem;
   margin-top: 2rem;
 `;
