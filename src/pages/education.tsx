@@ -4,6 +4,8 @@ import { GetStaticProps } from "next";
 import { useTranslations } from "next-intl";
 
 import { educationData } from "@/data/educationData";
+import BentoCard from "@/components/BentoCard";
+import { Period } from "@/components/Period";
 
 export default function Education() {
   const t = useTranslations("education");
@@ -15,14 +17,24 @@ export default function Education() {
       <PageContainer>
         <Title>{t("title")}</Title>
         <Grid>
-          {educationData.map((item) => (
-            <EduCard key={item.id}>
-              <Period>{item.period}</Period>
-              <Institution>{t(`items.${item.id}.institution`)}</Institution>
-              <Degree>{t(`items.${item.id}.degree`)}</Degree>
-              <Details>{t(`items.${item.id}.details`)}</Details>
-            </EduCard>
-          ))}
+          {educationData.map((item) => {
+            const mappedEducationAsSkill = {
+              id: item.id,
+              icon: item.icon || "EducationIcon",
+
+              // Wichtig: Da BentoCard intern .title und .description sucht,
+              // mappen wir die Übersetzung hier auf die Basis "education.items.item.id"
+              translationKey: `education.items.${item.id}`,
+              badges: [],
+            };
+
+            return (
+              <div key={item.id}>
+                <Period text={item.period} />
+                <BentoCard skill={mappedEducationAsSkill} $gridArea="auto" />
+              </div>
+            );
+          })}
         </Grid>
       </PageContainer>
     </>
@@ -54,38 +66,4 @@ const Grid = styled.div`
   display: flex;
   flex-direction: column;
   gap: 2rem;
-`;
-
-const EduCard = styled.div`
-  background: ${(props) => props.theme.colors.backgrounds.box};
-  backdrop-filter: blur(10px);
-  border: ${(props) => props.theme.borders.techBadge};
-  padding: 2rem;
-  border-radius: 16px;
-  transition: border-color 0.3s ease;
-
-  &:hover {
-    border-color: ${(props) => props.theme.colors.h4};
-  }
-`;
-
-const Period = styled.span`
-  color: ${(props) => props.theme.colors.h4};
-  font-weight: 600;
-  font-size: 0.9rem;
-`;
-
-const Institution = styled.h2`
-  color: ${(props) => props.theme.colors.textMain};
-  margin: 0.5rem 0;
-`;
-
-const Degree = styled.h3`
-  color: ${(props) => props.theme.colors.textMuted};
-  font-weight: 500;
-  margin-bottom: 1rem;
-`;
-
-const Details = styled.p`
-  color: ${(props) => props.theme.colors.details};
 `;

@@ -11,4 +11,6 @@ const StyledPeriod = styled.span`
   border-radius: ${(props) => props.theme.borders.borderRadius};
   font-size: 0.85rem;
   font-weight: 600;
+  margin-bottom: 0.75rem; 
+  display: inline-block;
 `;
