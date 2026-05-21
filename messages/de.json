@@ -1,0 +1,167 @@
+{
+  "hero": {
+    "title": "Melanie Busse",
+    "subTitle": "Senior Fullstack-Entwicklerin",
+    "description": "Über 19 Jahre Erfahrung in der Konzeption und Entwicklung komplexer Softwaresysteme. Expertin für Java-Backends und moderne Web-Frontends mit Angular und TypeScript.",
+    "badge": "Softwareentwicklung seit 2005"
+  },
+  "skills": {
+    "backend": {
+      "title": "Backend Core",
+      "description": "Über 19 Jahre Erfahrung in Java. Spezialist für <strong>Spring Boot</strong> und <strong>Quarkus</strong>. Architektur von skalierbaren Enterprise-Systemen und Microservices. Entwicklung von modularen, testbaren Backend-Systemen mit NestJS."
+    },
+    "frontend": {
+      "title": "Frontend Engineering",
+      "description": "Moderne SPAs mit <strong>Angular</strong> und <strong>TypeScript</strong>. Fokus auf Performance, State-Management und intuitive UX."
+    },
+    "infrastructure": {
+      "title": "Infrastructure & Hosting",
+      "description": "Setup und Verwaltung von <strong>VServer-Umgebungen</strong> (Strato). Deployment von Web-Projekten via Docker und Nginx."
+    },
+    "aiAutomation": {
+      "title": "AI & Automation",
+      "description": "Integration von <strong>LLMs</strong> in Software-Workflows. Entwicklung von KI-gestützten Tools und Automatisierung von Prozessen. Echtzeit-Kommunikation und Event-gesteuerte Architekturen."
+    },
+    "data": {
+      "title": "Data",
+      "description": "Design und Optimierung relationaler und NoSQL-Datenbanken. Fokus auf Datenintegrität und Performance-Tuning."
+    },
+    "devops": {
+      "title": "DevOps",
+      "description": "Automatisierung von Deployment-Prozessen und Container-Orchestrierung für skalierbare Cloud-Infrastrukturen."
+    },
+    "workflow": {
+      "title": "Workflow & Tools",
+      "description": "Sicherer Umgang mit modernen Entwicklungsumgebungen und agilen Methoden. Expertenwissen in der Modellierung und Transformation komplexer Datenformate."
+    },
+    "architecture": {
+      "title": "Architecture",
+      "description": "Konzeption wartbarer Systeme durch <strong>Domain-Driven Design (DDD)</strong> und hexagonale Architekturen."
+    }
+  },
+  "projects": {
+    "headline": "Featured Projects",
+    "introText": "Eine Auswahl meiner Arbeiten aus den Bereichen E-Commerce, öffentliche Verwaltung und industrielle Softwareentwicklung.",
+    "items": {
+      "emobility": {
+        "title": "Verwaltungssoftware E-Mobilität",
+        "company": "TECCON (Forschungsprojekt)",
+        "description": "Konzeption und Neuentwicklung einer Cloud-Microservices-Architektur für innovative Ladeinfrastrukturen. Fokus auf skalierbare Systeme und automatisierte Qualitätssicherung."
+      },
+      "amm": {
+        "title": "Arbeitsmarktmonitor (AMM)",
+        "company": "Bundesagentur für Arbeit",
+        "description": "Weiterentwicklung eines Analyse-Instruments für regionale Arbeitsmarktstrukturen. Implementierung interaktiver Grafiken und Umstellung auf moderne Bibliotheken."
+      },
+      "education": {
+        "title": "Informationssystem Bildung und Beruf",
+        "company": "Bundesagentur für Arbeit",
+        "description": "Betreuung zentraler Online-Angebote (ELAN, Entgeldatlas). Fokus auf barrierefreie PDF-Generierung und komplexe Datenaufbereitung."
+      },
+      "casino": {
+        "title": "Online-Casino Plattform",
+        "company": "edict egaming GmbH",
+        "description": "Entwicklung hochverfügbarer Casinolösungen. Aufbau deklarativer CI/CD-Pipelines und Implementierung neuer Marketing-Microservices."
+      }
+    }
+  },
+  "about": {
+    "headline": "Turning coffee into code since 2005.",
+    "introText": "Vom Diplom in Wirtschaftsinformatik an der Universität Paderborn bis zur Entwicklung von Enterprise-Lösungen für die Bundesagentur für Arbeit: Meine Leidenschaft gehört stabilen Backends und performanten Frontends.",
+    "stats": {
+      "expValue": "19+",
+      "expLabel": "Jahre Erfahrung",
+      "codeValue": "2005",
+      "codeLabel": "First Line of Code",
+      "focusValue": "Fullstack",
+      "focusLabel": "Fokus",
+      "infraValue": "VServer",
+      "infraLabel": "Infrastructure"
+    },
+    "timeline": {
+      "bootcamp": {
+        "title": "Intensiv-Bootcamp Fullstack Development",
+        "company": "neuefische GmbH",
+        "description": "Vertiefung moderner Web-Technologien: Von der Architektur mit Next.js (App & Pages Router) über Cloud-Deployment bis hin zu modernen Backend-Strukturen mit Node.js."
+      },
+      "teccon": {
+        "title": "Senior Fullstack-Entwicklerin",
+        "company": "TECCON (Forschungsprojekt)",
+        "description": "Konzeption und Neuentwicklung einer Cloud-Microservices-Architektur für innovative Ladeinfrastrukturen."
+      },
+      "ba_amm": {
+        "title": "Fullstack-Entwicklerin (Arbeitsmarktmonitor)",
+        "company": "Bundesagentur für Arbeit",
+        "description": "Weiterentwicklung eines Analyse-Instruments für regionale Arbeitsmarktstrukturen. Implementierung interaktiver Grafiken."
+      },
+      "ba_education": {
+        "title": "Backend-Entwicklerin (Informationssystem Bildung & Beruf)",
+        "company": "Bundesagentur für Arbeit",
+        "description": "Betreuung zentraler Online-Angebote (ELAN, Entgeldatlas). Fokus auf barrierefreie PDF-Generierung."
+      },
+      "edict": {
+        "title": "Software-Entwicklerin",
+        "company": "edict egaming GmbH",
+        "description": "Entwicklung hochverfügbarer Casinolösungen und Aufbau deklarativer CI/CD-Pipelines."
+      },
+      "hmmh": {
+        "title": "E-Commerce Software Engineer",
+        "company": "hmmh multimediahaus AG",
+        "description": "Multimandanten-E-Commerce-Plattform auf Basis von Hybris und Wartung von Intershop-Systemen. Erstellung von Proof-of-Concepts für die Akquise. [cite: 32]"
+      },
+      "areva": {
+        "title": "Java Component Expert",
+        "company": "AREVA NP GmbH",
+        "description": "Anforderungsanalyse, Datenmodellierung in UML und Implementierung von Anwendungen in Java, Struts und Python. [cite: 32]"
+      },
+      "isweb": {
+        "title": "The Web Begins",
+        "company": "is@web GmbH",
+        "description": "Erstellung dynamischer Webseiten mit HTML/CSS und JavaScript. Auslesen von Daten aus dem CMS und Erstellung von Workflows. [cite: 33]"
+      },
+
+      "university": {
+        "title": "Pioneering Tech",
+        "company": "Universität Paderborn",
+        "description": "Forschung an XML-Dokumenten für PDAs und domänenübergreifenden Architekturen im Projekt SIRENA. [cite: 33]"
+      }
+    }
+  },
+  "education": {
+    "title": "Bildungsweg",
+    "items": {
+      "university": {
+        "title": "Diplom-Wirtschaftsinformatik",
+        "description": "<h2>Universität Paderborn</h2>Schwerpunkte: Softwaretechnik, Datenbanken, Informationssysteme und Betriebswirtschaftslehre."
+      },
+      "milchwerke": {
+        "title": "Ausbildung zur Industriekauffrau",
+        "description": "<h2>Milchwerke Westfalen eG, Herford</h2>Abschluss: Industriekauffrau. Grundstein für das Verständnis wirtschaftlicher Prozesse."
+      },
+      "erich_gutenberg": {
+        "title": "Fachhochschulreife",
+        "description": "<h2>Erich-Gutenberg-Schule, Bünde</h2>Höhere Handelsschule, Schwerpunkt: Bürowirtschaft."
+      }
+    }
+  },
+  "imprint": {
+    "title": "Impressum",
+    "hostingText": "Diese Webseite wird gehostet bei:"
+  },
+  "privacy": {
+    "title": "Datenschutz",
+    "headline": "Datenschutzerklärung"
+  },
+  "nav": {
+    "skills": "Skills",
+    "projects": "Projekte",
+    "about": "Werdegang",
+    "education": "Bildung",
+    "contact": "Kontakt"
+  },
+  "footer": {
+    "role": "Senior Fullstack-Entwicklerin",
+    "imprint": "Impressum",
+    "privacy": "Datenschutz"
+  }
+}

@@ -1,0 +1,166 @@
+{
+  "hero": {
+    "title": "Melanie Busse",
+    "subTitle": "Senior Fullstack-udvikler",
+    "description": "Over 19 års erfaring med konceptualisering og udvikling af komplekse softwaresystemer. Ekspert i Java-backends og moderne web-frontends med Angular og TypeScript.",
+    "badge": "Softwareudvikling siden 2005"
+  },
+  "skills": {
+    "backend": {
+      "title": "Backend Core",
+      "description": "Over 19 års erfaring med Java. Specialist i <strong>Spring Boot</strong> og <strong>Quarkus</strong>. Arkitektur af skalerbare enterprise-systemer og microservices. Udvikling af modulære, testbare backend-systemer med NestJS."
+    },
+    "frontend": {
+      "title": "Frontend Engineering",
+      "description": "Moderne SPA'er med <strong>Angular</strong> og <strong>TypeScript</strong>. Fokus på performance, state management og intuitiv UX."
+    },
+    "infrastructure": {
+      "title": "Infrastructure & Hosting",
+      "description": "Opsætning og administration af <strong>vServer-miljøer</strong> (Strato). Deployment af webprojekter via Docker og Nginx."
+    },
+    "aiAutomation": {
+      "title": "AI & Automation",
+      "description": "Integration af <strong>LLM'er</strong> i software-workflows. Udvikling af AI-baserede værktøjer og automatisering af processer. Realtidskommunikation og eventstyrede arkitekturer."
+    },
+    "data": {
+      "title": "Data",
+      "description": "Design og optimering af relationelle og NoSQL-databaser. Fokus på dataintegritet og performance-tuning."
+    },
+    "devops": {
+      "title": "DevOps",
+      "description": "Automatisering af deployment-processer og container-orkestrering til skalerbare cloud-infrastrukturer."
+    },
+    "workflow": {
+      "title": "Workflow & Tools",
+      "description": "Sikker håndtering af moderne udviklingsmiljøer og agile metoder. Ekspertviden inden for modellering og transformation af komplekse dataformater."
+    },
+    "architecture": {
+      "title": "Architecture",
+      "description": "Konceptualisering af vedligeholdelsesvenlige systemer gennem <strong>Domain-Driven Design (DDD)</strong> og hexagonale arkitekturer."
+    }
+  },
+  "projects": {
+    "headline": "Featured Projects",
+    "introText": "Et udvalg af mine arbejder inden for e-handel, offentlig administration og industriel softwareudvikling.",
+    "items": {
+      "emobility": {
+        "title": "Administrationssoftware til E-Mobilitet",
+        "company": "TECCON (Forskningsprojekt)",
+        "description": "Konceptualisering og nyudvikling af en cloud-microservices-arkitektur til innovative ladeinfrastrukturer. Fokus på skalerbare systemer og automatiseret kvalitetssikring."
+      },
+      "amm": {
+        "title": "Arbejdsmarkedsmonitor (AMM)",
+        "company": "Bundesagentur für Arbeit",
+        "description": "Videreudvikling af et analyseinstrument til regionale arbejdsmarkedsstrukturer. Implementering af interaktive grafer og migrering til moderne biblioteker."
+      },
+      "education": {
+        "title": "Informationssystem for Uddannelse og Erhverv",
+        "company": "Bundesagentur für Arbeit",
+        "description": "Vedligeholdelse af centrale online-tjenester (ELAN, Entgeldatlas). Fokus på tilgængelig PDF-generering og kompleks databehandling."
+      },
+      "casino": {
+        "title": "Online Casino Platform",
+        "company": "edict egaming GmbH",
+        "description": "Udvikling af højtilgængelige casinoløsninger. Opbygning af deklarative CI/CD-pipelines og implementering af nye marketing-microservices."
+      }
+    }
+  },
+  "about": {
+    "headline": "Turning coffee into code since 2005.",
+    "introText": "Fra et diplom i erhvervsinformatik ved universitetet i Paderborn til udvikling af enterprise-løsninger for Bundesagentur für Arbeit: Min passion tilhører stabile backends og højtydende frontends.",
+    "stats": {
+      "expValue": "19+",
+      "expLabel": "Års erfaring",
+      "codeValue": "2005",
+      "codeLabel": "Første linje kode",
+      "focusValue": "Fullstack",
+      "focusLabel": "Fokus",
+      "infraValue": "VServer",
+      "infraLabel": "Infrastruktur"
+    },
+    "timeline": {
+      "bootcamp": {
+        "title": "Intensivt Bootcamp Fullstack Development",
+        "company": "neuefische GmbH",
+        "description": "Fordybelse i moderne webteknologier: Fra arkitektur med Next.js (App & Pages Router) over cloud-deployment til moderne backend-strukturer med Node.js."
+      },
+      "teccon": {
+        "title": "Senior Fullstack-udvikler",
+        "company": "TECCON (Forskningsprojekt)",
+        "description": "Konceptualisering og nyudvikling af en cloud-microservices-arkitektur til innovative ladeinfrastrukturer."
+      },
+      "ba_amm": {
+        "title": "Fullstack-udvikler (Arbejdsmarkedsmonitor)",
+        "company": "Bundesagentur für Arbeit",
+        "description": "Videreudvikling af et analyseinstrument til regionale arbejdsmarkedsstrukturer. Implementering af interaktive grafer."
+      },
+      "ba_education": {
+        "title": "Backend-udvikler (Informationssystem for Uddannelse & Erhverv)",
+        "company": "Bundesagentur für Arbeit",
+        "description": "Vedligeholdelse af centrale online-tjenester (ELAN, Entgeldatlas). Fokus på tilgængelig PDF-generering."
+      },
+      "edict": {
+        "title": "Softwareudvikler",
+        "company": "edict egaming GmbH",
+        "description": "Udvikling af højtilgængelige casinoløsninger og opbygning af deklarative CI/CD-pipelines."
+      },
+      "hmmh": {
+        "title": "E-Commerce Software Engineer",
+        "company": "hmmh multimediahaus AG",
+        "description": "Multi-tenant e-handelsplatform baseret på Hybris og vedligeholdelse af Intershop-systemer. Oprettelse af proof-of-concepts til akkvisition."
+      },
+      "areva": {
+        "title": "Java Component Expert",
+        "company": "AREVA NP GmbH",
+        "description": "Kravanalyse, datamodellering i UML og implementering af applikationer i Java, Struts og Python."
+      },
+      "isweb": {
+        "title": "The Web Begins",
+        "company": "is@web GmbH",
+        "description": "Oprettelse af dynamiske hjemmesider med HTML/CSS og JavaScript. Udtrækning af data fra CMS og oprettelse af workflows."
+      },
+      "university": {
+        "title": "Pioneering Tech",
+        "company": "Universitetet i Paderborn",
+        "description": "Forskning i XML-dokumenter til PDA'er og tværgående arkitekturer i SIRENA-projektet."
+      }
+    }
+  },
+  "education": {
+    "title": "Uddannelsesforløb",
+    "items": {
+      "university": {
+        "title": "Diplomuddannelse i Erhvervsinformatik",
+        "description": "<h2>Universitetet i Paderborn</h2>Hovedområder: Softwareteknologi, databaser, informationssystemer og virksomhedsøkonomi."
+      },
+      "milchwerke": {
+        "title": "Erhvervsuddannelse inden for industri og handel",
+        "description": "<h2>Milchwerke Westfalen eG, Herford</h2>Eksamen: Industriekauffrau. Grundstenen for forståelsen af økonomiske processer."
+      },
+      "erich_gutenberg": {
+        "title": "Erhvervsfaglig studentereksamen (adgangskvalifikation til universitetet)",
+        "description": "<h2>Erich-Gutenberg-Schule, Bünde</h2>Højere handelsskole, speciale: Kontoradministration."
+      }
+    }
+  },
+  "imprint": {
+    "title": "Juridisk meddelelse",
+    "hostingText": "Denne hjemmeside er hosted af:"
+  },
+  "privacy": {
+    "title": "Privatlivspolitik",
+    "headline": "Privatlivspolitik"
+  },
+  "nav": {
+    "skills": "Skills",
+    "projects": "Projekter",
+    "about": "Erfaring",
+    "education": "Uddannelse",
+    "contact": "Kontakt"
+  },
+  "footer": {
+    "role": "Senior Fullstack-udvikler",
+    "imprint": "Juridisk meddelelse",
+    "privacy": "Privatlivspolitik"
+  }
+}
