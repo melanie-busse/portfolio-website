@@ -1,5 +1,17 @@
+import { ComponentType } from "react";
+import {
+  FaCoins,
+  FaBagShopping,
+  FaAtom,
+  FaWindowMaximize,
+  FaEarthEurope,
+  FaGraduationCap,
+  FaCode,
+} from "react-icons/fa6";
+
 export interface TimelineEntry {
   id: string;
+  icon: ComponentType;
   year: string;
   tags: {
     frontend?: string[];
@@ -11,6 +23,7 @@ export interface TimelineEntry {
 export const timelineData: TimelineEntry[] = [
   {
     id: "bootcamp",
+    icon: FaCode,
     year: "2025 - 2026",
     tags: {
       frontend: ["Next.js", "React", "TypeScript", "JavaScript"],
@@ -20,6 +33,7 @@ export const timelineData: TimelineEntry[] = [
   },
   {
     id: "teccon",
+    icon: FaEarthEurope,
     year: "2022 - 2025",
     tags: {
       frontend: ["Angular", "TypeScript"],
@@ -29,6 +43,7 @@ export const timelineData: TimelineEntry[] = [
   },
   {
     id: "edict",
+    icon: FaCoins,
     year: "2015 - 2021",
     tags: {
       frontend: ["Angular", "TypeScript", "JavaScript"],
@@ -38,6 +53,7 @@ export const timelineData: TimelineEntry[] = [
   },
   {
     id: "hmmh",
+    icon: FaBagShopping,
     year: "2013 - 2015",
     tags: {
       frontend: ["Web-Content"],
@@ -47,6 +63,7 @@ export const timelineData: TimelineEntry[] = [
   },
   {
     id: "areva",
+    icon: FaAtom,
     year: "2007 - 2013",
     tags: {
       frontend: ["JSP", "Swing", "GUI Design"],
@@ -56,6 +73,7 @@ export const timelineData: TimelineEntry[] = [
   },
   {
     id: "isweb",
+    icon: FaWindowMaximize,
     year: "2005 - 2007",
     tags: {
       frontend: ["HTML", "CSS", "JavaScript", "Photoshop"],
@@ -65,6 +83,7 @@ export const timelineData: TimelineEntry[] = [
   },
   {
     id: "university",
+    icon: FaGraduationCap,
     year: "2004",
     tags: {
       frontend: ["Graphical UI (PDA)", "JSP"],

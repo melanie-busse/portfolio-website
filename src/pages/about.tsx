@@ -8,8 +8,7 @@ import { PageContainer } from "@/components/PageContainer";
 import { Grid } from "@/components/Grid";
 import { Card } from "@/components/Card";
 import { Period } from "@/components/Period";
-import { CardContent } from "@/components/CardContent";
-import { TagGroup } from "@/components/TagGroup";
+import BentoCard from "@/components/BentoCard";
 
 export default function About() {
   const t = useTranslations("about");
@@ -38,21 +37,20 @@ export default function About() {
       </Grid>
 
       <TimelineWrapper>
-        {timelineData.map((item) => (
-          <TimelineItem key={item.id}>
-            {" "}
-            {/* 💡 Eindeutige ID statt Index */}
-            <Period text={item.year} />
-            <CardContent
-              title={t(`timeline.${item.id}.title`)}
-              company={t(`timeline.${item.id}.company`)}
-              description={t(`timeline.${item.id}.description`)}
-            >
-              {/* 💡 Direkt das strukturierte Objekt übergeben – Typenkonflikt gelöst! */}
-              <TagGroup tags={item.tags} />
-            </CardContent>
-          </TimelineItem>
-        ))}
+        {timelineData.map((item) => {
+          const mappedTimelineAsSkill = {
+            icon: item.icon || "WorkIcon",
+            translationKey: `about.timeline.${item.id}`,
+            badges: item.tags,
+          };
+
+          return (
+            <TimelineItem key={item.id}>
+              <Period text={item.year} />
+              <BentoCard skill={mappedTimelineAsSkill} $gridArea={"auto"} />
+            </TimelineItem>
+          );
+        })}
       </TimelineWrapper>
     </PageContainer>
   );
