@@ -12,12 +12,13 @@ export const petrolTheme = {
       nav: "rgba(13, 21, 32, 0.7)",
       bentoBox: "rgba(0, 242, 255, 0.05)",
       iconWrapper: "rgba(0, 242, 255, 0.4)",
+      techBadge: "rgba(0, 212, 255, 0.03)",
 
       hovers: {
         card: "rgba(0, 242, 255, 0.1)",
         h1: "rgba(0, 242, 255, 0.3)",
         shadow: "rgba(0, 242, 255, 0.15)",
-        tech: "rgba(0, 242, 255, 0.20)",
+        tech: "rgba(0, 212, 255, 0.15)",
       },
     },
     primaryPetrol: "#0098ad",
@@ -26,7 +27,6 @@ export const petrolTheme = {
     textMain: "#f5f5f5",
     textMuted: "#a0a0a0",
     borderTop: "#2a8f86",
-    details: "rgba(160, 160, 160, 0.8)",
   },
   categories: {
     frontend: {
@@ -53,12 +53,12 @@ export const petrolTheme = {
     box: "0 0 30px #0098ad",
     hover: "0 10px 30px rgba(0, 242, 255, 0.15)",
     nav: "0 0 10px #00f2ff",
-    tech: "0 0 10px rgba(0, 242, 255, 0.20)",
+    tech: "0 0 8px rgba(0, 212, 255, 0.2);",
   },
   borders: {
     border: "1px solid rgba(0, 242, 255, 0.05)",
     timeline: "2px solid rgba(0, 242, 255, 0.2)",
-    techBadge: "1px solid rgba(0, 242, 255, 0.15)",
+    techBadge: "1px solid rgba(0, 212, 255, 0.4)",
     button: "1px solid #00f2ff",
     image: "2px solid #00d4eb",
     top: "2px solid #2a8f86",
@@ -136,7 +136,7 @@ export const GlobalStyle = createGlobalStyle`
     h3 {
       font-size: 1.5rem;
       color: ${(props) => props.theme.colors.textMain};
-      margin-bottom: 0.3rem;
+      margin: 0;
     }
     
     h4 {
@@ -147,7 +147,9 @@ export const GlobalStyle = createGlobalStyle`
     
     p {
       color: ${(props) => props.theme.colors.textMuted};
-      line-height: 1.6;
+      line-height: 1.62;
       font-size: 1.1rem;
+      margin-bottom: 0;
+      font-family:  ${(props) => props.theme.fonts.tech};
     }
 `;
