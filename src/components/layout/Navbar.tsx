@@ -2,7 +2,7 @@ import styled from "styled-components";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { useTranslations } from "next-intl";
-import LanguageSwitcher from "@/components/LanguageSwitcher";
+import LanguageSwitcher from "@/components/features/LanguageSwitcher";
 
 export default function Navbar() {
   const router = useRouter();
@@ -18,7 +18,7 @@ export default function Navbar() {
           Melanie<span>Busse</span>
         </Logo>
         <NavLinks>
-          <NavLink href="/" locale={locale} $active={isActive("/")}>
+          <NavLink href="/public" locale={locale} $active={isActive("/")}>
             {t("skills")}
           </NavLink>
           <NavLink href="/projects" locale={locale} $active={isActive("/projects")}>

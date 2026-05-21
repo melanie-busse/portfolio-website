@@ -4,8 +4,8 @@ import { ThemeProvider } from "styled-components";
 import { NextIntlClientProvider } from "next-intl";
 
 import { petrolTheme, GlobalStyle } from "@/styles/theme";
-import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
+import Navbar from "@/components/layout/Navbar";
+import Footer from "@/components/layout/Footer";
 
 export default function App({ Component, pageProps }: AppProps) {
   const router = useRouter();

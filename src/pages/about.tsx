@@ -3,12 +3,12 @@ import { GetStaticProps } from "next";
 import { useTranslations } from "next-intl";
 
 import { timelineData } from "@/data/timelineData";
-import { HeaderSection } from "@/components/HeaderSection";
-import { PageContainer } from "@/components/PageContainer";
-import { Grid } from "@/components/Grid";
-import { Card } from "@/components/Card";
-import { Period } from "@/components/Period";
-import BentoCard from "@/components/BentoCard";
+import { HeaderSection } from "@/components/features/HeaderSection";
+import { PageContainer } from "@/components/common/PageContainer";
+import { Grid } from "@/components/layout/Grid";
+import { Card } from "@/components/layout/Card";
+import { Period } from "@/components/common/Period";
+import BentoCard from "@/components/features/BentoCard";
 
 export default function About() {
   const t = useTranslations("about");

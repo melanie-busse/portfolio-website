@@ -2,8 +2,8 @@ import styled from "styled-components";
 import Head from "next/head";
 import { GetStaticProps } from "next";
 import { useTranslations } from "next-intl";
-import { PageContainer } from "@/components/PageContainer";
-import { ContentBox } from "@/components/ContentBox";
+import { PageContainer } from "@/components/common/PageContainer";
+import { ContentBox } from "@/components/common/ContentBox";
 
 export default function Datenschutz() {
   const t = useTranslations("privacy");

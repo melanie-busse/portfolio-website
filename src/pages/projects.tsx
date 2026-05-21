@@ -3,10 +3,10 @@ import { useTranslations } from "next-intl";
 import { GetStaticProps } from "next";
 
 import { projectsData } from "@/data/projectsData";
-import { HeaderSection } from "@/components/HeaderSection";
-import { PageContainer } from "@/components/PageContainer";
-import { Period } from "@/components/Period";
-import BentoCard from "@/components/BentoCard";
+import { HeaderSection } from "@/components/features/HeaderSection";
+import { PageContainer } from "@/components/common/PageContainer";
+import { Period } from "@/components/common/Period";
+import BentoCard from "@/components/features/BentoCard";
 
 export default function Projects() {
   const t = useTranslations("projects");

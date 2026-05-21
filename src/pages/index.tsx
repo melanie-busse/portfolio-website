@@ -1,5 +1,5 @@
-import Hero from "@/components/Hero";
-import SkillsGrid from "@/components/SkillsGrid";
+import Hero from "@/components/features/Hero";
+import SkillsGrid from "@/components/features/SkillsGrid";
 import { GetStaticProps } from "next";
 
 export default function Home() {

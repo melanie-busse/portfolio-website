@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 import { skillsData } from "@/data/skillsData";
-import BentoCard from "@/components/BentoCard";
+import BentoCard from "@/components/features/BentoCard";
 
 export default function SkillsGrid() {
   return (

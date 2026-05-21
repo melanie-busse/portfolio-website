@@ -4,8 +4,8 @@ import { GetStaticProps } from "next";
 import { useTranslations } from "next-intl";
 
 import { educationData } from "@/data/educationData";
-import BentoCard from "@/components/BentoCard";
-import { Period } from "@/components/Period";
+import BentoCard from "@/components/features/BentoCard";
+import { Period } from "@/components/common/Period";
 
 export default function Education() {
   const t = useTranslations("education");

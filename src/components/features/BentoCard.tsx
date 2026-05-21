@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { useTranslations } from "next-intl";
 
-import TechBadge from "@/components/TechBadge";
+import TechBadge from "@/components/common/TechBadge";
 
 export default function BentoCard({ skill, $gridArea }: { skill: any; $gridArea?: any }) {
   const IconComponent = skill.icon;
@@ -105,8 +105,6 @@ const IconWrapper = styled.div`
 const CardTitle = styled.h3``;
 
 const CardText = styled.p``;
-
-const Institute = styled.h2``;
 
 export const BadgeContainer = styled.div`
   display: flex;
