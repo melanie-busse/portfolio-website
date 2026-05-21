@@ -1,6 +1,21 @@
-export const projectsData = [
+import { FaChargingStation, FaChartLine, FaCoins, FaSitemap } from "react-icons/fa6";
+import { ComponentType } from "react";
+
+export interface ProjectEntry {
+  id: string;
+  icon: ComponentType;
+  period: string;
+  tags?: {
+    frontend?: string[];
+    backend?: string[];
+    tools?: string[];
+  };
+}
+
+export const projectsData: ProjectEntry[] = [
   {
     id: "emobility",
+    icon: FaChargingStation,
     period: "Seit 09/2024",
     tags: {
       frontend: ["Angular", "TypeScript", "Playwright", "Jasmine", "Bootstrap"],
@@ -10,6 +25,7 @@ export const projectsData = [
   },
   {
     id: "amm",
+    icon: FaChartLine,
     period: "01/2024 – 08/2024",
     tags: {
       frontend: ["Django Templates", "Bootstrap", "JavaScript", "Barrierefreiheit"],
@@ -19,6 +35,7 @@ export const projectsData = [
   },
   {
     id: "education",
+    icon: FaSitemap,
     period: "01/2022 – 08/2024",
     tags: {
       frontend: ["Angular", "TypeScript", "Jasmine", "Silk-Tests", "Barrierefreiheit"],
@@ -28,6 +45,7 @@ export const projectsData = [
   },
   {
     id: "casino",
+    icon: FaCoins,
     period: "08/2015 – 06/2021",
     tags: {
       frontend: ["Angular", "JavaScript", "Jasmine/Karma"],

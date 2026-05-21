@@ -1,32 +1,35 @@
 import styled from "styled-components";
+import { useTranslations } from "next-intl";
+import { GetStaticProps } from "next";
+
 import { projectsData } from "@/data/projectsData";
 import { HeaderSection } from "@/components/HeaderSection";
 import { PageContainer } from "@/components/PageContainer";
-
 import { Period } from "@/components/Period";
-import { CardContent } from "@/components/CardContent";
-import { TagGroup } from "@/components/TagGroup";
-import { useTranslations } from "next-intl";
-import { GetStaticProps } from "next";
+import BentoCard from "@/components/BentoCard";
 
 export default function Projects() {
   const t = useTranslations("projects");
   return (
     <PageContainer>
       <HeaderSection headline={t("headline")} text={t("introText")} />
+      <Grid>
+        {projectsData.map((project) => {
+          const mappedProjectAsSkill = {
+            id: project.id,
+            icon: project.icon,
+            translationKey: `projects.items.${project.id}`,
+            badges: project.tags,
+          };
 
-      {projectsData.map((project) => (
-        <CardContainer key={project.id}>
-          <Period text={project.period} />
-          <CardContent
-            title={t(`items.${project.id}.title`)}
-            company={t(`items.${project.id}.company`)}
-            description={t(`items.${project.id}.description`)}
-          >
-            <TagGroup tags={project.tags} />
-          </CardContent>
-        </CardContainer>
-      ))}
+          return (
+            <CardContainer key={project.id}>
+              <Period text={project.period} />
+              <BentoCard skill={mappedProjectAsSkill} $gridArea="auto" />
+            </CardContainer>
+          );
+        })}
+      </Grid>
     </PageContainer>
   );
 }
@@ -43,4 +46,10 @@ export const getStaticProps: GetStaticProps = async ({ locale }) => {
 const CardContainer = styled.div`
   position: relative;
   margin-bottom: 4rem;
+`;
+
+const Grid = styled.div`
+  position: relative;
+  margin-left: 20px;
+  padding-left: 40px;
 `;
