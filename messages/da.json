@@ -130,19 +130,16 @@
     "title": "Uddannelsesforløb",
     "items": {
       "university": {
-        "institution": "Universitetet i Paderborn",
-        "degree": "Diplomuddannelse i Erhvervsinformatik",
-        "details": "Hovedområder: Softwareteknologi, databaser, informationssystemer og virksomhedsøkonomi."
+        "title": "Diplomuddannelse i Erhvervsinformatik",
+        "description": "<h2>Universitetet i Paderborn</h2>Hovedområder: Softwareteknologi, databaser, informationssystemer og virksomhedsøkonomi."
       },
       "milchwerke": {
-        "institution": "Milchwerke Westfalen eG, Herford",
-        "degree": "Erhvervsuddannelse inden for industri og handel",
-        "details": "Eksamen: Industriekauffrau. Grundstenen for forståelsen af økonomiske processer."
+        "title": "Erhvervsuddannelse inden for industri og handel",
+        "description": "<h2>Milchwerke Westfalen eG, Herford</h2>Eksamen: Industriekauffrau. Grundstenen for forståelsen af økonomiske processer."
       },
       "erich_gutenberg": {
-        "institution": "Erich-Gutenberg-Schule, Bünde",
-        "degree": "Erhvervsfaglig studentereksamen (adgangskvalifikation til universitetet)",
-        "details": "Højere handelsskole, speciale: Kontoradministration."
+        "title": "Erhvervsfaglig studentereksamen (adgangskvalifikation til universitetet)",
+        "description": "<h2>Erich-Gutenberg-Schule, Bünde</h2>Højere handelsskole, speciale: Kontoradministration."
       }
     }
   },

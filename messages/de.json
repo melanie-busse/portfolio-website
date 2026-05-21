@@ -131,19 +131,16 @@
     "title": "Bildungsweg",
     "items": {
       "university": {
-        "institution": "Universität Paderborn",
-        "degree": "Diplom-Wirtschaftsinformatik",
-        "details": "Schwerpunkte: Softwaretechnik, Datenbanken, Informationssysteme und Betriebswirtschaftslehre."
+        "title": "Diplom-Wirtschaftsinformatik",
+        "description": "<h2>Universität Paderborn</h2>Schwerpunkte: Softwaretechnik, Datenbanken, Informationssysteme und Betriebswirtschaftslehre."
       },
       "milchwerke": {
-        "institution": "Milchwerke Westfalen eG, Herford",
-        "degree": "Ausbildung zur Industriekauffrau",
-        "details": "Abschluss: Industriekauffrau. Grundstein für das Verständnis wirtschaftlicher Prozesse."
+        "title": "Ausbildung zur Industriekauffrau",
+        "description": "<h2>Milchwerke Westfalen eG, Herford</h2>Abschluss: Industriekauffrau. Grundstein für das Verständnis wirtschaftlicher Prozesse."
       },
       "erich_gutenberg": {
-        "institution": "Erich-Gutenberg-Schule, Bünde",
-        "degree": "Fachhochschulreife",
-        "details": "Höhere Handelsschule, Schwerpunkt: Bürowirtschaft."
+        "title": "Fachhochschulreife",
+        "description": "<h2>Erich-Gutenberg-Schule, Bünde</h2>Höhere Handelsschule, Schwerpunkt: Bürowirtschaft."
       }
     }
   },

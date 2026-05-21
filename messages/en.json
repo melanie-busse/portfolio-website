@@ -131,19 +131,16 @@
     "title": "Educational Path",
     "items": {
       "university": {
-        "institution": "University of Paderborn",
-        "degree": "Degree in Business Informatics (Diplom-Wirtschaftsinformatik)",
-        "details": "Specializations: Software Engineering, Databases, Information Systems, and Business Administration."
+        "title": "Degree in Business Informatics (Diplom-Wirtschaftsinformatik)",
+        "description": "<h2>University of Paderborn</h2>Specializations: Software Engineering, Databases, Information Systems, and Business Administration."
       },
       "milchwerke": {
-        "institution": "Milchwerke Westfalen eG, Herford",
-        "degree": "Apprenticeship as Industrial Clerk",
-        "details": "Degree: Industrial Clerk (Industriekauffrau). Foundation for understanding core economic and business processes."
+        "title": "Apprenticeship as Industrial Clerk",
+        "description": "<h2>Milchwerke Westfalen eG, Herford</h2>Degree: Industrial Clerk (Industriekauffrau). Foundation for understanding core economic and business processes."
       },
       "erich_gutenberg": {
-        "institution": "Erich-Gutenberg-Schule, Bünde",
-        "degree": "Higher Commercial Certificate (Fachhochschulreife)",
-        "details": "Higher commercial school, specialization: Office Management."
+        "title": "Higher Commercial Certificate (Fachhochschulreife)",
+        "description": "<h2>Erich-Gutenberg-Schule, Bünde</h2>Higher commercial school, specialization: Office Management."
       }
     }
   },

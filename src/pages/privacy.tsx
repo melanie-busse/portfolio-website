@@ -118,7 +118,7 @@ const SubTitle = styled.h3`
 
 const Text = styled.p`
   margin-bottom: 1rem;
-  color: ${(props) => props.theme.colors.details};
+  color: ${(props) => props.theme.colors.textMuted};
   line-height: 1.6;
 
   a {
