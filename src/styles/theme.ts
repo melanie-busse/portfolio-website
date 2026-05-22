@@ -64,6 +64,7 @@ export const petrolTheme = {
     top: "2px solid #2a8f86",
     borderRadius: "24px",
     section: "3px solid #00f2ff",
+    sectionThin: "1px solid #00f2ff",
     borderFooter: "1px solid rgba(0, 242, 255, 0.1)",
   },
   fonts: {
