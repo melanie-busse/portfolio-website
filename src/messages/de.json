@@ -46,7 +46,28 @@
       "emobility": {
         "title": "Verwaltungssoftware E-Mobilität",
         "company": "TECCON (Forschungsprojekt)",
-        "description": "Konzeption und Neuentwicklung einer Cloud-Microservices-Architektur für innovative Ladeinfrastrukturen. Fokus auf skalierbare Systeme und automatisierte Qualitätssicherung."
+        "description": "Konzeption und Neuentwicklung einer Cloud-Microservices-Architektur für innovative Ladeinfrastrukturen. Fokus auf skalierbare Systeme und automatisierte Qualitätssicherung.",
+        "leadText": "Im Rahmen eines innovativen E-Mobility-Forschungsprojekts habe ich die Konzeption und Neuentwicklung einer cloudbasierten Verwaltungssoftware für Ladeinfrastrukturen begleitet. Als Fullstack-Entwicklerin reichte mein Aufgabengebiet vom Requirements Engineering über das Design der Microservices-Architektur und der Single-Page-Applikation bis hin zum Aufbau der Cloud-Infrastruktur.",
+        "challenges": [
+          {
+            "id": "architecture",
+            "icon": "architecture",
+            "title": "Vernetzte Microservices",
+            "description": "Konzeption einer Cloud-Architektur mit Quarkus und Kafka zur zuverlässigen Anbindung externer Systeme wie Ladesäulen-Infrastruktur und Buchhaltung."
+          },
+          {
+            "id": "testing",
+            "icon": "testing",
+            "title": "E2E Testarchitektur",
+            "description": "Aufbau einer lückenlosen, automatisierten Testlandschaft von Unit- und Integrationstests im Backend bis hin zu Playwright im Angular-Frontend."
+          },
+          {
+            "id": "devops",
+            "icon": "devops",
+            "title": "Requirements & DevOps",
+            "description": "Ganzheitliche Umsetzung fachlicher Anforderungen vom agilen Stakeholder-Refinement bis zum Cloud-Deployment via Azure Pipelines und Kubernetes."
+          }
+        ]
       },
       "amm": {
         "title": "Arbeitsmarktmonitor (AMM)",
@@ -63,7 +84,9 @@
         "company": "edict egaming GmbH",
         "description": "Entwicklung hochverfügbarer Casinolösungen. Aufbau deklarativer CI/CD-Pipelines und Implementierung neuer Marketing-Microservices."
       }
-    }
+    },
+    "backToOverview": "Zurück zur Übersicht",
+    "viewLiveProject": "Projekt live ansehen"
   },
   "about": {
     "headline": "Turning coffee into code since 2005.",

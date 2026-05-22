@@ -42,7 +42,7 @@ export default function Education() {
 }
 
 export const getStaticProps: GetStaticProps = async ({ locale }) => {
-  const messages = (await import(`../../messages/${locale || "de"}.json`)).default;
+  const messages = (await import(`@/messages/${locale || "de"}.json`)).default;
   return {
     props: {
       messages,

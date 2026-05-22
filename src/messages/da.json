@@ -63,7 +63,9 @@
         "company": "edict egaming GmbH",
         "description": "Udvikling af højtilgængelige casinoløsninger. Opbygning af deklarative CI/CD-pipelines og implementering af nye marketing-microservices."
       }
-    }
+    },
+    "backToOverview": "Tilbage til oversigten",
+    "viewLiveProject": "Se live projekt"
   },
   "about": {
     "headline": "Turning coffee into code since 2005.",
