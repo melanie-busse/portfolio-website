@@ -23,6 +23,7 @@ const StyledTechBadge = styled.span<{ $type: BadgeType }>`
   font-size: 0.75rem;
   font-weight: 600;
   letter-spacing: 0.03em;
+  text-transform: capitalize;
   padding: 0.4rem 0.8rem;
   border-radius: 6px;
   transition: all 0.25s ease-in-out;

@@ -1,7 +1,9 @@
+import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import { useTranslations } from "next-intl";
 import Link from "next/link";
 import { FaArrowLeft, FaBuilding, FaExternalLinkAlt } from "react-icons/fa";
+
 import { Period } from "@/components/common/Period";
 
 interface ProjectHeaderProps {
@@ -16,14 +18,25 @@ interface ProjectHeaderProps {
 export default function ProjectHeader({ project }: ProjectHeaderProps) {
   const t = useTranslations();
 
-  // Falls das Projekt noch lädt (wegen fallback: "blocking"), sichern wir uns ab
+  // Sichert ab, dass Server und Client beim ersten Render exakt dasselbe tun
+  const [isMounted, setIsMounted] = useState(false);
+
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
+
   if (!project) return null;
+
+  // Bis der Client bereit ist, rendern wir ein leures Element mit passenden Maßen
+  // Dadurch fliegt der HTML-Mismatch-Fehler sofort raus!
+  if (!isMounted) {
+    return <HeaderPlaceholder />;
+  }
 
   const IconComponent = project.icon;
 
   return (
     <HeaderWrapper>
-      {/* Zurück-Link zur Übersicht */}
       <BackLink href="/projects">
         <FaArrowLeft size={14} />
         {t("projects.backToOverview")}
@@ -32,9 +45,7 @@ export default function ProjectHeader({ project }: ProjectHeaderProps) {
       <HeaderContent>
         <TitleGroup>
           <Period text={project.period} />
-
           <MainTitle>{t(`projects.items.${project.id}.title`)}</MainTitle>
-
           <MetaContainer>
             <MetaItem>
               <FaBuilding size={16} />
@@ -56,7 +67,6 @@ export default function ProjectHeader({ project }: ProjectHeaderProps) {
           </MetaContainer>
         </TitleGroup>
 
-        {/* Das große "Ghost"-Icon im Hintergrund */}
         {IconComponent && (
           <IconBackground>
             <IconComponent />
@@ -67,7 +77,14 @@ export default function ProjectHeader({ project }: ProjectHeaderProps) {
   );
 }
 
-// --- STYLED COMPONENTS (unverändert) ---
+// Platzhalter-Komponente für das serverseitige Vorausschießen
+const HeaderPlaceholder = styled.div`
+  width: 100%;
+  height: 260px;
+  background: transparent;
+  margin-bottom: 2rem;
+`;
+
 const HeaderWrapper = styled.header`
   position: relative;
   width: 100%;
@@ -77,7 +94,7 @@ const HeaderWrapper = styled.header`
   border-radius: 16px;
   overflow: hidden;
   margin-bottom: 2rem;
-  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  box-shadow: ${(props) => props.theme.shadows.headerBox};
   backdrop-filter: blur(4px);
 `;
 
@@ -86,7 +103,7 @@ const BackLink = styled(Link)`
   align-items: center;
   gap: 0.5rem;
   color: ${({ theme }) => theme.colors.accentAqua};
-  font-family: ${({ theme }) => theme.fonts?.tech || "monospace"};
+  font-family: ${({ theme }) => theme.fonts.tech};
   font-size: 0.85rem;
   text-transform: uppercase;
   letter-spacing: 0.05em;
@@ -105,7 +122,7 @@ const HeaderContent = styled.div`
   align-items: flex-end;
   gap: 2rem;
 
-  @media (max-width: 768px) {
+  @media (max-width: ${(props) => props.theme.breakpoints.mobile}) {
     flex-direction: column;
     align-items: flex-start;
   }
@@ -121,7 +138,7 @@ const TitleGroup = styled.div`
 const MainTitle = styled.h1`
   font-size: clamp(1.75rem, 3vw, 2.5rem);
   font-weight: 700;
-  color: #f8fafc;
+  color: ${(props) => props.theme.colors.textMain};
   line-height: 1.1;
   margin: 0.5rem 0;
 `;
@@ -137,7 +154,7 @@ const MetaItem = styled.div`
   display: flex;
   align-items: center;
   gap: 0.6rem;
-  color: #94a3b8;
+  color: ${(props) => props.theme.colors.textMuted};
   font-size: 0.95rem;
   text-decoration: none;
 
@@ -160,13 +177,13 @@ const IconBackground = styled.div`
   right: 2rem;
   bottom: -1rem;
   font-size: 10rem;
-  color: ${({ theme }) => theme.colors.accentAqua || "#00f2fe"};
+  color: ${({ theme }) => theme.colors.accentAqua};
   opacity: 0.04;
   pointer-events: none;
   z-index: 1;
   transform: rotate(-10deg);
 
-  @media (max-width: 768px) {
+  @media (max-width: ${(props) => props.theme.breakpoints.mobile};) {
     display: none;
   }
 `;

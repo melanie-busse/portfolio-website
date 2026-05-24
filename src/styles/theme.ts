@@ -13,13 +13,24 @@ export const petrolTheme = {
       bentoBox: "rgba(0, 242, 255, 0.05)",
       iconWrapper: "rgba(0, 242, 255, 0.4)",
       techBadge: "rgba(0, 212, 255, 0.03)",
+      editor: "#0f172a",
+      editorHeader: "#1e293b",
+      codeArea: "#0b0f19",
+      contextBox: "rgba(30, 41, 59, 0.4)",
 
       hovers: {
         card: "rgba(0, 242, 255, 0.1)",
         h1: "rgba(0, 242, 255, 0.3)",
         shadow: "rgba(0, 242, 255, 0.15)",
         tech: "rgba(0, 212, 255, 0.15)",
+        impact: "rgba(255, 255, 255, 0.15)",
       },
+    },
+    code: {
+      yellow: "#f1fa8c",
+      pink: "#ff79c6",
+      green: "#50fa7b",
+      lightBlue: "#8be9fd",
     },
     primaryPetrol: "#0098ad",
     accentAqua: "#00d4eb",
@@ -27,6 +38,8 @@ export const petrolTheme = {
     textMain: "#f5f5f5",
     textMuted: "#a0a0a0",
     borderTop: "#2a8f86",
+    comments: "#64748b",
+    lineNumbers: "#334155",
   },
   categories: {
     frontend: {
@@ -54,6 +67,8 @@ export const petrolTheme = {
     hover: "0 10px 30px rgba(0, 242, 255, 0.15)",
     nav: "0 0 10px #00f2ff",
     tech: "0 0 8px rgba(0, 212, 255, 0.2);",
+    headerBox: "0 8px 32px 0 rgba(0, 0, 0, 0.37)",
+    editor: "0 12px 40px rgba(0, 0, 0, 0.5)",
   },
   borders: {
     border: "1px solid rgba(0, 242, 255, 0.05)",
@@ -66,6 +81,7 @@ export const petrolTheme = {
     section: "3px solid #00f2ff",
     sectionThin: "1px solid #00f2ff",
     borderFooter: "1px solid rgba(0, 242, 255, 0.1)",
+    editorHeader: "1px solid rgba(255, 255, 255, 0.05)",
   },
   fonts: {
     main: "'Segoe UI', Roboto, sans-serif",

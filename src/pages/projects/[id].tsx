@@ -1,12 +1,16 @@
 import { useRouter } from "next/router";
 import { GetStaticProps, GetStaticPaths } from "next";
-import { projectsData } from "@/data/projectsData";
 import { useTranslations } from "next-intl";
 
+import { projectsData } from "@/data/projectsData";
 import { PageContainer } from "@/components/common/PageContainer";
-import ProjectHeader from "@/components/layout/ProjectHeader";
-import ProjectLead from "@/components/layout/ProjectLead";
-import ProjectChallengeSection from "@/components/layout/ProjectChallengeSection";
+import ProjectHeader from "@/components/layout/ProjectPage/ProjectHeader";
+import ProjectLead from "@/components/layout/ProjectPage/ProjectLead";
+import ProjectChallenge from "@/components/layout/ProjectPage/ProjectChallenge";
+import ProjectTechnology from "@/components/layout/ProjectPage/ProjectTechnology";
+import ProjectImpact from "@/components/layout/ProjectPage/ProjectImpact";
+import ProjectDeepDive from "@/components/layout/ProjectPage/ProjectDeepDive";
+import ProjectStack from "@/components/layout/ProjectPage/ProjectStack";
 
 export default function ProjectDetails() {
   const t = useTranslations();
@@ -35,7 +39,11 @@ export default function ProjectDetails() {
     <PageContainer>
       <ProjectHeader project={project} />
       <ProjectLead projectId={project.id} />
-      <ProjectChallengeSection projectId={project.id} />
+      <ProjectChallenge projectId={project.id} />
+      <ProjectTechnology projectId={project.id} />
+      <ProjectImpact projectId={project.id} />
+      <ProjectDeepDive projectId={project.id} />
+      <ProjectStack projectId={project.id} />
     </PageContainer>
   );
 }

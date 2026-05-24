@@ -67,6 +67,89 @@
             "title": "Requirements & DevOps",
             "description": "Ganzheitliche Umsetzung fachlicher Anforderungen vom agilen Stakeholder-Refinement bis zum Cloud-Deployment via Azure Pipelines und Kubernetes."
           }
+        ],
+        "architecture": [
+          {
+            "id": "quarkus",
+            "title": "Quarkus & Java 21",
+            "description": "Einsatz eines Cloud-Native-Frameworks für extrem schnelle Startzeiten, geringen Speicherverbrauch und moderne Java-Features im Microservice-Backend.",
+            "type": "backend"
+          },
+          {
+            "id": "kafka",
+            "title": "Apache Kafka",
+            "description": "Ereignisgesteuerte Kommunikation (Event-Driven Architecture) für den asynchronen und hochverfügbaren Datenaustausch mit der Ladeinfrastruktur.",
+            "type": "backend"
+          },
+          {
+            "id": "angular",
+            "title": "Angular & TS",
+            "description": "Realisierung einer hochperformanten, strukturierten Single-Page-Applikation (SPA) für das intuitive Management der Ladestationen.",
+            "type": "frontend"
+          },
+          {
+            "id": "kubernetes",
+            "title": "Docker & K8s",
+            "description": "Containerisierung aller Services und Orchestrierung via Kubernetes in der Azure-Cloud für maximale Skalierbarkeit und Zero-Downtime-Deployments.",
+            "type": "tools"
+          }
+        ],
+        "impact": [
+          {
+            "id": "angular-components",
+            "type": "frontend",
+            "badgeText": "Frontend",
+            "title": "Angular-Komponenten implementiert",
+            "description": "Entwurf und Umsetzung neuer, modularer UI-Komponenten in Angular und nahtlose Anbindung der Benutzeroberfläche an die REST-Schnittstellen des Backends."
+          },
+          {
+            "id": "microservices",
+            "type": "backend",
+            "badgeText": "Backend",
+            "title": "Quarkus Microservices entwickelt",
+            "description": "Konzeption und Implementierung robuster Backend-Services mit Java EE/Quarkus sowie ereignisgesteuerte Integration via Apache Kafka."
+          },
+          {
+            "id": "test-automation",
+            "type": "tools",
+            "badgeText": "QA / Testing",
+            "title": "Automatisierte Testlandschaft aufgebaut",
+            "description": "Aufbau der vollständigen Testarchitektur mit JUnit- und Integrationstests im Backend sowie automatisierten E2E-Tests mittels Playwright und Jasmine im Frontend."
+          },
+          {
+            "id": "ci-cd-devops",
+            "type": "tools",
+            "badgeText": "DevOps",
+            "title": "CI/CD-Pipelines & Cloud-Deployment",
+            "description": "Konfiguration automatisierter Deploymentprozesse über Azure DevOps-Pipelines zur sicheren Orchestrierung der Container innerhalb des Kubernetes-Clusters."
+          },
+          {
+            "id": "agile-requirements",
+            "type": "default",
+            "badgeText": "Agile",
+            "title": "Requirements Engineering & Refinement",
+            "description": "Ganzheitliche Begleitung neuer fachlicher Anforderungen von der Konzeption bis zum Refinement im direkten Austausch mit den Stakeholdern."
+          }
+        ],
+        "deepDive": {
+          "filePath": "quarkus/ChargingStationConsumer.java",
+          "context": "Die asynchrone Verarbeitung der Ladedaten über Apache Kafka stellte sicher, dass Spitzenlasten an den Ladestationen das Kernsystem nicht blockieren. Durch den reaktiven Quarkus-Consumer werden eingehende Buchungs- und Verbrauchsdaten isoliert, validiert und performant in die PostgreSQL-Datenbank geschrieben.",
+          "code": "// Reaktiver Kafka Consumer für Ladedaten\n@ApplicationScoped\npublic class ChargingStationConsumer {\n\n    @Inject\n    ChargingService chargingService;\n\n    @Incoming(\"charging-sessions\")\n    @Acknowledgment(Acknowledgment.Strategy.MANUAL)\n    public Uni<Void> processSession(Message<String> message) {\n        String payload = message.getPayload();\n        \n        return chargingService.validateAndSave(payload)\n            .onItem().transformToUni(v -> Uni.createFrom().completionStage(message.ack()))\n            .onFailure().recoverWithUni(err -> {\n                // Fehlerbehandlung & Dead-Letter-Queue\n                return Uni.createFrom().completionStage(message.nack(err));\n            });\n    }\n}"
+        },
+        "stack": [
+          { "name": "Java 21", "type": "backend" },
+          { "name": "Quarkus", "type": "backend" },
+          { "name": "Apache Kafka", "type": "backend" },
+          { "name": "PostgreSQL", "type": "backend" },
+          { "name": "Angular", "type": "frontend" },
+          { "name": "TypeScript", "type": "frontend" },
+          { "name": "RxJS", "type": "frontend" },
+          { "name": "Docker", "type": "tools" },
+          { "name": "Kubernetes", "type": "tools" },
+          { "name": "Azure DevOps", "type": "tools" },
+          { "name": "JUnit", "type": "tools" },
+          { "name": "Playwright", "type": "tools" },
+          { "name": "Scrum", "type": "default" }
         ]
       },
       "amm": {
