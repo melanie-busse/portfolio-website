@@ -7,8 +7,11 @@ export default function BentoCard({ skill, $gridArea }: { skill: any; $gridArea?
   const IconComponent = skill.icon;
   const t = useTranslations();
 
+  // Wir nutzen die Prop falls übergeben, andernfalls den Fallback aus dem Objekt
+  const finalGridArea = $gridArea || skill.gridArea;
+
   return (
-    <StyledBentoCard key={skill.id} $gridArea={skill.gridArea}>
+    <StyledBentoCard key={skill.id} $gridArea={finalGridArea}>
       <CardHeader>
         <IconWrapper>
           <IconComponent />
@@ -26,12 +29,13 @@ export default function BentoCard({ skill, $gridArea }: { skill: any; $gridArea?
         {Array.isArray(skill.badges)
           ? // WALKLING/SKILLS: flaches Array
             skill.badges.map((badge: string, index: number) => (
-              <TechBadge index={index} badge={badge} $type="default" />
+              <TechBadge key={`${badge}-${index}`} index={index} badge={badge} $type="default" />
             ))
           : // TIMELINE: Verschachteltes Objekt mit Kategorien
             Object.entries(skill.badges).flatMap(([category, badgeArray]) =>
               (badgeArray as string[]).map((badge: string, index: number) => (
                 <TechBadge
+                  key={`${badge}-${index}`}
                   index={index}
                   badge={badge}
                   $type={category as "frontend" | "backend" | "tools"}
@@ -50,15 +54,16 @@ const StyledBentoCard = styled.div<{ $gridArea?: string }>`
   border: ${(props) => props.theme.borders.border};
   border-radius: ${(props) => props.theme.borders.borderRadius};
   padding: 2rem;
-  padding-bottom: 2rem;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   min-height: 100%;
   height: 100%;
+  width: 100%; /* Zwingt die Karte mobil in die volle Breite des Grids */
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   position: relative;
   overflow: hidden;
+  box-sizing: border-box; /* Verhindert, dass das Padding die Karte über 100% drückt */
 
   h2 {
     color: ${(props) => props.theme.colors.primaryPetrol};
@@ -85,6 +90,11 @@ const StyledBentoCard = styled.div<{ $gridArea?: string }>`
     );
     pointer-events: none;
   }
+
+  /* Kleiner Touch-Sicherheitsabstand für kleinere Handys */
+  @media (max-width: ${(props) => props.theme.breakpoints?.mobile || "480px"}) {
+    padding: 1.5rem;
+  }
 `;
 
 const CardHeader = styled.div`
@@ -92,6 +102,7 @@ const CardHeader = styled.div`
   align-items: center;
   gap: 1rem;
   margin-bottom: 1.5rem;
+  width: 100%;
 `;
 
 const IconWrapper = styled.div`
@@ -100,11 +111,19 @@ const IconWrapper = styled.div`
   filter: drop-shadow(0 0 8px ${(props) => props.theme.colors.backgrounds.iconWrapper});
   display: flex;
   align-items: center;
+  flex-shrink: 0; /* Verhindert, dass das Icon auf schmalen Screens gequetscht wird */
 `;
 
-const CardTitle = styled.h3``;
+const CardTitle = styled.h3`
+  margin: 0;
+  word-break: break-word; /* Falls ein Titel mal sehr lang ist */
+`;
 
-const CardText = styled.p``;
+const CardText = styled.p`
+  margin: 0;
+  word-break: break-word; /* Schützt das Layout vor langen HTML-Strings */
+  hyphens: auto;
+`;
 
 export const BadgeContainer = styled.div`
   display: flex;
@@ -112,4 +131,5 @@ export const BadgeContainer = styled.div`
   gap: 0.6rem;
   margin-top: auto;
   padding-top: 1.5rem;
+  width: 100%;
 `;
