@@ -168,6 +168,10 @@
         "description": "Entwicklung hochverfügbarer Casinolösungen. Aufbau deklarativer CI/CD-Pipelines und Implementierung neuer Marketing-Microservices."
       }
     },
+    "navigation": {
+      "previous": "Vorheriges Projekt",
+      "next": "Nächstes Projekt"
+    },
     "backToOverview": "Zurück zur Übersicht",
     "viewLiveProject": "Projekt live ansehen"
   },

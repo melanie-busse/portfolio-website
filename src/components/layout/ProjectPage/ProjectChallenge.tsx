@@ -35,15 +35,16 @@ export default function ProjectChallenge({ projectId }: ProjectChallengeSectionP
       <SectionTitle title="01 / THE CHALLENGE" headline="Die Herausforderung" />
 
       <ChallengeGrid>
-        {challengesArray.map((challenge: any) => (
-          <ChallengeCard key={challenge.id}>
-            <CardIconWrapper>{getChallengeIcon(challenge.icon)}</CardIconWrapper>
-            <div className="card-content">
-              <h3>{challenge.title}</h3>
-              <p>{challenge.description}</p>
-            </div>
-          </ChallengeCard>
-        ))}
+        {Array.isArray(challengesArray) &&
+          challengesArray.map((challenge: any) => (
+            <ChallengeCard key={challenge.id}>
+              <CardIconWrapper>{getChallengeIcon(challenge.icon)}</CardIconWrapper>
+              <div className="card-content">
+                <h3>{challenge.title}</h3>
+                <p>{challenge.description}</p>
+              </div>
+            </ChallengeCard>
+          ))}
       </ChallengeGrid>
     </ProjectSection>
   );

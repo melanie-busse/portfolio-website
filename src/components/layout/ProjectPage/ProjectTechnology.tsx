@@ -17,24 +17,32 @@ export default function ProjectTechnology({ projectId }: ProjectSectionProps) {
       <SectionTitle title="02 / THE ARCHITECTURE" headline="Technologieentscheidungen" />
 
       <ArchitectureGrid>
-        {(t.raw(`projects.items.${projectId}.architecture`) || []).map(
-          (tech: any, index: number) => (
-            <ArchitectureCard key={tech.id}>
-              <CardHeader>
-                <StatusDot $type={tech.type || "default"} />
-                <h3>{tech.title}</h3>
-              </CardHeader>
+        {(() => {
+          const architectureData = t.raw(`projects.items.${projectId}.architecture`);
 
-              <p>{tech.description}</p>
+          // Nur mappen, wenn es wirklich ein Array ist!
+          if (Array.isArray(architectureData)) {
+            return architectureData.map((tech: any, index: number) => (
+              <ArchitectureCard key={tech.id || index}>
+                <CardHeader>
+                  <StatusDot $type={tech.type || "default"} />
+                  <h3>{tech.title}</h3>
+                </CardHeader>
 
-              <TechBadge
-                index={index}
-                badge={tech.type === "tools" ? "DevOps / Tools" : tech.type}
-                $type={tech.type || "default"}
-              />
-            </ArchitectureCard>
-          )
-        )}
+                <p>{tech.description}</p>
+
+                <TechBadge
+                  index={index}
+                  badge={tech.type === "tools" ? "DevOps / Tools" : tech.type}
+                  $type={tech.type || "default"}
+                />
+              </ArchitectureCard>
+            ));
+          }
+
+          // Falls es kein Array ist (z.B. während des Ladens), rendern wir einfach nichts
+          return null;
+        })()}
       </ArchitectureGrid>
     </ProjectSection>
   );

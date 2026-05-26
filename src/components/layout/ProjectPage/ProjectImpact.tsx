@@ -17,17 +17,27 @@ export default function ProjectImpact({ projectId }: ProjectImpactProps) {
       <SectionTitle title="03 / MY IMPACT" headline="Mein Beitrag" />
 
       <ImpactList>
-        {(t.raw(`projects.items.${projectId}.impact`) || []).map((item: any, index: number) => (
-          <ImpactRow key={item.id}>
-            <BadgeWrapper>
-              <TechBadge index={index} badge={item.badgeText} $type={item.type || "default"} />
-            </BadgeWrapper>
+        {(() => {
+          const impactData = t.raw(`projects.items.${projectId}.impact`);
 
-            <ImpactContent>
-              <strong>{item.title}</strong> – {item.description}
-            </ImpactContent>
-          </ImpactRow>
-        ))}
+          // Wir mappen nur, wenn next-intl uns wirklich ein echtes Array liefert
+          if (Array.isArray(impactData)) {
+            return impactData.map((item: any, index: number) => (
+              <ImpactRow key={item.id || index}>
+                <BadgeWrapper>
+                  <TechBadge index={index} badge={item.badgeText} $type={item.type || "default"} />
+                </BadgeWrapper>
+
+                <ImpactContent>
+                  <strong>{item.title}</strong> – {item.description}
+                </ImpactContent>
+              </ImpactRow>
+            ));
+          }
+
+          // Während des Ladens oder bei fehlenden Daten rendern wir einfach nichts
+          return null;
+        })()}
       </ImpactList>
     </ProjectSection>
   );

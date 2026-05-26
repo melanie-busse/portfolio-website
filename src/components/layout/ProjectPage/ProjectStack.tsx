@@ -17,14 +17,24 @@ export default function ProjectStack({ projectId }: ProjectStackProps) {
       <SectionTitle title="05 / STACK" headline="Alle Technologien" />
 
       <StackContainer>
-        {(t.raw(`projects.items.${projectId}.stack`) || []).map((tech: any, index: number) => (
-          <TechBadge
-            key={tech.name}
-            index={index}
-            badge={tech.name}
-            $type={tech.type || "default"}
-          />
-        ))}
+        {(() => {
+          const stackData = t.raw(`projects.items.${projectId}.stack`);
+
+          // Nur mappen, wenn next-intl das Array fix und fertig geladen hat
+          if (Array.isArray(stackData)) {
+            return stackData.map((tech: any, index: number) => (
+              <TechBadge
+                key={tech.name || index} // Falls mal kein Name da ist, greift der Index
+                index={index}
+                badge={tech.name}
+                $type={tech.type || "default"}
+              />
+            ));
+          }
+
+          // Fallback während des Ladens
+          return null;
+        })()}
       </StackContainer>
     </ProjectSection>
   );
