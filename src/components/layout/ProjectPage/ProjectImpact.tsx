@@ -20,7 +20,6 @@ export default function ProjectImpact({ projectId }: ProjectImpactProps) {
         {(() => {
           const impactData = t.raw(`projects.items.${projectId}.impact`);
 
-          // Wir mappen nur, wenn next-intl uns wirklich ein echtes Array liefert
           if (Array.isArray(impactData)) {
             return impactData.map((item: any, index: number) => (
               <ImpactRow key={item.id || index}>

@@ -21,7 +21,6 @@ export default function ProjectDeepDive({ projectId }: ProjectDeepDiveProps) {
 
   useEffect(() => {
     if (isMounted) {
-      // Zwingt Prism, den Code im DOM zu highlighten, sobald alles bereit ist
       Prism.highlightAll();
     }
   }, [isMounted, projectId]); // Triggert auch, wenn das Projekt gewechselt wird

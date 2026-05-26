@@ -40,7 +40,6 @@ export default function ProjectTechnology({ projectId }: ProjectSectionProps) {
             ));
           }
 
-          // Falls es kein Array ist (z.B. während des Ladens), rendern wir einfach nichts
           return null;
         })()}
       </ArchitectureGrid>

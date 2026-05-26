@@ -27,8 +27,7 @@ export default function ProjectHeader({ project }: ProjectHeaderProps) {
 
   if (!project) return null;
 
-  // Bis der Client bereit ist, rendern wir ein leures Element mit passenden Maßen
-  // Dadurch fliegt der HTML-Mismatch-Fehler sofort raus!
+  // Bis der Client bereit ist, rendern wir ein lehres Element mit passenden Maßen
   if (!isMounted) {
     return <HeaderPlaceholder />;
   }

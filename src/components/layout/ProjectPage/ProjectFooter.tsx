@@ -40,12 +40,12 @@ export const ProjectNavFooter = styled.div`
   grid-template-columns: 1fr 1fr;
   gap: 1.5rem;
   width: 100%;
-  margin-top: 4rem; /* Schön viel Abstand zum Inhalt darüber */
+  margin-top: 4rem;
   padding-top: 2rem;
-  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  border-top: ${(props) => props.theme.borders.editorHeader};
 
-  @media (max-width: 640px) {
-    grid-template-columns: 1fr; /* Untereinander auf dem Handy */
+  @media (max-width: ${(props) => props.theme.breakpoints.mobile};) {
+    grid-template-columns: 1fr;
     gap: 1rem;
   }
 `;
@@ -68,9 +68,9 @@ export const NavLinkCard = styled.a<{ $align: "left" | "right" }>`
     display: flex;
     align-items: center;
     gap: 0.5rem;
-    font-family: ${(props) => props.theme.fonts?.tech || "monospace"};
+    font-family: ${(props) => props.theme.fonts.tech};
     font-size: 0.8rem;
-    color: ${(props) => props.theme.colors.accentAqua || "#00f2fe"};
+    color: ${(props) => props.theme.colors.accentAqua};
     text-transform: uppercase;
     letter-spacing: 0.05em;
     margin-bottom: 0.5rem;
@@ -80,15 +80,14 @@ export const NavLinkCard = styled.a<{ $align: "left" | "right" }>`
   h3 {
     font-size: 1.1rem;
     font-weight: 600;
-    color: ${(props) => props.theme.colors.textMain || "#f8fafc"};
+    color: ${(props) => props.theme.colors.textMain};
     margin: 0;
   }
 
   &:hover {
-    background: ${(props) => props.theme.colors.backgrounds.card || "rgba(30, 41, 59, 0.4)"};
-    border-color: rgba(255, 255, 255, 0.15);
+    background: ${(props) => props.theme.colors.backgrounds.card};
+    border-color: ${(props) => props.theme.colors.backgrounds.hovers.impact};
 
-    /* Pfeile bewegen sich je nach Richtung leicht weg */
     .nav-label {
       transform: ${(props) => (props.$align === "left" ? "translateX(-4px)" : "translateX(4px)")};
     }

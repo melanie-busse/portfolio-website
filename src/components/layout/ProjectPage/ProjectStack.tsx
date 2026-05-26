@@ -20,11 +20,10 @@ export default function ProjectStack({ projectId }: ProjectStackProps) {
         {(() => {
           const stackData = t.raw(`projects.items.${projectId}.stack`);
 
-          // Nur mappen, wenn next-intl das Array fix und fertig geladen hat
           if (Array.isArray(stackData)) {
             return stackData.map((tech: any, index: number) => (
               <TechBadge
-                key={tech.name || index} // Falls mal kein Name da ist, greift der Index
+                key={tech.name || index}
                 index={index}
                 badge={tech.name}
                 $type={tech.type || "default"}
@@ -32,7 +31,6 @@ export default function ProjectStack({ projectId }: ProjectStackProps) {
             ));
           }
 
-          // Fallback während des Ladens
           return null;
         })()}
       </StackContainer>
