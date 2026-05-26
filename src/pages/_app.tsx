@@ -12,7 +12,11 @@ export default function App({ Component, pageProps }: AppProps) {
   const locale = router.locale || "de";
 
   return (
-    <NextIntlClientProvider locale={locale} messages={pageProps.messages} timeZone="Europe/Berlin">
+    <NextIntlClientProvider
+      locale={locale}
+      messages={pageProps.messages || {}}
+      timeZone="Europe/Berlin"
+    >
       <ThemeProvider theme={petrolTheme}>
         <GlobalStyle />
         <Navbar />

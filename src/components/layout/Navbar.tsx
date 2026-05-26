@@ -18,7 +18,7 @@ export default function Navbar() {
           Melanie<span>Busse</span>
         </Logo>
         <NavLinks>
-          <NavLink href="/public" locale={locale} $active={isActive("/")}>
+          <NavLink href="/" locale={locale} $active={isActive("/")}>
             {t("skills")}
           </NavLink>
           <NavLink href="/projects" locale={locale} $active={isActive("/projects")}>

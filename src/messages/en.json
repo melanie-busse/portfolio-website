@@ -64,7 +64,9 @@
         "company": "edict egaming GmbH",
         "description": "Development of highly available casino solutions. Setting up declarative CI/CD pipelines and implementing new marketing microservices."
       }
-    }
+    },
+    "backToOverview": "Back to overview",
+    "viewLiveProject": "view live project"
   },
   "about": {
     "headline": "Turning coffee into code since 2005.",

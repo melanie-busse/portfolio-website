@@ -90,6 +90,9 @@ export const skillsData = [
       "SQLDeveloper",
       "MySQL",
       "PhpMyAdmin",
+      "Prisma",
+      "Flyway",
+      "NestJS TypeORM",
     ],
   },
   {
