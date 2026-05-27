@@ -20,7 +20,6 @@ export default function ProjectTechnology({ projectId }: ProjectSectionProps) {
         {(() => {
           const architectureData = t.raw(`projects.items.${projectId}.architecture`);
 
-          // Nur mappen, wenn es wirklich ein Array ist!
           if (Array.isArray(architectureData)) {
             return architectureData.map((tech: any, index: number) => (
               <ArchitectureCard key={tech.id || index}>
@@ -53,14 +52,17 @@ export const ArchitectureGrid = styled.div`
   gap: 1.25rem;
   width: 100%;
   margin-top: 1.5rem;
+  box-sizing: border-box;
 
-  @media (max-width: ${(props) => props.theme.breakpoints.desktop};) {
-    grid-template-columns: repeat(2, 1fr); 
+  @media (max-width: ${(props) => props.theme.breakpoints.desktop}) {
+    grid-template-columns: repeat(2, 1fr);
+  }
 
-  @media (max-width: ${(props) => props.theme.breakpoints.mobile};) {
-    grid-template-columns: 1fr; 
+  @media (max-width: ${(props) => props.theme.breakpoints.mobile}) {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
 `;
-
 export const ArchitectureCard = styled.div`
   display: flex;
   flex-direction: column;

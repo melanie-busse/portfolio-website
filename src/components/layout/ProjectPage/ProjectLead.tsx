@@ -23,7 +23,7 @@ export const StyledProjectLead = styled.p`
   background: ${(props) => props.theme.colors.backgrounds.box};
 
   @media (max-width: ${(props) => props.theme.breakpoints.mobile}) {
-    padding: 1.25rem;
-    margin: 2rem 0 2.5rem 0;
+    padding: 1.5rem 1rem;
+    margin-bottom: 2.5rem;
   }
 `;

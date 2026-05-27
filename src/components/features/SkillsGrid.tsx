@@ -19,10 +19,6 @@ const GridSection = styled.section`
   padding: 4rem 2rem;
   max-width: ${(props) => props.theme.widths.footer || "1200px"};
   margin: 0 auto;
-
-  @media (max-width: ${(props) => props.theme.breakpoints.mobile || "480px"}) {
-    padding: 2rem 1rem; /* Weniger Padding auf dem Handy, damit mehr Platz für Inhalt ist */
-  }
 `;
 
 const BentoContainer = styled.div`

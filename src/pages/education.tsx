@@ -6,6 +6,7 @@ import { useTranslations } from "next-intl";
 import { educationData } from "@/data/educationData";
 import BentoCard from "@/components/features/BentoCard";
 import { Period } from "@/components/common/Period";
+import { PageContainer } from "@/components/common/PageContainer";
 
 export default function Education() {
   const t = useTranslations("education");
@@ -49,12 +50,6 @@ export const getStaticProps: GetStaticProps = async ({ locale }) => {
     },
   };
 };
-
-const PageContainer = styled.div`
-  max-width: ${(props) => props.theme.widths.container};
-  margin: 0 auto;
-  padding: 4rem 2rem;
-`;
 
 const Title = styled.h1`
   color: ${(props) => props.theme.colors.h4};

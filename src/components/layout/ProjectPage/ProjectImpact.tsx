@@ -34,7 +34,6 @@ export default function ProjectImpact({ projectId }: ProjectImpactProps) {
             ));
           }
 
-          // Während des Ladens oder bei fehlenden Daten rendern wir einfach nichts
           return null;
         })()}
       </ImpactList>

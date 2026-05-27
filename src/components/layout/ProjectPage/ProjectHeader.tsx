@@ -17,8 +17,6 @@ interface ProjectHeaderProps {
 
 export default function ProjectHeader({ project }: ProjectHeaderProps) {
   const t = useTranslations();
-
-  // Sichert ab, dass Server und Client beim ersten Render exakt dasselbe tun
   const [isMounted, setIsMounted] = useState(false);
 
   useEffect(() => {
@@ -27,7 +25,6 @@ export default function ProjectHeader({ project }: ProjectHeaderProps) {
 
   if (!project) return null;
 
-  // Bis der Client bereit ist, rendern wir ein lehres Element mit passenden Maßen
   if (!isMounted) {
     return <HeaderPlaceholder />;
   }
@@ -76,7 +73,6 @@ export default function ProjectHeader({ project }: ProjectHeaderProps) {
   );
 }
 
-// Platzhalter-Komponente für das serverseitige Vorausschießen
 const HeaderPlaceholder = styled.div`
   width: 100%;
   height: 260px;
@@ -95,8 +91,14 @@ const HeaderWrapper = styled.header`
   margin-bottom: 2rem;
   box-shadow: ${(props) => props.theme.shadows.headerBox};
   backdrop-filter: blur(4px);
-`;
+  box-sizing: border-box;
 
+  @media (max-width: ${(props) => props.theme.breakpoints.mobile}) {
+    padding: 1.5rem 1rem;
+    border-radius: 12px;
+    margin-bottom: 1.5rem;
+  }
+`;
 const BackLink = styled(Link)`
   display: inline-flex;
   align-items: center;
@@ -113,6 +115,10 @@ const BackLink = styled(Link)`
   &:hover {
     opacity: 0.8;
   }
+
+  @media (max-width: ${(props) => props.theme.breakpoints.mobile || "480px"}) {
+    margin-bottom: 1.2rem; /* Weniger Leerlauf über dem Titel */
+  }
 `;
 
 const HeaderContent = styled.div`
@@ -121,9 +127,10 @@ const HeaderContent = styled.div`
   align-items: flex-end;
   gap: 2rem;
 
-  @media (max-width: ${(props) => props.theme.breakpoints.mobile}) {
+  @media (max-width: ${(props) => props.theme.breakpoints.mobile || "480px"}) {
     flex-direction: column;
     align-items: flex-start;
+    gap: 1rem;
   }
 `;
 
@@ -132,6 +139,7 @@ const TitleGroup = styled.div`
   flex-direction: column;
   gap: 0.5rem;
   z-index: 2;
+  width: 100%;
 `;
 
 const MainTitle = styled.h1`
@@ -140,6 +148,10 @@ const MainTitle = styled.h1`
   color: ${(props) => props.theme.colors.textMain};
   line-height: 1.1;
   margin: 0.5rem 0;
+
+  @media (max-width: ${(props) => props.theme.breakpoints.mobile || "480px"}) {
+    font-size: 1.6rem; /* Verhindert hässliche Zeilenumbrüche bei langen Projekttiteln */
+  }
 `;
 
 const MetaContainer = styled.div`
@@ -147,6 +159,11 @@ const MetaContainer = styled.div`
   flex-wrap: wrap;
   gap: 1.5rem;
   margin-top: 0.5rem;
+
+  @media (max-width: ${(props) => props.theme.breakpoints.mobile || "480px"}) {
+    gap: 0.8rem;
+    flex-direction: column; /* Untereinander auf sehr schmalen Displays */
+  }
 `;
 
 const MetaItem = styled.div`
@@ -182,7 +199,7 @@ const IconBackground = styled.div`
   z-index: 1;
   transform: rotate(-10deg);
 
-  @media (max-width: ${(props) => props.theme.breakpoints.mobile};) {
+  @media (max-width: ${(props) => props.theme.breakpoints.mobile}) {
     display: none;
   }
 `;

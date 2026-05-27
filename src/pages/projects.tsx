@@ -48,44 +48,30 @@ export const getStaticProps: GetStaticProps = async ({ locale }) => {
   };
 };
 
-// --- STYLES ---
-
 const Grid = styled.div`
   position: relative;
-  margin-left: 20px;
-  padding-left: 40px;
-
-  /* FIX 1: Links-Abstand mobil fast vollständig eliminieren */
-  @media (max-width: ${(props) => props.theme.breakpoints.mobile || "480px"}) {
-    margin-left: 0;
-    padding-left: 10px; /* Nur ein Mini-Sicherheitsabstand zum Bildschirmrand */
-    padding-right: 10px;
-  }
 `;
 
 const CardContainer = styled.div`
   position: relative;
   margin-bottom: 4rem;
 
-  @media (max-width: ${(props) => props.theme.breakpoints.mobile || "480px"}) {
+  @media (max-width: ${(props) => props.theme.breakpoints.mobile}) {
     margin-bottom: 3rem;
     display: flex;
     flex-direction: column;
-    gap: 0.5rem; /* Schafft sauberen Platz zwischen Datum und Karte */
+    gap: 0.5rem;
   }
 `;
 
-/* FIX 2: Container, um das Datum mobil flexibel zu positionieren */
 const PeriodWrapper = styled.div`
-  @media (max-width: ${(props) => props.theme.breakpoints.mobile || "480px"}) {
-    /* Holt das Datum aus der absoluten linken Position (falls es dort feststeckte) 
-       und setzt es sauber über die Karte */
+  @media (max-width: ${(props) => props.theme.breakpoints.mobile}) {
     position: relative;
     left: 0;
     margin-bottom: 0.2rem;
 
     span {
-      font-size: 0.85rem; /* Mobil leicht kompakter */
+      font-size: 0.85rem;
     }
   }
 `;
@@ -100,8 +86,8 @@ const ProjectLink = styled(Link)`
   &:hover {
     cursor: pointer;
     & > div {
-      border-color: ${({ theme }) => theme.colors?.accentAqua || "#00f2fe"};
-      box-shadow: ${({ theme }) => theme.shadows?.tech || "0 0 15px rgba(0, 242, 254, 0.15)"};
+      border-color: ${({ theme }) => theme.colors.accentAqua};
+      box-shadow: ${({ theme }) => theme.shadows.tech};
     }
   }
 `;

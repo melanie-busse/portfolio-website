@@ -5,7 +5,6 @@ import { useTranslations } from "next-intl";
 import { timelineData } from "@/data/timelineData";
 import { HeaderSection } from "@/components/features/HeaderSection";
 import { PageContainer } from "@/components/common/PageContainer";
-// Den globalen Grid-Import entfernen wir oder ersetzen ihn hier:
 import { Card } from "@/components/layout/Card";
 import { Period } from "@/components/common/Period";
 import BentoCard from "@/components/features/BentoCard";
@@ -17,7 +16,6 @@ export default function About() {
     <PageContainer>
       <HeaderSection headline={t("headline")} text={t("introText")} />
 
-      {/* HIER JETZT DAS OPTIMIERTE STATS-GRID NUTZEN */}
       <StatsGrid>
         <Card>
           <StatValue>{t("stats.expValue")}</StatValue>
@@ -66,25 +64,20 @@ export const getStaticProps: GetStaticProps = async ({ locale }) => {
   };
 };
 
-// --- STYLES ---
-
-// Das neue responsive Grid für die 4 Boxen
 const StatsGrid = styled.div`
   display: grid;
-  grid-template-columns: repeat(4, 1fr); /* Desktop: 4 nebeneinander */
+  grid-template-columns: repeat(4, 1fr);
   gap: 1.5rem;
   margin: 2rem 0 4rem 0;
 
-  @media (max-width: ${(props) => props.theme.breakpoints.tablet || "768px"}) {
-    grid-template-columns: repeat(2, 1fr); /* Tablet: 2x2 */
+  @media (max-width: ${(props) => props.theme.breakpoints.tablet}) {
+    grid-template-columns: repeat(2, 1fr);
   }
 
-  @media (max-width: ${(props) => props.theme.breakpoints.mobile || "480px"}) {
-    grid-template-columns: repeat(2, 1fr); /* HIER: Auch auf Mobile stur 2 nebeneinander! */
-    gap: 1rem; /* Etwas kompakterer Abstand auf dem Smartphone */
+  @media (max-width: ${(props) => props.theme.breakpoints.mobile}) {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
 
-    /* Falls die Card-Komponente ein zu großes Padding hat, 
-       können wir es hier für Mobile leicht herabsetzen */
     & > div {
       padding: 1.2rem 1rem;
     }
@@ -97,9 +90,9 @@ const TimelineWrapper = styled.div`
   margin-left: 20px;
   padding-left: 40px;
 
-  @media (max-width: ${(props) => props.theme.breakpoints.mobile || "480px"}) {
+  @media (max-width: ${(props) => props.theme.breakpoints.mobile}) {
     margin-left: 10px;
-    padding-left: 25px; /* Etwas kompakter mobil, damit die BentoCards mehr Platz haben */
+    padding-left: 25px;
   }
 `;
 
@@ -118,8 +111,8 @@ const TimelineItem = styled.div`
     background: ${(props) => props.theme.colors.h4};
     box-shadow: ${(props) => props.theme.shadows.nav};
 
-    @media (max-width: ${(props) => props.theme.breakpoints.mobile || "480px"}) {
-      left: -34px; /* Verschiebung anpassen, weil margin-left/padding-left oben verringert wurden */
+    @media (max-width: ${(props) => props.theme.breakpoints.mobile}) {
+      left: -34px;
     }
   }
 `;

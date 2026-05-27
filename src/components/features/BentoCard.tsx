@@ -56,6 +56,7 @@ const StyledBentoCard = styled.div<{ $gridArea?: string }>`
   padding: 2rem;
   display: flex;
   flex-direction: column;
+  flex-wrap: wrap;
   justify-content: flex-start;
   min-height: 100%;
   height: 100%;
@@ -91,9 +92,9 @@ const StyledBentoCard = styled.div<{ $gridArea?: string }>`
     pointer-events: none;
   }
 
-  /* Kleiner Touch-Sicherheitsabstand für kleinere Handys */
   @media (max-width: ${(props) => props.theme.breakpoints?.mobile || "480px"}) {
     padding: 1.5rem;
+    box-sizing: border-box;
   }
 `;
 
