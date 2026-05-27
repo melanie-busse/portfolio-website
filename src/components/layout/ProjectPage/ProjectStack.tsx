@@ -46,7 +46,7 @@ export const StackContainer = styled.div`
   margin-top: 1.5rem;
   padding: 1.5rem;
 
-  background: ${(props) => props.theme.colors.backgrounds.box || "rgba(30, 41, 59, 0.2)"};
+  background: ${(props) => props.theme.colors.backgrounds.box};
   border: ${(props) => props.theme.borders.border};
-  border-radius: ${(props) => props.theme.borders.borderRadius || "12px"};
+  border-radius: ${(props) => props.theme.borders.borderRadius};
 `;

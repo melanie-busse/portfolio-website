@@ -99,6 +99,13 @@ const ImageWrapper = styled.div`
   border: ${(props) => props.theme.borders.image};
   box-shadow: ${(props) => props.theme.shadows.box};
   margin-top: 40px;
+  flex-shrink: 0;
+
+  @media (max-width: ${(props) => props.theme.breakpoints.mobile || "480px"}) {
+    width: 150px;
+    height: 150px;
+    margin-top: 15px;
+  }
 
   img {
     object-fit: contain;
@@ -107,5 +114,9 @@ const ImageWrapper = styled.div`
     /* scale(1.1) sorgt dafür, dass keine leeren Ränder entstehen */
     transform: scale(1.1) translateX(-5px) translateY(25px);
     filter: grayscale(100%) brightness(0.8) contrast(1.1);
+
+    @media (max-width: ${(props) => props.theme.breakpoints.mobile || "480px"}) {
+      transform: scale(1.1) translateX(0px) translateY(15px);
+    }
   }
 `;

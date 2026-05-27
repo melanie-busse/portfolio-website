@@ -5,7 +5,6 @@ import { useTranslations } from "next-intl";
 import { timelineData } from "@/data/timelineData";
 import { HeaderSection } from "@/components/features/HeaderSection";
 import { PageContainer } from "@/components/common/PageContainer";
-import { Grid } from "@/components/layout/Grid";
 import { Card } from "@/components/layout/Card";
 import { Period } from "@/components/common/Period";
 import BentoCard from "@/components/features/BentoCard";
@@ -17,7 +16,7 @@ export default function About() {
     <PageContainer>
       <HeaderSection headline={t("headline")} text={t("introText")} />
 
-      <Grid>
+      <StatsGrid>
         <Card>
           <StatValue>{t("stats.expValue")}</StatValue>
           <StatLabel>{t("stats.expLabel")}</StatLabel>
@@ -34,7 +33,7 @@ export default function About() {
           <StatValue>{t("stats.infraValue")}</StatValue>
           <StatLabel>{t("stats.infraLabel")}</StatLabel>
         </Card>
-      </Grid>
+      </StatsGrid>
 
       <TimelineWrapper>
         {timelineData.map((item) => {
@@ -65,11 +64,36 @@ export const getStaticProps: GetStaticProps = async ({ locale }) => {
   };
 };
 
+const StatsGrid = styled.div`
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  margin: 2rem 0 4rem 0;
+
+  @media (max-width: ${(props) => props.theme.breakpoints.tablet}) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (max-width: ${(props) => props.theme.breakpoints.mobile}) {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+
+    & > div {
+      padding: 1.2rem 1rem;
+    }
+  }
+`;
+
 const TimelineWrapper = styled.div`
   position: relative;
   border-left: ${(props) => props.theme.borders.timeline};
   margin-left: 20px;
   padding-left: 40px;
+
+  @media (max-width: ${(props) => props.theme.breakpoints.mobile}) {
+    margin-left: 10px;
+    padding-left: 25px;
+  }
 `;
 
 const TimelineItem = styled.div`
@@ -80,12 +104,16 @@ const TimelineItem = styled.div`
     content: "";
     position: absolute;
     left: -49px;
-    top: 10px;
+    top: 4px;
     width: 16px;
     height: 16px;
     border-radius: 50%;
     background: ${(props) => props.theme.colors.h4};
     box-shadow: ${(props) => props.theme.shadows.nav};
+
+    @media (max-width: ${(props) => props.theme.breakpoints.mobile}) {
+      left: -34px;
+    }
   }
 `;
 

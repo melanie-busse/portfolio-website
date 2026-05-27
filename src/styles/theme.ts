@@ -167,6 +167,10 @@ export const GlobalStyle = createGlobalStyle`
       line-height: 1.62;
       font-size: 1.1rem;
       margin-bottom: 0;
-      font-family:  ${(props) => props.theme.fonts.tech};
+      font-family: ${(props) => props.theme.fonts.tech};
+
+      @media (max-width: ${(props) => props.theme.breakpoints.mobile}) {
+        font-size: 0.9rem;
+      }
     }
 `;
