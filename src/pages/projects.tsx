@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { useTranslations } from "next-intl";
 import { GetStaticProps } from "next";
 
-import { ProjectEntry, projectsData } from "@/data/projectsData";
+import { projectsData } from "@/data/projectsData";
 import { HeaderSection } from "@/components/features/HeaderSection";
 import { PageContainer } from "@/components/common/PageContainer";
 import { Period } from "@/components/common/Period";
