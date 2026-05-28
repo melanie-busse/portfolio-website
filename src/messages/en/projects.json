@@ -1,0 +1,143 @@
+{
+  "headlines": {
+    "challenge": "The Challenge",
+    "technology": "Technology Choices",
+    "impact": "My Contribution",
+    "deepDive": "Technical Highlight",
+    "stack": "All Technologies"
+  },
+  "headline": "Featured Projects",
+  "introText": "A selection of my work in e-commerce, public administration, and industrial software development.",
+  "navigation": {
+    "previous": "Previous Project",
+    "next": "Next Project"
+  },
+  "backToOverview": "Back to Overview",
+  "viewLiveProject": "View Live Project",
+  "items": {
+    "emobility": {
+      "title": "E-Mobility Management Software",
+      "company": "TECCON (Research Project)",
+      "description": "Conception and redevelopment of a cloud microservices architecture for innovative charging infrastructures. Focus on scalable systems and automated quality assurance.",
+      "leadText": "As part of an innovative E-Mobility research project, I accompanied the conception and redevelopment of a cloud-based management software for charging infrastructures. As a Fullstack Developer, my responsibilities ranged from requirements engineering, designing the microservices architecture and the single-page application, to setting up the cloud infrastructure.",
+      "challenges": [
+        {
+          "id": "architecture",
+          "icon": "architecture",
+          "title": "Interconnected Microservices",
+          "description": "Conception of a cloud architecture using Quarkus and Kafka for the reliable integration of external systems such as charging station infrastructure and accounting."
+        },
+        {
+          "id": "testing",
+          "icon": "testing",
+          "title": "E2E Test Architecture",
+          "description": "Establishment of a seamless, automated testing environment from unit and integration tests in the backend to Playwright in the Angular frontend."
+        },
+        {
+          "id": "devops",
+          "icon": "devops",
+          "title": "Requirements & DevOps",
+          "description": "Holistic implementation of business requirements, from agile stakeholder refinement to cloud deployment via Azure Pipelines and Kubernetes."
+        }
+      ],
+      "architecture": [
+        {
+          "id": "quarkus",
+          "title": "Quarkus & Java 21",
+          "description": "Utilization of a cloud-native framework for extremely fast startup times, low memory consumption, and modern Java features in the microservice backend.",
+          "type": "backend"
+        },
+        {
+          "id": "kafka",
+          "title": "Apache Kafka",
+          "description": "Event-driven architecture for asynchronous and highly available data exchange with the charging infrastructure.",
+          "type": "backend"
+        },
+        {
+          "id": "angular",
+          "title": "Angular & TS",
+          "description": "Realization of a high-performance, structured Single-Page Application (SPA) for intuitive charging station management.",
+          "type": "frontend"
+        },
+        {
+          "id": "kubernetes",
+          "title": "Docker & K8s",
+          "description": "Containerization of all services and orchestration via Kubernetes in the Azure Cloud for maximum scalability and zero-downtime deployments.",
+          "type": "tools"
+        }
+      ],
+      "impact": [
+        {
+          "id": "angular-components",
+          "type": "frontend",
+          "badgeText": "Frontend",
+          "title": "Angular Components Implemented",
+          "description": "Design and implementation of new, modular UI components in Angular, seamlessly connecting the user interface to the backend REST APIs."
+        },
+        {
+          "id": "microservices",
+          "type": "backend",
+          "badgeText": "Backend",
+          "title": "Quarkus Microservices Developed",
+          "description": "Conception and implementation of robust backend services using Java EE/Quarkus, featuring event-driven integration via Apache Kafka."
+        },
+        {
+          "id": "test-automation",
+          "type": "tools",
+          "badgeText": "QA / Testing",
+          "title": "Automated Testing Environment Built",
+          "description": "Setup of the complete testing architecture including JUnit and integration tests in the backend, as well as automated E2E tests using Playwright and Jasmine in the frontend."
+        },
+        {
+          "id": "ci-cd-devops",
+          "type": "tools",
+          "badgeText": "DevOps",
+          "title": "CI/CD Pipelines & Cloud Deployment",
+          "description": "Configuration of automated deployment processes via Azure DevOps pipelines for secure orchestration of containers within the Kubernetes cluster."
+        },
+        {
+          "id": "agile-requirements",
+          "type": "default",
+          "badgeText": "Agile",
+          "title": "Requirements Engineering & Refinement",
+          "description": "Holistic support for new business requirements, from initial conception to refinement in direct alignment with stakeholders."
+        }
+      ],
+      "deepDive": {
+        "filePath": "quarkus/ChargingStationConsumer.java",
+        "context": "Asynchronous processing of charging data via Apache Kafka ensured that peak loads at the charging stations did not block the core system. Through the reactive Quarkus consumer, incoming booking and consumption data are isolated, validated, and efficiently written to the PostgreSQL database.",
+        "code": "// Reactive Kafka consumer for charging data\n@ApplicationScoped\npublic class ChargingStationConsumer {\n\n    @Inject\n    ChargingService chargingService;\n\n    @Incoming(\"charging-sessions\")\n    @Acknowledgment(Acknowledgment.Strategy.MANUAL)\n    public Uni<Void> processSession(Message<String> message) {\n        String payload = message.getPayload();\n        \n        return chargingService.validateAndSave(payload)\n            .onItem().transformToUni(v -> Uni.createFrom().completionStage(message.ack()))\n            .onFailure().recoverWithUni(err -> {\n                // Error handling & Dead-Letter-Queue\n                return Uni.createFrom().completionStage(message.nack(err));\n            });\n    }\n}"
+      },
+      "stack": [
+        { "name": "Java 21", "type": "backend" },
+        { "name": "Quarkus", "type": "backend" },
+        { "name": "Apache Kafka", "type": "backend" },
+        { "name": "PostgreSQL", "type": "backend" },
+        { "name": "Angular", "type": "frontend" },
+        { "name": "TypeScript", "type": "frontend" },
+        { "name": "RxJS", "type": "frontend" },
+        { "name": "Docker", "type": "tools" },
+        { "name": "Kubernetes", "type": "tools" },
+        { "name": "Azure DevOps", "type": "tools" },
+        { "name": "JUnit", "type": "tools" },
+        { "name": "Playwright", "type": "tools" },
+        { "name": "Scrum", "type": "default" }
+      ]
+    },
+    "amm": {
+      "title": "Labour Market Monitor (AMM)",
+      "company": "Bundesagentur für Arbeit",
+      "description": "Further development of an analytical tool for regional labour market structures. Implementation of interactive charts and migration to modern libraries."
+    },
+    "education": {
+      "title": "Information System for Education and Profession",
+      "company": "Bundesagentur für Arbeit",
+      "description": "Maintenance of central online platforms (ELAN, Entgeldatlas). Special focus on accessible PDF generation and complex data processing."
+    },
+    "casino": {
+      "title": "Online Casino Platform",
+      "company": "edict egaming GmbH",
+      "description": "Development of highly available casino solutions. Setting up declarative CI/CD pipelines and implementing new marketing microservices."
+    }
+  }
+}

@@ -10,15 +10,15 @@ interface ProjectSectionProps {
 }
 
 export default function ProjectTechnology({ projectId }: ProjectSectionProps) {
-  const t = useTranslations();
+  const t = useTranslations("projects");
 
   return (
     <ProjectSection>
-      <SectionTitle title="02 / THE ARCHITECTURE" headline="Technologieentscheidungen" />
+      <SectionTitle title="02 / THE ARCHITECTURE" headline={t("headlines.technology")} />
 
       <ArchitectureGrid>
         {(() => {
-          const architectureData = t.raw(`projects.items.${projectId}.architecture`);
+          const architectureData = t.raw(`items.${projectId}.architecture`);
 
           if (Array.isArray(architectureData)) {
             return architectureData.map((tech: any, index: number) => (

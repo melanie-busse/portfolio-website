@@ -1,0 +1,143 @@
+{
+  "headlines": {
+    "challenge": "Udfordringen",
+    "technology": "Teknologivalg",
+    "impact": "Mit bidrag",
+    "deepDive": "Teknisk highlight",
+    "stack": "Alle teknologier"
+  },
+  "headline": "Udvalgte projekter",
+  "introText": "Et udvalg af mine arbejder inden for e-handel, offentlig administration og industriel softwareudvikling.",
+  "navigation": {
+    "previous": "Forrige projekt",
+    "next": "Næste projekt"
+  },
+  "backToOverview": "Tilbage til oversigten",
+  "viewLiveProject": "Se live projekt",
+  "items": {
+    "emobility": {
+      "title": "Administrationssoftware til e-mobilitet",
+      "company": "TECCON (Forskningsprojekt)",
+      "description": "Konceptualisering og nyudvikling af en cloud-microservices-arkitektur til innovative ladeinfrastrukturer. Fokus på skalerbare systemer og automatiseret kvalitetssikring.",
+      "leadText": "Som en del af et innovativt forskningsprojekt inden for e-mobilitet har jeg fulgt konceptualiseringen og nyudviklingen af en cloud-baseret administrationssoftware til ladeinfrastrukturer. Som Fullstack-udvikler dækkede mit ansvarsområde alt fra requirements engineering og design af microservices-arkitekturen samt Single-Page-applikationen til opbygning af cloud-infrastrukturen.",
+      "challenges": [
+        {
+          "id": "architecture",
+          "icon": "architecture",
+          "title": "Forbundne Microservices",
+          "description": "Konceptualisering af en cloud-arkitektur med Quarkus og Kafka til pålidelig integration af eksterne systemer såsom ladestationsinfrastruktur og regnskab."
+        },
+        {
+          "id": "testing",
+          "icon": "testing",
+          "title": "E2E Testarkitektur",
+          "description": "Opbygning af et komplet, automatiseret testmiljø fra unit- og integrationstests i backend til Playwright i Angular-frontend."
+        },
+        {
+          "id": "devops",
+          "icon": "devops",
+          "title": "Requirements & DevOps",
+          "description": "Helhedsorienteret implementering af faglige krav fra agil stakeholder-refinement til cloud-deployment via Azure Pipelines og Kubernetes."
+        }
+      ],
+      "architecture": [
+        {
+          "id": "quarkus",
+          "title": "Quarkus & Java 21",
+          "description": "Anvendelse af et cloud-native framework for ekstremt hurtige opstartstider, lavt hukommelsesforbrug og moderne Java-funktioner i microservice-backend.",
+          "type": "backend"
+        },
+        {
+          "id": "kafka",
+          "title": "Apache Kafka",
+          "description": "Hændelsesstyret kommunikation (Event-Driven Architecture) for asynkron og højtilgængelig dataudveksling med ladeinfrastrukturen.",
+          "type": "backend"
+        },
+        {
+          "id": "angular",
+          "title": "Angular & TS",
+          "description": "Realisering af en højtydende, struktureret Single-Page Application (SPA) til intuitiv administration af ladestationerne.",
+          "type": "frontend"
+        },
+        {
+          "id": "kubernetes",
+          "title": "Docker & K8s",
+          "description": "Containerisering af alle tjenester og orkestrering via Kubernetes i Azure Cloud for maksimal skalerbarhed og zero-downtime deployments.",
+          "type": "tools"
+        }
+      ],
+      "impact": [
+        {
+          "id": "angular-components",
+          "type": "frontend",
+          "badgeText": "Frontend",
+          "title": "Angular-komponenter implementeret",
+          "description": "Design og implementering af nye, modulære UI-komponenter i Angular samt sømløs integration af brugerfladen med backendens REST-api'er."
+        },
+        {
+          "id": "microservices",
+          "type": "backend",
+          "badgeText": "Backend",
+          "title": "Quarkus Microservices udviklet",
+          "description": "Konceptualisering og implementering af robuste backend-tjenester med Java EE/Quarkus samt hændelsesstyret integration via Apache Kafka."
+        },
+        {
+          "id": "test-automation",
+          "type": "tools",
+          "badgeText": "QA / Testing",
+          "title": "Automatiseret testmiljø opbygget",
+          "description": "Opbygning af den fulde testarkitektur med JUnit- og integrationstests i backend samt automatiserede E2E-tests via Playwright og Jasmine i frontend."
+        },
+        {
+          "id": "ci-cd-devops",
+          "type": "tools",
+          "badgeText": "DevOps",
+          "title": "CI/CD-pipelines & Cloud Deployment",
+          "description": "Konfiguration af automatiserede deploymentprocesser via Azure DevOps-pipelines til sikker orkestrering af containere i Kubernetes-clusteret."
+        },
+        {
+          "id": "agile-requirements",
+          "type": "default",
+          "badgeText": "Agile",
+          "title": "Requirements Engineering & Refinement",
+          "description": "Helhedsorienteret understøttelse af nye faglige krav fra konceptualisering til refinement i direkte dialog med interessenter."
+        }
+      ],
+      "deepDive": {
+        "filePath": "quarkus/ChargingStationConsumer.java",
+        "context": "Den asynkrone behandling af ladedata via Apache Kafka sikrede, at spidsbelastninger på ladestationerne ikke blokerede kernesystemet. Gennem den reaktive Quarkus-consumer bliver indgående booking- og forbrugsdata isoleret, valideret og effektivt gemt i PostgreSQL-databasen.",
+        "code": "// Reaktiv Kafka Consumer til ladedata\n@ApplicationScoped\npublic class ChargingStationConsumer {\n\n    @Inject\n    ChargingService chargingService;\n\n    @Incoming(\"charging-sessions\")\n    @Acknowledgment(Acknowledgment.Strategy.MANUAL)\n    public Uni<Void> processSession(Message<String> message) {\n        String payload = message.getPayload();\n        \n        return chargingService.validateAndSave(payload)\n            .onItem().transformToUni(v -> Uni.createFrom().completionStage(message.ack()))\n            .onFailure().recoverWithUni(err -> {\n                // Fejlhåndtering & Dead-Letter-Queue\n                return Uni.createFrom().completionStage(message.nack(err));\n            });\n    }\n}"
+      },
+      "stack": [
+        { "name": "Java 21", "type": "backend" },
+        { "name": "Quarkus", "type": "backend" },
+        { "name": "Apache Kafka", "type": "backend" },
+        { "name": "PostgreSQL", "type": "backend" },
+        { "name": "Angular", "type": "frontend" },
+        { "name": "TypeScript", "type": "frontend" },
+        { "name": "RxJS", "type": "frontend" },
+        { "name": "Docker", "type": "tools" },
+        { "name": "Kubernetes", "type": "tools" },
+        { "name": "Azure DevOps", "type": "tools" },
+        { "name": "JUnit", "type": "tools" },
+        { "name": "Playwright", "type": "tools" },
+        { "name": "Scrum", "type": "default" }
+      ]
+    },
+    "amm": {
+      "title": "Arbejdsmarkedsmonitor (AMM)",
+      "company": "Bundesagentur für Arbeit",
+      "description": "Videreudvikling af et analyseværktøj til regionale arbejdsmarkedsstrukturer. Implementering af interaktiv grafik og migrering til moderne biblioteker."
+    },
+    "education": {
+      "title": "Informationssystem Uddannelse og Erhverv",
+      "company": "Bundesagentur für Arbeit",
+      "description": "Vedligeholdelse af centrale online-tjenester (ELAN, Entgeldatlas). Fokus på handicapvenlig PDF-generering og kompleks databehandling."
+    },
+    "casino": {
+      "title": "Online Casino Platform",
+      "company": "edict egaming GmbH",
+      "description": "Udvikling af højtilgængelige kasinoløsninger. Etablering af deklarative CI/CD-pipelines og implementering af nye marketing-microservices."
+    }
+  }
+}

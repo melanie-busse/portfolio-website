@@ -26,13 +26,13 @@ interface ProjectChallengeSectionProps {
   projectId: string;
 }
 export default function ProjectChallenge({ projectId }: ProjectChallengeSectionProps) {
-  const t = useTranslations();
+  const t = useTranslations("projects");
 
-  const challengesArray = t.raw(`projects.items.${projectId}.challenges`) || [];
+  const challengesArray = t.raw(`items.${projectId}.challenges`) || [];
 
   return (
     <ProjectSection>
-      <SectionTitle title="01 / THE CHALLENGE" headline="Die Herausforderung" />
+      <SectionTitle title="01 / THE CHALLENGE" headline={t("headlines.challenge")} />
 
       <ChallengeGrid>
         {Array.isArray(challengesArray) &&

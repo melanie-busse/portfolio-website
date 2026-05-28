@@ -65,20 +65,17 @@ export const getStaticProps: GetStaticProps = async ({ locale }) => {
   const currentLocale = locale || "de";
 
   try {
-    const messages = (await import(`@/messages/${currentLocale}.json`)).default;
-
     return {
       props: {
-        messages,
+        messages: {
+          common: (await import(`@/messages/${currentLocale}/common.json`)).default,
+          projects: (await import(`@/messages/${currentLocale}/projects.json`)).default,
+        },
       },
     };
   } catch (error) {
-    console.error("Übersetzungsdatei konnte nicht geladen werden:", error);
-    return {
-      props: {
-        messages: {},
-      },
-    };
+    console.error("Fehler beim Laden der Übersetzungsdateien in getStaticProps:", error);
+    return { props: { messages: {} } };
   }
 };
 

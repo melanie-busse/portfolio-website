@@ -10,15 +10,15 @@ interface ProjectImpactProps {
 }
 
 export default function ProjectImpact({ projectId }: ProjectImpactProps) {
-  const t = useTranslations();
+  const t = useTranslations("projects");
 
   return (
     <ProjectSection>
-      <SectionTitle title="03 / MY IMPACT" headline="Mein Beitrag" />
+      <SectionTitle title="03 / MY IMPACT" headline={t("headlines.impact")} />
 
       <ImpactList>
         {(() => {
-          const impactData = t.raw(`projects.items.${projectId}.impact`);
+          const impactData = t.raw(`items.${projectId}.impact`);
 
           if (Array.isArray(impactData)) {
             return impactData.map((item: any, index: number) => (

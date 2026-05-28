@@ -12,7 +12,7 @@ interface ProjectDeepDiveProps {
 }
 
 export default function ProjectDeepDive({ projectId }: ProjectDeepDiveProps) {
-  const t = useTranslations();
+  const t = useTranslations("projects");
   const [isMounted, setIsMounted] = useState(false);
 
   useEffect(() => {
@@ -28,13 +28,13 @@ export default function ProjectDeepDive({ projectId }: ProjectDeepDiveProps) {
   // Wenn noch auf dem Server oder Daten fehlen, rendern wir nichts oder einen Platzhalter
   if (!isMounted) return null;
 
-  const codeText = t.raw(`projects.items.${projectId}.deepDive.code`) || "";
-  const filePath = t(`projects.items.${projectId}.deepDive.filePath`);
-  const contextText = t(`projects.items.${projectId}.deepDive.context`);
+  const codeText = t.raw(`items.${projectId}.deepDive.code`) || "";
+  const filePath = t(`items.${projectId}.deepDive.filePath`);
+  const contextText = t(`items.${projectId}.deepDive.context`);
 
   return (
     <ProjectSection>
-      <SectionTitle title="04 / DEEP DIVE" headline="Technisches Highlight" />
+      <SectionTitle title="04 / DEEP DIVE" headline={t("headlines.deepDive")} />
 
       <EditorContainer>
         <EditorHeader>
