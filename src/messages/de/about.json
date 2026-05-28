@@ -1,0 +1,61 @@
+{
+  "headline": "Turning coffee into code since 2005.",
+  "introText": "Vom Diplom in Wirtschaftsinformatik an der Universität Paderborn bis zur Entwicklung von Enterprise-Lösungen für die Bundesagentur für Arbeit: Meine Leidenschaft gehört stabilen Backends und performanten Frontends.",
+  "stats": {
+    "expValue": "21+",
+    "expLabel": "Jahre Erfahrung",
+    "codeValue": "2005",
+    "codeLabel": "First Line of Code",
+    "focusValue": "Fullstack",
+    "focusLabel": "Fokus",
+    "infraValue": "VServer",
+    "infraLabel": "Infrastructure"
+  },
+  "timeline": {
+    "bootcamp": {
+      "title": "Intensiv-Bootcamp Fullstack Development",
+      "company": "neuefische GmbH",
+      "description": "Vertiefung moderner Web-Technologien: Von der Architektur mit Next.js (App & Pages Router) über Cloud-Deployment bis hin zu modernen Backend-Strukturen mit Node.js."
+    },
+    "teccon": {
+      "title": "Senior Fullstack-Entwicklerin",
+      "company": "TECCON (Forschungsprojekt)",
+      "description": "Konzeption und Neuentwicklung einer Cloud-Microservices-Architektur für innovative Ladeinfrastrukturen."
+    },
+    "ba_amm": {
+      "title": "Fullstack-Entwicklerin (Arbeitsmarktmonitor)",
+      "company": "Bundesagentur für Arbeit",
+      "description": "Weiterentwicklung eines Analyse-Instruments für regionale Arbeitsmarktstrukturen. Implementierung interaktiver Grafiken."
+    },
+    "ba_education": {
+      "title": "Backend-Entwicklerin (Informationssystem Bildung & Beruf)",
+      "company": "Bundesagentur für Arbeit",
+      "description": "Betreuung zentraler Online-Angebote (ELAN, Entgeldatlas). Fokus auf barrierefreie PDF-Generierung."
+    },
+    "edict": {
+      "title": "Software-Entwicklerin",
+      "company": "edict egaming GmbH",
+      "description": "Entwicklung hochverfügbarer Casinolösungen und Aufbau deklarativer CI/CD-Pipelines."
+    },
+    "hmmh": {
+      "title": "E-Commerce Software Engineer",
+      "company": "hmmh multimediahaus AG",
+      "description": "Multimandanten-E-Commerce-Plattform auf Basis von Hybris und Wartung von Intershop-Systemen. Erstellung von Proof-of-Concepts für die Akquise."
+    },
+    "areva": {
+      "title": "Java Component Expert",
+      "company": "AREVA NP GmbH",
+      "description": "Anforderungsanalyse, Datenmodellierung in UML und Implementierung von Anwendungen in Java, Struts und Python."
+    },
+    "isweb": {
+      "title": "The Web Begins",
+      "company": "is@web GmbH",
+      "description": "Erstellung dynamischer Webseiten mit HTML/CSS und JavaScript. Auslesen von Daten aus dem CMS und Erstellung von Workflows."
+    },
+    "university": {
+      "title": "Pioneering Tech",
+      "company": "Universität Paderborn",
+      "description": "Forschung an XML-Dokumenten für PDAs und domänenübergreifenden Architekturen im Projekt SIRENA."
+    }
+  }
+}

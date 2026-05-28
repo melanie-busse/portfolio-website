@@ -1,0 +1,61 @@
+{
+  "headline": "Turning coffee into code since 2005.",
+  "introText": "From a degree in Business Informatics at the University of Paderborn to developing enterprise solutions for the Federal Employment Agency: My passion lies in stable backends and high-performance frontends.",
+  "stats": {
+    "expValue": "21+",
+    "expLabel": "Years of Experience",
+    "codeValue": "2005",
+    "codeLabel": "First Line of Code",
+    "focusValue": "Fullstack",
+    "focusLabel": "Focus",
+    "infraValue": "VServer",
+    "infraLabel": "Infrastructure"
+  },
+  "timeline": {
+    "bootcamp": {
+      "title": "Intensive Bootcamp Fullstack Development",
+      "company": "neuefische GmbH",
+      "description": "Deep dive into modern web technologies: From architecture with Next.js (App & Pages Router) and cloud deployment to modern backend structures with Node.js."
+    },
+    "teccon": {
+      "title": "Senior Fullstack Developer",
+      "company": "TECCON (Research Project)",
+      "description": "Conception and redevelopment of a cloud microservices architecture for innovative charging infrastructures."
+    },
+    "ba_amm": {
+      "title": "Fullstack Developer (Labour Market Monitor)",
+      "company": "Bundesagentur für Arbeit",
+      "description": "Further development of an analytical tool for regional labour market structures. Implementation of interactive charts."
+    },
+    "ba_education": {
+      "title": "Backend Developer (Information System for Education & Profession)",
+      "company": "Bundesagentur für Arbeit",
+      "description": "Maintenance of central online platforms (ELAN, Entgeldatlas). Special focus on accessible PDF generation."
+    },
+    "edict": {
+      "title": "Software Developer",
+      "company": "edict egaming GmbH",
+      "description": "Development of highly available casino solutions and setup of declarative CI/CD pipelines."
+    },
+    "hmmh": {
+      "title": "E-Commerce Software Engineer",
+      "company": "hmmh multimediahaus AG",
+      "description": "Multi-tenant e-commerce platform based on Hybris and maintenance of Intershop systems. Creation of proof-of-concepts for client acquisition."
+    },
+    "areva": {
+      "title": "Java Component Expert",
+      "company": "AREVA NP GmbH",
+      "description": "Requirements analysis, data modeling in UML, and implementation of applications in Java, Struts, and Python."
+    },
+    "isweb": {
+      "title": "The Web Begins",
+      "company": "is@web GmbH",
+      "description": "Creation of dynamic websites using HTML/CSS and JavaScript. Fetching data from the CMS and designing workflows."
+    },
+    "university": {
+      "title": "Pioneering Tech",
+      "company": "Universität Paderborn",
+      "description": "Research on XML documents for PDAs and cross-domain architectures within the SIRENA project."
+    }
+  }
+}
