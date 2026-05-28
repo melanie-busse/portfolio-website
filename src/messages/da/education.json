@@ -1,0 +1,17 @@
+{
+  "title": "Uddannelse",
+  "items": {
+    "university": {
+      "title": "Diplomuddannelse i Erhvervsinformatik",
+      "description": "<h2>Universitetet i Paderborn</h2>Fokusområder: Softwareteknologi, databaser, informationssystemer og erhvervsøkonomi."
+    },
+    "milchwerke": {
+      "title": "Erhvervsuddannelse som industriassistent",
+      "description": "<h2>Milchwerke Westfalen eG, Herford</h2>Eksamen: Industriekauffrau (industriassistent). Grundstenen for forståelsen af økonomiske processer."
+    },
+    "erich_gutenberg": {
+      "title": "Højere forberedelseseksamen (HF)",
+      "description": "<h2>Erich-Gutenberg-Schule, Bünde</h2>Handelsskole (Höhere Handelsschule), fokusområde: Kontoradministration."
+    }
+  }
+}
