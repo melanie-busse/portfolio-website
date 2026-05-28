@@ -8,7 +8,7 @@ import LanguageSwitcher from "@/components/features/LanguageSwitcher";
 export default function Navbar() {
   const router = useRouter();
   const { locale } = router;
-  const t = useTranslations("nav");
+  const t = useTranslations("common");
   const [isOpen, setIsOpen] = useState(false);
 
   const isActive = (path: string) => router.pathname === path;
@@ -32,7 +32,7 @@ export default function Navbar() {
         {/* Die Navigation (Desktop flach, Mobil als Overlay) */}
         <NavLinks $isOpen={isOpen}>
           <NavLink href="/" locale={locale} $active={isActive("/")} onClick={closeMenu}>
-            {t("skills")}
+            {t("nav.skills")}
           </NavLink>
           <NavLink
             href="/projects"
@@ -40,10 +40,10 @@ export default function Navbar() {
             $active={isActive("/projects")}
             onClick={closeMenu}
           >
-            {t("projects")}
+            {t("nav.projects")}
           </NavLink>
           <NavLink href="/about" locale={locale} $active={isActive("/about")} onClick={closeMenu}>
-            {t("about")}
+            {t("nav.about")}
           </NavLink>
           <NavLink
             href="/education"
@@ -51,10 +51,10 @@ export default function Navbar() {
             $active={isActive("/education")}
             onClick={closeMenu}
           >
-            {t("education")}
+            {t("nav.education")}
           </NavLink>
           <ContactButton href="mailto:mail@melanie-busse.de" onClick={closeMenu}>
-            {t("contact")}
+            {t("nav.contact")}
           </ContactButton>
 
           <SwitcherWrapper>
