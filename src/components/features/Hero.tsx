@@ -3,7 +3,7 @@ import Image from "next/image";
 import { useTranslations } from "next-intl";
 
 export default function Hero() {
-  const t = useTranslations("hero");
+  const t = useTranslations("common");
 
   return (
     <HeroContainer>
@@ -20,10 +20,10 @@ export default function Hero() {
         </ImageWrapper>
 
         <TextWrapper>
-          <NameTitle>{t("title")}</NameTitle>
-          <SubTitle>{t("subTitle")}</SubTitle>
-          <Description>{t("description")}</Description>
-          <HighlightBadge>{t("badge")}</HighlightBadge>
+          <NameTitle>{t("hero.title")}</NameTitle>
+          <SubTitle>{t("hero.subTitle")}</SubTitle>
+          <Description>{t("hero.description")}</Description>
+          <HighlightBadge>{t("hero.badge")}</HighlightBadge>
         </TextWrapper>
       </HeroContent>
     </HeroContainer>

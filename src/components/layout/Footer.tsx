@@ -6,28 +6,26 @@ import { useTranslations } from "next-intl";
 export default function Footer() {
   const currentYear = new Date().getFullYear();
   const { locale } = useRouter();
-  const t = useTranslations("footer");
+  const t = useTranslations("common");
 
   return (
     <FooterContainer>
       <FooterContent>
         <Copyright>
-          © {currentYear} Melanie Busse – {t("role")}
+          © {currentYear} Melanie Busse – {t("footer.role")}
         </Copyright>
         <FooterLinks>
           <FooterLink href="/imprint" locale={locale}>
-            {t("imprint")}
+            {t("footer.imprint")}
           </FooterLink>
           <FooterLink href="/privacy" locale={locale}>
-            {t("privacy")}
+            {t("footer.privacy")}
           </FooterLink>
         </FooterLinks>
       </FooterContent>
     </FooterContainer>
   );
 }
-
-// --- Styled Components ---
 
 const FooterContainer = styled.footer`
   width: 100%;

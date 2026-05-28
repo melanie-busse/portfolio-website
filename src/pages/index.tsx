@@ -12,11 +12,19 @@ export default function Home() {
 }
 
 export const getStaticProps: GetStaticProps = async ({ locale }) => {
-  const messages = (await import(`@/messages/${locale || "de"}.json`)).default;
+  const currentLocale = locale || "de";
 
-  return {
-    props: {
-      messages,
-    },
-  };
+  try {
+    return {
+      props: {
+        messages: {
+          common: (await import(`@/messages/${currentLocale}/common.json`)).default,
+          skills: (await import(`@/messages/${currentLocale}/skills.json`)).default,
+        },
+      },
+    };
+  } catch (error) {
+    console.error("Fehler beim Laden der Übersetzungsdateien in getStaticProps:", error);
+    return { props: { messages: {} } };
+  }
 };

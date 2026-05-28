@@ -1,0 +1,28 @@
+{
+  "hero": {
+    "title": "Melanie Busse",
+    "subTitle": "Senior Fullstack-Entwicklerin",
+    "description": "Über 19 Jahre Erfahrung in der Konzeption und Entwicklung komplexer Softwaresysteme. Expertin für Java-Backends und moderne Web-Frontends mit Angular und TypeScript.",
+    "badge": "Softwareentwicklung seit 2005"
+  },
+  "nav": {
+    "skills": "Skills",
+    "projects": "Projekte",
+    "about": "Werdegang",
+    "education": "Bildung",
+    "contact": "Kontakt"
+  },
+  "footer": {
+    "role": "Senior Fullstack-Entwicklerin",
+    "imprint": "Impressum",
+    "privacy": "Datenschutz"
+  },
+  "imprint": {
+    "title": "Impressum",
+    "hostingText": "Diese Webseite wird gehostet bei:"
+  },
+  "privacy": {
+    "title": "Datenschutz",
+    "headline": "Datenschutzerklärung"
+  }
+}

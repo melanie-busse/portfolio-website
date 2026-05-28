@@ -1,0 +1,28 @@
+{
+  "hero": {
+    "title": "Melanie Busse",
+    "subTitle": "Senior Fullstack Developer",
+    "description": "Over 21 years of experience in the conception and development of complex software systems. Expert in Java backends and modern web frontends with Angular and TypeScript.",
+    "badge": "Software development since 2005"
+  },
+  "nav": {
+    "skills": "Skills",
+    "projects": "Projects",
+    "about": "Career",
+    "education": "Education",
+    "contact": "Contact"
+  },
+  "footer": {
+    "role": "Senior Fullstack Developer",
+    "imprint": "Legal Notice",
+    "privacy": "Privacy Policy"
+  },
+  "imprint": {
+    "title": "Legal Notice",
+    "hostingText": "This website is hosted by:"
+  },
+  "privacy": {
+    "title": "Privacy",
+    "headline": "Privacy Policy"
+  }
+}
