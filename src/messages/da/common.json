@@ -10,7 +10,8 @@
     "projects": "Projekter",
     "about": "Karriere",
     "education": "Uddannelse",
-    "contact": "Kontakt"
+    "contact": "Kontakt",
+    "openMenu": "Åben menu"
   },
   "footer": {
     "role": "Senior Fullstack Udvikler",

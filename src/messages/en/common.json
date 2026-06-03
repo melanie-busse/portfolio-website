@@ -10,7 +10,8 @@
     "projects": "Projects",
     "about": "Career",
     "education": "Education",
-    "contact": "Contact"
+    "contact": "Contact",
+    "openMenu": "Open menu"
   },
   "footer": {
     "role": "Senior Fullstack Developer",
