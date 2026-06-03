@@ -23,7 +23,7 @@ export default function Navbar() {
         </Logo>
 
         {/* Hamburger Button für Mobile */}
-        <Hamburger onClick={toggleMenu} $isOpen={isOpen}>
+        <Hamburger aria-label={t("nav.openMenu")} onClick={toggleMenu} $isOpen={isOpen}>
           <span />
           <span />
           <span />
