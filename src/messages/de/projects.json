@@ -14,130 +14,1298 @@
   },
   "backToOverview": "Zurück zur Übersicht",
   "viewLiveProject": "Projekt live ansehen",
+
   "items": {
-    "emobility": {
-      "title": "Verwaltungssoftware E-Mobilität",
-      "company": "TECCON (Forschungsprojekt)",
-      "description": "Konzeption und Neuentwicklung einer Cloud-Microservices-Architektur für innovative Ladeinfrastrukturen. Fokus auf skalierbare Systeme und automatisierte Qualitätssicherung.",
-      "leadText": "Im Rahmen eines innovativen E-Mobility-Forschungsprojekts habe ich die Konzeption und Neuentwicklung einer cloudbasierten Verwaltungssoftware für Ladeinfrastrukturen begleitet. Als Fullstack-Entwicklerin reichte mein Aufgabengebiet vom Requirements Engineering über das Design der Microservices-Architektur und der Single-Page-Applikation bis hin zum Aufbau der Cloud-Infrastruktur.",
+    "developer-portfolio": {
+      "title": "Frontend Software-Entwickler | Personal Portfolio Website",
+      "company": "Personal Project",
+      "description": "Konzeption, Design und Entwicklung einer performanten, mehrsprachigen Portfolio-Webseite zur Demonstration moderner Webtechnologien.",
+      "leadText": "Dieses Portfolio wurde als eigenständiges Projekt entwickelt, um moderne Best Practices der Webentwicklung in einer realen Anwendung zu demonstrieren. Der Fokus lag auf einer kompromisslos performanten Architektur, einem barrierefreien und hochgradig responsiven Design sowie einer nahtlosen Internationalisierung. Durch den Verzicht auf schwere CSS-Frameworks zugunsten von maßgeschneiderten Styled Components wurde ein schlanker, wartbarer Code-Base realisiert, der durch dynamische Datenstrukturen vollständig modular gesteuert wird.",
+      "links": {
+        "github": "https://github.com/dein-username/portfolio",
+        "live": "https://deine-portfolio-domain.de"
+      },
       "challenges": [
         {
-          "id": "architecture",
-          "icon": "architecture",
-          "title": "Vernetzte Microservices",
-          "description": "Konzeption einer Cloud-Architektur mit Quarkus und Kafka zur zuverlässigen Anbindung externer Systeme wie Ladesäulen-Infrastruktur und Buchhaltung."
+          "id": "next-intl-i18n",
+          "icon": "tools",
+          "title": "Nahtlose Internationalisierung (i18n)",
+          "description": "Integration von next-intl zur sauberen Trennung von Anwendungslogik und textuellen Inhalten in Deutsch, Englisch und Dänisch inklusive dynamischer Pfad-Validierung."
         },
         {
-          "id": "testing",
-          "icon": "testing",
-          "title": "E2E Testarchitektur",
-          "description": "Aufbau einer lückenlosen, automatisierten Testlandschaft von Unit- und Integrationstests im Backend bis hin zu Playwright im Angular-Frontend."
+          "id": "styled-components-design",
+          "icon": "frontend",
+          "title": "Komponentenspezifisches CSS-in-JS",
+          "description": "Erstellung eines konsistenten Design-Systems mit Styled Components unter Nutzung globaler Themes für den Dark Mode und pixelgenauer, responsiver Layouts."
         },
         {
-          "id": "devops",
-          "icon": "devops",
-          "title": "Requirements & DevOps",
-          "description": "Ganzheitliche Umsetzung fachlicher Anforderungen vom agilen Stakeholder-Refinement bis zum Cloud-Deployment via Azure Pipelines und Kubernetes."
+          "id": "dynamic-data-rendering",
+          "icon": "database",
+          "title": "Datengesteuerte UI-Komponenten",
+          "description": "Architektur vollständig modularer UI-Sektionen (wie Projekt-Heros, Timelines und Skill-Grids), die sich vollautomatisch anhand strukturierter JSON-Objekte generieren."
         }
       ],
       "architecture": [
         {
-          "id": "quarkus",
-          "title": "Quarkus & Java 21",
-          "description": "Einsatz eines Cloud-Native-Frameworks für extrem schnelle Startzeiten, geringen Speicherverbrauch und moderne Java-Features im Microservice-Backend.",
-          "type": "backend"
-        },
-        {
-          "id": "kafka",
-          "title": "Apache Kafka",
-          "description": "Ereignisgesteuerte Kommunikation (Event-Driven Architecture) für den asynchronen und hochverfügbaren Datenaustausch mit der Ladeinfrastruktur.",
-          "type": "backend"
-        },
-        {
-          "id": "angular",
-          "title": "Angular & TS",
-          "description": "Realisierung einer hochperformanten, strukturierten Single-Page-Applikation (SPA) für das intuitive Management der Ladestationen.",
+          "id": "nextjs-pages-router",
+          "title": "Next.js Pages Router & SSR",
+          "description": "Strukturiertes Routing-Framework zur Gewährleistung optimierter Ladezeiten (Time to First Byte) und sauberer SEO-Strukturen durch hybrides Rendering.",
           "type": "frontend"
         },
         {
-          "id": "kubernetes",
-          "title": "Docker & K8s",
-          "description": "Containerisierung aller Services und Orchestrierung via Kubernetes in der Azure-Cloud für maximale Skalierbarkeit und Zero-Downtime-Deployments.",
+          "id": "clean-component-architecture",
+          "title": "Atomic / Modulare Komponenten",
+          "description": "Strikte Trennung von Layout-Containern, wiederverwendbaren UI-Kacheln (Buttons, Badges) und zustandsgesteuerten Sektionen für maximale Wartbarkeit.",
+          "type": "frontend"
+        }
+      ],
+      "impact": [
+        {
+          "id": "clean-code-architecture",
+          "type": "frontend",
+          "badgeText": "Clean Code",
+          "title": "Optimierte Performance",
+          "description": "Erreichen von Spitzenwerten in Google Lighthouse durch semantisches HTML, optimiertes Asset-Loading und den Verzicht auf overhead-intensive Drittbibliotheken."
+        },
+        {
+          "id": "robust-typescript",
+          "type": "tools",
+          "badgeText": "TS",
+          "title": "Typensichere Entwicklung",
+          "description": "Vollständige Typsicherheit über alle Komponenten-Props, Theme-Definitionen und Internationalisierungs-Pfade hinweg zur Vermeidung von Runtime-Fehlern."
+        }
+      ],
+      "stack": [
+        { "name": "Next.js (Pages)", "type": "frontend" },
+        { "name": "React", "type": "frontend" },
+        { "name": "TypeScript", "type": "frontend" },
+        { "name": "Styled Components", "type": "frontend" },
+        { "name": "next-intl", "type": "tools" },
+        { "name": "Vercel", "type": "tools" },
+        { "name": "Git / GitHub", "type": "tools" }
+      ],
+      "deepDive": {
+        "filePath": "src/components/layout/ProjectPage/ProjectLinks.tsx",
+        "context": "Das Code-Beispiel zeigt die fehlersichere Komponente zur Link-Generierung, die fehlerhafte oder unvollständige i18n-Übersetzungsschlüssel abfängt und das UI dynamisch anpasst.",
+        "code": "export default function ProjectLinks({ projectId }: ProjectLinksProps) {\n  const t = useTranslations(\"projects\");\n\n  const githubLink = t(\"items.\" + projectId + \".links.github\");\n  const liveLink = t(\"items.\" + projectId + \".links.live\");\n\n  const githubFallback = \"projects.items.\" + projectId + \".links.github\";\n  const liveFallback = \"projects.items.\" + projectId + \".links.live\";\n\n  const isGithubValide = githubLink && githubLink !== githubFallback && githubLink !== \"null\" && githubLink !== \"\";\n  const isLiveValide = liveLink && liveLink !== liveFallback && liveLink !== \"null\" && liveLink !== \"\";\n\n  if (!isGithubValide && !isLiveValide) return null;\n\n  return (\n    <LinksContainer>\n      {isGithubValide && <LinkButton href={githubLink} target=\"_blank\">Code</LinkButton>}\n      {isLiveValide && <LinkButton href={liveLink} target=\"_blank\" className=\"live-btn\">Live Demo</LinkButton>}\n    </LinksContainer>\n  );\n}"
+      }
+    },
+    "zoo2-animalpark-manager": {
+      "title": "Fullstack Web-Applikation | Zoo 2 Community Manager",
+      "company": "Persönliches Projekt & Bootcamp-Recap",
+      "description": "Entwicklung einer spezialisierten, multilingualen Management-Plattform für die Community des Spiels 'Zoo 2: Animal Park' zur strategischen Wettbewerbsplanung und Bestandsverwaltung.",
+      "leadText": "Als erstes großes Recap-Projekt habe ich ein datengestütztes Planungstool für die Spieler-Community von 'Zoo 2: Animal Park' entwickelt. Die Plattform aggregiert Spieldaten und hilft Clubs, fundierte Entscheidungen für In-Game-Wettbewerbe zu treffen. Im Zuge der kontinuierlichen Modernisierung habe ich die Anwendung von der ursprünglichen Next.js Pages-Router-Architektur vollständig auf den modernen Next.js App Router mit striktem TypeScript umgestellt, um die Performance durch Server Components zu maximieren und die Typsicherheit zu garantieren.",
+      "links": {
+        "github": "https://github.com/MelanieB-007/zoo2-community-manager",
+        "live": "https://zoo2-community-manager.vercel.app/"
+      },
+      "challenges": [
+        {
+          "id": "app-router-migration",
+          "icon": "architecture",
+          "title": "Migration auf den Next.js App Router & SWR",
+          "description": "Erfolgreiches Refactoring der Anwendung vom Pages Router auf den App Router. Integration von SWR für hocheffizientes, clientseitiges Data-Fetching, Caching und automatische Revalidierung im Frontend."
+        },
+        {
+          "id": "cloud-native-database",
+          "icon": "database",
+          "title": "Cloud-Native Serverless Datenbank",
+          "description": "Migration der relationalen Datenstruktur auf TiDB Cloud, eine hochverfügbare, verteilte MySQL-Datenbankarchitektur, angebunden via Prisma ORM."
+        },
+        {
+          "id": "enhanced-ux-notifications",
+          "icon": "frontend",
+          "title": "Optimierte UX & Notifications",
+          "description": "Implementierung einer interaktiven UI mit SweetAlert für visuell ansprechende Bestätigungsdialoge und Toastify für Echtzeit-Feedback bei Benutzeraktionen."
+        },
+        {
+          "id": "vercel-deployment",
+          "icon": "tools",
+          "title": "Serverless Deployment auf Vercel",
+          "description": "Architektur einer vollautomatisierten Deployment-Pipeline auf Vercel inklusive Optimierung der Serverless Functions und Umgebungsvariablen."
+        }
+      ],
+      "architecture": [
+        {
+          "id": "nextjs-app-router",
+          "title": "Next.js App Router & SWR",
+          "description": "Modernes Routing- und Rendering-Modell mit hybriden Server- und Client-Komponenten, kombiniert mit SWR für reaktive UI-Updates ohne manuelle State-Verwaltung.",
+          "type": "frontend"
+        },
+        {
+          "id": "prisma-tidb-layer",
+          "title": "Prisma ORM & TiDB Cloud Backend",
+          "description": "Typsicherer Datenzugriff auf eine verteilte MySQL-Instanz in der Cloud, optimiert für performante Joins und schnelle Aggregationen.",
+          "type": "backend"
+        }
+      ],
+      "impact": [
+        {
+          "id": "data-driven-advantage",
+          "type": "backend",
+          "badgeText": "Erfolg",
+          "title": "Datengestützte Club-Strategie",
+          "description": "Erfolgreiche Bereitstellung eines MVPs, das Clubs durch automatische Punkte-Szenariorechner einen signifikanten, messbaren Vorteil im Spiel verschafft."
+        },
+        {
+          "id": "clean-code-typesafety",
+          "type": "tools",
+          "badgeText": "Qualität",
+          "title": "Modernes Cloud-Setup",
+          "description": "Ein robuster, serverloser Tech-Stack auf Vercel und TiDB Cloud, der Ausfallsicherheit und fehlerfreie API-Datenflüsse unter TypeScript garantiert."
+        }
+      ],
+      "stack": [
+        { "name": "React / Next.js (App Router)", "type": "frontend" },
+        { "name": "TypeScript / SWR", "type": "frontend" },
+        { "name": "Styled Components", "type": "frontend" },
+        { "name": "SweetAlert / Toastify", "type": "frontend" },
+        { "name": "next-intl (i18n)", "type": "frontend" },
+        { "name": "TiDB Cloud (MySQL)", "type": "backend" },
+        { "name": "Node.js", "type": "backend" },
+        { "name": "MySQL / MariaDB", "type": "backend" },
+        { "name": "REST APIs", "type": "backend" },
+        { "name": "Prisma ORM", "type": "backend" },
+        { "name": "NextAuth.js (Discord OAuth)", "type": "backend" },
+        { "name": "Vercel Deployment", "type": "tools" },
+        { "name": "IntelliJ / PhpStorm", "type": "tools" },
+        { "name": "Git / GitHub", "type": "tools" },
+        { "name": "Datenbank-Integration", "type": "tools" }
+      ],
+      "deepDive": {
+        "filePath": "src/hooks/useCompetitionData.ts",
+        "context": "Dieser Custom Hook zeigt die Integration von SWR im Frontend des Zoo-Managers, um Szenario-Berechnungen für Wettbewerbe reaktiv zu fetchen und mittels Toastify Feedback zu geben.",
+        "code": "'use client';\n\nimport useSWR from 'swr';\nimport { toast } from 'react-toastify';\n\ninterface CalculationResult {\n  competitionId: string;\n  competitionName: string;\n  calculatedPoints: number;\n  status: string;\n}\n\nconst fetcher = (url: string) => fetch(url).then((res) => {\n  if (!res.ok) throw new Error('Kalkulation fehlgeschlagen');\n  return res.json();\n});\n\nexport function useCompetitionData(competitionId: string) {\n  const { data, error, isLoading } = useSWR<CalculationResult>(\n    competitionId ? `/api/competitions/${competitionId}/calculate` : null,\n    fetcher,\n    {\n      onSuccess: () => toast.success('Szenario-Berechnung erfolgreich aktualisiert!'),\n      onError: () => toast.error('Fehler bei der automatischen Punkteberechnung.'),\n      revalidateOnFocus: false\n    }\n  );\n\n  return {\n    result: data,\n    isError: error,\n    isLoading\n  };\n}"
+      }
+    },
+    "neuefische-fullstack-bootcamp": {
+      "title": "Full-Stack Software Development Weiterbildung",
+      "company": "neuefische GmbH – IT Bootcamp",
+      "description": "12-monatige, intensive Vollzeit-Weiterbildung im Full-Stack-Umfeld zur Vertiefung moderner JavaScript/TypeScript-Ökosysteme, Cloud-Technologien und KI-gestützter Softwareentwicklung.",
+      "leadText": "Um meine akademische Basis in der Wirtschaftsinformatik und meine langjährige Enterprise-Erfahrung gezielt auf den neuesten Stand moderner Cloud-Native- und JavaScript-Technologien zu bringen, habe ich diese intensive 12-monatige Full-Stack-Weiterbildung absolviert. Das praxisnahe Programm fokussierte sich auf den Aufbau moderner Single-Page- und Server-Side-Applikationen von Grund auf. Ein zentrales Highlight war die Umsetzung realer Praxisprojekte unter Einsatz modernster Tools sowie die Integration von KI-Agenten und APIs.",
+      "links": {
+        "github": "https://github.com/MelanieB-007/Boot-Camp",
+        "live": "https://www.neuefische.de/bootcamp/full-stack-software-development"
+      },
+      "challenges": [
+        {
+          "id": "stack-modernization",
+          "icon": "architecture",
+          "title": "Modernes JavaScript-Ökosystem",
+          "description": "Meisterung des gesamten modernen Stacks von tiefgehendem TypeScript über reaktive Frontends mit React bis hin zu strukturierten Backend-Architekturen mit Node.js und NestJS."
+        },
+        {
+          "id": "recap-project-zoo",
+          "icon": "database",
+          "title": "Erstes Recap-Projekt: Zoo-Manager",
+          "description": "Eigenständige Konzeption und Fullstack-Umsetzung des 'Zoo 2 Community Managers' zur Verwaltung von Tieren, Farbvarianten und Gehegen auf Basis von Next.js (Pages Router), MariaDB und Prisma."
+        },
+        {
+          "id": "ai-integration",
+          "icon": "tools",
+          "title": "KI-gestützte Entwicklung & AI Agents",
+          "description": "Praktische Implementierung von Anwendungen unter direkter Einbindung der OpenAI-API sowie der effiziente Einsatz von KI-Agenten wie Claude Code im Entwicklungs-Workflow."
+        },
+        {
+          "id": "devops-cloud",
+          "icon": "frontend",
+          "title": "Cloud-Deployment & DevOps",
+          "description": "Aufbau automatisierter CI/CD-Workflows sowie die Containerisierung von Anwendungen mit Docker und deren Deployment in die AWS-Cloud (EC2, S3, RDS)."
+        }
+      ],
+      "architecture": [
+        {
+          "id": "react-next-frontend",
+          "title": "React & Next.js Client-Schicht",
+          "description": "Komponentenbasierte Architekturen unter Nutzung von Hooks, fortgeschrittenem State Management und responsivem, barrierefreiem UI-Design.",
+          "type": "frontend"
+        },
+        {
+          "id": "nest-express-backend",
+          "title": "NestJS & Node.js REST-API",
+          "description": "Strukturiertes und skalierbares Backend mit NestJS zur Bereitstellung sicherer RESTful APIs inklusive Authentifizierung und relationaler SQL-Datenmodellierung.",
+          "type": "backend"
+        },
+        {
+          "id": "aws-docker-infra",
+          "title": "AWS & Docker Infrastruktur",
+          "description": "Isolierte Container-Umgebungen via Docker, deployed in der AWS-Cloud mit automatisierten Deployment-Pipelines.",
           "type": "tools"
         }
       ],
       "impact": [
         {
-          "id": "angular-components",
-          "type": "frontend",
-          "badgeText": "Frontend",
-          "title": "Angular-Komponenten implementiert",
-          "description": "Entwurf und Umsetzung neuer, modularer UI-Komponenten in Angular und nahtlose Anbindung der Benutzeroberfläche an die REST-Schnittstellen des Backends."
-        },
-        {
-          "id": "microservices",
+          "id": "fullstack-versatility",
           "type": "backend",
-          "badgeText": "Backend",
-          "title": "Quarkus Microservices entwickelt",
-          "description": "Konzeption und Implementierung robuster Backend-Services mit Java EE/Quarkus sowie ereignisgesteuerte Integration via Apache Kafka."
+          "badgeText": "Skills",
+          "title": "Umfassende Fullstack-Kompetenz",
+          "description": "Erfolgreicher Brückenschlag zwischen moderner UI/UX-Entwicklung im Frontend und performanten, sicheren Datenstrukturen im Backend."
         },
         {
-          "id": "test-automation",
+          "id": "agile-teamwork",
           "type": "tools",
-          "badgeText": "QA / Testing",
-          "title": "Automatisierte Testlandschaft aufgebaut",
-          "description": "Aufbau der vollständigen Testarchitektur mit JUnit- und Integrationstests im Backend sowie automatisierten E2E-Tests mittels Playwright und Jasmine im Frontend."
+          "badgeText": "Methodik",
+          "title": "Agile Arbeitsweise & Clean Code",
+          "description": "Intensive Anwendung von Pair Programming, agilen Scrum-Methoden, automatisiertem Unit-Testing und Clean-Code-Prinzipien in einem kollaborativen Team-Umfeld."
+        }
+      ],
+      "stack": [
+        { "name": "TypeScript / React", "type": "frontend" },
+        { "name": "Next.js (Pages- / App-Router)", "type": "frontend" },
+        { "name": "Node.js / NestJS / Express", "type": "backend" },
+        { "name": "MariaDB / Prisma / SQL", "type": "backend" },
+        { "name": "OpenAI API / AI Agents", "type": "tools" },
+        { "name": "Docker / AWS (EC2, S3)", "type": "tools" },
+        { "name": "CI/CD / GitHub Projects", "type": "tools" },
+        { "name": "Unit Testing / Clean Code", "type": "tools" }
+      ],
+      "deepDive": {
+        "filePath": "zoo-manager/pages/api/animals/index.ts",
+        "context": "Dieses Code-Beispiel zeigt einen sicheren API-Route-Handler im Next.js-Backend (Pages Router) meines ersten Recap-Projekts (Zoo-Manager), der Prisma zur performanten Abfrage von Tierdaten aus der MariaDB nutzt.",
+        "code": "// Next.js API-Route für das Tier-Management im Zoo-Manager\nimport type { NextApiRequest, NextApiResponse } from 'next';\nimport { PrismaClient } from '@prisma/client';\n\nconst prisma = new PrismaClient();\n\nexport default async function handler(\n  req: NextApiRequest,\n  res: NextApiResponse\n) {\n  const { method } = req;\n\n  switch (method) {\n    case 'GET':\n      try {\n        // Abfrage aller Tiere inklusive ihrer Farbvarianten aus der MariaDB\n        const animals = await prisma.animal.findMany({\n          include: { variants: true },\n          orderBy: { name: 'asc' },\n        });\n        return res.status(200).json(animals);\n      } catch (error) {\n        return res.status(500).json({ error: 'Failed to fetch animal data' });\n      }\n\n    case 'POST':\n      try {\n        const { name, enclosureId, species } = req.body;\n        if (!name || !enclosureId) {\n          return res.status(400).json({ error: 'Missing required fields' });\n        }\n\n        const newAnimal = await prisma.animal.create({\n          data: { name, enclosureId, species },\n        });\n        return res.status(201).json(newAnimal);\n      } catch (error) {\n        return res.status(500).json({ error: 'Could not create animal entry' });\n      }\n\n    default:\n      res.setHeader('Allow', ['GET', 'POST']);\n      return res.status(405).end(`Method ${method} Not Allowed`);\n  }\n}"
+      }
+    },
+    "ba-online-antrag-alg": {
+      "title": "Fullstack Software-Entwickler | Online-Antrag Arbeitslosengeld",
+      "company": "Bundesagentur für Arbeit (via TECCON)",
+      "description": "Fullstack-Entwicklung und Optimierung des bundesweiten Online-Antragsverfahrens für das Arbeitslosengeld mit Angular und Java.",
+      "leadText": "Im Rahmen dieses Projekts für die Online-Services der Bundesagentur für Arbeit stand die Weiterentwicklung des digitalen Antragsverfahrens für das Arbeitslosengeld im Fokus. Die Kernaufgabe bestand darin, den Antragsprozess für Bürgerinnen und Bürger so performant, sicher und intuitiv wie möglich zu gestalten. Durch den Einsatz moderner Webtechnologien im Frontend und einer robusten Java-Architektur im Backend wurde eine hochverfügbare Anwendung realisiert, die den strengen gesetzlichen Anforderungen an Datenschutz und Barrierefreiheit im öffentlichen Sektor gerecht wird.",
+      "links": {
+        "github": null,
+        "live": "https://www.arbeitsagentur.de/arbeitslos-arbeit-finden/arbeitslosengeld/arbeitslosengeld-beantragen"
+      },
+      "challenges": [
+        {
+          "id": "angular-accessibility",
+          "icon": "frontend",
+          "title": "Barrierefreies High-Traffic Frontend",
+          "description": "Umsetzung komponentenbasierter Architekturen mit Angular unter strikter Einhaltung der Barrierefreien-Informationstechnik-Verordnung (BITV) und WCAG, um allen Bürgerinnen und Bürgern einen uneingeschränkten Zugang zu ermöglichen."
         },
         {
-          "id": "ci-cd-devops",
+          "id": "java-backend-validation",
+          "icon": "database",
+          "title": "Sichere & skalierbare Java-Architektur",
+          "description": "Weiterentwicklung geschäftskritischer Backend-Services in Java zur sicheren Verarbeitung und Validierung sensibler Antragsdaten sowie deren Anbindung an die internen Core-Systeme der Bundesagentur."
+        },
+        {
+          "id": "enterprise-testing",
+          "icon": "tools",
+          "title": "Qualitätssicherung & Testabdeckung",
+          "description": "Implementierung umfassender Unit- und Integrationstests mit JUnit und Mockito im Backend sowie Jasmine/Karma im Frontend zur Gewährleistung maximaler Stabilität."
+        }
+      ],
+      "architecture": [
+        {
+          "id": "angular-spa-frontend",
+          "title": "Angular Single-Page-Application",
+          "description": "Modulare Frontend-Architektur mit reaktiven Formularen (Reactive Forms) für komplexe, mehrstufige Antragsassistenten inklusive Echtzeit-Validierung.",
+          "type": "frontend"
+        },
+        {
+          "id": "java-spring-backend",
+          "title": "Java Enterprise REST Services",
+          "description": "Sicheres, auf Spring Boot basierendes REST-API-Backend zur entkoppelten Verarbeitung, Validierung und Übermittlung von Benutzeranträgen.",
+          "type": "backend"
+        }
+      ],
+      "impact": [
+        {
+          "id": "accessible-ux",
+          "type": "frontend",
+          "badgeText": "BITV",
+          "title": "Uneingeschränkte Barrierefreiheit",
+          "description": "Erfolgreiche Auditierung kritischer Antragsstrecken bezüglich Barrierefreiheit durch Optimierung von Screenreader-Support, Tastaturbedienbarkeit und Kontrasten."
+        },
+        {
+          "id": "secure-processing",
+          "type": "backend",
+          "badgeText": "Security",
+          "title": "Sichere Datenvalidierung",
+          "description": "Verhinderung fehlerhafter Antragsdaten durch serverseitige Validierungsketten und strukturierte Fehlerbehandlung vor der Übergabe an nachgelagerte Systeme."
+        }
+      ],
+      "stack": [
+        { "name": "Java / Spring Boot", "type": "backend" },
+        { "name": "Angular", "type": "frontend" },
+        { "name": "TypeScript", "type": "frontend" },
+        { "name": "Oracle DB", "type": "backend" },
+        { "name": "Jenkins / Maven", "type": "tools" },
+        { "name": "Git / Bitbucket", "type": "tools" },
+        { "name": "Jira / Confluence", "type": "tools" }
+      ],
+      "deepDive": {
+        "filePath": "teccon/ba/alg/controller/ApplicationProcessingController.java",
+        "context": "Das Code-Beispiel zeigt einen Spring-Boot REST-Controller im Backend, der eingegangene Antragsdaten validiert, verarbeitet und eine standardisierte Antwort zurückgibt.",
+        "code": "package de.arbeitsagentur.ba.alg.controller;\n\nimport org.springframework.http.ResponseEntity;\nimport org.springframework.web.bind.annotation.*;\nimport jakarta.validation.Valid;\nimport lombok.RequiredArgsConstructor;\nimport de.arbeitsagentur.ba.alg.dto.ApplicationRequestDto;\nimport de.arbeitsagentur.ba.alg.dto.ApplicationResponseDto;\nimport de.arbeitsagentur.ba.alg.service.ApplicationProcessingService;\n\n@RestController\n@RequestMapping(\"/api/v1/applications\")\n@RequiredArgsConstructor\npublic class ApplicationProcessingController {\n\n    private final ApplicationProcessingService applicationService;\n\n    /**\n     * Nimmt den Online-Antrag auf Arbeitslosengeld entgegen und startet die Validierung.\n     */\n    @PostMapping(\"/submit\")\n    public ResponseEntity<ApplicationResponseDto> submitApplication(\n            @Valid @RequestBody ApplicationRequestDto requestDto) {\n        \n        // Verarbeitung und serverseitige Validierung über den Service-Layer\n        ApplicationResponseDto response = applicationService.processSubmittedApplication(requestDto);\n        \n        // Gibt den Status 200 OK mit der generierten Vorgangsnummer zurück\n        return ResponseEntity.ok(response);\n    }\n}"
+      }
+    },
+    "teccon-emobility-microservice": {
+      "title": "Software-Entwickler (Fullstack) | Entwicklung E-Mobilität",
+      "company": "TECCON Consulting & Engineering GmbH",
+      "description": "Konzeption, Neuentwicklung und Implementierung einer Cloud-Microservices-Architektur sowie einer Single-Page-Applikation für eine innovative Ladeinfrastruktur-Verwaltungssoftware.",
+      "leadText": "In diesem zukunftsweisenden Forschungsprojekt habe ich maßgeblich an der Konzeption und Umsetzung einer modernen, eventgetriebenen Cloud-Microservices-Architektur mitgewirkt. Das Ziel war die Entwicklung einer skalierbaren Verwaltungssoftware für ein innovatives Ladekonzept für Elektrofahrzeuge. Meine Aufgaben umfassten das Requirements Engineering, die Implementierung autarker Services inklusive der Integration externer Infrastrukturen (Ladesäulen, Buchhaltung) sowie den Aufbau einer automatisierten Testarchitektur für Frontend und Backend.",
+      "challenges": [
+        {
+          "id": "architecture-conception",
+          "icon": "architecture",
+          "title": "Architektur-Konzeption & Integration",
+          "description": "Entwurf und Umsetzung einer robusten Cloud-Microservices-Struktur zur nahtlosen Event-Kommunikation mit externen Ladesäulen-Systemen und Abrechnungsschnittstellen via Apache Kafka."
+        },
+        {
+          "id": "angular-frontend-dev",
+          "icon": "frontend",
+          "title": "Komponentenbasierte UI-Entwicklung",
+          "description": "Entwurf und Implementierung neuer, barrierefreier Frontendkomponenten mit Angular auf Basis von Penpot-Mockups sowie die vollständige Anbindung an die Backend-APIs."
+        },
+        {
+          "id": "automated-testing",
+          "icon": "tools",
+          "title": "Aufbau der Testarchitektur",
+          "description": "Konzeption und Entwicklung einer automatisierten End-to-End- und Unit-Teststrategie unter Einsatz von Playwright und Jasmine im Frontend sowie JUnit und Integrationstests im Backend."
+        },
+        {
+          "id": "cloud-deployment",
+          "icon": "database",
+          "title": "CI/CD & Cloud-Infrastruktur",
+          "description": "Erstellung und Konfiguration der Infrastruktur sowie Modellierung des Deploymentprozesses mittels Azure DevOps-Pipelines direkt in eine verwaltete Kubernetes-Umgebung."
+        }
+      ],
+      "architecture": [
+        {
+          "id": "quarkus-kafka-core",
+          "title": "Quarkus & Kafka Microservices",
+          "description": "Eventgetriebene Microservices auf Basis von Java 21 und JEE Quarkus, gekoppelt mit Apache Kafka für asynchrone, hochperformante Datenströme.",
+          "type": "backend"
+        },
+        {
+          "id": "azure-k8s-platform",
+          "title": "Azure & Kubernetes Orchestrierung",
+          "description": "Skalierbare Container-Infrastruktur auf der Azure-Cloud-Platform, automatisiert deployed über Azure DevOps-Pipelines.",
+          "type": "backend"
+        },
+        {
+          "id": "angular-spa-ui",
+          "title": "Angular Single-Page-Application",
+          "description": "Modulares, barrierefreies Frontend zur administrativen Steuerung und Überwachung der Ladevorgänge in Echtzeit.",
+          "type": "frontend"
+        }
+      ],
+      "impact": [
+        {
+          "id": "infrastructure-scalability",
+          "type": "backend",
+          "badgeText": "Infrastruktur",
+          "title": "Skalierbares Ladenetz-Management",
+          "description": "Erfolgreiche Bereitstellung einer flexiblen Plattform, die neue Ladesäulen und externe Drittsysteme über entkoppelte Microservices ohne Ausfallzeiten integrieren kann."
+        },
+        {
+          "id": "test-reliability",
+          "type": "tools",
+          "badgeText": "Quality",
+          "title": "Robuste E2E-Testabdeckung",
+          "description": "Signifikante Reduktion von UI-Regressionsfehlern durch die Einführung einer automatisierten Playwright-Testsuite für kritische Nutzerpfade."
+        }
+      ],
+      "stack": [
+        { "name": "Java 21 / Quarkus", "type": "backend" },
+        { "name": "Apache Kafka", "type": "backend" },
+        { "name": "Angular / TypeScript", "type": "frontend" },
+        { "name": "Hibernate (JPA) / PostgreSQL", "type": "backend" },
+        { "name": "Playwright / Jasmine", "type": "tools" },
+        { "name": "Azure Cloud & DevOps", "type": "tools" },
+        { "name": "Kubernetes / Docker", "type": "tools" },
+        { "name": "JWT / Barrierefreiheit", "type": "backend" }
+      ],
+      "deepDive": {
+        "filePath": "teccon/emobility/charging/ChargingStationResource.java",
+        "context": "Das Code-Beispiel zeigt einen hocheffizienten, reaktiven REST-Endpunkt mit Quarkus, der Autorisierungsprüfungen (JWT) durchführt und Statusänderungen einer Ladesäule verarbeitet.",
+        "code": "// Quarkus REST-Controller für das E-Mobility Lademanagement\npackage teccon.emobility.charging;\n\nimport jakarta.inject.Inject;\nimport jakarta.ws.rs.*;\nimport jakarta.ws.rs.core.MediaType;\nimport jakarta.ws.rs.core.Response;\nimport org.eclipse.microprofile.reactive.messaging.Channel;\nimport org.eclipse.microprofile.reactive.messaging.Emitter;\n\n@Path(\"/api/v1/charging-stations\")\n@Produces(MediaType.APPLICATION_JSON)\n@Consumes(MediaType.APPLICATION_JSON)\npublic class ChargingStationResource {\n\n    @Inject\n    @Channel(\"station-commands\")\n    Emitter<String> commandEmitter;\n\n    /**\n     * Sendet einen Remote-Start-Befehl an eine spezifische Ladesäule via Apache Kafka.\n     */\n    @POST\n    @Path(\"/{id}/start\")\n    public Response remoteStartTransaction(@PathParam(\"id\") String stationId, ChargingCommandDTO commandDTO) {\n        if (commandDTO == null || commandDTO.getUserId() == null) {\n            return Response.status(Response.Status.BAD_REQUEST)\n                           .entity(\"Invalid command payload.\").build();\n        }\n\n        // Event-Payload für Kafka vorbereiten und asynchron emittieren\n        String payload = String.format(\"{\\\"stationId\\\":\\\"%s\\\",\\\"action\\\":\\\"START\\\",\\\"user\\\":\\\"%s\\\"}\", \n                                       stationId, commandDTO.getUserId());\n        commandEmitter.send(payload);\n\n        return Response.status(Response.Status.ACCEPTED)\n                       .entity(new CommandResponseDTO(stationId, \"START_REQUESTED\")).build();\n    }\n}"
+      }
+    },
+    "teccon-ba-infosysbub": {
+      "title": "Software-Entwickler Online-Services (Fullstack)",
+      "company": "Bundesagentur für Arbeit (via TECCON)",
+      "description": "Agile Weiterentwicklung und Modernisierung der Verfahrensgruppe INFOSYSBUB zur Bereitstellung zentraler Online-Angebote im Internetportal der BA.",
+      "leadText": "Im Releasecontainer INFOSYSBUB habe ich in einem interdisziplinären Scrum-Team wesentliche Kernanwendungen des BA-Kundenportals betreut und weiterentwickelt, darunter ELAN (Elektronische Anzeige), AVGS (Aktivierungs- und Vermittlungsgutschein) und den Entgeldatlas. Neben der Feature-Entwicklung im Java/Spring-Backend und Angular-Frontend lag mein Fokus auf der Umsetzung strenger Richtlinien zur Barrierefreiheit (BITV) sowie der Automatisierung der CI/CD-Infrastruktur.",
+      "links": {
+        "github": null,
+        "live": "https://www.arbeitsagentur.de/arbeitslos-arbeit-finden/aktivierungs-vermittlungsgutschein-avgs"
+      },
+      "challenges": [
+        {
+          "id": "accessibility-pdfs",
+          "icon": "frontend",
+          "title": "Barrierefreie Dokumentengenerierung",
+          "description": "Konzeption und Implementierung einer serverseitigen Logik zur automatisierten Generierung vollständig barrierefreier PDF-Dokumente direkt aus komplexen Frontend-Ansichten."
+        },
+        {
+          "id": "frontend-library-migration",
+          "icon": "tools",
+          "title": "Library-Migrationen im Frontend",
+          "description": "Sukzessive Umstellung und Refactoring bestehender Webseiten auf die modernisierten, standardisierten UI-Bibliotheken der Bundesagentur für Arbeit unter Angular und TypeScript."
+        },
+        {
+          "id": "comprehensive-testing",
+          "icon": "tools",
+          "title": "Ganzheitliche Testabdeckung",
+          "description": "Sicherstellung stabiler Releases durch das Schreiben und Ausführen von Code-Analysen, Mocking, JUnit- und Integrationstests sowie automatisierten API-Tests mit Rest Assured."
+        },
+        {
+          "id": "agile-scrum-execution",
+          "icon": "architecture",
+          "title": "Agile Kooperation & Deployment",
+          "description": "Aktive Mitwirkung im gesamten Scrum-Zyklus inklusive Code-Reviews, Ticket-Dokumentation in Jira/Confluence sowie Live-Server-Deployments und Anpassung von Jenkins-Pipelines."
+        }
+      ],
+      "architecture": [
+        {
+          "id": "spring-boot-services",
+          "title": "Java & Spring Enterprise Services",
+          "description": "Robuste Backend-Services mit Spring, strukturiert über saubere Controller- und DTO-Schichten zur kontrollierten Datenübergabe an die Client-Anwendungen.",
+          "type": "backend"
+        },
+        {
+          "id": "angular-ba-frontend",
+          "title": "Angular Enterprise Frontend",
+          "description": "Skalierbare Single-Page-Applikation auf Basis von Angular und TypeScript zur Aufbereitung und Anzeige komplexer sozialer und beruflicher Strukturbeschreibungen.",
+          "type": "frontend"
+        },
+        {
+          "id": "jenkins-k8s-ci",
+          "title": "Automated DevOps Pipeline",
+          "description": "Kontinuierliche Integration mittels Jenkins CI-Server, Build-Management via Maven und containerisiertes Deployment auf Docker und Kubernetes.",
+          "type": "tools"
+        }
+      ],
+      "impact": [
+        {
+          "id": "bitv-compliance",
+          "type": "frontend",
+          "badgeText": "Accessibility",
+          "title": "Uneingeschränkte Barrierefreiheit",
+          "description": "Erfolgreiche Einhaltung der gesetzlichen BITV-Vorgaben für öffentliche Portale, wodurch kritische Antrags- und Informationsprozesse für alle Bürger zugänglich gemacht wurden."
+        },
+        {
+          "id": "stable-live-deployments",
           "type": "tools",
           "badgeText": "DevOps",
-          "title": "CI/CD-Pipelines & Cloud-Deployment",
-          "description": "Konfiguration automatisierter Deploymentprozesse über Azure DevOps-Pipelines zur sicheren Orchestrierung der Container innerhalb des Kubernetes-Clusters."
+          "title": "Optimierte Build-Infrastruktur",
+          "description": "Beschleunigung des Release-Zyklus durch gezielte Optimierungen der Jenkins-Pipelines und des Maven-Build-Managements."
+        }
+      ],
+      "stack": [
+        { "name": "Java / Spring", "type": "backend" },
+        { "name": "Angular / TypeScript", "type": "frontend" },
+        { "name": "Oracle DB", "type": "backend" },
+        { "name": "Jenkins / Maven", "type": "tools" },
+        { "name": "Docker / Kubernetes", "type": "tools" },
+        { "name": "Rest Assured / JUnit", "type": "tools" },
+        { "name": "Jira / Confluence / Git", "type": "tools" },
+        { "name": "Barrierefreiheit (BITV)", "type": "frontend" }
+      ],
+      "deepDive": {
+        "filePath": "teccon/ba/infosysbub/pdf/PdfGenerationController.java",
+        "context": "Dieser Auszug zeigt einen Spring-REST-Controller, der die Daten für einen Aktivierungs- und Vermittlungsgutschein (AVGS) entgegennimmt, verarbeitet und als barrierefreien PDF-Datenstrom zurückgibt.",
+        "code": "// Spring Boot REST-Controller für barrierefreie Dokumenten-Generierung\npackage teccon.ba.infosysbub.pdf;\n\nimport org.springframework.beans.factory.annotation.Autowired;\nimport org.springframework.http.HttpHeaders;\nimport org.springframework.http.HttpStatus;\nimport org.springframework.http.MediaType;\nimport org.springframework.http.ResponseEntity;\nimport org.springframework.web.bind.annotation.*;\n\n@RestController\n@RequestMapping(\"/api/v1/documents\")\npublic class PdfGenerationController {\n\n    @Autowired\n    private AccessiblePdfService pdfService;\n\n    /**\n     * Generiert ein barrierefreies PDF (PDF/UA konform) basierend auf den übermittelten Antragsdaten.\n     */\n    @PostMapping(\"/generate-avgs\")\n    public ResponseEntity<byte[]> generateAvgsPdf(@RequestBody AvgsDocumentDTO documentDTO) {\n        // Aufruf des Services zur Erstellung des barrierefreien Dokumenten-Streams\n        byte[] pdfContent = pdfService.createAccessibleDocument(documentDTO);\n        \n        HttpHeaders headers = new HttpHeaders();\n        headers.setContentType(MediaType.APPLICATION_PDF);\n        headers.setContentDispositionFormData(\"attachment\", \"avgs-bescheinigung.pdf\");\n        headers.setCacheControl(\"must-revalidate, post-check=0, pre-check=0\");\n        \n        return new ResponseEntity<>(pdfContent, headers, HttpStatus.OK);\n    }\n}"
+      }
+    },
+
+    "teccon-ba-amm": {
+      "title": "Software-Entwickler Online-Services | AMM",
+      "company": "Bundesagentur für Arbeit (via TECCON)",
+      "description": "Fullstack-Weiterentwicklung des Arbeitsmarktmonitors (AMM) zur interaktiven Analyse und Visualisierung regionaler Arbeitsmarkt- und Demografiestrukturen.",
+      "leadText": "Im Projekt Arbeitsmarktmonitor (AMM) lag der Fokus auf der Bereitstellung langlebiger Datenanalysen zu Berufen, Branchen und Demografie. Ich war zuständig für die Umsetzung webbasierter Oberflächen mit Python und Django. Ein wesentlicher Teil meiner Arbeit bestand darin, bestehende Legacy-Frontend-Komponenten auf neuere Bootstrap-Versionen sowie spezifische BA-Bibliotheken zu migrieren, um eine einheitliche und barrierefreie Benutzeroberfläche zu garantieren.",
+      "links": {
+        "github": null,
+        "live": "https://arbeitsmarktmonitor.arbeitsagentur.de/"
+      },
+      "challenges": [
+        {
+          "id": "django-integration",
+          "icon": "database",
+          "title": "Fullstack-Entwicklung mit Django",
+          "description": "Erstellung und Erweiterung von Webseiten und interaktiven Tabellen innerhalb des Python/Django-Ökosystems unter Nutzung von PyCharm."
         },
         {
-          "id": "agile-requirements",
-          "type": "default",
+          "id": "bootstrap-migration",
+          "icon": "frontend",
+          "title": "UI-Refactoring & Bootstrap-Upgrade",
+          "description": "Vollständige Umstellung und optische Modernisierung der Frontend-Seiten auf eine neue, performantere Bootstrap-Version unter Beibehaltung des Layouts."
+        },
+        {
+          "id": "enterprise-build-integration",
+          "icon": "tools",
+          "title": "Plattformübergreifendes Build-Management",
+          "description": "Einbindung und Wartung der Python/Django-Komponenten in die zentrale, Maven- und Jenkins-basierte CI/CD-Pipeline-Infrastruktur der Bundesagentur."
+        }
+      ],
+      "architecture": [
+        {
+          "id": "django-mvc-framework",
+          "title": "Python & Django Model-View-Controller",
+          "description": "Monolithisch strukturiertes Web-Framework zur serverseitigen Generierung datenintensiver, interaktiver Grafiken und Auswertungen.",
+          "type": "backend"
+        },
+        {
+          "id": "bootstrap-ba-libraries",
+          "title": "Responsive Bootstrap Frontend",
+          "description": "Server-rendered Templates, modernisiert mit neuesten Bootstrap-Komponenten und angepasst an die Barrierefreiheits-Vorgaben der BA.",
+          "type": "frontend"
+        }
+      ],
+      "impact": [
+        {
+          "id": "modern-ux",
+          "type": "frontend",
+          "badgeText": "UI/UX",
+          "title": "Zukunftssicheres Interface",
+          "description": "Erfolgreiche technische Entschuldung des Frontends durch Bereinigung veralteter CSS/Bootstrap-Klassen und reibungslose Library-Upgrades."
+        },
+        {
+          "id": "agile-delivery",
+          "type": "tools",
           "badgeText": "Agile",
-          "title": "Requirements Engineering & Refinement",
-          "description": "Ganzheitliche Begleitung neuer fachlicher Anforderungen von der Konzeption bis zum Refinement im direkten Austausch mit den Stakeholdern."
+          "title": "Präzise Sprint-Planung",
+          "description": "Effiziente Ticketbearbeitung im Scrum-Modell durch detaillierte Ausarbeitung technischer Unteraufgaben und präzise Aufwandsabschätzungen."
+        }
+      ],
+      "stack": [
+        { "name": "Python / Django", "type": "backend" },
+        { "name": "Bootstrap", "type": "frontend" },
+        { "name": "Oracle DB", "type": "backend" },
+        { "name": "Jenkins / Maven", "type": "tools" },
+        { "name": "Docker / Kubernetes", "type": "tools" },
+        { "name": "Git / Bitbucket", "type": "tools" },
+        { "name": "PyCharm / WSL / Linux", "type": "tools" }
+      ],
+      "deepDive": {
+        "filePath": "teccon/ba/amm/views/market_analysis.py",
+        "context": "Das Code-Beispiel zeigt eine Django-View im AMM-Backend, die statistische Daten aus einer Oracle-Datenbank filtert und für das Template-Rendering vorbereitet.",
+        "code": "# Django View für die Aufbereitung regionaler Arbeitsmarktdaten\nfrom django.shortcuts import render\nfrom django.views import View\nfrom django.contrib.auth.mixins import LoginRequiredMixin\nfrom ..models import RegionalStatistic\n\nclass LaborMarketAnalysisView(LoginRequiredMixin, View):\n    template_name = 'amm/analysis_dashboard.html'\n\n    def get(self, request, *args, **kwargs):\n        region_code = request.GET.get('region')\n        industry_sector = request.GET.get('sector', 'ALL')\n\n        # Datenbankabfrage mit Filtern für die Demografie- und Branchenanalyse\n        query_set = RegionalStatistic.objects.filter(region_id=region_code)\n        \n        if industry_sector != 'ALL':\n            query_set = query_set.filter(sector_code=industry_sector)\n\n        # Sortierung nach der langfristigen Entwicklung (Jahrgang)\n        statistics = query_set.order_by('-reporting_year')\n\n        context = {\n            'regional_data': statistics,\n            'selected_region': region_code,\n            'selected_sector': industry_sector,\n        }\n        \n        # Rendert die Seite mit dem aktualisierten Bootstrap-Layout\n        return render(request, self.template_name, context)"
+      }
+    },
+    "edict-monolith-apis": {
+      "title": "Software Engineer (B2B API Integration & Core Platform)",
+      "company": "edict eGaming GmbH (Gauselmann Gruppe)",
+      "description": "Weiterentwicklung der zentralen Online-Casino-Plattform sowie Konzeption und Implementierung hochverfügbarer B2B-Schnittstellen für internationale Drittanbieter.",
+      "leadText": "Zu Beginn meiner fast sechsjährigen Tätigkeit bei der edict eGaming GmbH lag mein Fokus auf der funktionalen Erweiterung der hochkomplexen, zentralen Core-Plattform. Ein wesentlicher Schwerpunkt war die Anbindung namhafter, internationaler B2B-Drittanbieter und Onlinespiel-Plattformen (wie BWin, Blueprint und die konzerneigenen Merkur Games), um eine nahtlose und sichere Spielübertragung in Echtzeit zu gewährleisten.",
+      "challenges": [
+        {
+          "id": "monolith-extension",
+          "icon": "architecture",
+          "title": "Skalierung der Core-Plattform",
+          "description": "Sichere funktionale Erweiterung der bestehenden JavaEE-Plattformarchitektur unter Einhaltung strenger regulatorischer und performancerelevanter Vorgaben der Gaming-Branche."
+        },
+        {
+          "id": "b2b-integrations",
+          "icon": "database",
+          "title": "Hochverfügbare API-Anbindungen",
+          "description": "Konzeption und Entwicklung robuster Schnittstellen zur nahtlosen Integration von Systemen großer Partner wie BWin und Blueprint bei minimalen Latenzzeiten."
+        },
+        {
+          "id": "legacy-modernization",
+          "icon": "frontend",
+          "title": "Datenkonsistenz & Legacy-Code",
+          "description": "Refactoring kritischer Plattform-Komponenten und Optimierung komplexer Datenabfragen auf Oracle-Datenbanken im laufenden Hochlast-Betrieb."
+        }
+      ],
+      "architecture": [
+        {
+          "id": "javaee-core",
+          "title": "Java EE Core Architecture",
+          "description": "Nutzung von Enterprise-Java-Technologien zur Gewährleistung von Transaktionssicherheit und Stabilität innerhalb der Plattform.",
+          "type": "backend"
+        },
+        {
+          "id": "integration-layer",
+          "title": "B2B Integration Layer",
+          "description": "Architektur von REST-basierten Adaptern zur schnellen und sicheren Synchronisation von Spieldaten und Kontoständen zwischen Systemen.",
+          "type": "backend"
+        },
+        {
+          "id": "oracle-db-layer",
+          "title": "Oracle Enterprise DB",
+          "description": "Anbindung und Optimierung relationaler Datenstrukturen zur Verwaltung von hochfrequentierten Spiel- und Transaktionsdaten.",
+          "type": "backend"
+        }
+      ],
+      "impact": [
+        {
+          "id": "partner-growth",
+          "type": "backend",
+          "badgeText": "Business",
+          "title": "Portfolio-Erweiterung",
+          "description": "Erfolgreiche Bereitstellung kritischer Spiele-Schnittstellen, die das B2B-Angebot des Unternehmens für internationale Großkunden maßgeblich erweiterten."
+        },
+        {
+          "id": "platform-stability",
+          "type": "default",
+          "badgeText": "Performance",
+          "title": "Fehlertolerante Integration",
+          "description": "Sicherstellung eines stabilen Spielbetriebs auch bei extremen Lastspitzen durch optimierte Failover-Mechanismen in den Kommunikations-Schnittstellen."
+        }
+      ],
+      "stack": [
+        { "name": "Java EE", "type": "backend" },
+        { "name": "REST-API", "type": "backend" },
+        { "name": "Oracle DB", "type": "backend" },
+        { "name": "B2B Integration", "type": "backend" },
+        { "name": "Git / GitLab", "type": "tools" },
+        { "name": "Scrum", "type": "tools" }
+      ],
+      "deepDive": {
+        "filePath": "edict/core/integration/PartnerApiAdapter.java",
+        "context": "Dieses Codebeispiel zeigt die abstrakte Struktur eines API-Adapters zur sicheren Validierung und Weiterleitung von Transaktionsdaten eines externen B2B-Partners im Plattform-Monolithen.",
+        "code": "// Java EE API-Adapter zur sicheren Anbindung von B2B-Plattformen\npackage com.edict.core.integration;\n\nimport javax.enterprise.context.ApplicationScoped;\nimport javax.ws.rs.core.Response;\n\n@ApplicationScoped\npublic class PartnerApiAdapter {\n\n    /**\n     * Validiert die Transaktion eines Drittanbieters (z. B. BWin) und bucht das Guthaben im Core-System.\n     */\n    public Response processExternalGameTransaction(String partnerId, String payload) {\n        // 1. Authentifizierung und Integritätsprüfung der Partner-Payload\n        if (partnerId == null || !partnerId.matches(\"^[a-zA-Z0-9_-]+$\")) {\n            return Response.status(Response.Status.BAD_REQUEST).entity(\"Invalid Partner ID\").build();\n        }\n        \n        try {\n            // 2. Transaktions-Logik innerhalb des sicheren JavaEE-Kontexts ausführen\n            boolean success = executeCoreBalanceUpdate(partnerId, payload);\n            \n            if (success) {\n                return Response.ok(\"{\\\"status\\\":\\\"SUCCESS\\\"}\").build();\n            }\n            return Response.status(Response.Status.SERVICE_UNAVAILABLE).entity(\"Transaction failed\").build();\n        } catch (Exception e) {\n            // Sicheres Logging ohne sensitive Gaming-Daten preiszugeben\n            return Response.serverError().build();\n        }\n    }\n\n    private boolean executeCoreBalanceUpdate(String partner, String data) {\n        // Interne Kommunikation mit der Oracle-Datenbank\n        return true;\n    }\n}"
+      }
+    },
+    "edict-marketing-microservice": {
+      "title": "Software Engineer (Cloud-Native Marketing Microservice)",
+      "company": "edict eGaming GmbH (Gauselmann Gruppe)",
+      "description": "Konzeption, Neuentwicklung und Fullstack-Implementierung eines unabhängigen, containerbasierten Microservices für Bonus- und Freispiel-Kampagnen.",
+      "leadText": "In diesem zukunftsweisenden Projekt habe ich maßgeblich an der Modernisierung der Systemlandschaft mitgewirkt. Ich begleitete den gesamten Lifecycle zur Erstellung eines komplett autarken, cloud-nativen Microservices für Marketingzwecke (Bonusverwaltung und Freispiele). Von der Aufteilung der Jira-Epics in atomare Tasks über das API-Design und die Testautomatisierung bis hin zur Frontend-Oberfläche lag die Umsetzung in meiner Hand.",
+      "challenges": [
+        {
+          "id": "epic-breakdown",
+          "icon": "architecture",
+          "title": "Epic-Analyse & Task-Planung",
+          "description": "Strukturierte Aufteilung komplexer fachlicher Anforderungen aus Jira-Epics in präzise technische User Stories, Definition von Akzeptanzkriterien und Sprint-Planung."
+        },
+        {
+          "id": "microservice-creation",
+          "icon": "database",
+          "title": "Greenfield Microservice mit Quarkus",
+          "description": "Entwicklung des Services auf Basis des modernen Cloud-Native-Frameworks Quarkus zur Erreichung minimaler Startzeiten und extrem geringen Speicherverbrauchs bei hoher Performance."
+        },
+        {
+          "id": "angular-frontend",
+          "icon": "frontend",
+          "title": "Fullstack-Integration mit Angular",
+          "description": "Erstellung einer intuitiven webbasierten Administrationsoberfläche mit Angular zur Steuerung, Konfiguration und visuellen Anpassung von Bonusaktionen."
+        },
+        {
+          "id": "test-coverage",
+          "icon": "tools",
+          "title": "Umfassende Testautomatisierung",
+          "description": "Sicherstellung einer maximalen Code-Abdeckung und Zuverlässigkeit durch den systematischen Einsatz von JUnit 5, Mocking und automatisierten API-Tests via Rest Assured."
+        }
+      ],
+      "architecture": [
+        {
+          "id": "quarkus-backend",
+          "title": "Quarkus Cloud-Native Core",
+          "description": "Hocheffizientes Java-Backend unter Nutzung von Quarkus für optimierte Container-Laufzeiten und native Cloud-Konnektivität.",
+          "type": "backend"
+        },
+        {
+          "id": "api-gateway",
+          "title": "API-Gateway Konsolidierung",
+          "description": "Einsatz eines zentralen API-Gateways als konsolidierter Einstiegspunkt zur sicheren Orchestrierung und Kapselung der internen Microservices.",
+          "type": "backend"
+        },
+        {
+          "id": "angular-app",
+          "title": "Angular SPA Storefront",
+          "description": "Modulare Single-Page-Application mit sauberer Trennung von Business-Logik (Controllers/DTOs) und UI-Layout Anpassung.",
+          "type": "frontend"
+        }
+      ],
+      "impact": [
+        {
+          "id": "marketing-agility",
+          "type": "backend",
+          "badgeText": "Features",
+          "title": "Flexibles Kampagnenmanagement",
+          "description": "Ermöglichung dynamischer Marketingaktionen (Freespins & Boni) in Echtzeit, komplett unabhängig vom Kern-Monolithen."
+        },
+        {
+          "id": "quality-standard",
+          "type": "tools",
+          "badgeText": "Quality",
+          "title": "Exzellente Code-Qualität",
+          "description": "Geringe Fehlerquote in Produktion durch strenge Einhaltung von Code-Reviews, Pair-Programming und lückenloser Testabdeckung (Integrationstests)."
+        }
+      ],
+      "stack": [
+        { "name": "Java / Quarkus", "type": "backend" },
+        { "name": "Angular", "type": "frontend" },
+        { "name": "PostgreSQL", "type": "backend" },
+        { "name": "Rest Assured / JUnit", "type": "tools" },
+        { "name": "API Gateway", "type": "backend" },
+        { "name": "Docker", "type": "tools" },
+        { "name": "Kubernetes", "type": "tools" },
+        { "name": "Kibana", "type": "tools" }
+      ],
+      "deepDive": {
+        "filePath": "edict/marketing/bonus/BonusResource.java",
+        "context": "Das Code-Beispiel zeigt einen reaktiven REST-Controller im Quarkus-Backend, der definierte Datenstrukturen (DTOs) validiert und für die Angular-Benutzeroberfläche bereitstellt.",
+        "code": "// Quarkus REST-Controller für das Bonus-Kampagnenmanagement\npackage com.edict.marketing.bonus;\n\nimport javax.inject.Inject;\nimport javax.ws.rs.*;\nimport javax.ws.rs.core.MediaType;\nimport javax.ws.rs.core.Response;\n\n@Path(\"/api/v1/bonuses\")\n@Produces(MediaType.APPLICATION_JSON)\n@Consumes(MediaType.APPLICATION_JSON)\npublic class BonusResource {\n\n    @Inject\n    BonusCampaignService bonusService;\n\n    /**\n     * Erstellt eine neue Freispiel-Kampagne, die über das Angular-Frontend konfiguriert wurde.\n     */\n    @POST\n    public Response createBonusCampaign(BonusCampaignDTO campaignDTO) {\n        // Validierung des übergebenen Data Transfer Objects (DTO)\n        if (campaignDTO.getAmountOfFreespins() <= 0) {\n            return Response.status(Response.Status.BAD_REQUEST)\n                           .entity(\"Freespins quantity must be greater than zero.\").build();\n        }\n\n        BonusCampaignCreatedResponse response = bonusService.processAndSaveCampaign(campaignDTO);\n        return Response.status(Response.Status.CREATED).entity(response).build();\n    }\n}"
+      }
+    },
+    "edict-devops-pipelines": {
+      "title": "Software Engineer (DevOps & CI/CD Platform Automation)",
+      "company": "edict eGaming GmbH (Gauselmann Gruppe)",
+      "description": "Konzeption, Erstellung und Test modularer deklarativer Jenkins-Pipelines in Groovy zum automatisierten Deployment des gesamten Online-Casinos.",
+      "leadText": "Ergänzend zu meinen Software-Engineering-Aufgaben übernahm ich die Verantwortung für die Automatisierung unserer Deployment-Prozesse. Ziel war es, das gesamte, komplexe Online-Casino-System per Knopfdruck reproduzierbar und fehlerfrei zu deployen. Hierzu entwickelte ich deklarative und scripted Pipelines in Groovy unter Jenkins, kapselte Funktionalitäten in versionsverwaltete Bibliotheken und orchestrierte Container-Infrastrukturen.",
+      "challenges": [
+        {
+          "id": "pipeline-design",
+          "icon": "architecture",
+          "title": "Deklarative Jenkins Pipelines",
+          "description": "Design und Entwicklung strukturierter Jenkins-Pipelines in Groovy zur Standardisierung von Build-, Test- und Deployment-Schritten über alle Entwicklungsstufen hinweg."
+        },
+        {
+          "id": "infrastructure-orchestration",
+          "icon": "database",
+          "title": "Containerisierung & Orchestrierung",
+          "description": "Integration von Docker-Containern und Konfiguration innerhalb von Kubernetes-Clustern zur isolierten Ausführung und Skalierung der Casino-Anwendungen."
+        },
+        {
+          "id": "shared-libraries",
+          "icon": "tools",
+          "title": "Modularisierung & Git-Integration",
+          "description": "Auslagerung wiederkehrender Pipeline-Logiken in externe, unter globaler Versionsverwaltung (GitLab) stehende Dateien zur einfacheren Wartung und Wiederverwendbarkeit."
+        }
+      ],
+      "architecture": [
+        {
+          "id": "jenkins-automation",
+          "title": "Jenkins Automation Server",
+          "description": "Zentrale Instanz zur Steuerung und Überwachung aller Build- und Deployment-Prozesse (Continuous Integration / Continuous Deployment).",
+          "type": "tools"
+        },
+        {
+          "id": "groovy-pipeline",
+          "title": "Pipeline-as-Code (Groovy)",
+          "description": "Skriptbasierte Definition der gesamten CI/CD-Logik zur lückenlosen Nachverfolgbarkeit aller Infrastruktur-Änderungen.",
+          "type": "backend"
+        },
+        {
+          "id": "k8s-docker",
+          "title": "Docker & Kubernetes Execution",
+          "description": "Bereitstellung der Build-Artefakte in standardisierten Docker-Images zur Orchestrierung auf Cloud-Infrastrukturen.",
+          "type": "tools"
+        }
+      ],
+      "impact": [
+        {
+          "id": "deployment-speed",
+          "type": "backend",
+          "badgeText": "Automation",
+          "title": "Casino-Deployment per Klick",
+          "description": "Drastische Reduzierung der Release-Zyklen und Eliminierung manueller Fehlerquellen beim Deployment des vollständigen Casino-Ökosystems."
+        },
+        {
+          "id": "developer-support",
+          "type": "tools",
+          "badgeText": "Support",
+          "title": "Plattform-Wartbarkeit erhöht",
+          "description": "Proaktiver Support und schnelle Fehlerbehebung bei Pipeline-Problemen, wodurch die Produktivität des gesamten Entwickler-Teams nachhaltig gesteigert wurde."
+        }
+      ],
+      "stack": [
+        { "name": "Jenkins", "type": "tools" },
+        { "name": "Groovy (Pipelines)", "type": "backend" },
+        { "name": "Docker", "type": "tools" },
+        { "name": "Kubernetes", "type": "tools" },
+        { "name": "GitLab CI", "type": "tools" },
+        { "name": "Build Management (Maven)", "type": "tools" }
+      ],
+      "deepDive": {
+        "filePath": "jenkins/pipelines/casino_deploy_pipeline.groovy",
+        "context": "Das folgende Scriptbeispiel repräsentiert eine deklarative Jenkins-Pipeline in Groovy, wie sie zur automatisierten Validierung, Kapselung im Docker-Image und Vorbereitung des Kubernetes-Deployments implementiert wurde.",
+        "code": "// Deklarative Jenkins-Pipeline für das automatisierte Deployment der Casino-Plattform\npipeline {\n    agent { label 'kubernetes-worker' }\n    \n    environment {\n        REGISTRY_CREDENTIALS = credentials('edict-gitlab-registry')\n        IMAGE_NAME           = 'registry.edict.de/casino/core-platform:latest'\n    }\n    \n    stages {\n        stage('Checkout & Verify') {\n            steps {\n                // Code-Abruf aus der GitLab-Versionsverwaltung\n                git url: 'https://gitlab.edict.de/casino/core-platform.git', branch: 'main'\n            }\n        }\n        stage('Build & Test') {\n            steps {\n                // Automatisierte Ausführung von Code-Analysen und JUnit-Tests via Maven\n                sh 'mvn clean package'\n            }\n        }\n        stage('Containerize') {\n            steps {\n                // Erstellung des Docker-Images und Push in die sichere Registry\n                sh \"docker build -t ${IMAGE_NAME} .\"\n                sh \"docker push ${IMAGE_NAME}\"\n            }\n        }\n        stage('Review & Notify') {\n            steps {\n                // Dokumentation und Statuspräsentation im Scrum-Review\n                echo \"Deployment erfolgreich für Kubernetes vorbereitet. Status: STABLE.\"\n            }\n        }\n    }\n}"
+      }
+    },
+    "hmmh-hybris": {
+      "title": "Software-Entwicklerin (SAP hybris Multimandanten-Plattform)",
+      "company": "hmmh multimediahaus AG",
+      "description": "Entwicklung und Optimierung einer hochskalierbaren Multimandanten-E-Commerce-Plattform auf Basis von SAP hybris mit Fokus auf Content-Pflege und Checkout.",
+      "leadText": "Bei der hmmh multimediahaus AG in Hamburg war ich Teil des Kernteams zur Realisierung einer komplexen Multimandanten-E-Commerce-Plattform auf Basis von hybris. Meine Schwerpunkte lagen in der tiefgehenden Backend-Logik für das Kundenkonto und die Bestellstrecke (Checkout) sowie in der performanten Datenmigration. Zusätzlich unterstützte ich aktiv Akquise-Tätigkeiten durch Machbarkeitsstudien und Proof-of-Concepts.",
+      "challenges": [
+        {
+          "id": "impex-migration",
+          "icon": "database",
+          "title": "Komplexe Content-Migration",
+          "description": "Sicherstellung einer fehlerfreien und performanten Migration von Web-Content aus dem Altsystem in die hybris-Plattform mittels maßgeschneiderter ImpEx-Skripte sowie Optimierung des Import-Cockpits für den Go-Live."
+        },
+        {
+          "id": "checkout-extension",
+          "icon": "architecture",
+          "title": "Spezifischer Checkout-Prozess",
+          "description": "Anpassung und funktionale Erweiterung des Standard-Checkout-Prozesses der hybris-Plattform zur Abdeckung hochspezifischer Kundenanforderungen und Business-Logiken."
+        },
+        {
+          "id": "template-refactoring",
+          "icon": "frontend",
+          "title": "Template-Refactoring & Komponenten",
+          "description": "Refaktorierung starrer Standard-Templates und Auslagerung der UI-Logik in flexible, wiederverwendbare Frontend-Komponenten zur effizienten Content-Pflege."
+        }
+      ],
+      "architecture": [
+        {
+          "id": "hybris-core",
+          "title": "SAP hybris Core",
+          "description": "Einsatz des flexiblen hybris-Frameworks zur sauberen Datenmodellierung und Orchestrierung einer robusten Multimandanten-Architektur.",
+          "type": "backend"
+        },
+        {
+          "id": "impex-engine",
+          "title": "ImpEx Data Engine",
+          "description": "Nutzung der hybris-eigenen Import- und Export-Schnittstellen zur automatisierten Strukturierung und Validierung riesiger Mengen an migriertem Web-Content.",
+          "type": "backend"
+        },
+        {
+          "id": "component-ui",
+          "title": "Component-Driven UI",
+          "description": "Entwicklung moderner Layout-Komponenten auf JSP- und JavaScript-Basis zur flexiblen und modularen Gestaltung dynamischer Content-Seiten.",
+          "type": "frontend"
+        }
+      ],
+      "impact": [
+        {
+          "id": "go-live-success",
+          "type": "backend",
+          "badgeText": "Go-Live",
+          "title": "Sicherer Plattform-Start",
+          "description": "Erfolgreicher Go-Live und stabiler Betrieb der Multimandanten-Plattform dank einer verfeinerten und getesteten Import-Strategie."
+        },
+        {
+          "id": "sales-support",
+          "type": "default",
+          "badgeText": "Sales",
+          "title": "Akquise gestärkt",
+          "description": "Gewinnung neuer Kundenprojekte durch die erfolgreiche technische Demonstration von Lösungen mittels maßgeschneiderter Proof-of-Concepts."
+        },
+        {
+          "id": "content-efficiency",
+          "type": "frontend",
+          "badgeText": "Usability",
+          "title": "Content-Pflege beschleunigt",
+          "description": "Massive Arbeitserleichterung für Redakteure durch die Einführung modularer Inhaltstemplates und optimierter Oberflächen."
+        }
+      ],
+      "stack": [
+        { "name": "Java EE", "type": "backend" },
+        { "name": "SAP hybris", "type": "backend" },
+        { "name": "ImpEx Scripting", "type": "backend" },
+        { "name": "JavaServer Pages", "type": "frontend" },
+        { "name": "JavaScript", "type": "frontend" },
+        { "name": "Proof-of-Concepts", "type": "tools" }
+      ],
+      "deepDive": {
+        "filePath": "hmmh/hybris/import/content_migration.impex",
+        "context": "Das folgende Beispiel zeigt die Syntax eines hybris ImpEx-Skripts, wie es für die strukturierte Migration von Web-Content-Komponenten und deren Zuordnung zu CMS-Inhaltsseiten eingesetzt wurde.",
+        "code": "# ImpEx Skript zur Migration von CMS Web-Content in der hybris-Plattform\n$contentCatalog=babyoneContentCatalog\n$contentCV=catalogVersion(CatalogVersion.catalog(Catalog.id('$contentCatalog')),CatalogVersion.version('Staged'))\n\n# Einfügen oder Aktualisieren von CMS-Komponenten zur flexiblen Inhaltsdarstellung\nINSERT_UPDATE CMSParagraphComponent;uid[unique=true];$contentCV[unique=true];name;content[lang=de];&componentRef\n;welcomeBonusBanner;;\"Willkommens Bonus Banner\";\"<p>Melden Sie sich jetzt an und sichern Sie sich exklusive Vorteile!</p>\";welcomeBonusBannerRef\n\n# Platzierung der Komponente auf einer vordefinierten Content-Seite\nINSERT_UPDATE ContentPage;uid[unique=true];$contentCV[unique=true];title[lang=de];masterTemplate(uid,$contentCV)\n;myAccountBonusPage;;\"Mein Kundenkonto - Bonusprogramm\";AccountPageTemplate"
+      }
+    },
+    "hmmh-intershop": {
+      "title": "Software-Entwicklerin (Intershop Enterprise E-Commerce – BabyOne)",
+      "company": "hmmh multimediahaus AG",
+      "description": "Wartung, laufende Optimierung und Feature-Entwicklung für den Intershop-basierten Online-Shop des Omnichannel-Händlers BabyOne.",
+      "leadText": "Neben der hybris-Entwicklung übernahm ich eigenverantwortlich die Wartung und kontinuierliche Weiterentwicklung des etablierten Intershop-Online-Shops für den namhaften Kunden BabyOne. Mein Fokus lag auf der tiefen Integration externer Drittsysteme, komplexer Fehleranalyse sowie der stetigen Optimierung der Benutzeroberflächen zur Steigerung der Conversion Rate.",
+      "challenges": [
+        {
+          "id": "bonus-program",
+          "icon": "architecture",
+          "title": "Drittsystem-Integration",
+          "description": "Konzeption und Implementierung einer stabilen Schnittstelle zur Anbindung eines externen Kundenbonus-Programms direkt in die bestehenden E-Commerce-Prozesse."
+        },
+        {
+          "id": "wishlist-webservice",
+          "icon": "database",
+          "title": "Wunschbox per WebService",
+          "description": "Erfolgreiche Integration einer interaktiven Wunschbox-Funktionalität mit performanter, bidirektionaler WebService-Anbindung an die Backend-Systeme."
+        },
+        {
+          "id": "ui-optimization",
+          "icon": "frontend",
+          "title": "UI- & Fehleranalyse",
+          "description": "Laufende Identifikation von Engpässen durch strukturierte Fehleranalysen und zielgerichtete Optimierung der UI-Komponenten für eine bessere User Experience."
+        }
+      ],
+      "architecture": [
+        {
+          "id": "intershop-pipelines",
+          "title": "Intershop Business Logik",
+          "description": "Einsatz der Intershop-Architektur zur Programmierung stabiler und modularer Transaktions- und Bestellprozesse.",
+          "type": "backend"
+        },
+        {
+          "id": "webservice-layer",
+          "title": "WebService API Layer",
+          "description": "Sichere Kommunikationsschicht mittels SOAP/REST zur synchronen Echtzeit-Abfrage von Bonuspunkten und Wunschbox-Daten aus externen Diensten.",
+          "type": "backend"
+        },
+        {
+          "id": "intershop-isml",
+          "title": "ISML Templates",
+          "description": "Optimierung und Anpassung der Benutzeroberflächen auf Basis von Intershop Standard Markup Language (ISML) für responsive und performante Storefronts.",
+          "type": "frontend"
+        }
+      ],
+      "impact": [
+        {
+          "id": "omnichannel-loyalty",
+          "type": "backend",
+          "badgeText": "Features",
+          "title": "Bonusprogramm integriert",
+          "description": "Erfolgreiche Einführung des digitalen Kundenbindungsprogramms zur nahtlosen Verschmelzung von Filial- und Online-Einkäufen."
+        },
+        {
+          "id": "wishlist-success",
+          "type": "default",
+          "badgeText": "Engagement",
+          "title": "Wunschbox gelauncht",
+          "description": "Signifikante Steigerung der Kundeninteraktion im Shop durch die Einführung des neuen, kollaborativen Wunschbox-Features."
+        },
+        {
+          "id": "system-stability",
+          "type": "frontend",
+          "badgeText": "Stability",
+          "title": "Ausfallzeiten minimiert",
+          "description": "Nachhaltig verbesserte Shop-Performance und Stabilität durch präzise, proaktive Fehleranalysen im laufenden Betrieb."
+        }
+      ],
+      "stack": [
+        { "name": "Java EE", "type": "backend" },
+        { "name": "Intershop", "type": "backend" },
+        { "name": "WebService APIs", "type": "backend" },
+        { "name": "ISML (Markup Language)", "type": "frontend" },
+        { "name": "JavaScript", "type": "frontend" },
+        { "name": "Fehler- / Performanceanalyse", "type": "tools" }
+      ],
+      "deepDive": {
+        "filePath": "hmmh/intershop/bonus/BonusServiceConnector.java",
+        "context": "Das Code-Beispiel demonstriert die Integration eines externen Kundenbindungsprogramms. Der Java-Service kapselt den API-Aufruf zur synchronen Abfrage des aktuellen Punktestands eines Kunden.",
+        "code": "// Java-Komponente zur Integration des externen Bonusprogramms bei Intershop\npackage com.hmmh.intershop.bonus;\n\nimport java.net.URL;\nimport javax.xml.ws.WebServiceRef;\n\npublic class BonusServiceConnector {\n    \n    /**\n     * Ruft den aktuellen Punktestand des Kunden über einen externen WebService ab.\n     */\n    public int fetchCustomerBonusPoints(String customerLoyaltyId) {\n        try {\n            // Strukturierter Aufruf des externen API-Endpunkts (vereinfacht)\n            BonusWebService_Service service = new BonusWebService_Service();\n            BonusWebService port = service.getBonusWebServicePort();\n            \n            // Abfrage ausführen\n            return port.getPointsBalance(customerLoyaltyId);\n        } catch (Exception e) {\n            // Robuste Fehleranalyse und Fallback im Checkout-Prozess\n            System.err.println(\"Fehler bei der Abfrage des externen Bonusdienstes: \" + e.getMessage());\n            return 0; \n        }\n    }\n}"
+      }
+    },
+    "areva-stromlaufplan": {
+      "title": "Software-Entwicklerin (Stromlaufplan-Engineering-Tools)",
+      "company": "AREVA NP GmbH",
+      "description": "Konzeption, Weiterentwicklung und Support einer geschäftskritischen Datenbankanwendung zur Erstellung von Stromlaufplänen für die Projektierung von Kernkraftwerken.",
+      "leadText": "In meiner Rolle bei der AREVA NP GmbH in Erlangen war ich maßgeblich an der Modernisierung und Betreuung von datenbankbasierten Design- und Engineering-Tools für elektrische Systeme beteiligt. Über den gesamten Zeitraum entwickelte ich eine Anwendung zur Stromlaufplan-Erstellung für die Atomkraftwerks-Planung, übernahm die Installation direkt vor Ort beim Kunden und verantwortete den technischen Anwendungssupport.",
+      "challenges": [
+        {
+          "id": "reengineering-legacy",
+          "icon": "architecture",
+          "title": "Reengineering & Migration",
+          "description": "Erfolgreiches Reverse- und Reengineering einer bestehenden Desktop-Anwendung (OpenRoad) und Transformation in eine moderne, webbasierte MVC-Architektur mittels Struts."
+        },
+        {
+          "id": "database-integration",
+          "icon": "database",
+          "title": "Ingres-Datenbankanbindung",
+          "description": "Entwicklung performanter, webbasierter Schnittstellen mit Java und SQL zur nahtlosen Anbindung und Migration bestehender, komplexer Ingres-Datenbanksysteme."
+        },
+        {
+          "id": "client-deployment",
+          "icon": "frontend",
+          "title": "Kundenbetreuung & Rollout",
+          "description": "Direkte Installation der sensiblen Planungssoftware beim Endkunden sowie langfristige fachliche und technische Betreuung im laufenden Betrieb."
+        }
+      ],
+      "architecture": [
+        {
+          "id": "struts-mvc",
+          "title": "Struts MVC Framework",
+          "description": "Strikte Trennung von Geschäftslogik und Präsentationsschicht zur Modernisierung des Altsystems und Gewährleistung hoher Wartbarkeit.",
+          "type": "backend"
+        },
+        {
+          "id": "ingres-sql",
+          "title": "Ingres DB & Java SQL",
+          "description": "Robuste Datenhaltungsebene zur sicheren Verarbeitung und Verwaltung hochkomplexer, elektrischer Verschaltungsdaten der Kraftwerksplanung.",
+          "type": "backend"
+        },
+        {
+          "id": "jsp-flex-ui",
+          "title": "JSP & Adobe Flex UI",
+          "description": "Kombination aus JavaServer Pages und Adobe Flex SDK zur Bereitstellung interaktiver, webbasierter Benutzeroberflächen für Planungsingenieure.",
+          "type": "frontend"
+        }
+      ],
+      "impact": [
+        {
+          "id": "modernization-success",
+          "type": "backend",
+          "badgeText": "Architecture",
+          "title": "System modernisiert",
+          "description": "Erfolgreiche Überführung unflexibler Altsysteme in eine zukunftssichere, webbasierte Enterprise-Architektur."
+        },
+        {
+          "id": "deployment-trust",
+          "type": "default",
+          "badgeText": "Customer",
+          "title": "Vor-Ort-Rollout",
+          "description": "Sichere Installation und reibungslose Inbetriebnahme der geschäftskritischen Software direkt in den Kundenumgebungen."
+        },
+        {
+          "id": "support-quality",
+          "type": "frontend",
+          "badgeText": "Support",
+          "title": "Kunden vertrauen",
+          "description": "Nachhaltige Steigerung der Anwenderzufriedenheit durch direkte, kompetente Betreuung und schnelle Fehlerbehebung."
+        }
+      ],
+      "stack": [
+        { "name": "Java", "type": "backend" },
+        { "name": "Struts", "type": "backend" },
+        { "name": "SQL / Ingres", "type": "backend" },
+        { "name": "JavaServer Pages", "type": "frontend" },
+        { "name": "Adobe Flex SDK", "type": "frontend" },
+        { "name": "Tomcat / Apache", "type": "tools" }
+      ],
+      "deepDive": {
+        "filePath": "areva/engineering/actions/CircuitPlanRoutingAction.java",
+        "context": "Das folgende Beispiel zeigt die Struktur einer klassischen Struts Action-Klasse, die verwendet wurde, um die Formulardaten eines Stromlaufplans zu validieren, zu verarbeiten und über die SQL-Schicht in der Ingres-Datenbank zu sichern.",
+        "code": "// Java Struts Action zur Verarbeitung von Stromlaufplan-Daten\npackage com.areva.engineering.actions;\n\nimport javax.servlet.http.*;\nimport org.apache.struts.action.*;\n\npublic class CircuitPlanRoutingAction extends Action {\n    @Override\n    public ActionForward execute(ActionMapping mapping, ActionForm form, \n                                 HttpServletRequest request, HttpServletResponse response) throws Exception {\n        \n        // Cast des eingehenden Struts-Formulars\n        DynaActionForm planForm = (DynaActionForm) form;\n        String circuitId = planForm.getString(\"circuitId\");\n        \n        // Validierung und Datenbank-Interaktion via SQL\n        if (circuitId == null || circuitId.trim().isEmpty()) {\n            return mapping.findForward(\"error\");\n        }\n        \n        // Logik zur Speicherung im Ingres-System über ein DAO (vereinfacht)\n        request.setAttribute(\"statusMessage\", \"Stromlaufplan erfolgreich aktualisiert.\");\n        return mapping.findForward(\"success\");\n    }\n}"
+      }
+    },
+    "areva-reaktor-testing": {
+      "title": "Software-Testerin & Entwicklerin (Automated Quality Assurance)",
+      "company": "AREVA NP GmbH",
+      "description": "Entwicklung einer automatisierten Python-Anwendung zur Systemanalyse von Linux-Testrechnern im Integrations-Testzentrum für Reaktorschränke.",
+      "leadText": "Im Integrations-Testzentrum für speicherprogrammierbare Steuerungen entwickelte ich 2007 eine spezialisierte Python-Anwendung. Das Tool liest die exakte Hard- und Softwarekonfiguration von Linux-Rechnern automatisch aus und generiert eine detaillierte Übersicht. Diese wurde direkt an die PyTests angehängt, um die lückenlose Rückverfolgbarkeit des Test-Equipments bei der Überprüfung von Reaktorschrank-Software zu garantieren.",
+      "challenges": [
+        {
+          "id": "hardware-inspection",
+          "icon": "architecture",
+          "title": "Automatisierte Systemanalyse",
+          "description": "Entwicklung robuster Skripte unter Linux, um Systemkomponenten, Firmware-Stände und Software-Versionen ohne manuelles Eingreifen fehlerfrei auszulesen."
+        },
+        {
+          "id": "test-traceability",
+          "icon": "database",
+          "title": "Lückenlose Test-Zuweisung",
+          "description": "Strukturierung und dynamische Koppelung der ausgelesenen Systemkonfiguration mit den automatisierten Testprotokollen der PyTest-Suite."
+        },
+        {
+          "id": "gui-usability",
+          "icon": "frontend",
+          "title": "Übersichtliche Darstellung",
+          "description": "Konzeption und Design einer intuitiven GUI mittels PyQt bzw. strukturierter Report-Ausgaben zur schnellen Verifizierung des Test-Setups."
+        }
+      ],
+      "architecture": [
+        {
+          "id": "python-core",
+          "title": "Python OS Automation",
+          "description": "Nutzung nativer Python-Bibliotheken zur systemnahen Abfrage von Linux-Hardware-Spezifikationen und Kernel-Informationen.",
+          "type": "backend"
+        },
+        {
+          "id": "pytest-integration",
+          "title": "PyTest & PyUnit Framework",
+          "description": "Zentrales Test-Framework, das die generierte Equipment-Übersicht automatisch als Metadaten in jeden Testlauf der Reaktorschränke einspeist.",
+          "type": "backend"
+        },
+        {
+          "id": "pyqt-interface",
+          "title": "PyQt GUI / Report Engine",
+          "description": "Erstellung von Benutzeroberflächen oder formatierten Protokollen zur übersichtlichen Validierung der Hardware-Umgebung vor dem Teststart.",
+          "type": "frontend"
+        }
+      ],
+      "impact": [
+        {
+          "id": "audit-safety",
+          "type": "backend",
+          "badgeText": "Compliance",
+          "title": "Audit-Sicherheit erhöht",
+          "description": "Garantierte Rückverfolgbarkeit, mit welchem exakten IT-Equipment und Softwarestand die Reaktorschränke geprüft wurden."
+        },
+        {
+          "id": "zero-manual-effort",
+          "type": "default",
+          "badgeText": "Automation",
+          "title": "100% Automatisiert",
+          "description": "Vollständige Eliminierung manueller Dokumentationsfehler beim Erfassen der Testrechner-Spezifikationen."
+        },
+        {
+          "id": "qa-efficiency",
+          "type": "frontend",
+          "badgeText": "QA Speed",
+          "title": "Effizientes Debugging",
+          "description": "Massive Zeitersparnis bei der Fehlersuche im Integrationszentrum durch direkt mitgelieferte Systemumgebungs-Daten."
+        }
+      ],
+      "stack": [
+        { "name": "Python", "type": "backend" },
+        { "name": "PyTest / PyUnit", "type": "backend" },
+        { "name": "Linux-Systemanalyse", "type": "backend" },
+        { "name": "PyQt", "type": "frontend" }
+      ],
+      "deepDive": {
+        "filePath": "areva/qa/automation/sys_inspector.py",
+        "context": "Dieses Python-Skript demonstriert exemplarisch das Prinzip der automatisierten Systemanalyse unter Linux. Es liest Kernel- und Hardware-Informationen aus und bereitet sie für das Anhängen an ein PyTest-Protokoll vor.",
+        "code": "# Python-Skript zur automatisierten Hard- und Software-Analyse unter Linux\nimport platform\nimport sys\n\ndef get_system_equipment_summary():\n    \"\"\"Liest relevante Systemparameter des Testrechners aus.\"\"\"\n    equipment_info = {\n        \"os_release\": platform.release(),\n        \"architecture\": platform.machine(),\n        \"python_version\": sys.version.split()[0],\n        \"test_node_name\": platform.node()\n    }\n    return equipment_info\n\nif __name__ == \"__main__\":\n    # Test-Ausgabe für die Integration in den PyTest-Report\n    info = get_system_equipment_summary()\n    print(f\"--- EQUIPMENT REPORT FOR REAKTOR-SCHRANK-TESTS ---\")\n    for key, value in info.items():\n        print(f\"{key.upper()}: {value}\")"
+      }
+    },
+    "isweb": {
+      "title": "Software-Entwicklerin (Knowledge Management)",
+      "company": "is@web GmbH",
+      "description": "Entwicklung dynamischer Webanwendungen und komplexer Intranet-Workflows auf Basis des plattformübergreifenden Informationssystems COIS im Bereich Wissensmanagement.",
+      "leadText": "Bei der is@web GmbH Knowledge Management in Nürnberg habe ich an der Umsetzung des plattformdurchgängigen Steuerungssystems COIS gearbeitet, um Unternehmenswissen zeitzonen- und ortsunabhängig verfügbar zu machen. In enger Zusammenarbeit mit der konzerneigenen Werbeagentur und Direktkunden lag mein Fokus auf der Erstellung dynamischer Webinterfaces sowie der Programmierung geschäftskritischer Intranet-Workflows.",
+      "challenges": [
+        {
+          "id": "workflow-automation",
+          "icon": "architecture",
+          "title": "Automatisierte Workflows",
+          "description": "Konzeption und Implementierung komplexer, automatisierter Geschäftsprozesse für das Intranet mittels LotusScript und der Lotus-Notes-Formel-Sprache."
+        },
+        {
+          "id": "cms-integration",
+          "icon": "database",
+          "title": "CMS-Datenintegration",
+          "description": "Strukturiert ausgelesene und performante Anzeige von dynamischen Inhalten und Wissensbasen direkt aus dem Lotus Notes Content-Management-System."
+        },
+        {
+          "id": "agency-frontend",
+          "icon": "frontend",
+          "title": "Pixelgenaues Frontend",
+          "description": "Erstellung moderner, dynamischer Webseiten mit HTML/CSS und JavaScript auf Basis präziser, kreativer Vorgaben der Werbeagentur."
+        }
+      ],
+      "architecture": [
+        {
+          "id": "lotus-notes-cms",
+          "title": "Lotus Notes CMS",
+          "description": "Zentrales Content-Management-System zur strukturierten Haltung, Abbildung und Bereitstellung komplexer Wissensdatenbanken im COIS-System.",
+          "type": "backend"
+        },
+        {
+          "id": "lotusscript-backend",
+          "title": "LotusScript & Formula",
+          "description": "Einsatz von LotusScript und Lotus-Notes-Formel-Sprache zur verlässlichen Programmierung der serverseitigen Intranet-Workflowlogik.",
+          "type": "backend"
+        },
+        {
+          "id": "dynamic-web",
+          "title": "Dynamic Web Stack",
+          "description": "Einsatz von nativem JavaScript, HTML und CSS zur pixelgenauen Transformation von Agentur-Layouts in funktionale Webanwendungen.",
+          "type": "frontend"
+        }
+      ],
+      "impact": [
+        {
+          "id": "workflow-success",
+          "type": "backend",
+          "badgeText": "Backend",
+          "title": "Intranet gesteuert",
+          "description": "Erfolgreiche Digitalisierung und Beschleunigung interner Unternehmensprozesse durch maßgeschneiderte Workflow-Module."
+        },
+        {
+          "id": "data-availability",
+          "type": "default",
+          "badgeText": "Knowledge",
+          "title": "Wissensbasis mobilisiert",
+          "description": "Sicherstellung einer konsistenten, multilingualen Datenverfügbarkeit für das Management, unabhängig von Zeit und Raum."
+        },
+        {
+          "id": "design-implementation",
+          "type": "frontend",
+          "badgeText": "UI / UX",
+          "title": "Schnittstelle zur Agentur",
+          "description": "Nahtlose und reibungslose technische Umsetzung anspruchsvoller Design- und Layoutvorgaben direkt für Endkunden."
         }
       ],
       "deepDive": {
-        "filePath": "quarkus/ChargingStationConsumer.java",
-        "context": "Die asynchrone Verarbeitung der Ladedaten über Apache Kafka stellte sicher, dass Spitzenlasten an den Ladestationen das Kernsystem nicht blockieren. Durch den reaktiven Quarkus-Consumer werden eingehende Buchungs- und Verbrauchsdaten isoliert, validiert und performant in die PostgreSQL-Datenbank geschrieben.",
-        "code": "// Reaktiver Kafka Consumer für Ladedaten\n@ApplicationScoped\npublic class ChargingStationConsumer {\n\n    @Inject\n    ChargingService chargingService;\n\n    @Incoming(\"charging-sessions\")\n    @Acknowledgment(Acknowledgment.Strategy.MANUAL)\n    public Uni<Void> processSession(Message<String> message) {\n        String payload = message.getPayload();\n        \n        return chargingService.validateAndSave(payload)\n            .onItem().transformToUni(v -> Uni.createFrom().completionStage(message.ack()))\n            .onFailure().recoverWithUni(err -> {\n                // Fehlerbehandlung & Dead-Letter-Queue\n                return Uni.createFrom().completionStage(message.nack(err));\n            });\n    }\n}"
+        "filePath": "isweb/cois/workflows/IntranetApprovalWorkflow.lss",
+        "context": "Zur Steuerung der Wissensfreigabe im COIS-System wurden serverseitige Workflows implementiert. Das folgende Code-Beispiel zeigt die logische Struktur eines automatisierten Freigabeprozesses in LotusScript, der Dokumentenstatus validiert und Benachrichtigungen im Intranet triggert.",
+        "code": "' LotusScript zur automatisierten Workflow-Steuerung im Intranet\nSub Initialize\n    Dim session As New NotesSession\n    Dim db As NotesDatabase\n    Dim dc As NotesDocumentCollection\n    Dim doc As NotesDocument\n    \n    Set db = session.CurrentDatabase\n    Set dc = db.UnprocessedDocuments\n    Set doc = dc.GetFirstDocument\n    \n    While Not(doc Is Nothing)\n        ' Überprüfung des aktuellen Workflow-Status\n        If doc.GetItemValue(\"Status\")(0) = \"Pending_Approval\" Then\n            ' Usability-Anpassung: Setze automatischen Zeitstempel\n            Call doc.ReplaceItemValue(\"ApprovedDate\", Now)\n            Call doc.ReplaceItemValue(\"Status\", \"Published\")\n            \n            ' Workflow an das COIS-Wissensmanagement übergeben\n            Call doc.Save(True, False)\n        End If\n        Set doc = dc.GetNextDocument(doc)\n    Wend\nEnd Sub"
       },
       "stack": [
-        { "name": "Java 21", "type": "backend" },
-        { "name": "Quarkus", "type": "backend" },
-        { "name": "Apache Kafka", "type": "backend" },
-        { "name": "PostgreSQL", "type": "backend" },
-        { "name": "Angular", "type": "frontend" },
-        { "name": "TypeScript", "type": "frontend" },
-        { "name": "RxJS", "type": "frontend" },
-        { "name": "Docker", "type": "tools" },
-        { "name": "Kubernetes", "type": "tools" },
-        { "name": "Azure DevOps", "type": "tools" },
-        { "name": "JUnit", "type": "tools" },
-        { "name": "Playwright", "type": "tools" },
-        { "name": "Scrum", "type": "default" }
+        { "name": "LotusScript", "type": "backend" },
+        { "name": "Lotus Formula", "type": "backend" },
+        { "name": "Lotus Notes CMS", "type": "backend" },
+        { "name": "JavaScript", "type": "frontend" },
+        { "name": "HTML5 / CSS3", "type": "frontend" },
+        { "name": "Photoshop", "type": "tools" }
       ]
     },
-    "amm": {
-      "title": "Arbeitsmarktmonitor (AMM)",
-      "company": "Bundesagentur für Arbeit",
-      "description": "Weiterentwicklung eines Analyse-Instruments für regionale Arbeitsmarktstrukturen. Implementierung interaktiver Grafiken und Umstellung auf moderne Bibliotheken."
-    },
-    "education": {
-      "title": "Informationssystem Bildung und Beruf",
-      "company": "Bundesagentur für Arbeit",
-      "description": "Betreuung zentraler Online-Angebote (ELAN, Entgeldatlas). Fokus auf barrierefreie PDF-Generierung und komplexe Datenaufbereitung."
-    },
-    "casino": {
-      "title": "Online-Casino Plattform",
-      "company": "edict egaming GmbH",
-      "description": "Entwicklung hochverfügbarer Casinolösungen. Aufbau deklarativer CI/CD-Pipelines und Implementierung neuer Marketing-Microservices."
+    "memphis": {
+      "title": "Studentische Hilfskraft (EU-Projekt MEMPHIS)",
+      "company": "Universität Paderborn / C-LAB",
+      "description": "Entwicklung einer personalisierten, grafischen Benutzeroberfläche für PDAs im Rahmen des 5. EU-Forschungsrahmenprogramms. Fokus auf die Integration und Bearbeitung von XML-Dokumenten.",
+      "leadText": "Das EU-Forschungsprojekt MEMPHIS (Multilingual Content for Flexible Format Internet Premium Services) am C-LAB – einer Kooperation der Universität Paderborn und der Siemens AG – entwickelte anspruchsvolle, plattformunabhängige Online-Dienste für den Medien- und Finanzbereich in Zusammenarbeit mit Partnern wie Bertelsmann. Als studentische Hilfskraft habe ich an der Konzeption flexibler Benutzeroberflächen für mobile Endgeräte gearbeitet. Im Rahmen meiner Diplomarbeit lag mein Fokus auf der methodischen Vorbereitung und Validierung der MEMPHIS-Demonstratoren und Prototypen nach Usability-Gesichtspunkten – der Grundstein für mein heutiges Verständnis von intuitiver User Experience.",
+      "challenges": [
+        {
+          "id": "ui-pda",
+          "icon": "frontend",
+          "title": "Usability & Prototyping",
+          "description": "Methodische Vorbereitung und Validierung der mobilen MEMPHIS-Demonstratoren nach strengen Usability-Gesichtspunkten im Rahmen der Diplomarbeit."
+        },
+        {
+          "id": "xml-integration",
+          "icon": "database",
+          "title": "XML-Datenverarbeitung",
+          "description": "Strukturierte Integration, Validierung und dynamische Bearbeitung von XML-Dokumenten zur flexiblen Inhaltsdarstellung."
+        },
+        {
+          "id": "system-integration",
+          "icon": "architecture",
+          "title": "Systemintegration & Server",
+          "description": "Nahtlose Einbindung der neu entwickelten mobilen Oberfläche in das bestehende Gesamtsystem unter Verwendung von Apache Tomcat."
+        }
+      ],
+      "architecture": [
+        {
+          "id": "tomcat-server",
+          "title": "Apache Tomcat",
+          "description": "Einsatz als robuster Web- und Applikationsserver für die Bereitstellung der dynamischen Java-Servlets und Web-Services.",
+          "type": "backend"
+        },
+        {
+          "id": "jsp-servlets",
+          "title": "JavaServer Pages & Servlets",
+          "description": "Realisierung der serverseitigen Anwendungslogik und dynamischen Generierung plattformunabhängiger Oberflächen.",
+          "type": "backend"
+        },
+        {
+          "id": "xml-xslt",
+          "title": "XML & XSLT",
+          "description": "Strukturierte Datenhaltung und Transformation von Inhalten, um flexible Formate für unterschiedliche Endgeräte (wie PDAs) zu gewährleisten.",
+          "type": "backend"
+        }
+      ],
+      "impact": [
+        {
+          "id": "usability-validation",
+          "type": "default",
+          "badgeText": "Diplomarbeit",
+          "title": "Usability-Validierung vorbereitet",
+          "description": "Methodische Konzeption, Vorbereitung und Durchführung der Validierung von MEMPHIS-Demonstratoren und Prototypen nach Usability-Gesichtspunkten."
+        },
+        {
+          "id": "pda-interface",
+          "type": "frontend",
+          "badgeText": "UI / UX",
+          "title": "Personalisierte PDA-Oberflächen",
+          "description": "Entwurf und Umsetzung grafischer Benutzerschnittstellen, die speziell auf die Anforderungen und Display-Restriktionen mobiler Clients optimiert waren."
+        },
+        {
+          "id": "xml-processing",
+          "type": "backend",
+          "badgeText": "Backend",
+          "title": "XML-Datenintegration",
+          "description": "Anbindung und Verarbeitung komplexer XML-Dokumente innerhalb des Content-Management-Workflows zur multilingualen Inhaltserstellung."
+        }
+      ],
+      "deepDive": {
+        "filePath": "c-lab/memphis/pda/XSLTTransformerServlet.java",
+        "context": "Im Rahmen der Prototypen-Entwicklung wurde die serverseitige Transformation von XML-Strukturen via XSLT genutzt. Das Java-Servlet transformierte die multilingualen Rohdaten dynamisch in ein für PDAs optimiertes, schlankes Ausgabeformat, um die Barrierefreiheit und Usability auf mobilen Endgeräten sicherzustellen.",
+        "code": "// Java Servlet zur dynamischen XML/XSLT-Transformation für mobile Clients\npublic class XSLTTransformerServlet extends HttpServlet {\n    \n    protected void doGet(HttpServletRequest request, HttpServletResponse response) \n            throws ServletException, IOException {\n        \n        response.setContentType(\"text/html; charset=UTF-8\");\n        PrintWriter out = response.getWriter();\n        \n        try {\n            Source xmlSource = new StreamSource(getServletContext().getResourceAsStream(\"/WEB-INF/content.xml\"));\n            Source xslSource = new StreamSource(getServletContext().getResourceAsStream(\"/WEB-INF/pda-format.xsl\"));\n            \n            TransformerFactory factory = TransformerFactory.newInstance();\n            Transformer transformer = factory.newTransformer(xslSource);\n            \n            // Dynamische Usability-Anpassung (z.B. Schriftgröße/Sprache)\n            transformer.setParameter(\"uiMode\", \"pda-compact\");\n            \n            transformer.transform(xmlSource, new StreamResult(out));\n        } catch (TransformerException e) {\n            throw new ServletException(\"XSLT Transformation failed\", e);\n        }\n    }\n}"
+      },
+      "stack": [
+        { "name": "Java", "type": "backend" },
+        { "name": "Apache Tomcat", "type": "backend" },
+        { "name": "XML / XSLT", "type": "backend" },
+        { "name": "JSP", "type": "frontend" },
+        { "name": "PDA UI Design", "type": "frontend" },
+        { "name": "C-LAB Ecosystem", "type": "tools" }
+      ]
     }
   }
 }

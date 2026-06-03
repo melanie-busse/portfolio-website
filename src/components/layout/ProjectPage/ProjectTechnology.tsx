@@ -48,14 +48,14 @@ export default function ProjectTechnology({ projectId }: ProjectSectionProps) {
 
 export const ArchitectureGrid = styled.div`
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   gap: 1.25rem;
   width: 100%;
   margin-top: 1.5rem;
   box-sizing: border-box;
 
-  @media (max-width: ${(props) => props.theme.breakpoints.desktop}) {
-    grid-template-columns: repeat(2, 1fr);
+  @media (min-width: ${(props) => props.theme.breakpoints.desktop}) {
+    grid-template-columns: repeat(auto-fit, minmax(calc(25% - 1.25rem), 1fr));
   }
 
   @media (max-width: ${(props) => props.theme.breakpoints.mobile}) {
@@ -63,6 +63,7 @@ export const ArchitectureGrid = styled.div`
     gap: 1rem;
   }
 `;
+
 export const ArchitectureCard = styled.div`
   display: flex;
   flex-direction: column;

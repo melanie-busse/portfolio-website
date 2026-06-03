@@ -15,129 +15,1279 @@
   "backToOverview": "Tilbage til oversigten",
   "viewLiveProject": "Se live projekt",
   "items": {
-    "emobility": {
-      "title": "Administrationssoftware til e-mobilitet",
-      "company": "TECCON (Forskningsprojekt)",
-      "description": "Konceptualisering og nyudvikling af en cloud-microservices-arkitektur til innovative ladeinfrastrukturer. Fokus på skalerbare systemer og automatiseret kvalitetssikring.",
-      "leadText": "Som en del af et innovativt forskningsprojekt inden for e-mobilitet har jeg fulgt konceptualiseringen og nyudviklingen af en cloud-baseret administrationssoftware til ladeinfrastrukturer. Som Fullstack-udvikler dækkede mit ansvarsområde alt fra requirements engineering og design af microservices-arkitekturen samt Single-Page-applikationen til opbygning af cloud-infrastrukturen.",
+    "developer-portfolio": {
+      "title": "Frontend Softwareudvikler | Personlig Portfoliowebside",
+      "company": "Personligt Projekt",
+      "description": "Konceptualisering, design og udvikling af en performant, flersproget portfoliowebside til demonstration af moderne webteknologier.",
+      "leadText": "Dette portfolio blev udviklet som et selvstændigt projekt for at demonstrere moderne best practices inden for webudvikling i en virkelig applikation. Fokus lå på en kompromisløs performant arkitektur, et tilgængeligt og yderst responsivt design samt en flydende internationalisering. Ved at fravælge tunge CSS-frameworks til fordel for skræddersyede Styled Components blev der realiseret en slank kodebase, der vedligeholdes nemt og styres fuldstændig modulært via datastrukturer.",
+      "links": {
+        "github": "https://github.com/dein-username/portfolio",
+        "live": "https://deine-portfolio-domain.de"
+      },
       "challenges": [
         {
-          "id": "architecture",
-          "icon": "architecture",
-          "title": "Forbundne Microservices",
-          "description": "Konceptualisering af en cloud-arkitektur med Quarkus og Kafka til pålidelig integration af eksterne systemer såsom ladestationsinfrastruktur og regnskab."
+          "id": "next-intl-i18n",
+          "icon": "tools",
+          "title": "Flydende Internationalisering (i18n)",
+          "description": "Integration af next-intl for en ren adskillelse af applikationslogik og tekstindhold på tysk, engelsk og dansk, inklusive dynamisk sti-validering."
         },
         {
-          "id": "testing",
-          "icon": "testing",
-          "title": "E2E Testarkitektur",
-          "description": "Opbygning af et komplet, automatiseret testmiljø fra unit- og integrationstests i backend til Playwright i Angular-frontend."
+          "id": "styled-components-design",
+          "icon": "frontend",
+          "title": "Komponentspecifik CSS-in-JS",
+          "description": "Oprettelse af et konsistent designsystem med Styled Components ved hjælp af globale temaer til dark mode samt pixel-perfekte, responsive layouts."
         },
         {
-          "id": "devops",
-          "icon": "devops",
-          "title": "Requirements & DevOps",
-          "description": "Helhedsorienteret implementering af faglige krav fra agil stakeholder-refinement til cloud-deployment via Azure Pipelines og Kubernetes."
+          "id": "dynamic-data-rendering",
+          "icon": "database",
+          "title": "Datastyrede UI-Komponenter",
+          "description": "Arkitektur af fuldstændig modulære UI-sektioner (såsom projekt-heros, tidslinjer og skill-grids), der genereres fuldautomatisk ud fra strukturerede JSON-objekter."
         }
       ],
       "architecture": [
         {
-          "id": "quarkus",
-          "title": "Quarkus & Java 21",
-          "description": "Anvendelse af et cloud-native framework for ekstremt hurtige opstartstider, lavt hukommelsesforbrug og moderne Java-funktioner i microservice-backend.",
-          "type": "backend"
-        },
-        {
-          "id": "kafka",
-          "title": "Apache Kafka",
-          "description": "Hændelsesstyret kommunikation (Event-Driven Architecture) for asynkron og højtilgængelig dataudveksling med ladeinfrastrukturen.",
-          "type": "backend"
-        },
-        {
-          "id": "angular",
-          "title": "Angular & TS",
-          "description": "Realisering af en højtydende, struktureret Single-Page Application (SPA) til intuitiv administration af ladestationerne.",
+          "id": "nextjs-pages-router",
+          "title": "Next.js Pages Router & SSR",
+          "description": "Struktureret routing-framework for at sikre optimerede indlæsningstider (Time to First Byte) og skarpe SEO-strukturer via hybrid rendering.",
           "type": "frontend"
         },
         {
-          "id": "kubernetes",
-          "title": "Docker & K8s",
-          "description": "Containerisering af alle tjenester og orkestrering via Kubernetes i Azure Cloud for maksimal skalerbarhed og zero-downtime deployments.",
+          "id": "clean-component-architecture",
+          "title": "Atomiske / Modulære Komponenter",
+          "description": "Streng adskillelse af layout-containere, genanvendelige UI-fliser (knapper, badges) og tilstandsstyrede sektioner for maksimal vedligeholdelse.",
+          "type": "frontend"
+        }
+      ],
+      "impact": [
+        {
+          "id": "clean-code-architecture",
+          "type": "frontend",
+          "badgeText": "Clean Code",
+          "title": "Optimeret Ydeevne",
+          "description": "Opnåelse af topkarakterer i Google Lighthouse gennem semantisk HTML, optimeret asset-indlæsning og undgåelse af tunge tredjepartsbiblioteker."
+        },
+        {
+          "id": "robust-typescript",
+          "type": "tools",
+          "badgeText": "TS",
+          "title": "Typesikker Udvikling",
+          "description": "Fuld typesikkerhed på tværs af alle komponent-props, tema-definitioner og internationaliserings-stier for at forhindre runtime-fejl."
+        }
+      ],
+      "stack": [
+        { "name": "Next.js (Pages)", "type": "frontend" },
+        { "name": "React", "type": "frontend" },
+        { "name": "TypeScript", "type": "frontend" },
+        { "name": "Styled Components", "type": "frontend" },
+        { "name": "next-intl", "type": "tools" },
+        { "name": "Vercel", "type": "tools" },
+        { "name": "Git / GitHub", "type": "tools" }
+      ],
+      "deepDive": {
+        "filePath": "src/components/layout/ProjectPage/ProjectLinks.tsx",
+        "context": "Kodeeksemplet viser den fejltolerante komponent til link-generering, som opfanger fejlbehæftede eller ufuldstændige i18n-oversættelsesnøgler og tilpasser UI dynamisk.",
+        "code": "export default function ProjectLinks({ projectId }: ProjectLinksProps) {\n  const t = useTranslations(\"projects\");\n\n  const githubLink = t(\"items.\" + projectId + \".links.github\");\n  const liveLink = t(\"items.\" + projectId + \".links.live\");\n\n  const githubFallback = \"projects.items.\" + projectId + \".links.github\";\n  const liveFallback = \"projects.items.\" + projectId + \".links.live\";\n\n  const isGithubValide = githubLink && githubLink !== githubFallback && githubLink !== \"null\" && githubLink !== \"\";\n  const isLiveValide = liveLink && liveLink !== liveFallback && liveLink !== \"null\" && liveLink !== \"\";\n\n  if (!isGithubValide && !isLiveValide) return null;\n\n  return (\n    <LinksContainer>\n      {isGithubValide && <LinkButton href={githubLink} target=\"_blank\">Code</LinkButton>}\n      {isLiveValide && <LinkButton href={liveLink} target=\"_blank\" className=\"live-btn\">Live Demo</LinkButton>}\n    </LinksContainer>\n  );\n}"
+      }
+    },
+    "zoo2-animalpark-manager": {
+      "title": "Fullstack Webapplikation | Zoo 2 Community Manager",
+      "company": "Personligt projekt & Bootcamp-Recap",
+      "description": "Udvikling af en specialiseret, flersproget administrationsplatform til 'Zoo 2: Animal Park'-spilfællesskabet, designet til strategisk konkurrenceplanlægning og lagerstyring.",
+      "leadText": "Som mit første store recap-projekt udviklede jeg et datadrevet planlægningsværktøj til 'Zoo 2: Animal Park'-spillerfællesskabet. Platformen samler spildata og hjælper klubber med at træffe velinformerede beslutninger i forbindelse med konkurrencer i spillet. Som en del af en løbende modernisering har jeg fuldstændig migreret applikationen fra den oprindelige Next.js Pages Router-arkitektur til den moderne Next.js App Router med strikt TypeScript for at maksimere ydeevnen via Server Components og garantere absolut typesikkerhed.",
+      "challenges": [
+        {
+          "id": "app-router-migration",
+          "icon": "architecture",
+          "title": "Migration til Next.js App Router & SWR",
+          "description": "Succesfuld refactoring af applikationen fra Pages Router til App Router. Integration af SWR for yderst effektiv data-fetching på klientsiden, caching og automatisk revalidering i frontenden."
+        },
+        {
+          "id": "cloud-native-database",
+          "icon": "database",
+          "title": "Cloud-Native Serverless Database",
+          "description": "Migration af de relationelle datastrukturer til TiDB Cloud, en højt tilgængelig, distribueret MySQL-databasearkitektur, forbundet via Prisma ORM."
+        },
+        {
+          "id": "enhanced-ux-notifications",
+          "icon": "frontend",
+          "title": "Optimeret UX & Notifikationer",
+          "description": "Implementering af en interaktiv brugerflade med SweetAlert til visuelt flotte bekræftelsesdialoger og Toastify for realtidsfeedback ved brugerhandlinger."
+        },
+        {
+          "id": "vercel-deployment",
+          "icon": "tools",
+          "title": "Serverless Deployment på Vercel",
+          "description": "Arkitektur af en fuldautomatisk deployment-pipeline på Vercel, inklusive optimering af serverless functions og miljøvariabler (environment variables)."
+        }
+      ],
+      "architecture": [
+        {
+          "id": "nextjs-app-router",
+          "title": "Next.js App Router & SWR-integration",
+          "description": "Moderne routing- og renderingsmodel med hybride Server- og Client-komponenter, kombineret med SWR for reaktive UI-opdateringer uden manuel state-styring.",
+          "type": "frontend"
+        },
+        {
+          "id": "prisma-tidb-layer",
+          "title": "Prisma ORM & TiDB Cloud Backend",
+          "description": "Typesikker dataadgang til en distribueret MySQL-instans i skyen, optimeret til højtydende joins og hurtige aggregeringer.",
+          "type": "backend"
+        }
+      ],
+      "impact": [
+        {
+          "id": "data-driven-advantage",
+          "type": "backend",
+          "badgeText": "Succes",
+          "title": "Datadrevet klubstrategi",
+          "description": "Succesfuld levering af en MVP, der giver klubber en betydelig, mærkbar strategisk fordel i spillet via automatiske pointscenarie-beregnere."
+        },
+        {
+          "id": "clean-code-typesafety",
+          "type": "tools",
+          "badgeText": "Kvalitet",
+          "title": "Moderne Cloud-Arkitektur",
+          "description": "Et robust, serverløst tech-stack på Vercel og TiDB Cloud, hvilket sikrer fejltoleranc og fejlfrie API-datastrømme under TypeScript."
+        }
+      ],
+      "stack": [
+        { "name": "React / Next.js (App Router)", "type": "frontend" },
+        { "name": "TypeScript / SWR", "type": "frontend" },
+        { "name": "Styled Components", "type": "frontend" },
+        { "name": "SweetAlert / Toastify", "type": "frontend" },
+        { "name": "next-intl (i18n)", "type": "frontend" },
+        { "name": "TiDB Cloud (MySQL)", "type": "backend" },
+        { "name": "Node.js", "type": "backend" },
+        { "name": "MySQL / MariaDB", "type": "backend" },
+        { "name": "REST APIs", "type": "backend" },
+        { "name": "Prisma ORM", "type": "backend" },
+        { "name": "NextAuth.js (Discord OAuth)", "type": "backend" },
+        { "name": "Vercel Deployment", "type": "tools" },
+        { "name": "IntelliJ / PhpStorm", "type": "tools" },
+        { "name": "Git / GitHub", "type": "tools" },
+        { "name": "Datenbank-Integration", "type": "tools" }
+      ],
+      "deepDive": {
+        "filePath": "src/hooks/useCompetitionData.ts",
+        "context": "Denne custom hook viser integrationen af SWR i Zoo-Manager-frontenden for reaktivt at hente scenarieberegninger for konkurrencer og give feedback via Toastify.",
+        "code": "'use client';\n\nimport useSWR from 'swr';\nimport { toast } from 'react-toastify';\n\ninterface CalculationResult {\n  competitionId: string;\n  competitionName: string;\n  calculatedPoints: number;\n  status: string;\n}\n\nconst fetcher = (url: string) => fetch(url).then((res) => {\n  if (!res.ok) throw new Error('Kalkulation fejlede');\n  return res.json();\n});\n\nexport function useCompetitionData(competitionId: string) {\n  const { data, error, isLoading } = useSWR<CalculationResult>(\n    competitionId ? `/api/competitions/${competitionId}/calculate` : null,\n    fetcher,\n    {\n      onSuccess: () => toast.success('Scenarieberegning opdateret med succes!'),\n      onError: () => toast.error('Fejl under automatisk pointberegning.'),\n      revalidateOnFocus: false\n    }\n  );\n\n  return {\n    result: data,\n    isError: error,\n    isLoading\n  };\n}"
+      }
+    },
+    "neuefische-fullstack-bootcamp": {
+      "title": "Full-Stack Software Development Efteruddannelse",
+      "company": "neuefische GmbH – IT Bootcamp",
+      "description": "12-måneders intensiv fuldtids efteruddannelse inden for Full-Stack, med speciale i moderne JavaScript/TypeScript-økosystemer, cloud-teknologier og AI-drevet softwareudvikling.",
+      "leadText": "For målrettet at opdatere min akademiske baggrund inden for erhvervsinformatik og min mangeårige enterprise-erfaring med de nyeste cloud-native og JavaScript-teknologier, gennemførte jeg dette intensive 12-måneders Full-Stack-bootcamp. Det praksisnære program fokuserede på opbygning af moderne single-page og server-side applikationer helt fra bunden. Et centralt højdepunkt var implementeringen af reelle praksisprojekter ved hjælp af topmoderne værktøjer samt integration af AI-agenter og API'er.",
+      "challenges": [
+        {
+          "id": "stack-modernization",
+          "icon": "architecture",
+          "title": "Moderne JavaScript-økosystem",
+          "description": "Mestring af hele det moderne stack, fra dybdegående TypeScript og reaktive frontends med React til strukturerede backend-arkitekturer med Node.js og NestJS."
+        },
+        {
+          "id": "recap-project-zoo",
+          "icon": "database",
+          "title": "Første Recap-projekt: Zoo-Manager",
+          "description": "Selvstændig konceptualisering og full-stack implementering af 'Zoo 2 Community Manager' til administration af dyr, farvevarianter og indhegninger baseret på Next.js (Pages Router), MariaDB og Prisma."
+        },
+        {
+          "id": "ai-integration",
+          "icon": "tools",
+          "title": "AI-drevet udvikling & AI-agenter",
+          "description": "Praktisk implementering af applikationer med direkte integration af OpenAI-API'en samt effektiv brug af AI-agenter som Claude Code i udviklingsworkflowet."
+        },
+        {
+          "id": "devops-cloud",
+          "icon": "frontend",
+          "title": "Cloud-Deployment & DevOps",
+          "description": "Opbygning af automatiserede CI/CD-workflows samt containerisering af applikationer med Docker og efterfølgende deployment til AWS-cloud (EC2, S3, RDS)."
+        }
+      ],
+      "architecture": [
+        {
+          "id": "react-next-frontend",
+          "title": "React & Next.js Klient-lag",
+          "description": "Komponentbaserede arkitekturer ved hjælp af hooks, avanceret State Management og responsivt, tilgængeligt UI-design.",
+          "type": "frontend"
+        },
+        {
+          "id": "nest-express-backend",
+          "title": "NestJS & Node.js REST-API",
+          "description": "Struktureret og skalerbar backend med NestJS til levering af sikre RESTful API'er, herunder autentificering og relationel SQL-datamodellering.",
+          "type": "backend"
+        },
+        {
+          "id": "aws-docker-infra",
+          "title": "AWS & Docker Infrastruktur",
+          "description": "Isolerede containermiljøer via Docker, deployet i AWS-cloud med automatiserede deployment-pipelines.",
           "type": "tools"
         }
       ],
       "impact": [
         {
-          "id": "angular-components",
-          "type": "frontend",
-          "badgeText": "Frontend",
-          "title": "Angular-komponenter implementeret",
-          "description": "Design og implementering af nye, modulære UI-komponenter i Angular samt sømløs integration af brugerfladen med backendens REST-api'er."
-        },
-        {
-          "id": "microservices",
+          "id": "fullstack-versatility",
           "type": "backend",
-          "badgeText": "Backend",
-          "title": "Quarkus Microservices udviklet",
-          "description": "Konceptualisering og implementering af robuste backend-tjenester med Java EE/Quarkus samt hændelsesstyret integration via Apache Kafka."
+          "badgeText": "Skills",
+          "title": "Omfattende Full-Stack kompetence",
+          "description": "Succesfuld brobygning mellem moderne UI/UX-udvikling i frontenden og performante, sikre datastrukturer i backenden."
         },
         {
-          "id": "test-automation",
+          "id": "agile-teamwork",
           "type": "tools",
-          "badgeText": "QA / Testing",
-          "title": "Automatiseret testmiljø opbygget",
-          "description": "Opbygning af den fulde testarkitektur med JUnit- og integrationstests i backend samt automatiserede E2E-tests via Playwright og Jasmine i frontend."
+          "badgeText": "Metode",
+          "title": "Agil arbejdsmetode & Clean Code",
+          "description": "Intensiv anvendelse af pair programming, agile Scrum-metoder, automatiseret enhedstestning (unit testing) og clean code-principper i et kollaborativt teammiljø."
+        }
+      ],
+      "stack": [
+        { "name": "TypeScript / React", "type": "frontend" },
+        { "name": "Next.js (Pages- / App-Router)", "type": "frontend" },
+        { "name": "Node.js / NestJS / Express", "type": "backend" },
+        { "name": "MariaDB / Prisma / SQL", "type": "backend" },
+        { "name": "OpenAI API / AI Agents", "type": "tools" },
+        { "name": "Docker / AWS (EC2, S3)", "type": "tools" },
+        { "name": "CI/CD / GitHub Projects", "type": "tools" },
+        { "name": "Unit Testing / Clean Code", "type": "tools" }
+      ],
+      "deepDive": {
+        "filePath": "zoo-manager/pages/api/animals/index.ts",
+        "context": "Dette kodeeksempel viser en sikker API-route-handler i Next.js-backenden (Pages Router) i mit første recap-projekt (Zoo-Manager), som anvender Prisma til effektivt at hente data om dyr fra MariaDB.",
+        "code": "// Next.js API-route til administration af dyr i Zoo-Manager\nimport type { NextApiRequest, NextApiResponse } from 'next';\nimport { PrismaClient } from '@prisma/client';\n\nconst prisma = new PrismaClient();\n\nexport default async function handler(\n  req: NextApiRequest,\n  res: NextApiResponse\n) {\n  const { method } = req;\n\n  switch (method) {\n    case 'GET':\n      try {\n        // Hent alle dyr inklusive deres farvevarianter fra MariaDB\n        const animals = await prisma.animal.findMany({\n          include: { variants: true },\n          orderBy: { name: 'asc' },\n        });\n        return res.status(200).json(animals);\n      } catch (error) {\n        return res.status(500).json({ error: 'Failed to fetch animal data' });\n      }\n\n    case 'POST':\n      try {\n        const { name, enclosureId, species } = req.body;\n        if (!name || !enclosureId) {\n          return res.status(400).json({ error: 'Missing required fields' });\n        }\n\n        const newAnimal = await prisma.animal.create({\n          data: { name, enclosureId, species },\n        });\n        return res.status(201).json(newAnimal);\n      } catch (error) {\n        return res.status(500).json({ error: 'Could not create animal entry' });\n      }\n\n    default:\n      res.setHeader('Allow', ['GET', 'POST']);\n      return res.status(405).end(`Method ${method} Not Allowed`);\n  }\n}"
+      }
+    },
+    "ba-online-antrag-alg": {
+      "title": "Fullstack Softwareudvikler | Online Ansøgning om Arbejdsløshedsunderstøttelse",
+      "company": "Bundesagentur für Arbeit (via TECCON)",
+      "description": "Fullstack-udvikling og optimering af den landsdækkende online ansøgningsproces for arbejdsløshedsunderstøttelse med Angular og Java.",
+      "leadText": "Inden for dette projekt for Bundesagentur für Arbeits onlinetjenester var fokus på videreudvikling af den digitale ansøgningsproces for arbejdsløshedsunderstøttelse. Kerneopgaven bestod i at gøre ansøgningsforløbet så performant, sikkert og intuitivt som muligt for borgerne. Ved hjælp af moderne webteknologier i frontend og en robust Java-arkitektur i backend blev der realiseret en højt tilgængelig applikation, som opfylder de strenge lovkrav til databeskyttelse og tilgængelighed i den offentlige sektor.",
+      "links": {
+        "github": null,
+        "live": "https://www.arbeitsagentur.de/arbeitslos-arbeit-finden/arbeitslosengeld/arbeitslosengeld-beantragen"
+      },
+      "challenges": [
+        {
+          "id": "angular-accessibility",
+          "icon": "frontend",
+          "title": "Tilgængelig Frontend til Høj Trafik",
+          "description": "Implementering af komponentbaserede arkitekturer med Angular i streng overensstemmelse med tilgængelighedsdirektiverne (BITV) og WCAG for at sikre ubegrænset adgang for alle borgere."
         },
         {
-          "id": "ci-cd-devops",
+          "id": "java-backend-validation",
+          "icon": "database",
+          "title": "Sikker & Skalerbar Java-Arkitektur",
+          "description": "Videreudvikling af forretningskritiske backend-services i Java til sikker behandling og validering af følsomme ansøgningsdata samt integration til agenturets interne kernesystemer."
+        },
+        {
+          "id": "enterprise-testing",
+          "icon": "tools",
+          "title": "Kvalitetssikring & Testdækning",
+          "description": "Implementering af omfattende unit- og integrationstests med JUnit og Mockito i backend samt Jasmine/Karma i frontend for at garantere maksimal stabilitet."
+        }
+      ],
+      "architecture": [
+        {
+          "id": "angular-spa-frontend",
+          "title": "Angular Single-Page-Application",
+          "description": "Modulær frontend-arkitektur med reaktive formularer (Reactive Forms) til komplekse, flertrins ansøgningsguider inklusive realtidsvalidering.",
+          "type": "frontend"
+        },
+        {
+          "id": "java-spring-backend",
+          "title": "Java Enterprise REST Services",
+          "description": "Sikkert, Spring Boot-baseret REST-API-backend til afkoblet behandling, validering og indsendelse af brugeransøgninger.",
+          "type": "backend"
+        }
+      ],
+      "impact": [
+        {
+          "id": "accessible-ux",
+          "type": "frontend",
+          "badgeText": "BITV / WCAG",
+          "title": "Ubegrænset Tilgængelighed",
+          "description": "Succesfuld auditering af kritiske ansøgningsforløb med hensyn til tilgængelighed gennem optimering af skærmlæser-support, tastaturbetjening og kontraster."
+        },
+        {
+          "id": "secure-processing",
+          "type": "backend",
+          "badgeText": "Sikkerhed",
+          "title": "Sikker Datavalidering",
+          "description": "Forebyggelse af fejlbehæftede ansøgningsdata via valideringskæder på serversiden og struktureret fejlhåndtering inden overførsel til efterfølgende systemer."
+        }
+      ],
+      "stack": [
+        { "name": "Java / Spring Boot", "type": "backend" },
+        { "name": "Angular", "type": "frontend" },
+        { "name": "TypeScript", "type": "frontend" },
+        { "name": "Oracle DB", "type": "backend" },
+        { "name": "Jenkins / Maven", "type": "tools" },
+        { "name": "Git / Bitbucket", "type": "tools" },
+        { "name": "Jira / Confluence", "type": "tools" }
+      ],
+      "deepDive": {
+        "filePath": "teccon/ba/alg/controller/ApplicationProcessingController.java",
+        "context": "Kodeeksemplet viser en Spring Boot REST-controller i backend, der validerer, behandler og returnerer et standardiseret svar for indkommende ansøgningsdata.",
+        "code": "package de.arbeitsagentur.ba.alg.controller;\n\nimport org.springframework.http.ResponseEntity;\nimport org.springframework.web.bind.annotation.*;\nimport jakarta.validation.Valid;\nimport lombok.RequiredArgsConstructor;\nimport de.arbeitsagentur.ba.alg.dto.ApplicationRequestDto;\nimport de.arbeitsagentur.ba.alg.dto.ApplicationResponseDto;\nimport de.arbeitsagentur.ba.alg.service.ApplicationProcessingService;\n\n@RestController\n@RequestMapping(\"/api/v1/applications\")\n@RequiredArgsConstructor\npublic class ApplicationProcessingController {\n\n    private final ApplicationProcessingService applicationService;\n\n    /**\n     * Modtager online-ansøgningen om arbejdsløshedsunderstøttelse og starter valideringen.\n     */\n    @PostMapping(\"/submit\")\n    public ResponseEntity<ApplicationResponseDto> submitApplication(\n            @Valid @RequestBody ApplicationRequestDto requestDto) {\n        \n        // Behandling og validering på serversiden via service-layer\n        ApplicationResponseDto response = applicationService.processSubmittedApplication(requestDto);\n        \n        // Returnerer status 200 OK med det genererede sagsnummer\n        return ResponseEntity.ok(response);\n    }\n}"
+      }
+    },
+    "teccon-emobility-microservice": {
+      "title": "Softwareudvikler (Fullstack) | Udvikling inden for E-mobilitet",
+      "company": "TECCON Consulting & Engineering GmbH",
+      "description": "Konceptualisering, greenfield-udvikling og implementering af en cloud-native microservices-arkitektur samt en single-page-applikation til en innovativ administrationssoftware for ladeinfrastruktur.",
+      "leadText": "I dette fremtidsorienterede forskningsprojekt spillede jeg en central rolle i designet og implementeringen af en moderne, hændelsesdrevet (event-driven) cloud-microservices-arkitektur. Formålet var at udvikle en skalerbar administrationssoftware til et innovativt ladekoncept for elbiler. Mine ansvarsområder omfattede requirements engineering, implementering af uafhængige tjenester, integration af ekstern infrastruktur (ladestandere, bogføringssystemer) samt opbygning af en automatiseret testarkitektur til både frontend og backend.",
+      "challenges": [
+        {
+          "id": "architecture-conception",
+          "icon": "architecture",
+          "title": "Arkitekturkoncept & Integration",
+          "description": "Design og implementering af en robust cloud-microservices-struktur til problemfri, asynkron hændelseskommunikation med eksterne ladestandere og afregningsinterfaces via Apache Kafka."
+        },
+        {
+          "id": "angular-frontend-dev",
+          "icon": "frontend",
+          "title": "Komponentbaseret UI-udvikling",
+          "description": "Design og implementering af nye tilgængelige frontend-komponenter med Angular baseret på Penpot-mockups, herunder fuld integration med backend-API'er."
+        },
+        {
+          "id": "automated-testing",
+          "icon": "tools",
+          "title": "Opbygning af testarkitektur",
+          "description": "Konceptualisering og udvikling af en automatiseret end-to-end- og enhedsteststrategi ved hjælp af Playwright og Jasmine i frontenden, samt JUnit og integrationstests i backenden."
+        },
+        {
+          "id": "cloud-deployment",
+          "icon": "database",
+          "title": "CI/CD & Cloud-infrastruktur",
+          "description": "Etablering og konfiguration af infrastrukturen samt modellering af deploymentprocessen via Azure DevOps-pipelines direkte til et styret Kubernetes-miljø."
+        }
+      ],
+      "architecture": [
+        {
+          "id": "quarkus-kafka-core",
+          "title": "Quarkus & Kafka Microservices",
+          "description": "Hændelsesdrevne microservices baseret på Java 21 og JEE Quarkus, koblet med Apache Kafka for asynkrone, højperformante datastrømme.",
+          "type": "backend"
+        },
+        {
+          "id": "azure-k8s-platform",
+          "title": "Azure & Kubernetes Orkestrering",
+          "description": "Skalerbar container-infrastruktur på Azure Cloud-platformen, automatisk deployet via Azure DevOps-pipelines.",
+          "type": "backend"
+        },
+        {
+          "id": "angular-spa-ui",
+          "title": "Angular Single-Page-Application",
+          "description": "Modulær og tilgængelig frontend til administrativ styring og overvågning af ladeprocesser i realtid.",
+          "type": "frontend"
+        }
+      ],
+      "impact": [
+        {
+          "id": "infrastructure-scalability",
+          "type": "backend",
+          "badgeText": "Infrastruktur",
+          "title": "Skalerbar administration af ladeniveau",
+          "description": "Succesfuld levering af en fleksibel platform, der kan integrere nye ladestandere og eksterne tredjepartssystemer via afkoblede microservices uden nedetid."
+        },
+        {
+          "id": "test-reliability",
+          "type": "tools",
+          "badgeText": "Kvalitet",
+          "title": "Robust E2E-testdækning",
+          "description": "Markant reduktion af UI-regressionsfejl ved introduktion af en automatiseret Playwright-testsuite til kritiske brugerforløb."
+        }
+      ],
+      "stack": [
+        { "name": "Java 21 / Quarkus", "type": "backend" },
+        { "name": "Apache Kafka", "type": "backend" },
+        { "name": "Angular / TypeScript", "type": "frontend" },
+        { "name": "Hibernate (JPA) / PostgreSQL", "type": "backend" },
+        { "name": "Playwright / Jasmine", "type": "tools" },
+        { "name": "Azure Cloud & DevOps", "type": "tools" },
+        { "name": "Kubernetes / Docker", "type": "tools" },
+        { "name": "JWT / Tilgængelighed", "type": "backend" }
+      ],
+      "deepDive": {
+        "filePath": "teccon/emobility/charging/ChargingStationResource.java",
+        "context": "Dette kodeeksempel viser et yderst effektivt, reaktivt REST-endpoint med Quarkus, som udfører autorisationskontrol (JWT) og behandler statusændringer fra en ladestander.",
+        "code": "// Quarkus REST-controller til administration af e-mobilitetsopladning\npackage teccon.emobility.charging;\n\nimport jakarta.inject.Inject;\nimport jakarta.ws.rs.*;\nimport jakarta.ws.rs.core.MediaType;\nimport jakarta.ws.rs.core.Response;\nimport org.eclipse.microprofile.reactive.messaging.Channel;\nimport org.eclipse.microprofile.reactive.messaging.Emitter;\n\n@Path(\"/api/v1/charging-stations\")\n@Produces(MediaType.APPLICATION_JSON)\n@Consumes(MediaType.APPLICATION_JSON)\npublic class ChargingStationResource {\n\n    @Inject\n    @Channel(\"station-commands\")\n    Emitter<String> commandEmitter;\n\n    /**\n     * Sender en fjernstartskommando til en specifik ladestander via Apache Kafka.\n     */\n    @POST\n    @Path(\"/{id}/start\")\n    public Response remoteStartTransaction(@PathParam(\"id\") String stationId, ChargingCommandDTO commandDTO) {\n        if (commandDTO == null || commandDTO.getUserId() == null) {\n            return Response.status(Response.Status.BAD_REQUEST)\n                           .entity(\"Invalid command payload.\").build();\n        }\n\n        // Klargør event-payload til Kafka og send asynkront\n        String payload = String.format(\"{\\\"stationId\\\":\\\"%s\\\",\\\"action\\\":\\\"START\\\",\\\"user\\\":\\\"%s\\\"}\", \n                                       stationId, commandDTO.getUserId());\n        commandEmitter.send(payload);\n\n        return Response.status(Response.Status.ACCEPTED)\n                       .entity(new CommandResponseDTO(stationId, \"START_REQUESTED\")).build();\n    }\n}"
+      }
+    },
+
+    "teccon-ba-infosysbub": {
+      "title": "Softwareudvikler til onlinetjenester (Fullstack)",
+      "company": "Bundesagentur für Arbeit (via TECCON)",
+      "description": "Agil videreudvikling og modernisering af systemgruppen INFOSYSBUB for at levere centrale onlinetjenester på styrelsens webportal.",
+      "leadText": "Inden for INFOSYSBUB-releasecontaineren arbejdede jeg i et tværfagligt Scrum-team med at vedligeholde og videreudvikle centrale applikationer på styrelsens kundeportal, herunder ELAN (elektronisk anmeldelse af kompensationsafgift for svære handicap), Entgeldatlas (lønatlas) og AVGS (aktiverings- og formidlingskupon). Ud over udvikling af backend-features i Java/Spring og frontend-opgaver i Angular, lå mit primære fokus på at overholde strenge retningslinjer for digital tilgængelighed (BITV) samt automatisering af CI/CD-infrastrukturen.",
+      "challenges": [
+        {
+          "id": "accessibility-pdfs",
+          "icon": "frontend",
+          "title": "Tilgængelig dokumentgenerering",
+          "description": "Konceptualisering og implementering af server-side logik til automatisk generering af fuldt tilgængelige PDF-dokumenter direkte fra komplekse frontend-visninger."
+        },
+        {
+          "id": "frontend-library-migration",
+          "icon": "tools",
+          "title": "Migrering af frontend-biblioteker",
+          "description": "Løbende refactoring og migrering af eksisterende websider til de moderniserede, standardiserede UI-biblioteker hos Bundesagentur für Arbeit ved hjælp av Angular og TypeScript."
+        },
+        {
+          "id": "comprehensive-testing",
+          "icon": "tools",
+          "title": "Helhedsorienteret testdækning",
+          "description": "Sikring af stabile produktions-releases ved at skrive og udføre kodeanalyser, mocking, JUnit- og integrationstests samt automatiserede API-tests via Rest Assured."
+        },
+        {
+          "id": "agile-scrum-execution",
+          "icon": "architecture",
+          "title": "Agilt samarbejde & Deployment",
+          "description": "Aktiv deltagelse i den fulde Scrum-livscyklus, herunder kodeanmeldelser (code reviews), omfattende billetdokumentation i Jira/Confluence, live-server deployments og tilpasning af Jenkins-pipelines."
+        }
+      ],
+      "architecture": [
+        {
+          "id": "spring-boot-services",
+          "title": "Java & Spring Enterprise Services",
+          "description": "Robuste backend-tjenester med Spring, struktureret via klare controller- og DTO-lag for kontrolleret dataoverførsel til klientapplikationer.",
+          "type": "backend"
+        },
+        {
+          "id": "angular-ba-frontend",
+          "title": "Angular Enterprise Frontend",
+          "description": "Skalierbar single-page-applikation bygget med Angular og TypeScript til behandling og visning af komplekse sociale og erhvervsmæssige strukturbeskrivelser.",
+          "type": "frontend"
+        },
+        {
+          "id": "jenkins-k8s-ci",
+          "title": "Automatiseret DevOps Pipeline",
+          "description": "Kontinuerlig integration via Jenkins CI-server, build-management med Maven og containeriseret deployment ved brug af Docker og Kubernetes.",
+          "type": "tools"
+        }
+      ],
+      "impact": [
+        {
+          "id": "bitv-compliance",
+          "type": "frontend",
+          "badgeText": "Tilgængelighed",
+          "title": "Uhindret digital tilgængelighed",
+          "description": "Succesfuld overholdelse af de lovmæssige BITV-tilgængelighedsstandarder for offentlige portaler, hvilket gør kritiske ansøgnings- og informationsforløb tilgængelige for alle borgere."
+        },
+        {
+          "id": "stable-live-deployments",
           "type": "tools",
           "badgeText": "DevOps",
-          "title": "CI/CD-pipelines & Cloud Deployment",
-          "description": "Konfiguration af automatiserede deploymentprocesser via Azure DevOps-pipelines til sikker orkestrering af containere i Kubernetes-clusteret."
+          "title": "Optimeret build-infrastruktur",
+          "description": "Fremskyndelse af release-cyklusser gennem målrettede optimeringer af Jenkins-pipelines og Maven build-management."
+        }
+      ],
+      "stack": [
+        { "name": "Java / Spring", "type": "backend" },
+        { "name": "Angular / TypeScript", "type": "frontend" },
+        { "name": "Oracle DB", "type": "backend" },
+        { "name": "Jenkins / Maven", "type": "tools" },
+        { "name": "Docker / Kubernetes", "type": "tools" },
+        { "name": "Rest Assured / JUnit", "type": "tools" },
+        { "name": "Jira / Confluence / Git", "type": "tools" },
+        { "name": "Tilgængelighed (BITV)", "type": "frontend" }
+      ],
+      "deepDive": {
+        "filePath": "teccon/ba/infosysbub/pdf/PdfGenerationController.java",
+        "context": "Dette uddrag illustrerer en Spring REST-controller, der modtager data til en aktiverings- og formidlingskupon (AVGS), behandler dem og returnerer dem som en tilgængelig PDF-datastrøm.",
+        "code": "// Spring Boot REST-controller til tilgængelig dokumentgenerering\npackage teccon.ba.infosysbub.pdf;\n\nimport org.springframework.beans.factory.annotation.Autowired;\nimport org.springframework.http.HttpHeaders;\nimport org.springframework.http.HttpStatus;\nimport org.springframework.http.MediaType;\nimport org.springframework.http.ResponseEntity;\nimport org.springframework.web.bind.annotation.*;\n\n@RestController\n@RequestMapping(\"/api/v1/documents\")\npublic class PdfGenerationController {\n\n    @Autowired\n    private AccessiblePdfService pdfService;\n\n    /**\n     * Genererer en tilgængelig PDF (PDF/UA-konform) baseret på de indsendte ansøgningsdata.\n     */\n    @POST\n    @Path(\"/generate-avgs\")\n    public ResponseEntity<byte[]> generateAvgsPdf(@RequestBody AvgsDocumentDTO documentDTO) {\n        // Kald til tjenesten for at generere den tilgængelige dokument-bytestrøm\n        byte[] pdfContent = pdfService.createAccessibleDocument(documentDTO);\n        \n        HttpHeaders headers = new HttpHeaders();\n        headers.setContentType(MediaType.APPLICATION_PDF);\n        headers.setContentDispositionFormData(\"attachment\", \"avgs-bescheinigung.pdf\");\n        headers.setCacheControl(\"must-revalidate, post-check=0, pre-check=0\");\n        \n        return new ResponseEntity<>(pdfContent, headers, HttpStatus.OK);\n    }\n}"
+      }
+    },
+
+    "teccon-ba-amm": {
+      "title": "Softwareudvikler til onlinetjenester | AMM",
+      "company": "Bundesagentur für Arbeit (via TECCON)",
+      "description": "Fullstack-videreudvikling af arbejdsmarkedsmonitoren (AMM) til interaktiv analyse og visualisering af regionale arbejdsmarkeds- og demografiske strukturer.",
+      "leadText": "I projektet Arbejdsmarkedsmonitor (AMM) var hovedfokus på at levere langsigtede dataanalyser vedrørende erhverv, brancher, arbejdsmarked og demografi. Jeg var ansvarlig for at implementere webbaserede grænseflader ved hjælp af Python og Django. En væsentlig del af mit arbejde bestod i at migrere ældre frontend-komponenter til nyere Bootstrap-versioner og specifikke UI-bibliotheker hos styrelsen for at garantere en standardiseret og fuldt tilgængelig brugeroplevelse.",
+      "challenges": [
+        {
+          "id": "django-integration",
+          "icon": "database",
+          "title": "Fullstack-udvikling med Django",
+          "description": "Oprettelse og udvidelse af websider og interaktive datatabeller inden for Python/Django-økosystemet under anvendelse af PyCharm."
         },
         {
-          "id": "agile-requirements",
+          "id": "bootstrap-migration",
+          "icon": "frontend",
+          "title": "UI-Refactoring & Bootstrap-opgradering",
+          "description": "Komplet refactoring og visuel modernisering af frontend-skabeloner (templates) til en nyere, mere effektiv Bootstrap-version, samtidig med at layoutets integritet bevares."
+        },
+        {
+          "id": "enterprise-build-integration",
+          "icon": "tools",
+          "title": "Build-integration på tværs af platforme",
+          "description": "Integration og vedligeholdelse af Python/Django-komponenterne i styrelsens centrale Maven- og Jenkins-baserede CI/CD-pipelineinfrastruktur."
+        }
+      ],
+      "architecture": [
+        {
+          "id": "django-mvc-framework",
+          "title": "Python & Django Model-View-Controller",
+          "description": "Monolitisk struktureret web-framework, der anvendes til server-side rendering af dataintensive, interaktive diagrammer og statistiske analyser.",
+          "type": "backend"
+        },
+        {
+          "id": "bootstrap-ba-libraries",
+          "title": "Responsiv Bootstrap Frontend",
+          "description": "Server-rendered skabeloner moderniseret med opdaterede Bootstrap-komponenter og tilpasset styrelsens strenge krav til digital tilgængelighed.",
+          "type": "frontend"
+        }
+      ],
+      "impact": [
+        {
+          "id": "modern-ux",
+          "type": "frontend",
+          "badgeText": "UI/UX",
+          "title": "Fremtidssikret interface",
+          "description": "Succesfuld reduktion af teknisk gæld i frontenden ved at rydde op i forældede CSS/Bootstrap-klasser og udføre problemfrie biblioteksopgraderinger."
+        },
+        {
+          "id": "agile-delivery",
+          "type": "tools",
+          "badgeText": "Agil",
+          "title": "Præcis sprintplanlægning",
+          "description": "Effektiv opgaveløsning i Scrum-modellen opnået ved at udarbejde detaljerede tekniske underopgaver og præcise estimater af arbejdsindsatsen."
+        }
+      ],
+      "stack": [
+        { "name": "Python / Django", "type": "backend" },
+        { "name": "Bootstrap", "type": "frontend" },
+        { "name": "Oracle DB", "type": "backend" },
+        { "name": "Jenkins / Maven", "type": "tools" },
+        { "name": "Docker / Kubernetes", "type": "tools" },
+        { "name": "Git / Bitbucket", "type": "tools" },
+        { "name": "PyCharm / WSL / Linux", "type": "tools" }
+      ],
+      "deepDive": {
+        "filePath": "teccon/ba/amm/views/market_analysis.py",
+        "context": "Dette kodeeksempel viser en Django-view i AMM-backenden, der filtrerer statistiske data fra en Oracle-database og forbereder dem til skabelon-rendering.",
+        "code": "# Django View til behandling af regional arbejdsmarkedsstatistik\nfrom django.shortcuts import render\nfrom django.views import View\nfrom django.contrib.auth.mixins import LoginRequiredMixin\nfrom ..models import RegionalStatistic\n\nclass LaborMarketAnalysisView(LoginRequiredMixin, View):\n    template_name = 'amm/analysis_dashboard.html'\n\n    def get(self, request, *args, **kwargs):\n        region_code = request.GET.get('region')\n        industry_sector = request.GET.get('sector', 'ALL')\n\n        # Forespørg database med filtre for demografisk og brancheanalyse\n        query_set = RegionalStatistic.objects.filter(region_id=region_code)\n        \n        if industry_sector != 'ALL':\n            query_set = query_set.filter(sector_code=industry_sector)\n\n        # Sorter efter langsigtet udvikling (rapporteringsår)\n        statistics = query_set.order_by('-reporting_year')\n\n        context = {\n            'regional_data': statistics,\n            'selected_region': region_code,\n            'selected_sector': industry_sector,\n        }\n        \n        # Render skabelonen med det opdaterede Bootstrap-layout\n        return render(request, self.template_name, context)"
+      }
+    },
+    "edict-monolith-apis": {
+      "title": "Software Engineer (B2B API Integration & Core Platform)",
+      "company": "edict eGaming GmbH (Gauselmann Group)",
+      "description": "Videreudvikling af den centrale online casinoplatform samt konception og implementering af højtilgængelige B2B-grænseflader til internationale tredjepartsudbydere.",
+      "leadText": "I begyndelsen af mit næsten seksårige ansættelsesforhold hos edict eGaming GmbH lå mit fokus på funktionel udvidelse af den komplekse kerneplatform. Et væsentligt tyngdepunkt var tilkoblingen af kendte, internationale B2B-tredjepartsudbydere og online spilplatforme (såsom BWin, Blueprint og koncernens egne Merkur Games) for at sikre en problemfri og sikker spilsynkronisering i realtid.",
+      "challenges": [
+        {
+          "id": "monolith-extension",
+          "icon": "architecture",
+          "title": "Skalering af kerneplatformen",
+          "description": "Sikker funktionel udvidelse af den eksisterende JavaEE-platformarkitektur under overholdelse af strenge lovmæssige og præstationsrelevante krav i spilbranchen."
+        },
+        {
+          "id": "b2b-integrations",
+          "icon": "database",
+          "title": "Højtilgængelige API-forbindelser",
+          "description": "Konceptualisering og udvikling af robuste grænseflader til problemfri integration af store partnere som BWin og Blueprint med minimal latenstid."
+        },
+        {
+          "id": "legacy-modernization",
+          "icon": "frontend",
+          "title": "Datakonsistens & Legacy-kode",
+          "description": "Refaktorering af kritiske platformskomponenter og optimering af komplekse databaseforespørgsler på Oracle-systemer under live-drift med høj belastning."
+        }
+      ],
+      "architecture": [
+        {
+          "id": "javaee-core",
+          "title": "Java EE Core Architecture",
+          "description": "Anvendelse af enterprise Java-teknologier til at sikre transaktionssikkerhed og generel platformsstabilitet.",
+          "type": "backend"
+        },
+        {
+          "id": "integration-layer",
+          "title": "B2B Integration Layer",
+          "description": "Arkitektur af REST-baserede adaptere til hurtig og sikker synkronisering af spildata og kontosaldi mellem systemer.",
+          "type": "backend"
+        },
+        {
+          "id": "oracle-db-layer",
+          "title": "Oracle Enterprise DB",
+          "description": "Tilslutning og optimering af relationelle datamodeller til at håndtere hyppige spil- og transaktionsdata.",
+          "type": "backend"
+        }
+      ],
+      "impact": [
+        {
+          "id": "partner-growth",
+          "type": "backend",
+          "badgeText": "Business",
+          "title": "Porteføljeudvidelse",
+          "description": "Succesfuld udrulning af kritiske spil-API'er, der udvidede virksomhedens B2B-tilbud til store internationale kunder markant."
+        },
+        {
+          "id": "platform-stability",
           "type": "default",
-          "badgeText": "Agile",
-          "title": "Requirements Engineering & Refinement",
-          "description": "Helhedsorienteret understøttelse af nye faglige krav fra konceptualisering til refinement i direkte dialog med interessenter."
+          "badgeText": "Performance",
+          "title": "Fejltolerant integration",
+          "description": "Sikrede stabil spildrift selv i perioder med ekstrem spidstrafik via optimerede failover-mekanismer i kommunikationslagene."
+        }
+      ],
+      "stack": [
+        { "name": "Java EE", "type": "backend" },
+        { "name": "REST-API", "type": "backend" },
+        { "name": "Oracle DB", "type": "backend" },
+        { "name": "B2B Integration", "type": "backend" },
+        { "name": "Git / GitLab", "type": "tools" },
+        { "name": "Scrum", "type": "tools" }
+      ],
+      "deepDive": {
+        "filePath": "edict/core/integration/PartnerApiAdapter.java",
+        "context": "Dette kodeeksempel viser den abstrakte struktur af en API-adapter, der bruges til sikkert at validere og videresende transaktionsdata fra en ekstern B2B-partner i platformens monolit.",
+        "code": "// Java EE API-adapter til sikker B2B-platformsintegration\npackage com.edict.core.integration;\n\nimport javax.enterprise.context.ApplicationScoped;\nimport javax.ws.rs.core.Response;\n\n@ApplicationScoped\npublic class PartnerApiAdapter {\n\n    /**\n     * Validerer en tredjepartstransaktion (f.eks. BWin) og opdaterer kontosaldi i kernesystemet.\n     */\n    public Response processExternalGameTransaction(String partnerId, String payload) {\n        if (partnerId == null || !partnerId.matches(\"^[a-zA-Z0-9_-]+$\")) {\n            return Response.status(Response.Status.BAD_REQUEST).entity(\"Invalid Partner ID\").build();\n        }\n        \n        try {\n            boolean success = executeCoreBalanceUpdate(partnerId, payload);\n            \n            if (success) {\n                return Response.ok(\"{\\\"status\\\":\\\"SUCCESS\\\"}\").build();\n            }\n            return Response.status(Response.Status.SERVICE_UNAVAILABLE).entity(\"Transaction failed\").build();\n        } catch (Exception e) {\n            return Response.serverError().build();\n        }\n    }\n\n    private boolean executeCoreBalanceUpdate(String partner, String data) {\n        return true;\n    }\n}"
+      }
+    },
+    "edict-marketing-microservice": {
+      "title": "Software Engineer (Cloud-Native Marketing Microservice)",
+      "company": "edict eGaming GmbH (Gauselmann Group)",
+      "description": "Konception, greenfield-udvikling og fullstack-implementering af en uafhængig, containerbaseret mikrotjeneste til bonus- og freespins-kampagner.",
+      "leadText": "I dette fremadrettede projekt bidrog jeg væsentligt til at modernisere systemlandskabet. Jeg styrede hele livscyklussen for oprettelsen af en fuldstændig uafhængig, cloud-native mikrotjeneste til marketingformål (bonusstyring og gratis spins). Fra opdeling af Jira Epics i atomare opgaver, definition af API-skemaer og automatiseret testning op til frontend UI-layoutet var hele implementeringen i mine hænder.",
+      "challenges": [
+        {
+          "id": "epic-breakdown",
+          "icon": "architecture",
+          "title": "Epic-analyse & opgaveplanlægning",
+          "description": "Struktureret opdeling af komplekse forretningskrav fra Jira Epics i præcise tekniske user stories, definition af acceptkriterier og sprint-planlægning."
+        },
+        {
+          "id": "microservice-creation",
+          "icon": "database",
+          "title": "Greenfield Microservice med Quarkus",
+          "description": "Udvikling af tjenesten på basis af det moderne cloud-native framework Quarkus for at opnå lynhurtige opstartstider og minimalt hukommelsesforbrug under høj belastning."
+        },
+        {
+          "id": "angular-frontend",
+          "icon": "frontend",
+          "title": "Fullstack-integration med Angular",
+          "description": "Opbygning af en intuitiv webadministrationsgrænseflade ved hjælp af Angular til at styre, konfigurere og tilpasse aktive bonusbegivenheder visuelt."
+        },
+        {
+          "id": "test-coverage",
+          "icon": "tools",
+          "title": "Omfattende testautomatisering",
+          "description": "Sikring af maksimal koderålidelighed og dækning ved systematisk at integrere JUnit 5, enterprise-mocking og automatiserede API-test via Rest Assured."
+        }
+      ],
+      "architecture": [
+        {
+          "id": "quarkus-backend",
+          "title": "Quarkus Cloud-Native Core",
+          "description": "Højeffektiv Java-backend, der udnytter Quarkus til optimerede container-kørselstider og indbygget cloud-konnektivitet.",
+          "type": "backend"
+        },
+        {
+          "id": "api-gateway",
+          "title": "API Gateway-konsolidering",
+          "description": "Implementering af en central API-gateway som et enkelt indgangspunkt til sikker dirigering, filtrering og indkapsling af interne mikrotjenestekald.",
+          "type": "backend"
+        },
+        {
+          "id": "angular-app",
+          "title": "Angular SPA Storefront",
+          "description": "Modulær single-page applikation, der opretholder en streng adskillelse mellem forretningsdatamappinger (controllere/DTO'er) und UI-layoutet.",
+          "type": "frontend"
+        }
+      ],
+      "impact": [
+        {
+          "id": "marketing-agility",
+          "type": "backend",
+          "badgeText": "Features",
+          "title": "Fleksibel kampagnestyring",
+          "description": "Muliggjorde dynamiske marketingkampagner (gratis spins & bonusser) i realtid, fuldstændig afkoblet fra den centrale legacy-monolit."
+        },
+        {
+          "id": "quality-standard",
+          "type": "tools",
+          "badgeText": "Quality",
+          "title": "Fremragende kodekvalitet",
+          "description": "Opnåede minimale fejlprocenter i produktionen ved at opretholde strenge kodegennemgange, pair programming-rutiner og omfattende integrationstestdækning."
+        }
+      ],
+      "stack": [
+        { "name": "Java / Quarkus", "type": "backend" },
+        { "name": "Angular", "type": "frontend" },
+        { "name": "PostgreSQL", "type": "backend" },
+        { "name": "Rest Assured / JUnit", "type": "tools" },
+        { "name": "API Gateway", "type": "backend" },
+        { "name": "Docker", "type": "tools" }
+      ],
+      "deepDive": {
+        "filePath": "edict/marketing/bonus/BonusResource.java",
+        "context": "Dette kodeeksempel viser en reaktiv REST-controller i Quarkus-backend, der validerer dataoverførselsobjekter (DTO'er) og leverer slutpunkter til Angular-klienten.",
+        "code": "// Quarkus REST-controller til bonuskampagnestyring\npackage com.edict.marketing.bonus;\n\nimport javax.inject.Inject;\nimport javax.ws.rs.*;\nimport javax.ws.rs.core.MediaType;\nimport javax.ws.rs.core.Response;\n\n@Path(\"/api/v1/bonuses\")\n@Produces(MediaType.APPLICATION_JSON)\n@Consumes(MediaType.APPLICATION_JSON)\npublic class BonusResource {\n\n    @Inject\n    BonusCampaignService bonusService;\n\n    /**\n     * Opretter en ny gratis spilkampagne konfigureret i Angular-frontend-administrationspanelet.\n     */\n    @POST\n    public Response createBonusCampaign(BonusCampaignDTO campaignDTO) {\n        if (campaignDTO.getAmountOfFreespins() <= 0) {\n            return Response.status(Response.Status.BAD_REQUEST)\n                           .entity(\"Freespins quantity must be greater than zero.\").build();\n        }\n\n        BonusCampaignCreatedResponse response = bonusService.processAndSaveCampaign(campaignDTO);\n        return Response.status(Response.Status.CREATED).entity(response).build();\n    }\n}"
+      }
+    },
+    "edict-devops-pipelines": {
+      "title": "Software Engineer (DevOps & CI/CD Platform Automation)",
+      "company": "edict eGaming GmbH (Gauselmann Group)",
+      "description": "Konception, oprettelse og test af modulære deklarative Jenkins-pipelines ved hjælp af Groovy til automatiseret end-to-end udrulning af casinosystemet.",
+      "leadText": "Som supplement til mine softwareudviklingsopgaver overtog jeg ansvaret for at automatisere vores udrulningslandskaber. Det primære mål var at udrulle hele det komplekse online casinosystem pålideligt og fejlfrit ved tryk på en knap. For at opnå dette udviklede jeg deklarative og scripted pipelines i Groovy under Jenkins, og isolerede kernerutiner i versionsstyrede delte filer.",
+      "challenges": [
+        {
+          "id": "pipeline-design",
+          "icon": "architecture",
+          "title": "Deklarative Jenkins Pipelines",
+          "description": "Design og scripting af strukturerede Jenkins-pipelines ved hjælp af Groovy til at standardisere build-, test- og container-releasefaser på tværs af alle miljøer."
+        },
+        {
+          "id": "infrastructure-orchestration",
+          "icon": "database",
+          "title": "Containerisering & orkestrering",
+          "description": "Integration af Docker-miljøer og klyngekonfigurationer i Kubernetes-mål for at afvikle og skalere containerisolerede casinotjenester."
+        },
+        {
+          "id": "shared-libraries",
+          "icon": "tools",
+          "title": "Modularisering & Git-integration",
+          "description": "Uddragning af overflødige pipelineskripte i eksterne delte hjælpeværktøjer, der vedligeholdes under global versionsstyring (GitLab) for nem langsigtet vedligeholdelse."
+        }
+      ],
+      "architecture": [
+        {
+          "id": "jenkins-automation",
+          "title": "Jenkins Automation Server",
+          "description": "Central automationskoordinator, der overvåger alle kontinuerlige integrations- og automatiserede måldistributionssekvenser (CI/CD).",
+          "type": "tools"
+        },
+        {
+          "id": "groovy-pipeline",
+          "title": "Pipeline-as-Code (Groovy)",
+          "description": "Scriptbaseret definition af hele integrationskæden, hvilket sikrer fuld sporbarhed for infrastrukturjusteringer.",
+          "type": "backend"
+        },
+        {
+          "id": "k8s-docker",
+          "title": "Docker & Kubernetes Execution",
+          "description": "Pakning af applikationsbuilds i standard Docker-billedartefakter klar til containerbaseret skalering på cloud-netværk.",
+          "type": "tools"
+        }
+      ],
+      "impact": [
+        {
+          "id": "deployment-speed",
+          "type": "backend",
+          "badgeText": "Automation",
+          "title": "Et-klik casino-udrulning",
+          "description": "Drastisk forkortede release-cyklusser og eliminerede menneskelige fejlvektorer under massive miljømæssige udrulninger."
+        },
+        {
+          "id": "developer-support",
+          "type": "tools",
+          "badgeText": "Support",
+          "title": "Forhøjet platform-vedligeholdelse",
+          "description": "Ydede proaktiv support til fejlfinding og fejlretning af pipelines, hvilket øgede leveringshastigheden for det tværfunktionelle team."
+        }
+      ],
+      "stack": [
+        { "name": "Jenkins", "type": "tools" },
+        { "name": "Groovy (Pipelines)", "type": "backend" },
+        { "name": "Docker", "type": "tools" },
+        { "name": "Kubernetes", "type": "tools" },
+        { "name": "GitLab CI", "type": "tools" },
+        { "name": "Build Management (Maven)", "type": "tools" }
+      ],
+      "deepDive": {
+        "filePath": "jenkins/pipelines/casino_deploy_pipeline.groovy",
+        "context": "Følgende script-eksempel repræsenterer en deklarativ Jenkins-pipeline i Groovy, der er udrullet til at håndtere kildetest, Docker-pakning og forberedelse af Kubernetes-distribution.",
+        "code": "// Deklarativ Jenkins-pipeline til automatiseret udrulning af casinoplatforme\npipeline {\n    agent { label 'kubernetes-worker' }\n    \n    environment {\n        REGISTRY_CREDENTIALS = credentials('edict-gitlab-registry')\n        IMAGE_NAME           = 'registry.edict.de/casino/core-platform:latest'\n    }\n    \n    stages {\n        stage('Checkout & Verify') {\n            steps {\n                git url: 'https://gitlab.edict.de/casino/core-platform.git', branch: 'main'\n            }\n        }\n        stage('Build & Test') {\n            steps {\n                sh 'mvn clean package'\n            }\n        }\n        stage('Containerize') {\n            steps {\n                sh \"docker build -t ${IMAGE_NAME} .\"\n                sh \"docker push ${IMAGE_NAME}\"\n            }\n        }\n        stage('Review & Notify') {\n            steps {\n                echo \"Deployment pipeline færdig. Status: STABLE.\"\n            }\n        }\n    }\n}"
+      }
+    },
+    "hmmh-hybris": {
+      "title": "Softwareudvikler (SAP hybris Multi-Tenant-platform)",
+      "company": "hmmh multimediahaus AG",
+      "description": "Udvikling og optimering af en yderst skalerbar multi-tenant e-handelsplatform baseret på SAP hybris med fokus på indholdsstyring og checkout.",
+      "leadText": "Hos hmmh multimediahaus AG i Hamborg var jeg en del af kerneteamet, der realiserede en kompleks multi-tenant e-handelsplatform baseret på hybris. Mine primære ansvarsområder omfattede dybdegående backend-logik til kundekonti og indkøbskurvsforløb (checkout) samt højtydende datamigrering. Derudover støttede jeg aktivt salgsaktiviteter gennem gennemførlighedsstudier og Proof-of-Concepts.",
+      "challenges": [
+        {
+          "id": "impex-migration",
+          "icon": "database",
+          "title": "Kompleks indholdsmigrering",
+          "description": "Sikring af en fejlfri og højtydende migrering af webindhold fra det ældre system til hybris-platformen ved hjælp af skræddersyede ImpEx-scripts samt optimering af Import Cockpit før go-live."
+        },
+        {
+          "id": "checkout-extension",
+          "icon": "architecture",
+          "title": "Specifik checkout-proces",
+          "description": "Tilpasning og funktionel udvidelse af standard checkout-processen på hybris-platformen for at imødekomme meget specifikke kundekrav og forretningslogikker."
+        },
+        {
+          "id": "template-refactoring",
+          "icon": "frontend",
+          "title": "Template-refaktorering & komponenter",
+          "description": "Refaktorering af stive standardskabeloner og udlicitering af UI-logik til fleksible, genanvendelige frontend-komponenter til effektiv indholdsredigering."
+        }
+      ],
+      "architecture": [
+        {
+          "id": "hybris-core",
+          "title": "SAP hybris Core",
+          "description": "Anvendelse af det fleksible hybris-framework til klar datamodellering og orkestrering af en robust multi-tenant arkitektur.",
+          "type": "backend"
+        },
+        {
+          "id": "impex-engine",
+          "title": "ImpEx Data Engine",
+          "description": "Brug af hybris' egne import- og eksportgrænseflader til automatisk strukturering og validering af enorme mængder migreret webindhold.",
+          "type": "backend"
+        },
+        {
+          "id": "component-ui",
+          "title": "Component-Driven UI",
+          "description": "Udvikling af moderne layoutkomponenter på JSP- og JavaScript-basis til fleksibel og modulær udformning af dynamiske indholdssider.",
+          "type": "frontend"
+        }
+      ],
+      "impact": [
+        {
+          "id": "go-live-success",
+          "type": "backend",
+          "badgeText": "Go-Live",
+          "title": "Sikker platformslancering",
+          "description": "Succesfuld go-live og stabil drift af multi-tenant-platformen takket være en forfinet og grundigt testet importstrategi."
+        },
+        {
+          "id": "sales-support",
+          "type": "default",
+          "badgeText": "Sales",
+          "title": "Styrket kundehvervning",
+          "description": "Sikring af nye kundeprojekter gennem succesfuld teknisk demonstration af løsninger ved hjælp af skræddersyede Proof-of-Concepts."
+        },
+        {
+          "id": "content-efficiency",
+          "type": "frontend",
+          "badgeText": "Usability",
+          "title": "Hurtigere indholdspleje",
+          "description": "Massiv arbejdslettelse for redaktører gennem introduktion af modulære indholdsskabeloner og optimerede brugerflader."
+        }
+      ],
+      "stack": [
+        { "name": "Java EE", "type": "backend" },
+        { "name": "SAP hybris", "type": "backend" },
+        { "name": "ImpEx Scripting", "type": "backend" },
+        { "name": "JavaServer Pages", "type": "frontend" },
+        { "name": "JavaScript", "type": "frontend" },
+        { "name": "Proof-of-Concepts", "type": "tools" }
+      ],
+      "deepDive": {
+        "filePath": "hmmh/hybris/import/content_migration.impex",
+        "context": "Følgende eksempel viser syntaksen for et hybris ImpEx-script, som blev brugt til struktureret migrering af webindholdskomponenter og deres tilknytning til CMS-sider.",
+        "code": "# ImpEx-script til migrering af CMS-webindhold på hybris-platformen\n$contentCatalog=babyoneContentCatalog\n$contentCV=catalogVersion(CatalogVersion.catalog(Catalog.id('$contentCatalog')),CatalogVersion.version('Staged'))\n\n# Indsæt eller opdater CMS-komponenter til fleksibel indholdsvisning\nINSERT_UPDATE CMSParagraphComponent;uid[unique=true];$contentCV[unique=true];name;content[lang=da];&componentRef\n;welcomeBonusBanner;;\"Velkomstbonus Banner\";\"<p>Tilmeld dig nu og få eksklusive fordele!</p>\";welcomeBonusBannerRef\n\n# Placer komponenten på en foruddefineret indholdsside\nINSERT_UPDATE ContentPage;uid[unique=true];$contentCV[unique=true];title[lang=da];masterTemplate(uid,$contentCV)\n;myAccountBonusPage;;\"Min konto - Bonusprogram\";AccountPageTemplate"
+      }
+    },
+    "hmmh-intershop": {
+      "title": "Softwareudvikler (Intershop Enterprise E-Commerce – BabyOne)",
+      "company": "hmmh multimediahaus AG",
+      "description": "Vedligeholdelse, løbende optimering og featureudvikling af den Intershop-baserede onlinebutik for omnichannel-forhandleren BabyOne.",
+      "leadText": "Sideløbende med hybris-udviklingen overtog jeg selvstændigt vedligeholdelsen og den løbende videreudvikling af den etablerede Intershop-onlinebutik for den kendte kunde BabyOne. Mit fokus lå på dyb integration af eksterne tredjepartssystemer, kompleks fejlanalyse samt løbende optimering af brugergrænseflader for at øge konverteringsraten.",
+      "challenges": [
+        {
+          "id": "bonus-program",
+          "icon": "architecture",
+          "title": "Tredjeparts-integration",
+          "description": "Konceptualisering og implementering af en stabil grænseflade til at forbinde et eksternt kundebonusprogram direkte med de eksisterende e-handelsprocesser."
+        },
+        {
+          "id": "wishlist-webservice",
+          "icon": "database",
+          "title": "Ønskeboks via WebService",
+          "description": "Succesfuld integration af en interaktiv ønskeboks-funktionalitet med højtydende, bidirektionel WebService-forbindelse til backend-systemerne."
+        },
+        {
+          "id": "ui-optimization",
+          "icon": "frontend",
+          "title": "UI- & fejlanalyse",
+          "description": "Løbende identifikation af flaskehalse gennem strukturerede fejlanalyser og målrettet optimering af UI-komponenter for en bedre brugeroplevelse."
+        }
+      ],
+      "architecture": [
+        {
+          "id": "intershop-pipelines",
+          "title": "Intershop-forretningslogik",
+          "description": "Anvendelse af Intershops pipeline-arkitektur til programmering af stabile og modulære transaktions- og købsprocesser.",
+          "type": "backend"
+        },
+        {
+          "id": "webservice-layer",
+          "title": "WebService API Layer",
+          "description": "Sikkert kommunikationslag ved hjælp af SOAP/REST til synkron realtidsforespørgsel af bonuspoint og ønskeboksdata fra eksterne tjenester.",
+          "type": "backend"
+        },
+        {
+          "id": "intershop-isml",
+          "title": "ISML-skabeloner",
+          "description": "Optimering og tilpasning af brugergrænseflader baseret på Intershop Standard Markup Language (ISML) for responsive storefronts.",
+          "type": "frontend"
+        }
+      ],
+      "impact": [
+        {
+          "id": "omnichannel-loyalty",
+          "type": "backend",
+          "badgeText": "Features",
+          "title": "Bonusprogram integreret",
+          "description": "Succesfuld lancering af det digitale kundeloyalitetsprogram, som smelter fysisk butiks- og onlinehandel sømløst sammen."
+        },
+        {
+          "id": "wishlist-success",
+          "type": "default",
+          "badgeText": "Engagement",
+          "title": "Ønskeboks lanceret",
+          "description": "Signifikant stigning i kundeinteraktionen i butikken gennem introduktionen af den nye, kollaborative ønskeboks-funktion."
+        },
+        {
+          "id": "system-stability",
+          "type": "frontend",
+          "badgeText": "Stability",
+          "title": "Nedetid minimeret",
+          "description": "Bæredygtigt forbedret butiksperformance og stabilitet gennem præcise, proaktive fejlanalyser i produktionsmiljøet."
+        }
+      ],
+      "stack": [
+        { "name": "Java EE", "type": "backend" },
+        { "name": "Intershop", "type": "backend" },
+        { "name": "WebService APIs", "type": "backend" },
+        { "name": "ISML (Markup Language)", "type": "frontend" },
+        { "name": "JavaScript", "type": "frontend" },
+        { "name": "Fejl- / Performanceanalyse", "type": "tools" }
+      ],
+      "deepDive": {
+        "filePath": "hmmh/intershop/bonus/BonusServiceConnector.java",
+        "context": "Dette kodeeksempel viser integrationen af et eksternt loyalitetsprogram. Java-tjenesten indkapsler API-kaldet til synkron hentning af en brugers bonuspoint.",
+        "code": "// Java-komponent til integration af eksternt bonusprogram hos Intershop\npackage com.hmmh.intershop.bonus;\n\nimport java.net.URL;\nimport javax.xml.ws.WebServiceRef;\n\npublic class BonusServiceConnector {\n    \n    /**\n     * Henter aktuelle bonuspoint fra en ekstern WebService.\n     */\n    public int fetchCustomerBonusPoints(String customerLoyaltyId) {\n        try {\n            BonusWebService_Service service = new BonusWebService_Service();\n            BonusWebService port = service.getBonusWebServicePort();\n            \n            return port.getPointsBalance(customerLoyaltyId);\n        } catch (Exception e) {\n            System.err.println(\"Fejl ved forespørgsel til ekstern bonustjeneste: \" + e.getMessage());\n            return 0; \n        }\n    }\n}"
+      }
+    },
+    "areva-stromlaufplan": {
+      "title": "Softwareudvikler (Strømskema-engineeringværktøjer)",
+      "company": "AREVA NP GmbH",
+      "description": "Konceptualisering, videreudvikling og support af en forretningskritisk databaseapplikation til oprettelse af strømskemaer til projektering af atomkraftværker.",
+      "leadText": "I min rolle hos AREVA NP GmbH i Erlangen var jeg væsentligt involveret i modernisering og support af databasebaserede design- og engineeringværktøjer til elektriske systemer. Gennem hele perioden udviklede jeg en applikation til oprettelse af strømskemaer til atomkraftværksplanlægning, varetog installationen direkte hos kunden og var ansvarlig for den tekniske applikationssupport.",
+      "challenges": [
+        {
+          "id": "reengineering-legacy",
+          "icon": "architecture",
+          "title": "Reengineering & migration",
+          "description": "Succesfuld reverse- og reengineering af en eksisterende desktop-applikation (OpenRoad) og transformation til en moderne, webbaseret MVC-arkitektur ved hjælp af Struts."
+        },
+        {
+          "id": "database-integration",
+          "icon": "database",
+          "title": "Ingres-databaseforbindelse",
+          "description": "Udvikling af højtydende, webbaserede grænseflader med Java og SQL til problemfri forbindelse og migration af eksisterende, komplekse Ingres-databasesystemer."
+        },
+        {
+          "id": "client-deployment",
+          "icon": "frontend",
+          "title": "Kundesupport & rollout",
+          "description": "Direkte installation af den følsomme planlægningssoftware hos slutkunden samt langsigtet faglig og teknisk support under den løbende drift."
+        }
+      ],
+      "architecture": [
+        {
+          "id": "struts-mvc",
+          "title": "Struts MVC Framework",
+          "description": "Strikk separation af forretningslogik og præsentationslag for at modernisere ældre systemer og sikre høj vedligeholdelsesvenlighed.",
+          "type": "backend"
+        },
+        {
+          "id": "ingres-sql",
+          "title": "Ingres DB & Java SQL",
+          "description": "Robust datalagringslag til sikker behandling og styring af yderst komplekse elektriske ledningsdata til kraftværksplanlægning.",
+          "type": "backend"
+        },
+        {
+          "id": "jsp-flex-ui",
+          "title": "JSP & Adobe Flex UI",
+          "description": "Kombination af JavaServer Pages og Adobe Flex SDK til levering af interaktive, webbaserede brugergrænseflader til planlægningsingeniører.",
+          "type": "frontend"
+        }
+      ],
+      "impact": [
+        {
+          "id": "modernization-success",
+          "type": "backend",
+          "badgeText": "Architecture",
+          "title": "System moderniseret",
+          "description": "Succesfuld overførsel af ufleksible ældre systemer til en fremtidssikret, webbaseret enterprise-arkitektur."
+        },
+        {
+          "id": "deployment-trust",
+          "type": "default",
+          "badgeText": "Customer",
+          "title": "Udrulning på stedet",
+          "description": "Sikker installation og problemfri idriftsættelse af forretningskritisk software direkte i kundemiljøer."
+        },
+        {
+          "id": "support-quality",
+          "type": "frontend",
+          "badgeText": "Support",
+          "title": "Kundernes tillid",
+          "description": "Bæredygtig øgning af brugertilfredsheden gennem direkte, kompetent support og hurtig fejlafhjælpning."
+        }
+      ],
+      "stack": [
+        { "name": "Java", "type": "backend" },
+        { "name": "Struts", "type": "backend" },
+        { "name": "SQL / Ingres", "type": "backend" },
+        { "name": "JavaServer Pages", "type": "frontend" },
+        { "name": "Adobe Flex SDK", "type": "frontend" },
+        { "name": "Tomcat / Apache", "type": "tools" }
+      ],
+      "deepDive": {
+        "filePath": "areva/engineering/actions/CircuitPlanRoutingAction.java",
+        "context": "Følgende eksempel viser strukturen af en klassisk Struts Action-klasse, der blev brugt til at validere og behandle formulardata fra et strømskema og gemme dem i Ingres-databasen via SQL-laget.",
+        "code": "// Java Struts Action til behandling af strømskemadata\npackage com.areva.engineering.actions;\n\nimport javax.servlet.http.*;\nimport org.apache.struts.action.*;\n\npublic class CircuitPlanRoutingAction extends Action {\n    @Override\n    public ActionForward execute(ActionMapping mapping, ActionForm form, \n                                 HttpServletRequest request, HttpServletResponse response) throws Exception {\n        \n        DynaActionForm planForm = (DynaActionForm) form;\n        String circuitId = planForm.getString(\"circuitId\");\n        \n        if (circuitId == null || circuitId.trim().isEmpty()) {\n            return mapping.findForward(\"error\");\n        }\n        \n        request.setAttribute(\"statusMessage\", \"Strømskema opdateret med succes.\");\n        return mapping.findForward(\"success\");\n    }\n}"
+      }
+    },
+    "areva-reaktor-testing": {
+      "title": "Softwaretester & udvikler (Automatiseret kvalitetssikring)",
+      "company": "AREVA NP GmbH",
+      "description": "Udvikling af en automatiseret Python-applikation til systemanalyse af Linux-testcomputere i integrationstestcentret for reaktorskabe.",
+      "leadText": "I integrationstestcentret for programmerbare logiske styringer udviklede jeg i 2007 en specialiseret Python-applikation. Værktøjet udlæser automatisk den nøjagtige hardware- og softwarekonfiguration af Linux-computere og genererer en detaljeret oversigt. Denne blev vedhæftet direkte til PyTests for at garantere fuld sporbarhed af testudstyret under verifikation af reaktorskabs-software.",
+      "challenges": [
+        {
+          "id": "hardware-inspection",
+          "icon": "architecture",
+          "title": "Automatiseret systemanalyse",
+          "description": "Udvikling af robuste scripts under Linux til fejlfrit at udlæse systemkomponenter, firmware-niveauer og softwareversioner uden manuel indgriben."
+        },
+        {
+          "id": "test-traceability",
+          "icon": "database",
+          "title": "Fuldstændig test-tilknytning",
+          "description": "Strukturering og dynamisk kobling af den udlæste systemkonfiguration med de automatiserede testprotokoller i PyTest-suiten."
+        },
+        {
+          "id": "gui-usability",
+          "icon": "frontend",
+          "title": "Overskuelig præsentation",
+          "description": "Konceptualisering og design af en intuitiv GUI ved hjælp af PyQt eller strukturerede rapportudlæsninger til hurtig verifikation af testopsætningen."
+        }
+      ],
+      "architecture": [
+        {
+          "id": "python-core",
+          "title": "Python OS Automation",
+          "description": "Anvendelse af integrerede Python-biblioteker til systemnær forespørgsel af Linux-hardwarespecifikationer og kernel-informationer.",
+          "type": "backend"
+        },
+        {
+          "id": "pytest-integration",
+          "title": "PyTest & PyUnit Framework",
+          "description": "Centralt testframework, der automatisk indfører den genererede udstyrs-oversigt som metadata i enhver testkørsel af reaktorskabene.",
+          "type": "backend"
+        },
+        {
+          "id": "pyqt-interface",
+          "title": "PyQt GUI / Report Engine",
+          "description": "Oprettelse af brugergrænseflader eller formaterede protokoller til gennemskuelig validering af hardwaremiljøet før teststart.",
+          "type": "frontend"
+        }
+      ],
+      "impact": [
+        {
+          "id": "audit-safety",
+          "type": "backend",
+          "badgeText": "Compliance",
+          "title": "Øget auditsikkerhed",
+          "description": "Garanteret sporbarhed med hensyn til, hvilket præcist it-udstyr og softwarestatus reaktorskabene blev testet med."
+        },
+        {
+          "id": "zero-manual-effort",
+          "type": "default",
+          "badgeText": "Automation",
+          "title": "100% automatiseret",
+          "description": "Fuldstændig eliminering af manuelle dokumentationsfejl ved registrering af testcomputerspecifikationer."
+        },
+        {
+          "id": "qa-efficiency",
+          "type": "frontend",
+          "badgeText": "QA Speed",
+          "title": "Effektiv fejlfinding",
+          "description": "Massiv tidsbesparelse under fejlsøgning i integrationscentret takket være direkte medleverede systemmiljødata."
+        }
+      ],
+      "stack": [
+        { "name": "Python", "type": "backend" },
+        { "name": "PyTest / PyUnit", "type": "backend" },
+        { "name": "Linux-Systemanalyse", "type": "backend" },
+        { "name": "PyQt", "type": "frontend" }
+      ],
+      "deepDive": {
+        "filePath": "areva/qa/automation/sys_inspector.py",
+        "context": "Dette Python-script fungerer som et eksempel på automatiseret systemanalyse under Linux. Det udlæser kernel- og hardwaredetaljer og formaterer dem, så de kan vedhæftes en PyTest-log.",
+        "code": "# Python-script til automatiseret hardware- og softwareanalyse under Linux\nimport platform\nimport sys\n\ndef get_system_equipment_summary():\n    \"\"\"Udlæser relevante systemparametre fra testcomputeren.\"\"\"\n    equipment_info = {\n        \"os_release\": platform.release(),\n        \"architecture\": platform.machine(),\n        \"python_version\": sys.version.split()[0],\n        \"test_node_name\": platform.node()\n    }\n    return equipment_info\n\nif __name__ == \"__main__\":\n    info = get_system_equipment_summary()\n    print(f\"--- EQUIPMENT REPORT FOR REAKTOR-SCHRANK-TESTS ---\")\n    for key, value in info.items():\n        print(f\"{key.upper()}: {value}\")"
+      }
+    },
+    "isweb": {
+      "title": "Softwareudvikler (Knowledge Management)",
+      "company": "is@web GmbH",
+      "description": "Udvikling af dynamiske webapplikationer og komplekse intranet-workflows baseret på det tværgående informationssystem COIS inden for vidensstyring.",
+      "leadText": "Hos is@web GmbH Knowledge Management i Nürnberg arbejdede jeg med implementeringen af det tværgående styringssystem COIS, som gjorde virksomhedens viden tilgængelig uafhængigt af tidszone og sted. I tæt samarbejde med koncernens eget reklamebureau og direkte kunder lå mit fokus på opbygning af dynamiske webinterfaces samt programmering af forretningskritiske intranet-workflows.",
+      "challenges": [
+        {
+          "id": "workflow-automation",
+          "icon": "architecture",
+          "title": "Automatiserede workflows",
+          "description": "Konceptualisering og implementering af komplekse, automatiserede forretningsprocesser til intranettet ved hjælp af LotusScript og Lotus Notes-formelsprog."
+        },
+        {
+          "id": "cms-integration",
+          "icon": "database",
+          "title": "CMS-dataintegration",
+          "description": "Struktureret udlæsning og højtydende visning af dynamisk indhold og vidensbaser direkte fra Lotus Notes content-management-systemet."
+        },
+        {
+          "id": "agency-frontend",
+          "icon": "frontend",
+          "title": "Pixelpræcis frontend",
+          "description": "Oprettelse af moderne, dynamiske websider med HTML/CSS og JavaScript baseret på præcise, kreative retningslinjer fra reklamebureauet."
+        }
+      ],
+      "architecture": [
+        {
+          "id": "lotus-notes-cms",
+          "title": "Lotus Notes CMS",
+          "description": "Centralt content management-system til struktureret lagring, kortlægning og levering af komplekse vidensdatabaser i COIS-systemet.",
+          "type": "backend"
+        },
+        {
+          "id": "lotusscript-backend",
+          "title": "LotusScript & Formula",
+          "description": "Anvendelse af LotusScript og Lotus Notes-formelsprog til pålidelig programmering af intranettets workflow-logik på serversiden.",
+          "type": "backend"
+        },
+        {
+          "id": "dynamic-web",
+          "title": "Dynamisk Web Stack",
+          "description": "Anvendelse af integreret JavaScript, HTML og CSS til pixelpræcis transformation af bureaulayouts til funktionelle webapplikationer.",
+          "type": "frontend"
+        }
+      ],
+      "impact": [
+        {
+          "id": "workflow-success",
+          "type": "backend",
+          "badgeText": "Backend",
+          "title": "Intranet strømlinet",
+          "description": "Succesfuld digitalisering og acceleration af interne virksomhedsprocesser gennem skræddersyede workflow-moduler."
+        },
+        {
+          "id": "data-availability",
+          "type": "default",
+          "badgeText": "Knowledge",
+          "title": "Viden mobiliseret",
+          "description": "Sikring af konsistent, flersproget datatilgængelighed for ledelsen, uafhængigt af tid og sted."
+        },
+        {
+          "id": "design-implementation",
+          "type": "frontend",
+          "badgeText": "UI / UX",
+          "title": "Bureau-justering",
+          "description": "Sømløs og problemfri teknisk implementering af krævende design- og layoutspecifikationer direkte til slutkunder."
         }
       ],
       "deepDive": {
-        "filePath": "quarkus/ChargingStationConsumer.java",
-        "context": "Den asynkrone behandling af ladedata via Apache Kafka sikrede, at spidsbelastninger på ladestationerne ikke blokerede kernesystemet. Gennem den reaktive Quarkus-consumer bliver indgående booking- og forbrugsdata isoleret, valideret og effektivt gemt i PostgreSQL-databasen.",
-        "code": "// Reaktiv Kafka Consumer til ladedata\n@ApplicationScoped\npublic class ChargingStationConsumer {\n\n    @Inject\n    ChargingService chargingService;\n\n    @Incoming(\"charging-sessions\")\n    @Acknowledgment(Acknowledgment.Strategy.MANUAL)\n    public Uni<Void> processSession(Message<String> message) {\n        String payload = message.getPayload();\n        \n        return chargingService.validateAndSave(payload)\n            .onItem().transformToUni(v -> Uni.createFrom().completionStage(message.ack()))\n            .onFailure().recoverWithUni(err -> {\n                // Fejlhåndtering & Dead-Letter-Queue\n                return Uni.createFrom().completionStage(message.nack(err));\n            });\n    }\n}"
+        "filePath": "isweb/cois/workflows/IntranetApprovalWorkflow.lss",
+        "context": "For at styre vidensfrigivelsen i COIS-systemet blev der implementeret workflows auf serversiden. Følgende kodeeksempel viser den logiske struktur af en automatiseret godkendelsesproces i LotusScript, som validerer dokumentstatus og udløser meddelelser på intranettet.",
+        "code": "' LotusScript til automatiseret workflow-styring på intranettet\nSub Initialize\n    Dim session New NotesSession\n    Dim db As NotesDatabase\n    Dim dc As NotesDocumentCollection\n    Dim doc As NotesDocument\n    \n    Set db = session.CurrentDatabase\n    Set dc = db.UnprocessedDocuments\n    Set doc = dc.GetFirstDocument\n    \n    While Not(doc Is Nothing)\n        ' Kontrol af den aktuelle workflow-status\n        If doc.GetItemValue(\"Status\")(0) = \"Pending_Approval\" Then\n            ' Usability-tilpasning: Sæt automatisk tidsstempel\n            Call doc.ReplaceItemValue(\"ApprovedDate\", Now)\n            Call doc.ReplaceItemValue(\"Status\", \"Published\")\n            \n            ' Overfør workflow til COIS-vidensstyringssystemet\n            Call doc.Save(True, False)\n        End If\n        Set doc = dc.GetNextDocument(doc)\n    Wend\nEnd Sub"
       },
       "stack": [
-        { "name": "Java 21", "type": "backend" },
-        { "name": "Quarkus", "type": "backend" },
-        { "name": "Apache Kafka", "type": "backend" },
-        { "name": "PostgreSQL", "type": "backend" },
-        { "name": "Angular", "type": "frontend" },
-        { "name": "TypeScript", "type": "frontend" },
-        { "name": "RxJS", "type": "frontend" },
-        { "name": "Docker", "type": "tools" },
-        { "name": "Kubernetes", "type": "tools" },
-        { "name": "Azure DevOps", "type": "tools" },
-        { "name": "JUnit", "type": "tools" },
-        { "name": "Playwright", "type": "tools" },
-        { "name": "Scrum", "type": "default" }
+        { "name": "LotusScript", "type": "backend" },
+        { "name": "Lotus Formula", "type": "backend" },
+        { "name": "Lotus Notes CMS", "type": "backend" },
+        { "name": "JavaScript", "type": "frontend" },
+        { "name": "HTML5 / CSS3", "type": "frontend" },
+        { "name": "Photoshop", "type": "tools" }
       ]
     },
-    "amm": {
-      "title": "Arbejdsmarkedsmonitor (AMM)",
-      "company": "Bundesagentur für Arbeit",
-      "description": "Videreudvikling af et analyseværktøj til regionale arbejdsmarkedsstrukturer. Implementering af interaktiv grafik og migrering til moderne biblioteker."
-    },
-    "education": {
-      "title": "Informationssystem Uddannelse og Erhverv",
-      "company": "Bundesagentur für Arbeit",
-      "description": "Vedligeholdelse af centrale online-tjenester (ELAN, Entgeldatlas). Fokus på handicapvenlig PDF-generering og kompleks databehandling."
-    },
-    "casino": {
-      "title": "Online Casino Platform",
-      "company": "edict egaming GmbH",
-      "description": "Udvikling af højtilgængelige kasinoløsninger. Etablering af deklarative CI/CD-pipelines og implementering af nye marketing-microservices."
+    "memphis": {
+      "title": "Studentermedhjælper (Projekt MEMPHIS)",
+      "company": "Universitetet i Paderborn",
+      "description": "Udvikling af en personaliseret, grafisk brugerflade til PDA'er. Fokus på integration og behandling af XML-dokumenter.",
+      "leadText": "EU-forskningsprojektet MEMPHIS (Multilingual Content for Flexible Format Internet Premium Services) ved C-LAB – et samarbejde mellem Universitetet i Paderborn og Siemens AG – udviklede avancerede, platformsuafhængige onlinetjenester til medie- og finanssektoren i samarbejde med partnere som Bertelsmann. Som studentermedhjælper arbejdede jeg med konceptualisering af fleksible brugerflader til mobile enheder. I mit diplomarbejde lå mit fokus på den metodiske forberedelse og validering af MEMPHIS-demonstratorer og prototyper ud fra usability-kriterier – hvilket lagde grundstenen for min nuværende forståelse af intuitiv user experience.",
+      "challenges": [
+        {
+          "id": "ui-pda",
+          "icon": "frontend",
+          "title": "Usability & Prototyping",
+          "description": "Metodisk forberedelse og validering af de mobile MEMPHIS-demonstratorer ud fra strenge usability-kriterier som en del af diplomarbejdet."
+        },
+        {
+          "id": "xml-integration",
+          "icon": "database",
+          "title": "XML-databehandling",
+          "description": "Struktureret integration, validering og dynamisk behandling af XML-dokumenter til fleksibel indholdsvisning."
+        },
+        {
+          "id": "system-integration",
+          "icon": "architecture",
+          "title": "Systemintegration",
+          "description": "Sømløs integration af den nyudviklede mobile brugerflade i forskningsprojektets eksisterende overordnede system."
+        }
+      ],
+      "architecture": [
+        {
+          "id": "tomcat-server",
+          "title": "Apache Tomcat",
+          "description": "Anvendt som en robust web- og applikationsserver til afvikling og levering af dynamiske Java Servlets og web-services.",
+          "type": "backend"
+        },
+        {
+          "id": "jsp-servlets",
+          "title": "JavaServer Pages & Servlets",
+          "description": "Implementering af applikationslogik påserversiden og dynamisk generering af platformsuafhængige brugerflader.",
+          "type": "backend"
+        },
+        {
+          "id": "xml-xslt",
+          "title": "XML & XSLT",
+          "description": "Struktureret datalagring og transformation af indhold for at sikre fleksible formater på tværs af forskellige slutenheder (som PDA'er).",
+          "type": "backend"
+        }
+      ],
+      "impact": [
+        {
+          "id": "usability-validation",
+          "type": "default",
+          "badgeText": "Speciale",
+          "title": "Usability-validering forberedt",
+          "description": "Metodisk konceptualisering, forberedelse og udførelse af valideringen af MEMPHIS-demonstratorer og prototyper ud fra usability-kriterier."
+        },
+        {
+          "id": "pda-interface",
+          "type": "frontend",
+          "badgeText": "UI / UX",
+          "title": "Personaliserede PDA-brugerflader",
+          "description": "Design og implementering af grafiske brugerflader, der var specifikt optimeret til mobile klienters krav og skærmbegrænsninger."
+        },
+        {
+          "id": "xml-processing",
+          "type": "backend",
+          "badgeText": "Backend",
+          "title": "XML-dataintegration",
+          "description": "Integration og behandling af komplekse XML-dokumenter i content management-workflowet til flersproget indholdsproduktion."
+        }
+      ],
+      "deepDive": {
+        "filePath": "c-lab/memphis/pda/XSLTTransformerServlet.java",
+        "context": "Som en del af prototypeudviklingen blev serverside-transformation af XML-strukturer via XSLT anvendt. Java-servletten transformerede dynamisk flersprogede rådata til et slankt outputformat optimeret til PDA'er for at sikre tilgængelighed og usability på mobile enheder.",
+        "code": "// Java Servlet til dynamisk XML/XSLT-transformation for mobile klienter\npublic class XSLTTransformerServlet extends HttpServlet {\n    \n    protected void doGet(HttpServletRequest request, HttpServletResponse response) \n            throws ServletException, IOException {\n        \n        response.setContentType(\"text/html; charset=UTF-8\");\n        PrintWriter out = response.getWriter();\n        \n        try {\n            Source xmlSource = new StreamSource(getServletContext().getResourceAsStream(\"/WEB-INF/content.xml\"));\n            Source xslSource = new StreamSource(getServletContext().getResourceAsStream(\"/WEB-INF/pda-format.xsl\"));\n            \n            TransformerFactory factory = TransformerFactory.newInstance();\n            Transformer transformer = factory.newTransformer(xslSource);\n            \n            // Dynamisk usability-tilpasning (f.eks. skriftstørrelse/sprog)\n            transformer.setParameter(\"uiMode\", \"pda-compact\");\n            \n            transformer.transform(xmlSource, new StreamResult(out));\n        } catch (TransformerException e) {\n            throw new ServletException(\"XSLT Transformation failed\", e);\n        }\n    }\n}"
+      },
+      "stack": [
+        { "name": "Java", "type": "backend" },
+        { "name": "Apache Tomcat", "type": "backend" },
+        { "name": "XML / XSLT", "type": "backend" },
+        { "name": "JSP", "type": "frontend" },
+        { "name": "PDA UI Design", "type": "frontend" },
+        { "name": "C-LAB Ecosystem", "type": "tools" }
+      ]
     }
   }
 }
