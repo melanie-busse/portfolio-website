@@ -24,5 +24,24 @@
   "privacy": {
     "title": "Databeskyttelse",
     "headline": "Privatlivspolitik"
+  },
+  "metadata": {
+    "homeTitle": "Melanie Busse | Fullstack Software Developer",
+    "homeDescription": "Melanie Busses portefølje – Fullstack Software Developer med fokus på React, Next.js og Java. Oplev mine projekter og mit tech-stack.",
+
+    "projectsTitle": "Projekter | Melanie Busse",
+    "projectsDescription": "En oversigt over mine softwareprojekter. Lige fra store enterprise-applikationer for Bundesagentur für Arbeit til moderne, personlige React- og Next.js-projekter.",
+
+    "aboutTitle": "Om mig & Karriere | Melanie Busse",
+    "aboutDescription": "Læs mere om min rejse som udvikler: 19 års it-erfaring, solid Java-ekspertise og den nyeste fullstack-uddannelse.",
+
+    "educationTitle": "Uddannelse & Kvalifikationer | Melanie Busse",
+    "educationDescription": "Min uddannelsesbaggrund: Eksamen i erhvervsinformatik (Business Informatics) fra Universitetet i Paderborn, uddannelse som industriassistent og et intensivt Fullstack Bootcamp.",
+
+    "legalTitle": "Imprint | Melanie Busse",
+    "legalDescription": "Juridiske oplysninger og imprint for Melanie Busse.",
+
+    "privacyTitle": "Privatlivspolitik | Melanie Busse",
+    "privacyDescription": "Privatlivspolitik for Melanie Busses portefølje-hjemmeside."
   }
 }

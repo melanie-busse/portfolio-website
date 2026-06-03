@@ -8,34 +8,39 @@ import { PageContainer } from "@/components/common/PageContainer";
 import { Period } from "@/components/common/Period";
 import BentoCard from "@/components/features/BentoCard";
 import Link from "next/link";
+import Meta from "@/components/seo/Meta";
 
 export default function Projects() {
   const t = useTranslations("projects");
   return (
-    <PageContainer>
-      <HeaderSection headline={t("headline")} text={t("introText")} />
-      <Grid>
-        {projectsData.map((project) => {
-          const mappedProjectAsSkill = {
-            id: project.id,
-            icon: project.icon,
-            translationKey: `projects.items.${project.id}`,
-            badges: project.tags,
-          };
+    <>
+      <Meta titleKey="projectsTitle" descriptionKey="projectsDescription" />
 
-          return (
-            <CardContainer key={project.id}>
-              <PeriodWrapper>
-                <Period text={project.period} />
-              </PeriodWrapper>
-              <ProjectLink href={`/projects/${project.id}`} passHref>
-                <BentoCard skill={mappedProjectAsSkill} $gridArea="auto" />
-              </ProjectLink>
-            </CardContainer>
-          );
-        })}
-      </Grid>
-    </PageContainer>
+      <PageContainer>
+        <HeaderSection headline={t("headline")} text={t("introText")} />
+        <Grid>
+          {projectsData.map((project) => {
+            const mappedProjectAsSkill = {
+              id: project.id,
+              icon: project.icon,
+              translationKey: `projects.items.${project.id}`,
+              badges: project.tags,
+            };
+
+            return (
+              <CardContainer key={project.id}>
+                <PeriodWrapper>
+                  <Period text={project.period} />
+                </PeriodWrapper>
+                <ProjectLink href={`/projects/${project.id}`} passHref>
+                  <BentoCard skill={mappedProjectAsSkill} $gridArea="auto" />
+                </ProjectLink>
+              </CardContainer>
+            );
+          })}
+        </Grid>
+      </PageContainer>
+    </>
   );
 }
 

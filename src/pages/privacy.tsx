@@ -1,22 +1,21 @@
 import styled from "styled-components";
-import Head from "next/head";
 import { GetStaticProps } from "next";
 import { useTranslations } from "next-intl";
 import { PageContainer } from "@/components/common/PageContainer";
 import { ContentBox } from "@/components/common/ContentBox";
+import Meta from "@/components/seo/Meta";
 
 export default function Datenschutz() {
-  const t = useTranslations("privacy");
+  const t = useTranslations();
+  const privacyTitle = `${t("common.metadata.privacyTitle")} | Melanie Busse`;
 
   return (
     <>
-      <Head>
-        <title>{t("title")} | Melanie Busse</title>
-        <meta name="robots" content="noindex" />
-      </Head>
+      <Meta overrideTitle={privacyTitle} descriptionKey="privacyDescription" noIndex={true} />
+
       <PageContainer>
         <ContentBox>
-          <Title>{t("headline")}</Title>
+          <Title>{t("privacy.headline")}</Title>
 
           <Section>
             <SectionTitle>1. Datenschutz auf einen Blick</SectionTitle>
@@ -88,8 +87,8 @@ export const getStaticProps: GetStaticProps = async ({ locale }) => {
     return {
       props: {
         messages: {
-          ...fileContent, // Bedient useTranslations("privacy") direkt auf der Seite
-          common: fileContent, // Bedient useTranslations("common") in Nav & Footer nach dem Rollback
+          ...fileContent,
+          common: fileContent,
         },
       },
     };
