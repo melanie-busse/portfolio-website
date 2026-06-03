@@ -60,32 +60,45 @@ const Description = styled.p`
 `;
 
 const HighlightBadge = styled.span`
-  background: ${(props) => props.theme.colors.primaryPetrol}22; // 22 ist Hex für Transparenz
+  background: ${(props) => props.theme.colors.primaryPetrol}22;
   border: 1px solid ${(props) => props.theme.colors.primaryPetrol};
   color: ${(props) => props.theme.colors.accentAqua};
   padding: 0.5rem 1rem;
   border-radius: 50px;
   font-family: ${(props) => props.theme.fonts.tech};
   font-size: 0.9rem;
-  margin-top: 2rem;
+
+  /* KORREKTUREN: */
+  display: inline-block;
+  white-space: nowrap;
+  flex-shrink: 0;
+  margin-top: 1.5rem;
 `;
 
 const HeroContent = styled.div`
   display: flex;
+  flex-direction: row; /* Desktop: Nebeneinander */
   align-items: center;
+  justify-content: center;
   gap: 4rem;
   max-width: ${(props) => props.theme.widths.footer};
 
-  @media (${(props) => props.theme.breakpoints.laptopSmall}) {
-    flex-direction: column;
-    gap: 2rem;
+  /* KORREKTUR: Nutze den mobilen Breakpoint statt laptopSmall, 
+     oder setze testweise fix 768px ein, damit es definitiv greift */
+  @media (max-width: ${(props) => props.theme.breakpoints.mobile || "768px"}) {
+    flex-direction: column; /* Mobil: Untereinander stapeln! */
+    gap: 1.5rem;
   }
 `;
 
 const TextWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Desktop: Linksbündig */
   text-align: left;
 
-  @media (${(props) => props.theme.breakpoints.laptopSmall}) {
+  @media (max-width: ${(props) => props.theme.breakpoints.mobile || "768px"}) {
+    align-items: center; /* Mobil: Zentriert (Text + Badge) */
     text-align: center;
   }
 `;
