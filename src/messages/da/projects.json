@@ -21,8 +21,8 @@
       "description": "Konceptualisering, design og udvikling af en performant, flersproget portfoliowebside til demonstration af moderne webteknologier.",
       "leadText": "Dette portfolio blev udviklet som et selvstændigt projekt for at demonstrere moderne best practices inden for webudvikling i en virkelig applikation. Fokus lå på en kompromisløs performant arkitektur, et tilgængeligt og yderst responsivt design samt en flydende internationalisering. Ved at fravælge tunge CSS-frameworks til fordel for skræddersyede Styled Components blev der realiseret en slank kodebase, der vedligeholdes nemt og styres fuldstændig modulært via datastrukturer.",
       "links": {
-        "github": "https://github.com/dein-username/portfolio",
-        "live": "https://deine-portfolio-domain.de"
+        "github": "https://github.com/MelanieB-007/portfolio-website",
+        "live": "https://portfolio-website-delta-fawn-14.vercel.app/"
       },
       "challenges": [
         {

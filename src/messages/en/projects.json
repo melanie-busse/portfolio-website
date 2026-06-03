@@ -21,8 +21,10 @@
       "description": "Conception, design, and development of a performant, multilingual portfolio website to demonstrate modern web technologies.",
       "leadText": "This portfolio was developed as an independent project to demonstrate modern web development best practices in a real-world application. The focus was on an uncompromisingly performant architecture, an accessible and highly responsive design, and seamless internationalization. By eschewing heavy CSS frameworks in favor of custom-tailored Styled Components, a lean, maintainable codebase was realized, completely driven by modular data structures.",
       "links": {
-        "github": "https://github.com/dein-username/portfolio",
-        "live": "https://deine-portfolio-domain.de"
+        "links": {
+          "github": "https://github.com/MelanieB-007/portfolio-website",
+          "live": "https://portfolio-website-delta-fawn-14.vercel.app/"
+        }
       },
       "challenges": [
         {

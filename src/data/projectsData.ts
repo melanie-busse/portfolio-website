@@ -32,7 +32,7 @@ export interface ProjectEntry {
 export const projectsData: ProjectEntry[] = [
   {
     id: "developer-portfolio",
-    icon: LuUser, // Oder FaLaptopCode / LuLayoutDashboard
+    icon: LuUser,
     period: "05/2026 – 06/2026",
     tags: {
       frontend: ["Next.js (Pages)", "React", "TypeScript", "Styled Components"],
