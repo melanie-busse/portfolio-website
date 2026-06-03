@@ -14,6 +14,8 @@
   },
   "backToOverview": "Tilbage til oversigten",
   "viewLiveProject": "Se live projekt",
+  "notFound": "Projektet blev ikke fundet",
+
   "items": {
     "developer-portfolio": {
       "title": "Frontend Softwareudvikler | Personlig Portfoliowebside",

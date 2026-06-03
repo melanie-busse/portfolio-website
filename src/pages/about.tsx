@@ -8,50 +8,55 @@ import { PageContainer } from "@/components/common/PageContainer";
 import { Card } from "@/components/layout/Card";
 import { Period } from "@/components/common/Period";
 import BentoCard from "@/components/features/BentoCard";
+import Meta from "@/components/seo/Meta";
 
 export default function About() {
   const t = useTranslations("about");
 
   return (
-    <PageContainer>
-      <HeaderSection headline={t("headline")} text={t("introText")} />
+    <>
+      <Meta titleKey="aboutTitle" descriptionKey="aboutDescription" />
 
-      <StatsGrid>
-        <Card>
-          <StatValue>{t("stats.expValue")}</StatValue>
-          <StatLabel>{t("stats.expLabel")}</StatLabel>
-        </Card>
-        <Card>
-          <StatValue>{t("stats.codeValue")}</StatValue>
-          <StatLabel>{t("stats.codeLabel")}</StatLabel>
-        </Card>
-        <Card>
-          <StatValue>{t("stats.focusValue")}</StatValue>
-          <StatLabel>{t("stats.focusLabel")}</StatLabel>
-        </Card>
-        <Card>
-          <StatValue>{t("stats.infraValue")}</StatValue>
-          <StatLabel>{t("stats.infraLabel")}</StatLabel>
-        </Card>
-      </StatsGrid>
+      <PageContainer>
+        <HeaderSection headline={t("headline")} text={t("introText")} />
 
-      <TimelineWrapper>
-        {timelineData.map((item) => {
-          const mappedTimelineAsSkill = {
-            icon: item.icon || "WorkIcon",
-            translationKey: `about.timeline.${item.id}`,
-            badges: item.tags,
-          };
+        <StatsGrid>
+          <Card>
+            <StatValue>{t("stats.expValue")}</StatValue>
+            <StatLabel>{t("stats.expLabel")}</StatLabel>
+          </Card>
+          <Card>
+            <StatValue>{t("stats.codeValue")}</StatValue>
+            <StatLabel>{t("stats.codeLabel")}</StatLabel>
+          </Card>
+          <Card>
+            <StatValue>{t("stats.focusValue")}</StatValue>
+            <StatLabel>{t("stats.focusLabel")}</StatLabel>
+          </Card>
+          <Card>
+            <StatValue>{t("stats.infraValue")}</StatValue>
+            <StatLabel>{t("stats.infraLabel")}</StatLabel>
+          </Card>
+        </StatsGrid>
 
-          return (
-            <TimelineItem key={item.id}>
-              <Period text={item.year} />
-              <BentoCard skill={mappedTimelineAsSkill} $gridArea={"auto"} />
-            </TimelineItem>
-          );
-        })}
-      </TimelineWrapper>
-    </PageContainer>
+        <TimelineWrapper>
+          {timelineData.map((item) => {
+            const mappedTimelineAsSkill = {
+              icon: item.icon || "WorkIcon",
+              translationKey: `about.timeline.${item.id}`,
+              badges: item.tags,
+            };
+
+            return (
+              <TimelineItem key={item.id}>
+                <Period text={item.year} />
+                <BentoCard skill={mappedTimelineAsSkill} $gridArea={"auto"} />
+              </TimelineItem>
+            );
+          })}
+        </TimelineWrapper>
+      </PageContainer>
+    </>
   );
 }
 

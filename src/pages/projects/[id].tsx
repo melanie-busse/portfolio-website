@@ -12,6 +12,7 @@ import ProjectImpact from "@/components/layout/ProjectPage/ProjectImpact";
 import ProjectDeepDive from "@/components/layout/ProjectPage/ProjectDeepDive";
 import ProjectStack from "@/components/layout/ProjectPage/ProjectStack";
 import ProjectFooter from "@/components/layout/ProjectPage/ProjectFooter";
+import Meta from "@/components/seo/Meta";
 
 export default function ProjectDetails() {
   const t = useTranslations();
@@ -47,8 +48,13 @@ export default function ProjectDetails() {
   const prevProjectId = projectOrder[prevIndex];
   const nextProjectId = projectOrder[nextIndex];
 
+  const dynamicTitle = `${t(`projects.items.${project.id}.title`)} | Melanie Busse`;
+  const dynamicDescription = t(`projects.items.${project.id}.description`);
+
   return (
     <PageContainer>
+      <Meta overrideTitle={dynamicTitle} overrideDescription={dynamicDescription} />
+
       <ProjectHeader project={project} />
       <ProjectLead projectId={project.id} />
       <ProjectChallenge projectId={project.id} />

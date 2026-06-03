@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import Head from "next/head";
 import { GetStaticProps } from "next";
 import { useTranslations } from "next-intl";
 
@@ -7,14 +6,14 @@ import { educationData } from "@/data/educationData";
 import BentoCard from "@/components/features/BentoCard";
 import { Period } from "@/components/common/Period";
 import { PageContainer } from "@/components/common/PageContainer";
+import Meta from "@/components/seo/Meta";
 
 export default function Education() {
   const t = useTranslations("education");
   return (
     <>
-      <Head>
-        <title>{t("title")} | Melanie Busse</title>
-      </Head>
+      <Meta titleKey="educationTitle" descriptionKey="educationDescription" />
+
       <PageContainer>
         <Title>{t("title")}</Title>
         <Grid>

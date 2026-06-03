@@ -1,23 +1,21 @@
 import styled from "styled-components";
-import Head from "next/head";
 
 import { PageContainer } from "@/components/common/PageContainer";
 import { ContentBox } from "@/components/common/ContentBox";
 import { useTranslations } from "next-intl";
 import { GetStaticProps } from "next";
+import Meta from "@/components/seo/Meta";
 
 export default function Imprint() {
-  const t = useTranslations("imprint");
+  const t = useTranslations();
+  const legalTitle = `${t("common.metadata.legalTitle")} | Melanie Busse`;
 
   return (
     <>
-      <Head>
-        <title>{t("title")} | Melanie Busse</title>
-        <meta name="robots" content="noindex" />
-      </Head>
+      <Meta overrideTitle={legalTitle} descriptionKey="legalDescription" noIndex={true} />
       <PageContainer>
         <ContentBox>
-          <Title>{t("title")}</Title>
+          <Title>{t("imprint.title")}</Title>
 
           <Section>
             <SectionTitle>Angaben gemäß § 5 TMG</SectionTitle>
@@ -49,7 +47,7 @@ export default function Imprint() {
           <Section>
             <SectionTitle>Hosting</SectionTitle>
             <Text>
-              {t("hostingText")}
+              {t("imprint.hostingText")}
               <br />
               <strong>STRATO AG</strong>
               <br />

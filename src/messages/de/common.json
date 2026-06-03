@@ -24,5 +24,24 @@
   "privacy": {
     "title": "Datenschutz",
     "headline": "Datenschutzerklärung"
+  },
+  "metadata": {
+    "homeTitle": "Melanie Busse | Fullstack Software Developer",
+    "homeDescription": "Portfolio von Melanie Busse – Fullstack Software Developer mit Fokus auf React, Next.js und Java. Entdecke meine Projekte und meinen Tech-Stack.",
+
+    "projectsTitle": "Projekte | Melanie Busse",
+    "projectsDescription": "Übersicht meiner Softwareprojekte. Von großen Enterprise-Anwendungen der Bundesagentur für Arbeit bis hin zu modernen React- und Next.js-Eigenprojekten.",
+
+    "aboutTitle": "Über mich & Werdegang | Melanie Busse",
+    "aboutDescription": "Erfahre mehr über meinen Werdegang als Entwicklerin: 19 Jahre IT-Erfahrung, fundierte Java-Expertise und modernste Fullstack-Weiterbildung.",
+
+    "educationTitle": "Ausbildung & Qualifikationen | Melanie Busse",
+    "educationDescription": "Mein Bildungsweg: Diplom-Wirtschaftsinformatik der Universität Paderborn, Ausbildung zur Industriekauffrau und das intensive Fullstack-Bootcamp.",
+
+    "legalTitle": "Impressum | Melanie Busse",
+    "legalDescription": "Rechtliche Informationen und Impressum von Melanie Busse.",
+
+    "privacyTitle": "Datenschutz | Melanie Busse",
+    "privacyDescription": "Datenschutzerklärung für das Portfolio von Melanie Busse."
   }
 }

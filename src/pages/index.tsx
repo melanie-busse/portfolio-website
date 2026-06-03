@@ -1,13 +1,17 @@
 import Hero from "@/components/features/Hero";
 import SkillsGrid from "@/components/features/SkillsGrid";
 import { GetStaticProps } from "next";
+import Meta from "@/components/seo/Meta";
 
 export default function Home() {
   return (
-    <main>
-      <Hero />
-      <SkillsGrid />
-    </main>
+    <>
+      <Meta titleKey="homeTitle" descriptionKey="homeDescription" />
+      <main>
+        <Hero />
+        <SkillsGrid />
+      </main>
+    </>
   );
 }
 

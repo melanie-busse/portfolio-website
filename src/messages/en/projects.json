@@ -14,6 +14,8 @@
   },
   "backToOverview": "Back to Overview",
   "viewLiveProject": "View Live Project",
+  "notFound": "Project not found",
+
   "items": {
     "developer-portfolio": {
       "title": "Frontend Software Developer | Personal Portfolio Website",

@@ -33,8 +33,10 @@ export default class MyDocument extends Document {
   }
 
   render() {
+    const currentLocale = this.props.__NEXT_DATA__.locale || "de";
+
     return (
-      <Html>
+      <Html lang={currentLocale}>
         <Head />
         <body>
           <Main />
