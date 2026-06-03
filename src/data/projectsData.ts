@@ -35,9 +35,9 @@ export const projectsData: ProjectEntry[] = [
     icon: LuUser,
     period: "05/2026 – 06/2026",
     tags: {
-      frontend: ["Next.js (Pages)", "React", "TypeScript", "Styled Components"],
+      frontend: ["Next.js (Page Router)", "React", "TypeScript", "next-Intl", "Styled Components"],
       backend: ["Dynamic Routing", "JSON Data Hydration"],
-      tools: ["next-intl (i18n)", "GitHub", "Vercel Deployment", "Lighthouse Audits"],
+      tools: ["GitHub", "Vercel Deployment", "Lighthouse Audits"],
     },
   },
   {
@@ -50,7 +50,7 @@ export const projectsData: ProjectEntry[] = [
         "TypeScript / SWR",
         "Next.js (App Router)",
         "Styled Components",
-        "next-intl / i18next",
+        "next-Intl",
         "SweetAlert / Toastify",
         "Responsive Design",
       ],
@@ -102,7 +102,7 @@ export const projectsData: ProjectEntry[] = [
       frontend: ["Angular", "TypeScript", "Reactive Forms", "Accessibility / BITV"],
       backend: ["Java", "Spring Boot", "REST API", "Data Validation"],
       tools: [
-        "IntelliJ IDEA", // Alternativ das von dir genutzte Tool
+        "IntelliJ IDEA",
         "Jenkins",
         "Maven",
         "Git / Bitbucket",

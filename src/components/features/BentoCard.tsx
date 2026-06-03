@@ -10,18 +10,27 @@ export default function BentoCard({ skill, $gridArea }: { skill: any; $gridArea?
   // Wir nutzen die Prop falls übergeben, andernfalls den Fallback aus dem Objekt
   const finalGridArea = $gridArea || skill.gridArea;
 
+  // Dynamische Keys für die Übersetzung zusammenbauen
+  const titleKey = `${skill.translationKey}.title`;
+  const companyKey = `${skill.translationKey}.company`;
+  const descriptionKey = `${skill.translationKey}.description`;
+
   return (
     <StyledBentoCard key={skill.id} $gridArea={finalGridArea}>
       <CardHeader>
         <IconWrapper>
           <IconComponent />
         </IconWrapper>
-        <CardTitle>{t.raw(`${skill.translationKey}.title`)}</CardTitle>
+        <HeaderTitleWrapper>
+          <CardTitle>{t.raw(titleKey)}</CardTitle>
+          {/* Rendert die Firma NUR, wenn der Key im JSON existiert (z.B. bei der Timeline) */}
+          {t.has(companyKey) && <CardCompany>{t.raw(companyKey)}</CardCompany>}
+        </HeaderTitleWrapper>
       </CardHeader>
 
       <CardText
         dangerouslySetInnerHTML={{
-          __html: t.raw(`${skill.translationKey}.description`),
+          __html: t.raw(descriptionKey),
         }}
       />
 
@@ -47,6 +56,36 @@ export default function BentoCard({ skill, $gridArea }: { skill: any; $gridArea?
   );
 }
 
+// --- HIER SIND DIE NEUEN UND ANGEPASSTEN STYLES ---
+
+const CardHeader = styled.div`
+  display: flex;
+  align-items: center; /* Zentriert Icon und Textblock vertikal */
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  width: 100%;
+`;
+
+const HeaderTitleWrapper = styled.div`
+  display: flex;
+  flex-direction: column; /* Stapelt Titel und Firma untereinander */
+  gap: 0.2rem;
+`;
+
+const CardTitle = styled.h3`
+  margin: 0;
+  word-break: break-word;
+`;
+
+const CardCompany = styled.span`
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: ${(props) => props.theme.colors.h4}; /* Nutzt deine Akzentfarbe */
+  word-break: break-word;
+`;
+
+// --- AB HIER BLEIBT ALLES WIE GEHABT ---
+
 const StyledBentoCard = styled.div<{ $gridArea?: string }>`
   grid-area: ${(props) => props.$gridArea};
   background: ${(props) => props.theme.colors.backgrounds.box};
@@ -60,11 +99,11 @@ const StyledBentoCard = styled.div<{ $gridArea?: string }>`
   justify-content: flex-start;
   min-height: 100%;
   height: 100%;
-  width: 100%; /* Zwingt die Karte mobil in die volle Breite des Grids */
+  width: 100%;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   position: relative;
   overflow: hidden;
-  box-sizing: border-box; /* Verhindert, dass das Padding die Karte über 100% drückt */
+  box-sizing: border-box;
 
   h2 {
     color: ${(props) => props.theme.colors.primaryPetrol};
@@ -98,31 +137,18 @@ const StyledBentoCard = styled.div<{ $gridArea?: string }>`
   }
 `;
 
-const CardHeader = styled.div`
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  margin-bottom: 1.5rem;
-  width: 100%;
-`;
-
 const IconWrapper = styled.div`
   font-size: 2rem;
   color: ${(props) => props.theme.colors.h4};
   filter: drop-shadow(0 0 8px ${(props) => props.theme.colors.backgrounds.iconWrapper});
   display: flex;
   align-items: center;
-  flex-shrink: 0; /* Verhindert, dass das Icon auf schmalen Screens gequetscht wird */
-`;
-
-const CardTitle = styled.h3`
-  margin: 0;
-  word-break: break-word; /* Falls ein Titel mal sehr lang ist */
+  flex-shrink: 0;
 `;
 
 const CardText = styled.p`
   margin: 0;
-  word-break: break-word; /* Schützt das Layout vor langen HTML-Strings */
+  word-break: break-word;
   hyphens: auto;
 `;
 

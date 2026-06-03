@@ -75,11 +75,11 @@
         }
       ],
       "stack": [
-        { "name": "Next.js (Pages)", "type": "frontend" },
+        { "name": "Next.js (Page Router)", "type": "frontend" },
         { "name": "React", "type": "frontend" },
         { "name": "TypeScript", "type": "frontend" },
         { "name": "Styled Components", "type": "frontend" },
-        { "name": "next-intl", "type": "tools" },
+        { "name": "next-Intl", "type": "frontend" },
         { "name": "Vercel", "type": "tools" },
         { "name": "Git / GitHub", "type": "tools" }
       ],
@@ -155,7 +155,7 @@
         { "name": "TypeScript / SWR", "type": "frontend" },
         { "name": "Styled Components", "type": "frontend" },
         { "name": "SweetAlert / Toastify", "type": "frontend" },
-        { "name": "next-intl (i18n)", "type": "frontend" },
+        { "name": "next-Intl", "type": "frontend" },
         { "name": "TiDB Cloud (MySQL)", "type": "backend" },
         { "name": "Node.js", "type": "backend" },
         { "name": "MySQL / MariaDB", "type": "backend" },
