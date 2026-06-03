@@ -81,17 +81,24 @@ export default function Datenschutz() {
 }
 
 export const getStaticProps: GetStaticProps = async ({ locale }) => {
-  const messages = (await import(`@/messages/${locale || "de"}.json`)).default;
-  return {
-    props: {
-      messages: {
-        common: (await import(`../messages/${locale}/common.json`)).default,
+  const currentLocale = locale || "de";
+  try {
+    const fileContent = (await import(`@/messages/${currentLocale}/common.json`)).default;
+
+    return {
+      props: {
+        messages: {
+          ...fileContent, // Bedient useTranslations("privacy") direkt auf der Seite
+          common: fileContent, // Bedient useTranslations("common") in Nav & Footer nach dem Rollback
+        },
       },
-    },
-  };
+    };
+  } catch (error) {
+    console.error("Fehler beim Laden der Übersetzungsdateien in getStaticProps:", error);
+    return { props: { messages: {} } };
+  }
 };
 
-// --- Styled Components ---
 const Title = styled.h1`
   margin-bottom: 2rem;
   color: ${(props) => props.theme.colors.textMain};
