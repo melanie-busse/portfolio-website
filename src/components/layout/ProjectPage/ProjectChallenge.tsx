@@ -26,13 +26,12 @@ interface ProjectChallengeSectionProps {
   projectId: string;
 }
 export default function ProjectChallenge({ projectId }: ProjectChallengeSectionProps) {
-  const t = useTranslations();
-
-  const challengesArray = t.raw(`projects.items.${projectId}.challenges`) || [];
+  const t = useTranslations("projects");
+  const challengesArray = t.raw(`items.${projectId}.challenges`) || [];
 
   return (
     <ProjectSection>
-      <SectionTitle title="01 / THE CHALLENGE" headline="Die Herausforderung" />
+      <SectionTitle title="01 / THE CHALLENGE" headline={t("headlines.challenge")} />
 
       <ChallengeGrid>
         {Array.isArray(challengesArray) &&
@@ -52,20 +51,16 @@ export default function ProjectChallenge({ projectId }: ProjectChallengeSectionP
 
 export const ChallengeGrid = styled.div`
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1.5rem;
+
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.25rem;
   width: 100%;
   margin-top: 1.5rem;
-
-  @media (max-width: ${(props) => props.theme.breakpoints.tablet}) {
-    grid-template-columns: repeat(2, 1fr);
-  }
 
   @media (max-width: ${(props) => props.theme.breakpoints.mobile}) {
     grid-template-columns: 1fr;
   }
 `;
-
 export const ChallengeCard = styled.div`
   display: flex;
   flex-direction: row;

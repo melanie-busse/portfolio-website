@@ -10,15 +10,15 @@ interface ProjectStackProps {
 }
 
 export default function ProjectStack({ projectId }: ProjectStackProps) {
-  const t = useTranslations();
+  const t = useTranslations("projects");
 
   return (
     <ProjectSection>
-      <SectionTitle title="05 / STACK" headline="Alle Technologien" />
+      <SectionTitle title="05 / STACK" headline={t("headlines.stack")} />
 
       <StackContainer>
         {(() => {
-          const stackData = t.raw(`projects.items.${projectId}.stack`);
+          const stackData = t.raw(`items.${projectId}.stack`);
 
           if (Array.isArray(stackData)) {
             return stackData.map((tech: any, index: number) => (

@@ -1,0 +1,34 @@
+{
+  "backend": {
+    "title": "Backend Core",
+    "description": "Über 21 Jahre Erfahrung in Java. Spezialist für <strong>Spring Boot</strong> und <strong>Quarkus</strong>. Architektur von skalierbaren Enterprise-Systemen und Microservices. Entwicklung von modularen, testbaren Backend-Systemen mit NestJS."
+  },
+  "frontend": {
+    "title": "Frontend Engineering",
+    "description": "Moderne SPAs mit <strong>Angular</strong> und <strong>TypeScript</strong>. Fokus auf Performance, State-Management und intuitive UX."
+  },
+  "infrastructure": {
+    "title": "Infrastructure & Hosting",
+    "description": "Setup und Verwaltung von <strong>VServer-Umgebungen</strong> (Strato). Deployment von Web-Projekten via Docker und Nginx."
+  },
+  "aiAutomation": {
+    "title": "AI & Automation",
+    "description": "Integration von <strong>LLMs</strong> in Software-Workflows. Entwicklung von KI-gestützten Tools und Automatisierung von Prozessen. Echtzeit-Kommunikation und Event-gesteuerte Architekturen."
+  },
+  "data": {
+    "title": "Data",
+    "description": "Design und Optimierung relationaler und NoSQL-Datenbanken. Fokus auf Datenintegrität und Performance-Tuning."
+  },
+  "devops": {
+    "title": "DevOps",
+    "description": "Automatisierung von Deployment-Prozessen und Container-Orchestrierung für skalierbare Cloud-Infrastrukturen."
+  },
+  "workflow": {
+    "title": "Workflow & Tools",
+    "description": "Sicherer Umgang mit modernen Entwicklungsumgebungen und agilen Methoden. Expertenwissen in der Modellierung und Transformation komplexer Datenformate."
+  },
+  "architecture": {
+    "title": "Architecture",
+    "description": "Konzeption wartbarer Systeme durch <strong>Domain-Driven Design (DDD)</strong> und hexagonale Architekturen."
+  }
+}

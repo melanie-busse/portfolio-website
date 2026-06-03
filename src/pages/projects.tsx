@@ -40,12 +40,21 @@ export default function Projects() {
 }
 
 export const getStaticProps: GetStaticProps = async ({ locale }) => {
-  const messages = (await import(`@/messages/${locale || "de"}.json`)).default;
-  return {
-    props: {
-      messages,
-    },
-  };
+  const currentLocale = locale || "de";
+
+  try {
+    return {
+      props: {
+        messages: {
+          common: (await import(`@/messages/${currentLocale}/common.json`)).default,
+          projects: (await import(`@/messages/${currentLocale}/projects.json`)).default,
+        },
+      },
+    };
+  } catch (error) {
+    console.error("Fehler beim Laden der Übersetzungsdateien in getStaticProps:", error);
+    return { props: { messages: {} } };
+  }
 };
 
 const Grid = styled.div`

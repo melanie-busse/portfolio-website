@@ -17,6 +17,7 @@ export const petrolTheme = {
       editorHeader: "#1e293b",
       codeArea: "#0b0f19",
       contextBox: "rgba(30, 41, 59, 0.4)",
+      projectButton: "rgba(255, 255, 255, 0.02)",
 
       hovers: {
         card: "rgba(0, 242, 255, 0.1)",
@@ -24,6 +25,7 @@ export const petrolTheme = {
         shadow: "rgba(0, 242, 255, 0.15)",
         tech: "rgba(0, 212, 255, 0.15)",
         impact: "rgba(255, 255, 255, 0.15)",
+        button: "rgba(255, 255, 255, 0.06)",
       },
     },
     code: {

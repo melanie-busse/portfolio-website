@@ -1,0 +1,17 @@
+{
+  "title": "Education",
+  "items": {
+    "university": {
+      "title": "Degree in Business Informatics (Diplom)",
+      "description": "<h2>University of Paderborn</h2>Specializations: Software Engineering, Databases, Information Systems, and Business Administration. Thesis written within the framework of the EU research project MEMPHIS."
+    },
+    "milchwerke": {
+      "title": "Vocational Training as an Industrial Clerk",
+      "description": "<h2>Milchwerke Westfalen eG, Herford</h2>Degree: Industriekauffrau (Industrial Clerk). Laid the foundation for understanding business and corporate processes."
+    },
+    "erich_gutenberg": {
+      "title": "Technical College Entrance Qualification",
+      "description": "<h2>Erich-Gutenberg-Schule, Bünde</h2>Higher Commercial School (Höhere Handelsschule), focus area: Office Management."
+    }
+  }
+}

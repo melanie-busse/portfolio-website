@@ -83,12 +83,22 @@ export default function Imprint() {
 }
 
 export const getStaticProps: GetStaticProps = async ({ locale }) => {
-  const messages = (await import(`@/messages/${locale || "de"}.json`)).default;
-  return {
-    props: {
-      messages,
-    },
-  };
+  const currentLocale = locale || "de";
+  try {
+    const fileContent = (await import(`@/messages/${currentLocale}/common.json`)).default;
+
+    return {
+      props: {
+        messages: {
+          ...fileContent, // Bedient useTranslations("privacy") direkt auf der Seite
+          common: fileContent, // Bedient useTranslations("common") in Nav & Footer nach dem Rollback
+        },
+      },
+    };
+  } catch (error) {
+    console.error("Fehler beim Laden der Übersetzungsdateien in getStaticProps:", error);
+    return { props: { messages: {} } };
+  }
 };
 
 const Title = styled.h1`
