@@ -17,6 +17,80 @@
   "notFound": "Project not found",
 
   "items": {
+    "vserver-deployment": {
+      "title": "DevOps & Cloud Infrastructure | vServer Setup & Deployment",
+      "company": "Personal Project",
+      "description": "Conceptual design, hardening, and automated deployment of a Linux server environment for production web applications.",
+      "leadText": "This project was implemented to deploy the full-stack applications developed during the bootcamp (such as the Zoo2 Community Manager) under real-world production conditions. The focus was on building a highly secure infrastructure from scratch, strictly isolating services using Docker, and automating routing and SSL encryption. By applying modern DevOps practices, a robust hosting environment was created that ensures maximum availability and ease of maintenance.",
+      "links": {
+        "github": "",
+        "live": ""
+      },
+      "challenges": [
+        {
+          "id": "server-hardening",
+          "icon": "tools",
+          "title": "Server Hardening & Linux Security",
+          "description": "Configuration of a restrictive Ubuntu system, including disabling password logins in favor of SSH key authentication and securing open ports."
+        },
+        {
+          "id": "docker-orchestration",
+          "icon": "database",
+          "title": "Isolated Container Orchestration",
+          "description": "Structuring and deploying multi-container environments with Docker Compose for clean encapsulation of web servers, backend APIs, and databases."
+        },
+        {
+          "id": "reverse-proxy-routing",
+          "icon": "frontend",
+          "title": "Central Reverse Proxying",
+          "description": "Configuring Nginx to securely forward external HTTP/HTTPS requests to internal Docker networks, including automated header configuration."
+        }
+      ],
+      "architecture": [
+        {
+          "id": "automated-ssl-certbot",
+          "title": "SSL/TLS Automation via Certbot",
+          "description": "Integration of Let's Encrypt for fully automated generation and regular renewal of SSL certificates for encrypted HTTPS connections.",
+          "type": "frontend"
+        },
+        {
+          "id": "brute-force-protection",
+          "title": "Intrusion Prevention & Firewalling",
+          "description": "Implementing active packet filtering with UFW and configuring Fail2Ban to automatically block IPs during suspicious login attempts.",
+          "type": "tools"
+        }
+      ],
+      "impact": [
+        {
+          "id": "high-availability-env",
+          "type": "backend",
+          "badgeText": "DevOps",
+          "title": "Maximum Availability",
+          "description": "Ensuring continuous operation by configuring robust Docker restart policies and structured management of environment variables (.env)."
+        },
+        {
+          "id": "efficient-resource-usage",
+          "type": "tools",
+          "badgeText": "Linux",
+          "title": "Resource-Efficient Hosting",
+          "description": "Optimizing server resource utilization by using lightweight Alpine Linux base images within the Docker container environment."
+        }
+      ],
+      "stack": [
+        { "name": "Linux (Ubuntu Server)", "type": "backend" },
+        { "name": "Docker", "type": "backend" },
+        { "name": "Docker Compose", "type": "backend" },
+        { "name": "Nginx", "type": "frontend" },
+        { "name": "Let's Encrypt / Certbot", "type": "frontend" },
+        { "name": "SSH / Security", "type": "tools" },
+        { "name": "UFW Firewall & Fail2Ban", "type": "tools" }
+      ],
+      "deepDive": {
+        "filePath": "docker-compose.yaml",
+        "context": "The configuration example shows the production-ready orchestration of a web service and an isolated Postgres database, including named volumes for persistent data storage and automatic restarts.",
+        "code": "version: '3.8'\n\nservices:\n  db:\n    image: postgres:17-alpine\n    container_name: arcade-db\n    restart: always\n    environment:\n      POSTGRES_PASSWORD: ${DB_PASSWORD}\n    volumes:\n      - pgdata:/var/lib/postgresql/data\n    networks:\n      - arcade-net\n\n  scoreboard:\n    image: scoreboard-service:v2\n    container_name: scoreboard-app\n    restart: always\n    ports:\n      - \"3000:3000\"\n    environment:\n      - DATABASE_URL=postgresql://postgres:${DB_PASSWORD}@db:5432/postgres\n    networks:\n      - arcade-net\n    depends_on:\n      - db\n\nvolumes:\n  pgdata:\n\nnetworks:\n  arcade-net:\n    driver: bridge"
+      }
+    },
     "developer-portfolio": {
       "title": "Frontend Software Developer | Personal Portfolio Website",
       "company": "Personal Project",

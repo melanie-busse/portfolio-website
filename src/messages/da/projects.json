@@ -17,6 +17,79 @@
   "notFound": "Projektet blev ikke fundet",
 
   "items": {
+    "vserver-deployment": {
+      "title": "DevOps & Cloud-infrastruktur | vServer Setup & Deployment",
+      "company": "Personal Project",
+      "description": "Konceptualisering, hærdning og automatiseret deployment af et Linux-servermiljø til produktionsklare webapplikationer.",
+      "leadText": "Dette projekt blev implementeret for at udrulle de full-stack applikationer, der blev udviklet under bootcampen (såsom Zoo2 Community Manager), under virkelige produktionsforhold. Fokus var på at opbygge en højsikker infrastruktur fra bunden, strikt isolering af tjenester ved hjælp af Docker samt automatisering af routing og SSL-kryptering. Ved at anvende moderne DevOps-praksis blev der skabt et robust hostingmiljø, som sikrer maksimal tilgængelighed og nem vedligeholdelse.",
+      "links": {
+        "github": "",
+        "live": ""
+      },
+      "challenges": [
+        {
+          "id": "server-hardening",
+          "icon": "tools",
+          "title": "Serverhærdning & Linux-sikkerhed",
+          "description": "Konfiguration af et restriktivt Ubuntu-system, herunder deaktivering af adgangskodelogins til fordel for SSH-key-autentificering og sikring af åbne porte."
+        },
+        {
+          "id": "docker-orchestration",
+          "icon": "database",
+          "title": "Isoleret container-orkestrering",
+          "description": "Strukturering og udrulning af multi-container-miljøer med Docker Compose for en ren indkapsling af webservere, backend-API'er og databaser."
+        },
+        {
+          "id": "reverse-proxy-routing",
+          "icon": "frontend",
+          "title": "Central Reverse Proxying",
+          "description": "Konfiguration af Nginx til sikker videresendelse af eksterne HTTP/HTTPS-anmodninger til interne Docker-netværk, inklusive automatiseret header-konfiguration."
+        }
+      ],
+      "architecture": [
+        {
+          "id": "automated-ssl-certbot",
+          "title": "SSL/TLS-automatisering via Certbot",
+          "description": "Integration af Let's Encrypt til fuldautomatisk generering og regelmæssig fornyelse af SSL-certifikater til krypterede HTTPS-forbindelser.",
+          "type": "frontend"
+        },
+        {
+          "id": "brute-force-protection",
+          "title": "Intrusion Prevention & Firewall",
+          "description": "Implementering af aktiv pakkefiltrering med UFW og konfiguration af Fail2Ban til automatisk blokering af IP'er ved mistænkelige loginforøg."
+        }
+      ],
+      "impact": [
+        {
+          "id": "high-availability-env",
+          "type": "backend",
+          "badgeText": "DevOps",
+          "title": "Maksimal tilgængelighed",
+          "description": "Sikring af kontinuerlig drift ved at konfigurere robuste Docker-genstartspolitikker og struktureret styring af miljøvariabler (.env)."
+        },
+        {
+          "id": "efficient-resource-usage",
+          "type": "tools",
+          "badgeText": "Linux",
+          "title": "Ressourceeffektiv hosting",
+          "description": "Optimal udnyttelse af serverressourcer ved at bruge letvægts Alpine Linux-basisbilleder i Docker-containermiljøet."
+        }
+      ],
+      "stack": [
+        { "name": "Linux (Ubuntu Server)", "type": "backend" },
+        { "name": "Docker", "type": "backend" },
+        { "name": "Docker Compose", "type": "backend" },
+        { "name": "Nginx", "type": "frontend" },
+        { "name": "Let's Encrypt / Certbot", "type": "frontend" },
+        { "name": "SSH / Security", "type": "tools" },
+        { "name": "UFW Firewall & Fail2Ban", "type": "tools" }
+      ],
+      "deepDive": {
+        "filePath": "docker-compose.yaml",
+        "context": "Konfigurationseksemplet viser den produktionsklare orkestrering af en webtjeneste og en isoleret Postgres-database, inklusive named volumes til persistent datalagring og automatiske genstarter.",
+        "code": "version: '3.8'\n\nservices:\n  db:\n    image: postgres:17-alpine\n    container_name: arcade-db\n    restart: always\n    environment:\n      POSTGRES_PASSWORD: ${DB_PASSWORD}\n    volumes:\n      - pgdata:/var/lib/postgresql/data\n    networks:\n      - arcade-net\n\n  scoreboard:\n    image: scoreboard-service:v2\n    container_name: scoreboard-app\n    restart: always\n    ports:\n      - \"3000:3000\"\n    environment:\n      - DATABASE_URL=postgresql://postgres:${DB_PASSWORD}@db:5432/postgres\n    networks:\n      - arcade-net\n    depends_on:\n      - db\n\nvolumes:\n  pgdata:\n\nnetworks:\n  arcade-net:\n    driver: bridge"
+      }
+    },
     "developer-portfolio": {
       "title": "Frontend Softwareudvikler | Personlig Portfoliowebside",
       "company": "Personligt Projekt",

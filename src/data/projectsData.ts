@@ -16,7 +16,7 @@ import {
   FaProjectDiagram,
   FaShoppingCart,
 } from "react-icons/fa";
-import { LuUser } from "react-icons/lu";
+import { LuServer, LuUser } from "react-icons/lu";
 
 export interface ProjectEntry {
   id: string;
@@ -30,6 +30,16 @@ export interface ProjectEntry {
 }
 
 export const projectsData: ProjectEntry[] = [
+  {
+    id: "vserver-deployment",
+    icon: LuServer,
+    period: "06/2026",
+    tags: {
+      frontend: ["Reverse Proxy (Nginx)", "SSL-Encryption", "Let’s Encrypt"],
+      backend: ["Linux (Ubuntu Server)", "Docker", "Docker Compose"],
+      tools: ["SSH Security", "UFW Firewall", "Fail2Ban"],
+    },
+  },
   {
     id: "developer-portfolio",
     icon: LuUser,
