@@ -1,0 +1,25 @@
+{
+  "headline": "Dokumente & Zertifikate",
+  "introText": "Hier finden Sie meine vollständigen Bewerbungsunterlagen, akademischen Abschlüsse und Nachweise über meine aktuellen Qualifikationen zum Download.",
+
+  "cvDe": {
+    "title": "Lebenslauf (DE)",
+    "description": "Mein aktuelles Entwicklerprofil auf Deutsch mit vollem Fokus auf Fullstack, Java und moderne Web-Infrastrukturen.<br/><br/><a href='/docs/Lebenslauf_Melanie_Busse_DE.pdf' download class='bento-download-btn'>Download (PDF)</a>"
+  },
+  "cvEn": {
+    "title": "Curriculum Vitae (EN)",
+    "description": "English version of my professional profile tailored for international teams or tech-focused roles.<br/><br/><a href='/docs/CV_Melanie_Busse_EN.pdf' download class='bento-download-btn'>Download (PDF)</a>"
+  },
+  "diplom": {
+    "title": "Diplomzeugnis",
+    "description": "Offizieller akademischer Abschluss der Universität Paderborn im Studiengang Wirtschaftsinformatik.<br/><br/><a href='/docs/Diplomzeugnis_Melanie_Busse.pdf' target='_blank' rel='noopener noreferrer' class='bento-download-btn'>Ansehen (PDF)</a>"
+  },
+  "zeugnisse": {
+    "title": "Arbeitszeugnisse",
+    "description": "Gesammelte Referenzen und Leistungsbeurteilungen meiner bisherigen beruflichen Stationen.<br/><br/><a href='/docs/Arbeitszeugnisse_Melanie_Busse.pdf' target='_blank' rel='noopener noreferrer' class='bento-download-btn'>Ansehen (PDF)</a>"
+  },
+  "bootcamp": {
+    "title": "Bootcamp-Flyer & Curriculum",
+    "description": "Detaillierte Übersicht der intensiv geschulten Technologien und agilen Praktiken (Next.js, NestJS, Docker, TDD) der Weiterbildung.<br/><br/><a href='/docs/Bootcamp_Curriculum.pdf' target='_blank' rel='noopener noreferrer' class='bento-download-btn'>Ansehen (PDF)</a>"
+  }
+}

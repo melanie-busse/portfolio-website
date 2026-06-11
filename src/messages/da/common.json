@@ -11,6 +11,7 @@
     "about": "Karriere",
     "education": "Uddannelse",
     "contact": "Kontakt",
+    "download": "CV",
     "openMenu": "Åben menu"
   },
   "footer": {
@@ -38,6 +39,9 @@
 
     "educationTitle": "Uddannelse & Kvalifikationer | Melanie Busse",
     "educationDescription": "Min uddannelsesbaggrund: Eksamen i erhvervsinformatik (Business Informatics) fra Universitetet i Paderborn, uddannelse som industriassistent og et intensivt Fullstack Bootcamp.",
+
+    "downloadTitle": "Dokumenter & Certifikater | Melanie Busse",
+    "downloadDescription": "Her kan du downloade mine fuldstændige ansøgningsdokumenter, akademiske eksamensbeviser og dokumentation for mine nuværende kvalifikationer.",
 
     "legalTitle": "Imprint | Melanie Busse",
     "legalDescription": "Juridiske oplysninger og imprint for Melanie Busse.",

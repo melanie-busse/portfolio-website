@@ -175,4 +175,26 @@ export const GlobalStyle = createGlobalStyle`
         font-size: 0.9rem;
       }
     }
+
+    .bento-download-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.6rem 1.4rem;
+      color: #00e5ff; 
+      border: 1px solid rgba(0, 229, 255, 0.3);
+      border-radius: 8px;
+      text-decoration: none;
+      font-size: 0.95rem;
+      font-weight: 500;
+      transition: all 0.2s ease-in-out;
+      margin-top: 1.5rem;
+    }
+
+    .bento-download-btn:hover {
+      background: rgba(0, 229, 255, 0.1);
+      border-color: #00e5ff;
+      color: #ffffff;
+      box-shadow: 0 0 10px rgba(0, 229, 255, 0.2);
+    }
 `;

@@ -53,6 +53,14 @@ export default function Navbar() {
           >
             {t("nav.education")}
           </NavLink>
+          <NavLink
+            href="/download"
+            locale={locale}
+            $active={isActive("/download")}
+            onClick={closeMenu}
+          >
+            {t("nav.download")}
+          </NavLink>
           <ContactButton href="mailto:mail@melanie-busse.de" onClick={closeMenu}>
             {t("nav.contact")}
           </ContactButton>

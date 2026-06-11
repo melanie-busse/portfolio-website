@@ -11,6 +11,7 @@
     "about": "Career",
     "education": "Education",
     "contact": "Contact",
+    "download": "CV",
     "openMenu": "Open menu"
   },
   "footer": {
@@ -38,6 +39,9 @@
 
     "educationTitle": "Education & Qualifications | Melanie Busse",
     "educationDescription": "My educational background: Degree in Business Informatics from the University of Paderborn, vocational training as an industrial clerk, and an intensive Fullstack Bootcamp.",
+
+    "downloadTitle": "Documents & Certificates | Melanie Busse",
+    "downloadDescription": "Here you can find and download my complete application documents, academic degrees, and certificates regarding my current qualifications.",
 
     "legalTitle": "Legal Notice | Melanie Busse",
     "legalDescription": "Legal information and imprint for Melanie Busse.",
