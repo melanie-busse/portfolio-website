@@ -10,6 +10,7 @@
     "projects": "Projekte",
     "about": "Werdegang",
     "education": "Bildung",
+    "download": "Unterlagen",
     "contact": "Kontakt",
     "openMenu": "Menü öffnen"
   },
@@ -38,6 +39,9 @@
 
     "educationTitle": "Ausbildung & Qualifikationen | Melanie Busse",
     "educationDescription": "Mein Bildungsweg: Diplom-Wirtschaftsinformatik der Universität Paderborn, Ausbildung zur Industriekauffrau und das intensive Fullstack-Bootcamp.",
+
+    "downloadTitle": "Dokumente & Zertifikate | Melanie Busse",
+    "downloadDescription": "Hier finden Sie meine vollständigen Bewerbungsunterlagen, akademischen Abschlüsse und Nachweise über meine aktuellen Qualifikationen zum Download.",
 
     "legalTitle": "Impressum | Melanie Busse",
     "legalDescription": "Rechtliche Informationen und Impressum von Melanie Busse.",

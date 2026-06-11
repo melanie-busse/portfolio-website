@@ -1,0 +1,25 @@
+{
+  "headline": "Documents & Certificates",
+  "introText": "Here you can find and download my complete application documents, academic degrees, and certificates regarding my current qualifications.",
+
+  "cvDe": {
+    "title": "Curriculum Vitae (DE)",
+    "description": "My current professional profile in German with a full focus on full-stack development, Java, and modern web infrastructures.<br/><br/><a href='/docs/Lebenslauf_Melanie_Busse_DE.pdf' download class='bento-download-btn'>Download (PDF)</a>"
+  },
+  "cvEn": {
+    "title": "Curriculum Vitae (EN)",
+    "description": "English version of my professional profile tailored for international teams or tech-focused roles.<br/><br/><a href='/docs/CV_Melanie_Busse_EN.pdf' download class='bento-download-btn'>Download (PDF)</a>"
+  },
+  "diplom": {
+    "title": "Degree Certificate",
+    "description": "Official academic degree from the University of Paderborn in Business Informatics (Diplom-Wirtschaftsinformatik).<br/><br/><a href='/docs/Diplomzeugnis_Melanie_Busse.pdf' target='_blank' rel='noopener noreferrer' class='bento-download-btn'>View (PDF)</a>"
+  },
+  "zeugnisse": {
+    "title": "Employment References",
+    "description": "Collected reference letters and performance evaluations from my previous roles as a software developer.<br/><br/><a href='/docs/Arbeitszeugnisse_Melanie_Busse.pdf' target='_blank' rel='noopener noreferrer' class='bento-download-btn'>View (PDF)</a>"
+  },
+  "bootcamp": {
+    "title": "Bootcamp Flyer & Curriculum",
+    "description": "Detailed overview of the intensively trained technologies and agile practices (Next.js, NestJS, Docker, TDD) during the training.<br/><br/><a href='/docs/Bootcamp_Curriculum.pdf' target='_blank' rel='noopener noreferrer' class='bento-download-btn'>View (PDF)</a>"
+  }
+}

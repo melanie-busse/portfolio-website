@@ -56,8 +56,6 @@ export default function BentoCard({ skill, $gridArea }: { skill: any; $gridArea?
   );
 }
 
-// --- HIER SIND DIE NEUEN UND ANGEPASSTEN STYLES ---
-
 const CardHeader = styled.div`
   display: flex;
   align-items: center; /* Zentriert Icon und Textblock vertikal */
@@ -83,8 +81,6 @@ const CardCompany = styled.span`
   color: ${(props) => props.theme.colors.h4}; /* Nutzt deine Akzentfarbe */
   word-break: break-word;
 `;
-
-// --- AB HIER BLEIBT ALLES WIE GEHABT ---
 
 const StyledBentoCard = styled.div<{ $gridArea?: string }>`
   grid-area: ${(props) => props.$gridArea};
