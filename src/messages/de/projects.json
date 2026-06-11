@@ -17,6 +17,80 @@
   "notFound": "Projekt nicht gefunden",
 
   "items": {
+    "vserver-deployment": {
+      "title": "DevOps & Cloud-Infrastruktur | vServer Setup & Deployment",
+      "company": "Personal Project",
+      "description": "Konzeption, Absicherung und automatisiertes Deployment einer Linux-Serverumgebung für produktive Webapplikationen.",
+      "leadText": "Dieses Projekt wurde umgesetzt, um die im Bootcamp entwickelten Full-Stack-Anwendungen (wie den Zoo2 Community Manager) unter realen Bedingungen produktiv zu hosten. Der Fokus lag auf dem Aufbau einer hochsicheren Infrastruktur von Grund auf, der strikten Isolierung von Diensten mittels Docker sowie der Automatisierung von Routing und SSL-Verschlüsselung. Durch den Einsatz moderner DevOps-Praktiken wurde eine robuste Hosting-Umgebung geschaffen, die maximale Verfügbarkeit bietet und einfach zu warten ist.",
+      "links": {
+        "github": "",
+        "live": ""
+      },
+      "challenges": [
+        {
+          "id": "server-hardening",
+          "icon": "tools",
+          "title": "Server-Härtung & Linux-Security",
+          "description": "Konfiguration eines restriktiven Ubuntu-Systems inklusive Deaktivierung von Passwort-Logins zugunsten von SSH-Key-Authentifizierung und Absicherung offener Ports."
+        },
+        {
+          "id": "docker-orchestration",
+          "icon": "database",
+          "title": "Isolierte Container-Orchestrierung",
+          "description": "Strukturierung und Bereitstellung von Multi-Container-Umgebungen mit Docker Compose zur sauberen Kapselung von Web-Servern, Backend-APIs und Datenbanken."
+        },
+        {
+          "id": "reverse-proxy-routing",
+          "icon": "frontend",
+          "title": "Zentrales Reverse Proxying",
+          "description": "Konfiguration von Nginx zur sicheren Weiterleitung externer HTTP/HTTPS-Anfragen an die internen Docker-Netzwerke inklusive automatischer Header-Konfiguration."
+        }
+      ],
+      "architecture": [
+        {
+          "id": "automated-ssl-certbot",
+          "title": "SSL/TLS-Automatisierung via Certbot",
+          "description": "Anbindung von Let's Encrypt zur vollautomatischen Generierung und regelmäßigen Erneuerung von SSL-Zertifikaten für verschlüsselte HTTPS-Verbindungen.",
+          "type": "frontend"
+        },
+        {
+          "id": "brute-force-protection",
+          "title": "Intrusion Prevention & Firewalling",
+          "description": "Implementierung einer aktiven Paketfilterung mit UFW und Einrichtung von Fail2Ban zur automatischen IP-Sperrung bei verdächtigen Login-Versuchen.",
+          "type": "tools"
+        }
+      ],
+      "impact": [
+        {
+          "id": "high-availability-env",
+          "type": "backend",
+          "badgeText": "DevOps",
+          "title": "Maximale Verfügbarkeit",
+          "description": "Sicherstellung des kontinuierlichen Betriebs durch die Konfiguration robuster Docker-Restart-Policys und ein strukturiertes Management von Umgebungsvariablen (.env)."
+        },
+        {
+          "id": "efficient-resource-usage",
+          "type": "tools",
+          "badgeText": "Linux",
+          "title": "Ressourceneffizientes Hosting",
+          "description": "Optimale Ausnutzung der Server-Ressourcen durch den Einsatz schlanker Alpine-Linux-Basisimages innerhalb der Docker-Containerumgebung."
+        }
+      ],
+      "stack": [
+        { "name": "Linux (Ubuntu Server)", "type": "backend" },
+        { "name": "Docker", "type": "backend" },
+        { "name": "Docker Compose", "type": "backend" },
+        { "name": "Nginx", "type": "frontend" },
+        { "name": "Let's Encrypt / Certbot", "type": "frontend" },
+        { "name": "SSH / Security", "type": "tools" },
+        { "name": "UFW Firewall & Fail2Ban", "type": "tools" }
+      ],
+      "deepDive": {
+        "filePath": "docker-compose.yaml",
+        "context": "Das Konfigurationsbeispiel zeigt die produktionsbereite Orchestrierung eines Web-Services und einer isolierten Postgres-Datenbank inklusive Named Volumes zur persistenten Datenspeicherung und automatischen Restarts.",
+        "code": "version: '3.8'\n\nservices:\n  db:\n    image: postgres:17-alpine\n    container_name: arcade-db\n    restart: always\n    environment:\n      POSTGRES_PASSWORD: ${DB_PASSWORD}\n    volumes:\n      - pgdata:/var/lib/postgresql/data\n    networks:\n      - arcade-net\n\n  scoreboard:\n    image: scoreboard-service:v2\n    container_name: scoreboard-app\n    restart: always\n    ports:\n      - \"3000:3000\"\n    environment:\n      - DATABASE_URL=postgresql://postgres:${DB_PASSWORD}@db:5432/postgres\n    networks:\n      - arcade-net\n    depends_on:\n      - db\n\nvolumes:\n  pgdata:\n\nnetworks:\n  arcade-net:\n    driver: bridge"
+      }
+    },
     "developer-portfolio": {
       "title": "Frontend Software-Entwickler | Personal Portfolio Website",
       "company": "Personal Project",
