@@ -23,8 +23,8 @@
       "description": "Konzeption, Absicherung und automatisiertes Deployment einer Linux-Serverumgebung für produktive Webapplikationen.",
       "leadText": "Dieses Projekt wurde umgesetzt, um die im Bootcamp entwickelten Full-Stack-Anwendungen (wie den Zoo2 Community Manager) unter realen Bedingungen produktiv zu hosten. Der Fokus lag auf dem Aufbau einer hochsicheren Infrastruktur von Grund auf, der strikten Isolierung von Diensten mittels Docker sowie der Automatisierung von Routing und SSL-Verschlüsselung. Durch den Einsatz moderner DevOps-Praktiken wurde eine robuste Hosting-Umgebung geschaffen, die maximale Verfügbarkeit bietet und einfach zu warten ist.",
       "links": {
-        "github": "",
-        "live": ""
+        "github": null,
+        "live": null
       },
       "challenges": [
         {
@@ -97,8 +97,8 @@
       "description": "Konzeption, Design und Entwicklung einer performanten, mehrsprachigen Portfolio-Webseite zur Demonstration moderner Webtechnologien.",
       "leadText": "Dieses Portfolio wurde als eigenständiges Projekt entwickelt, um moderne Best Practices der Webentwicklung in einer realen Anwendung zu demonstrieren. Der Fokus lag auf einer kompromisslos performanten Architektur, einem barrierefreien und hochgradig responsiven Design sowie einer nahtlosen Internationalisierung. Durch den Verzicht auf schwere CSS-Frameworks zugunsten von maßgeschneiderten Styled Components wurde ein schlanker, wartbarer Code-Base realisiert, der durch dynamische Datenstrukturen vollständig modular gesteuert wird.",
       "links": {
-        "github": "https://github.com/MelanieB-007/portfolio-website",
-        "live": "https://portfolio-website-delta-fawn-14.vercel.app/"
+        "github": "https://github.com/melanie-busse/portfolio-website",
+        "live": "https://melanie-busse.de"
       },
       "challenges": [
         {
@@ -259,7 +259,7 @@
       "description": "12-monatige, intensive Vollzeit-Weiterbildung im Full-Stack-Umfeld zur Vertiefung moderner JavaScript/TypeScript-Ökosysteme, Cloud-Technologien und KI-gestützter Softwareentwicklung.",
       "leadText": "Um meine akademische Basis in der Wirtschaftsinformatik und meine langjährige Enterprise-Erfahrung gezielt auf den neuesten Stand moderner Cloud-Native- und JavaScript-Technologien zu bringen, habe ich diese intensive 12-monatige Full-Stack-Weiterbildung absolviert. Das praxisnahe Programm fokussierte sich auf den Aufbau moderner Single-Page- und Server-Side-Applikationen von Grund auf. Ein zentrales Highlight war die Umsetzung realer Praxisprojekte unter Einsatz modernster Tools sowie die Integration von KI-Agenten und APIs.",
       "links": {
-        "github": "https://github.com/MelanieB-007/Boot-Camp",
+        "github": "https://github.com/melanie-busse/boot-camp",
         "live": "https://www.neuefische.de/bootcamp/full-stack-software-development"
       },
       "challenges": [

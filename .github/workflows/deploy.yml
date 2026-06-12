@@ -1,0 +1,42 @@
+name: CI/CD Portfolio Deployment
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      # 1. Code aus GitHub auschecken
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      # 2. Docker BuildX einrichten (optimiert das Bauen)
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v3
+
+      # 3. Das Docker Image auf GitHub bauen (Test, ob alles fehlerfrei kompiliert)
+      - name: Build Docker Image
+        run: |
+          docker build -t portfolio-app:latest .
+
+      # 4. Verbindung zum vServer herstellen und Deployment starten
+      - name: Deploy to vServer via SSH
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          host: ${{ secrets.SERVER_HOST }}
+          username: ${{ secrets.SERVER_USER }}
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          script: |
+            # 1. In das Verzeichnis deines Projekts auf dem Server wechseln
+            # PASSE DEN PFAD UNTEN AN (z.B. /home/melanie/portfolio)
+            cd /home/melanie/portfolio-website
+            
+            # 2. Den neuesten Code von GitHub auf den Server ziehen
+            git pull origin main
+            
+            # 3. Den Docker-Container mit dem neuen Code im Hintergrund neu starten
+            docker compose up -d --build
