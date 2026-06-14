@@ -253,6 +253,10 @@
       "company": "neuefische GmbH – IT Bootcamp",
       "description": "12-måneders intensiv fuldtids efteruddannelse inden for Full-Stack, med speciale i moderne JavaScript/TypeScript-økosystemer, cloud-teknologier og AI-drevet softwareudvikling.",
       "leadText": "For målrettet at opdatere min akademiske baggrund inden for erhvervsinformatik og min mangeårige enterprise-erfaring med de nyeste cloud-native og JavaScript-teknologier, gennemførte jeg dette intensive 12-måneders Full-Stack-bootcamp. Det praksisnære program fokuserede på opbygning af moderne single-page og server-side applikationer helt fra bunden. Et centralt højdepunkt var implementeringen af reelle praksisprojekter ved hjælp af topmoderne værktøjer samt integration af AI-agenter og API'er.",
+      "links": {
+        "github": "https://github.com/melanie-busse/bootcamp-apps",
+        "live": "/bootcamp-apps"
+      },
       "challenges": [
         {
           "id": "stack-modernization",

@@ -259,8 +259,8 @@
       "description": "12-monatige, intensive Vollzeit-Weiterbildung im Full-Stack-Umfeld zur Vertiefung moderner JavaScript/TypeScript-Ökosysteme, Cloud-Technologien und KI-gestützter Softwareentwicklung.",
       "leadText": "Um meine akademische Basis in der Wirtschaftsinformatik und meine langjährige Enterprise-Erfahrung gezielt auf den neuesten Stand moderner Cloud-Native- und JavaScript-Technologien zu bringen, habe ich diese intensive 12-monatige Full-Stack-Weiterbildung absolviert. Das praxisnahe Programm fokussierte sich auf den Aufbau moderner Single-Page- und Server-Side-Applikationen von Grund auf. Ein zentrales Highlight war die Umsetzung realer Praxisprojekte unter Einsatz modernster Tools sowie die Integration von KI-Agenten und APIs.",
       "links": {
-        "github": "https://github.com/melanie-busse/boot-camp",
-        "live": "https://www.neuefische.de/bootcamp/full-stack-software-development"
+        "github": "https://github.com/melanie-busse/bootcamp-apps",
+        "live": "/bootcamp-apps"
       },
       "challenges": [
         {

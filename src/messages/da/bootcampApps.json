@@ -1,0 +1,13 @@
+{
+  "headline": "Bootcamp-apps",
+  "introText": "Her finder du en oversigt over full-stack applikationer, der er udviklet i løbet af intensivprogrammet og implementeret på en egen vServer-infrastruktur.",
+
+  "darkbay": {
+    "title": "DarkBay – Digitalt auktionshus",
+    "description": "En fuldt funktionel full-stack auktionsplatform til pirater. Udviklet som en højtydende Single Page Application med et Angular-frontend og et robust NestJS-backend i et monorepo. Applikationen indeholder sikker JWT-autentificering, realtidsvalidering og en relationel MariaDB-databaseforbindelse via TypeORM.<br/><br/><a href='https://darkbay.melanie-busse.de' target='_blank' class='bento-download-btn'>Gå til live-app</a>"
+  },
+  "cyber-chat": {
+    "title": "Cyber-Chat API",
+    "description": "Et moderne backend-projekt, der demonstrerer en sikker REST API-arkitektur med NestJS. Applikationen implementerer fuldstændig brugeradministration inklusive krypteret autentificering og rollebaseret beskyttelse. Hele infrastrukturen er dokumenteret og testet via en interaktiv OpenAPI/Swagger-brugerflade.<br/><br/><a href='https://api.darkbay.melanie-busse.de/api' target='_blank' class='bento-download-btn'>Gå til API-dokumentation (Swagger)</a>"
+  }
+}
