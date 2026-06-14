@@ -34,6 +34,7 @@ export default function Navbar() {
           <NavLink href="/" locale={locale} $active={isActive("/")} onClick={closeMenu}>
             {t("nav.skills")}
           </NavLink>
+
           <NavLink
             href="/projects"
             locale={locale}
@@ -42,6 +43,16 @@ export default function Navbar() {
           >
             {t("nav.projects")}
           </NavLink>
+
+          <NavLink
+            href="/bootcamp-apps"
+            locale={locale}
+            $active={isActive("/bootcamp-apps")}
+            onClick={closeMenu}
+          >
+            {t("nav.bootcampApps")}
+          </NavLink>
+
           <NavLink href="/about" locale={locale} $active={isActive("/about")} onClick={closeMenu}>
             {t("nav.about")}
           </NavLink>

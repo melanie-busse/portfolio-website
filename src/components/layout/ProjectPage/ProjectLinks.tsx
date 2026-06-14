@@ -22,6 +22,9 @@ export default function ProjectLinks({ projectId }: ProjectLinksProps) {
 
   if (!isGithubValide && !isLiveValide) return null;
 
+  // Prüfen, ob es sich um einen internen Link handelt (beginnt mit '/')
+  const isInternalLink = liveLink && liveLink.startsWith("/");
+
   return (
     <LinksContainer>
       {isGithubValide && (
@@ -32,7 +35,12 @@ export default function ProjectLinks({ projectId }: ProjectLinksProps) {
       )}
 
       {isLiveValide && (
-        <LinkButton href={liveLink} target="_blank" rel="noopener noreferrer" className="live-btn">
+        <LinkButton
+          href={liveLink}
+          target={isInternalLink ? "_self" : "_blank"}
+          rel={isInternalLink ? undefined : "noopener noreferrer"}
+          className="live-btn"
+        >
           <LuExternalLink />
           <span>Live Projekt ansehen</span>
         </LinkButton>
@@ -40,6 +48,7 @@ export default function ProjectLinks({ projectId }: ProjectLinksProps) {
     </LinksContainer>
   );
 }
+
 const LinksContainer = styled.div`
   display: flex;
   flex-wrap: wrap;
