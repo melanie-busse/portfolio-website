@@ -8,6 +8,30 @@
   },
   "cyber-chat": {
     "title": "Cyber-Chat API",
-    "description": "A modern backend project demonstrating a secure REST API architecture built with NestJS. The application implements complete user management, including encrypted authentication and role-based security. The entire infrastructure is documented and tested using an interactive OpenAPI/Swagger interface.<br/><br/><a href='https://api.darkbay.melanie-busse.de/api' target='_blank' class='bento-download-btn'>Go to API Documentation (Swagger)</a>"
+    "description": "A modern backend project demonstrating a secure REST API architecture with NestJS. The application implements complete user management, including encrypted authentication and role-based access control. The entire infrastructure is documented and tested via an interactive OpenAPI/Swagger interface.<br/><br/><a href='https://api.darkbay.melanie-busse.de/api' target='_blank' class='bento-download-btn'>Go to API Documentation (Swagger)</a>"
+  },
+  "itLibrary": {
+    "title": "IT Book Library",
+    "description": "A web-based library application for managing and personalizing IT literature. The project was implemented using native TypeScript and interacts dynamically with a REST API (Bookmonkey API). Users can search the entire book catalog, retrieve detailed information, and save favorite books to an individual watchlist.<br/><br/><a href='https://it-book.melanie-busse.de' target='_blank' class='bento-download-btn'>Go to Live App</a>"
+  },
+  "trailGuide": {
+    "title": "Trail-Guide Hiking Planner",
+    "description": "An interactive route planner for hiking enthusiasts to efficiently manage trails and regions. The application is built on Node.js and Express, utilizes server-side HTML templating for the views, and stores all route data in an integrated SQLite database. The project is fully containerized and run via Docker.<br/><br/><a href='https://trail-guide.melanie-busse.de' target='_blank' class='bento-download-btn'>Go to Live App</a>"
+  },
+  "themeCreator": {
+    "title": "Theme Creator",
+    "description": "An intuitive web tool for UI/UX developers to dynamically create and preview color schemes. Built with React and TailwindCSS, the app enables real-time experimentation with color palettes and saves user-defined themes directly to the browser's LocalStorage.<br/><br/><a href='https://theme-creator.melanie-busse.de' target='_blank' class='bento-download-btn'>Go to Live App</a>"
+  },
+  "rickAndMorty": {
+    "title": "Rick & Morty Explorer",
+    "description": "A reactive web application to explore the entire multiverse of the well-known sci-fi series. The frontend was developed with React and TypeScript, integrating the official Rick & Morty REST API. Features include high-performance filtering, live search, and client-side paging of characters.<br/><br/><a href='https://rick-and-morty.melanie-busse.de' target='_blank' class='bento-download-btn'>Go to Live App</a>"
+  },
+  "artGallery": {
+    "title": "Digital Art Gallery",
+    "description": "An interactive online exhibition showcasing selected artworks. Realized as a lightweight frontend project using native JavaScript (ES6+), HTML5, and modern CSS3. The focus lies on dynamic DOM manipulation during exhibit loading and a responsive layout for mobile devices.<br/><br/><a href='https://art-gallery.melanie-busse.de' target='_blank' class='bento-download-btn'>Go to Live App</a>"
+  },
+  "quizGame": {
+    "title": "Quiz Game",
+    "description": "An engaging, browser-based trivia game with dynamic score evaluation. The game is entirely based on Vanilla JavaScript. The question catalogs are structured and stored in JSON files, loaded asynchronously at runtime, and visually presented through an animated user interface.<br/><br/><a href='https://quiz-game.melanie-busse.de' target='_blank' class='bento-download-btn'>Go to Live App</a>"
   }
 }

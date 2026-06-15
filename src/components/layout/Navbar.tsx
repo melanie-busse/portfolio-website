@@ -3,7 +3,8 @@ import styled from "styled-components";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { useTranslations } from "next-intl";
-import LanguageSwitcher from "@/components/features/LanguageSwitcher";
+import { FaGithub, FaLinkedinIn } from "react-icons/fa6";
+import LanguageSwitcher from "@/components/layout/LanguageSwitcher"; // Icons importiert
 
 export default function Navbar() {
   const router = useRouter();
@@ -56,6 +57,7 @@ export default function Navbar() {
           <NavLink href="/about" locale={locale} $active={isActive("/about")} onClick={closeMenu}>
             {t("nav.about")}
           </NavLink>
+
           <NavLink
             href="/education"
             locale={locale}
@@ -64,6 +66,7 @@ export default function Navbar() {
           >
             {t("nav.education")}
           </NavLink>
+
           <NavLink
             href="/download"
             locale={locale}
@@ -72,6 +75,27 @@ export default function Navbar() {
           >
             {t("nav.download")}
           </NavLink>
+
+          {/* Social Media Links */}
+          <SocialWrapper>
+            <SocialIcon
+              href="https://github.com/dein-github-name" // TODO: Deine GitHub URL eintragen
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="GitHub"
+            >
+              <FaGithub />
+            </SocialIcon>
+            <SocialIcon
+              href="https://linkedin.com/in/dein-linkedin-name" // TODO: Deine LinkedIn URL eintragen
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="LinkedIn"
+            >
+              <FaLinkedinIn />
+            </SocialIcon>
+          </SocialWrapper>
+
           <ContactButton href="mailto:mail@melanie-busse.de" onClick={closeMenu}>
             {t("nav.contact")}
           </ContactButton>
@@ -98,7 +122,7 @@ const Nav = styled.nav`
 const NavContainer = styled.div`
   max-width: ${(props) => props.theme.widths.footer};
   margin: 0 auto;
-  padding: 1rem 2rem;
+  padding: 0 1.5rem; /* Weniger Padding links/rechts am Rand */
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -108,11 +132,13 @@ const NavContainer = styled.div`
 `;
 
 const Logo = styled(Link)`
-  font-size: 1.5rem;
+  font-size: 1.4rem; /* Minimal kleiner für mehr Platz */
   font-weight: 700;
   color: ${(props) => props.theme.colors.textMain};
   text-decoration: none;
   z-index: 1001;
+  margin-right: 2rem; /* Garantiert festen Abstand zum ersten Link ("Skills") */
+  white-space: nowrap; /* Verhindert, dass das Logo unschön bricht */
 
   span {
     color: ${(props) => props.theme.colors.h4};
@@ -162,14 +188,13 @@ const Hamburger = styled.button<{ $isOpen: boolean }>`
 const NavLinks = styled.div<{ $isOpen: boolean }>`
   display: flex;
   align-items: center;
-  gap: 2rem;
+  gap: 1.1rem; /* Deutlich enger auf Desktop (vorher 2rem) */
+  flex-wrap: nowrap; /* Verhindert elastische, mehrzeilige Umbrüche */
 
   @media (max-width: ${(props) => props.theme.breakpoints.mobile}) {
     flex-direction: column;
     justify-content: center;
-
     background: ${(props) => props.theme.colors.backgrounds.body};
-
     position: fixed;
     top: 0;
     left: 0;
@@ -177,12 +202,10 @@ const NavLinks = styled.div<{ $isOpen: boolean }>`
     bottom: 0;
     height: 100vh;
     width: 100vw;
-
-    gap: 2.5rem;
+    gap: 2.5rem; /* Auf Mobile bleibt der großzügige Abstand */
     padding: 2rem;
     box-sizing: border-box;
     z-index: 1000;
-
     transition:
       transform 0.3s ease-in-out,
       opacity 0.3s ease-in-out;
@@ -199,10 +222,11 @@ interface NavLinkStylesProps {
 const NavLink = styled(Link)<NavLinkStylesProps>`
   color: ${(props) => (props.$active ? props.theme.colors.h4 : props.theme.colors.textMuted)};
   text-decoration: none;
-  font-size: 0.95rem;
+  font-size: 0.9rem; /* Leicht reduziert von 0.95rem */
   font-weight: 500;
   transition: all 0.3s ease;
   position: relative;
+  white-space: nowrap; /* Zwingt "Bootcamp-Apps" in eine einzige Zeile */
 
   @media (max-width: ${(props) => props.theme.breakpoints.mobile}) {
     font-size: 1.5rem;
@@ -225,15 +249,48 @@ const NavLink = styled(Link)<NavLinkStylesProps>`
   }
 `;
 
+const SocialWrapper = styled.div`
+  display: flex;
+  gap: 0.8rem; /* Schön kompakt auf Desktop */
+  align-items: center;
+  border-left: 1px solid ${(props) => props.theme.colors.textMuted}33; /* Dezente Trennlinie zu den Links */
+  padding-left: 0.8rem;
+
+  @media (max-width: ${(props) => props.theme.breakpoints.mobile}) {
+    gap: 2rem;
+    margin-top: 0.5rem;
+    border-left: none;
+    padding-left: 0;
+  }
+`;
+
+const SocialIcon = styled.a`
+  color: ${(props) => props.theme.colors.textMuted};
+  font-size: 1.2rem; /* Leicht angepasst */
+  display: flex;
+  align-items: center;
+  transition: all 0.3s ease;
+
+  @media (max-width: ${(props) => props.theme.breakpoints.mobile}) {
+    font-size: 2rem;
+  }
+
+  &:hover {
+    color: ${(props) => props.theme.colors.h4};
+    transform: translateY(-2px);
+  }
+`;
+
 const ContactButton = styled.a`
   background: transparent;
   border: ${(props) => props.theme.borders.button};
   color: ${(props) => props.theme.colors.h4};
-  padding: 0.5rem 1.2rem;
+  padding: 0.4rem 1rem; /* Minimal kompakteres Padding für Desktop */
   border-radius: 50px;
   text-decoration: none;
   font-size: 0.9rem;
   font-weight: 600;
+  white-space: nowrap;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 
   @media (max-width: ${(props) => props.theme.breakpoints.mobile}) {
@@ -249,6 +306,9 @@ const ContactButton = styled.a`
 `;
 
 const SwitcherWrapper = styled.div`
+  display: flex;
+  align-items: center;
+
   @media (max-width: ${(props) => props.theme.breakpoints.mobile}) {
     margin-top: 1rem;
     transform: scale(1.2);

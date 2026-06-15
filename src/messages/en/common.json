@@ -35,6 +35,9 @@
     "projectsTitle": "Projects | Melanie Busse",
     "projectsDescription": "An overview of my software projects. Ranging from large-scale enterprise applications for the Federal Employment Agency to modern, personal React and Next.js projects.",
 
+    "bootcampAppsTitle": "Bootcamp Apps & Full-Stack Projects | Melanie Busse",
+    "bootcampAppsDescription": "Explore the full-stack applications from my intensive bootcamp – ranging from REST APIs and Single Page Applications to containerized Docker infrastructures.",
+
     "aboutTitle": "About Me & Career | Melanie Busse",
     "aboutDescription": "Learn more about my journey as a developer: 19 years of IT experience, solid Java expertise, and state-of-the-art fullstack training.",
 

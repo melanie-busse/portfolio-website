@@ -1,13 +1,37 @@
 {
   "headline": "Bootcamp-apps",
-  "introText": "Her finder du en oversigt over full-stack applikationer, der er udviklet i løbet af intensivprogrammet og implementeret på en egen vServer-infrastruktur.",
+  "introText": "Her finder du en oversigt over de fullstack-applikationer, der blev udviklet under intensivprogrammet og udrullet på en dedikeret vServer-infrastruktur.",
 
   "darkbay": {
     "title": "DarkBay – Digitalt auktionshus",
-    "description": "En fuldt funktionel full-stack auktionsplatform til pirater. Udviklet som en højtydende Single Page Application med et Angular-frontend og et robust NestJS-backend i et monorepo. Applikationen indeholder sikker JWT-autentificering, realtidsvalidering og en relationel MariaDB-databaseforbindelse via TypeORM.<br/><br/><a href='https://darkbay.melanie-busse.de' target='_blank' class='bento-download-btn'>Gå til live-app</a>"
+    "description": "En fuldt funktionel fullstack-auktionsplatform til pirater. Udviklet som en højtydende Single Page Application med et Angular-frontend og et robust NestJS-backend i et monorepo. Applikationen har sikker JWT-autentificering, realtidsvalidering og en relationel MariaDB-databaseforbindelse via TypeORM.<br/><br/><a href='https://darkbay.melanie-busse.de' target='_blank' class='bento-download-btn'>Gå til live-app</a>"
   },
   "cyber-chat": {
     "title": "Cyber-Chat API",
-    "description": "Et moderne backend-projekt, der demonstrerer en sikker REST API-arkitektur med NestJS. Applikationen implementerer fuldstændig brugeradministration inklusive krypteret autentificering og rollebaseret beskyttelse. Hele infrastrukturen er dokumenteret og testet via en interaktiv OpenAPI/Swagger-brugerflade.<br/><br/><a href='https://api.darkbay.melanie-busse.de/api' target='_blank' class='bento-download-btn'>Gå til API-dokumentation (Swagger)</a>"
+    "description": "Et moderne backend-projekt, der demonstrerer en sikker REST-API-arkitektur med NestJS. Applikationen implementerer fuldstændig brugeradministration inklusive krypteret autentificering og rollebaseret adgangskontrol. Hele infrastrukturen er dokumenteret og testet via en interaktiv OpenAPI/Swagger-brugerflade.<br/><br/><a href='https://api.darkbay.melanie-busse.de/api' target='_blank' class='bento-download-btn'>Gå til API-dokumentation (Swagger)</a>"
+  },
+  "itLibrary": {
+    "title": "IT-bogbibliotek",
+    "description": "En webbaseret biblioteksapplikation til administration og personlig tilpasning af IT-faglitteratur. Projektet blev implementeret med indbygget TypeScript og interagerer dynamisk med et REST-API (Bookmonkey-API). Brugere kan søge i hele bogsamlingen, hente detaljerede oplysninger og gemme favoritbøger på en individuel huskeliste.<br/><br/><a href='https://it-book.melanie-busse.de' target='_blank' class='bento-download-btn'>Gå til live-app</a>"
+  },
+  "trailGuide": {
+    "title": "Trail-Guide vandreplanlægger",
+    "description": "En interaktiv ruteplanlægger for vandreentusiaster til effektiv administration af ruter og regioner. Applikationen er bygget på Node.js og Express, bruger serverbaseret HTML-templating til views og gemmer alle rutedata i en integreret SQLite-database. Projektet kører fuldt containeriseret via Docker.<br/><br/><a href='https://trail-guide.melanie-busse.de' target='_blank' class='bento-download-btn'>Gå til live-app</a>"
+  },
+  "themeCreator": {
+    "title": "Theme Creator",
+    "description": "Et intuitivt webværktøj til UI/UX-udviklere til dynamisk oprettelse og forhåndsvisning af farveskemaer. Appen er udviklet med React og TailwindCSS. Den gør det muligt at eksperimentere med farvepaletter i realtid og gemmer brugerdefinerede temaer direkte i browserens LocalStorage.<br/><br/><a href='https://theme-creator.melanie-busse.de' target='_blank' class='bento-download-btn'>Gå til live-app</a>"
+  },
+  "rickAndMorty": {
+    "title": "Rick & Morty-opdagelsesrejsende",
+    "description": "En reaktiv webapplikation til at udforske hele multiversat af den kendte sci-fi-serie. Frontenden er udviklet med React og TypeScript og forbinder det officielle Rick & Morty REST-API. Funktionerne omfatter højtydende filtrering, livesøgning og paginering af karakterer på klientsiden.<br/><br/><a href='https://rick-and-morty.melanie-busse.de' target='_blank' class='bento-download-btn'>Gå til live-app</a>"
+  },
+  "artGallery": {
+    "title": "Digitalt kunstgalleri",
+    "description": "En interaktiv onlineudstilling til præsentation af udvalgte kunstværker. Realiseret som et letvægts frontend-projekt med indbygget JavaScript (ES6+), HTML5 og moderne CSS3. Der er fokus på dynamisk DOM-manipulation ved indlæsning af udstillingsgenstande samt et responsivt layout til mobile enheder.<br/><br/><a href='https://art-gallery.melanie-busse.de' target='_blank' class='bento-download-btn'>Gå til live-app</a>"
+  },
+  "quizGame": {
+    "title": "Quiz-spil",
+    "description": "Et spændende, browserbaseret vidensspil med dynamisk pointberegning. Spillet er udelukkende baseret på Vanilla JavaScript. Spørgsmålskatalogerne er struktureret i JSON-filer, indlæses asynkront under kørslen og præsenteres visuelt via en animeret brugerflade.<br/><br/><a href='https://quiz-game.melanie-busse.de' target='_blank' class='bento-download-btn'>Gå til live-app</a>"
   }
 }

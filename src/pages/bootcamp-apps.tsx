@@ -12,7 +12,7 @@ export default function BootcampAppsPage() {
 
   return (
     <>
-      <Meta titleKey="downloadTitle" descriptionKey="downloadDescription" />
+      <Meta titleKey="bootcampAppsTitle" descriptionKey="bootcampAppsDescription" />
 
       <PageContainer>
         <HeaderSection headline={t("headline")} text={t("introText")} />
