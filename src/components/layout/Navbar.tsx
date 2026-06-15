@@ -3,8 +3,8 @@ import styled from "styled-components";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { useTranslations } from "next-intl";
-import LanguageSwitcher from "@/components/features/LanguageSwitcher";
-import { FaGithub, FaLinkedinIn } from "react-icons/fa6"; // Icons importiert
+import { FaGithub, FaLinkedinIn } from "react-icons/fa6";
+import LanguageSwitcher from "@/components/layout/LanguageSwitcher"; // Icons importiert
 
 export default function Navbar() {
   const router = useRouter();

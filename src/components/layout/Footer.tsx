@@ -2,6 +2,7 @@ import styled from "styled-components";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { useTranslations } from "next-intl";
+import { FaGithub, FaLinkedinIn } from "react-icons/fa6";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -14,6 +15,27 @@ export default function Footer() {
         <Copyright>
           © {currentYear} Melanie Busse – {t("footer.role")}
         </Copyright>
+
+        {/* Social Media Links im Footer */}
+        <FooterSocials>
+          <SocialIcon
+            href="https://github.com/melanie-busse"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="GitHub"
+          >
+            <FaGithub />
+          </SocialIcon>
+          <SocialIcon
+            href="https://linkedin.com/in/melanie-busse"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="LinkedIn"
+          >
+            <FaLinkedinIn />
+          </SocialIcon>
+        </FooterSocials>
+
         <FooterLinks>
           <FooterLink href="/imprint" locale={locale}>
             {t("footer.imprint")}
@@ -26,6 +48,8 @@ export default function Footer() {
     </FooterContainer>
   );
 }
+
+// --- STYLED COMPONENTS ---
 
 const FooterContainer = styled.footer`
   width: 100%;
@@ -51,7 +75,7 @@ const FooterContent = styled.div`
 
 const Copyright = styled.p`
   font-size: 0.9rem;
-  color: ${(props) => props.theme.colors.textMuted}; /* Farbanbindung für besseren Kontrast */
+  color: ${(props) => props.theme.colors.textMuted};
 `;
 
 const FooterLinks = styled.nav`
@@ -67,5 +91,24 @@ const FooterLink = styled(Link)`
 
   &:hover {
     color: ${(props) => props.theme.colors.h4};
+  }
+`;
+
+const FooterSocials = styled.div`
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+`;
+
+const SocialIcon = styled.a`
+  color: ${(props) => props.theme.colors.textMuted};
+  font-size: 1.25rem;
+  display: flex;
+  align-items: center;
+  transition: all 0.3s ease;
+
+  &:hover {
+    color: ${(props) => props.theme.colors.h4};
+    transform: translateY(-2px);
   }
 `;

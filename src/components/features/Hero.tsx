@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import Image from "next/image";
 import { useTranslations } from "next-intl";
+import { FaGithub, FaLinkedinIn } from "react-icons/fa6"; // Icons importiert
 
 export default function Hero() {
   const t = useTranslations("common");
@@ -23,12 +24,35 @@ export default function Hero() {
           <NameTitle>{t("hero.title")}</NameTitle>
           <SubTitle>{t("hero.subTitle")}</SubTitle>
           <Description>{t("hero.description")}</Description>
+
+          {/* Social Media Links auf der Startseite */}
+          <SocialRow>
+            <SocialButton
+              href="https://github.com/melanie-busse"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="GitHub Profil"
+            >
+              <FaGithub size={16} /> GitHub
+            </SocialButton>
+            <SocialButton
+              href="https://linkedin.com/in/melanie-busse"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="LinkedIn Profil"
+            >
+              <FaLinkedinIn size={16} /> LinkedIn
+            </SocialButton>
+          </SocialRow>
+
           <HighlightBadge>{t("hero.badge")}</HighlightBadge>
         </TextWrapper>
       </HeroContent>
     </HeroContainer>
   );
 }
+
+// --- STYLED COMPONENTS ---
 
 const HeroContainer = styled.section`
   display: flex;
@@ -59,6 +83,45 @@ const Description = styled.p`
   margin-bottom: 30px;
 `;
 
+{
+  /* NEU: Container für die Buttons */
+}
+const SocialRow = styled.div`
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 0.5rem;
+
+  @media (max-width: ${(props) => props.theme.breakpoints.mobile || "768px"}) {
+    justify-content: center;
+    width: 100%;
+  }
+`;
+
+{
+  /* NEU: Styling für die Bento/Hero-Social-Buttons */
+}
+const SocialButton = styled.a`
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: ${(props) => props.theme.colors.backgrounds.nav || "rgba(255, 255, 255, 0.03)"};
+  border: 1px solid ${(props) => props.theme.colors.textMuted}33;
+  color: ${(props) => props.theme.colors.textMain};
+  padding: 0.5rem 1.2rem;
+  border-radius: 50px;
+  text-decoration: none;
+  font-size: 0.85rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+
+  &:hover {
+    border-color: ${(props) => props.theme.colors.accentAqua || props.theme.colors.h4};
+    color: ${(props) => props.theme.colors.accentAqua || props.theme.colors.h4};
+    box-shadow: 0 0 12px ${(props) => props.theme.colors.accentAqua || props.theme.colors.h4}44;
+    transform: translateY(-2px);
+  }
+`;
+
 const HighlightBadge = styled.span`
   background: ${(props) => props.theme.colors.primaryPetrol}22;
   border: 1px solid ${(props) => props.theme.colors.primaryPetrol};
@@ -83,8 +146,6 @@ const HeroContent = styled.div`
   gap: 4rem;
   max-width: ${(props) => props.theme.widths.footer};
 
-  /* KORREKTUR: Nutze den mobilen Breakpoint statt laptopSmall, 
-     oder setze testweise fix 768px ein, damit es definitiv greift */
   @media (max-width: ${(props) => props.theme.breakpoints.mobile || "768px"}) {
     flex-direction: column; /* Mobil: Untereinander stapeln! */
     gap: 1.5rem;
@@ -122,9 +183,6 @@ const ImageWrapper = styled.div`
 
   img {
     object-fit: contain;
-    /* translateX schiebt es nach links */
-    /* translateY schiebt es nach unten */
-    /* scale(1.1) sorgt dafür, dass keine leeren Ränder entstehen */
     transform: scale(1.1) translateX(-5px) translateY(25px);
     filter: grayscale(100%) brightness(0.8) contrast(1.1);
 
