@@ -170,6 +170,10 @@
       "company": "Personal Project & Bootcamp Recap",
       "description": "Development of a specialized, multilingual management platform for the 'Zoo 2: Animal Park' gaming community, designed for strategic competition planning and inventory management.",
       "leadText": "As my first major recap project, I developed a data-driven planning tool for the 'Zoo 2: Animal Park' player community. The platform aggregates game data and helps clubs make informed decisions for in-game competitions. As part of a continuous modernization process, I fully migrated the application from its original Next.js Pages Router architecture to the modern Next.js App Router using strict TypeScript to maximize performance through Server Components and guarantee absolute type safety.",
+      "links": {
+        "github": "https://github.com/melanie-busse/zoo2-community-manager",
+        "live": "https://zoo2.melanie-busse.de/"
+      },
       "challenges": [
         {
           "id": "app-router-migration",

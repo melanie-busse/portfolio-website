@@ -171,8 +171,8 @@
       "description": "Entwicklung einer spezialisierten, multilingualen Management-Plattform für die Community des Spiels 'Zoo 2: Animal Park' zur strategischen Wettbewerbsplanung und Bestandsverwaltung.",
       "leadText": "Als erstes großes Recap-Projekt habe ich ein datengestütztes Planungstool für die Spieler-Community von 'Zoo 2: Animal Park' entwickelt. Die Plattform aggregiert Spieldaten und hilft Clubs, fundierte Entscheidungen für In-Game-Wettbewerbe zu treffen. Im Zuge der kontinuierlichen Modernisierung habe ich die Anwendung von der ursprünglichen Next.js Pages-Router-Architektur vollständig auf den modernen Next.js App Router mit striktem TypeScript umgestellt, um die Performance durch Server Components zu maximieren und die Typsicherheit zu garantieren.",
       "links": {
-        "github": "https://github.com/MelanieB-007/zoo2-community-manager",
-        "live": "https://zoo2-community-manager.vercel.app/"
+        "github": "https://github.com/melanie-busse/zoo2-community-manager",
+        "live": "https://zoo2.melanie-busse.de/"
       },
       "challenges": [
         {
