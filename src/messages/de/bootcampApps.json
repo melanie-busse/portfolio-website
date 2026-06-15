@@ -12,7 +12,7 @@
   },
   "itLibrary": {
     "title": "IT-Buch-Bibliothek",
-    "description": "Eine webbasierte Bibliotheksanwendung für die Verwaltung und Personalisierung von IT-Fachliteratur. Das Projekt wurde mit nativem TypeScript umgesetzt und interagiert dynamisch mit einer REST-API (Bookmonkey-API). Nutzer können den gesamten Buchbestand durchsuchen, Detailinformationen abrufen und favorisierte Bücher in einer individuellen Merkliste speichern.<br/><br/><a href='https://library.melanie-busse.de' target='_blank' class='bento-download-btn'>Zur Live-App</a>"
+    "description": "Eine webbasierte Bibliotheksanwendung für die Verwaltung und Personalisierung von IT-Fachliteratur. Das Projekt wurde mit nativem TypeScript umgesetzt und interagiert dynamisch mit einer REST-API (Bookmonkey-API). Nutzer können den gesamten Buchbestand durchsuchen, Detailinformationen abrufen und favorisierte Bücher in einer individuellen Merkliste speichern.<br/><br/><a href='https://it-book.melanie-busse.de' target='_blank' class='bento-download-btn'>Zur Live-App</a>"
   },
   "trailGuide": {
     "title": "Trail-Guide Wanderplaner",
@@ -32,6 +32,6 @@
   },
   "quizGame": {
     "title": "Quiz-Game",
-    "description": "Ein packendes, browserbasiertes Wissensspiel mit dynamischer Punkteauswertung. Das Spiel basiert komplett auf Vanilla JavaScript. Die Fragenkataloge sind strukturiert in JSON-Dateien hinterlegt, werden zur Laufzeit asynchron geladen und über eine animierte Benutzeroberfläche visuell aufbereitet.<br/><br/><a href='https://quiz.melanie-busse.de' target='_blank' class='bento-download-btn'>Zur Live-App</a>"
+    "description": "Ein packendes, browserbasiertes Wissensspiel mit dynamischer Punkteauswertung. Das Spiel basiert komplett auf Vanilla JavaScript. Die Fragenkataloge sind strukturiert in JSON-Dateien hinterlegt, werden zur Laufzeit asynchron geladen und über eine animierte Benutzeroberfläche visuell aufbereitet.<br/><br/><a href='https://quiz-game.melanie-busse.de' target='_blank' class='bento-download-btn'>Zur Live-App</a>"
   }
 }

@@ -12,7 +12,7 @@
   },
   "itLibrary": {
     "title": "IT Book Library",
-    "description": "A web-based library application for managing and personalizing IT literature. The project was implemented using native TypeScript and interacts dynamically with a REST API (Bookmonkey API). Users can search the entire book catalog, retrieve detailed information, and save favorite books to an individual watchlist.<br/><br/><a href='https://library.melanie-busse.de' target='_blank' class='bento-download-btn'>Go to Live App</a>"
+    "description": "A web-based library application for managing and personalizing IT literature. The project was implemented using native TypeScript and interacts dynamically with a REST API (Bookmonkey API). Users can search the entire book catalog, retrieve detailed information, and save favorite books to an individual watchlist.<br/><br/><a href='https://it-book.melanie-busse.de' target='_blank' class='bento-download-btn'>Go to Live App</a>"
   },
   "trailGuide": {
     "title": "Trail-Guide Hiking Planner",
@@ -32,6 +32,6 @@
   },
   "quizGame": {
     "title": "Quiz Game",
-    "description": "An engaging, browser-based trivia game with dynamic score evaluation. The game is entirely based on Vanilla JavaScript. The question catalogs are structured and stored in JSON files, loaded asynchronously at runtime, and visually presented through an animated user interface.<br/><br/><a href='https://quiz.melanie-busse.de' target='_blank' class='bento-download-btn'>Go to Live App</a>"
+    "description": "An engaging, browser-based trivia game with dynamic score evaluation. The game is entirely based on Vanilla JavaScript. The question catalogs are structured and stored in JSON files, loaded asynchronously at runtime, and visually presented through an animated user interface.<br/><br/><a href='https://quiz-game.melanie-busse.de' target='_blank' class='bento-download-btn'>Go to Live App</a>"
   }
 }

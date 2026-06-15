@@ -12,7 +12,7 @@
   },
   "itLibrary": {
     "title": "IT-bogbibliotek",
-    "description": "En webbaseret biblioteksapplikation til administration og personlig tilpasning af IT-faglitteratur. Projektet blev implementeret med indbygget TypeScript og interagerer dynamisk med et REST-API (Bookmonkey-API). Brugere kan søge i hele bogsamlingen, hente detaljerede oplysninger og gemme favoritbøger på en individuel huskeliste.<br/><br/><a href='https://library.melanie-busse.de' target='_blank' class='bento-download-btn'>Gå til live-app</a>"
+    "description": "En webbaseret biblioteksapplikation til administration og personlig tilpasning af IT-faglitteratur. Projektet blev implementeret med indbygget TypeScript og interagerer dynamisk med et REST-API (Bookmonkey-API). Brugere kan søge i hele bogsamlingen, hente detaljerede oplysninger og gemme favoritbøger på en individuel huskeliste.<br/><br/><a href='https://it-book.melanie-busse.de' target='_blank' class='bento-download-btn'>Gå til live-app</a>"
   },
   "trailGuide": {
     "title": "Trail-Guide vandreplanlægger",
@@ -32,6 +32,6 @@
   },
   "quizGame": {
     "title": "Quiz-spil",
-    "description": "Et spændende, browserbaseret vidensspil med dynamisk pointberegning. Spillet er udelukkende baseret på Vanilla JavaScript. Spørgsmålskatalogerne er struktureret i JSON-filer, indlæses asynkront under kørslen og præsenteres visuelt via en animeret brugerflade.<br/><br/><a href='https://quiz.melanie-busse.de' target='_blank' class='bento-download-btn'>Gå til live-app</a>"
+    "description": "Et spændende, browserbaseret vidensspil med dynamisk pointberegning. Spillet er udelukkende baseret på Vanilla JavaScript. Spørgsmålskatalogerne er struktureret i JSON-filer, indlæses asynkront under kørslen og præsenteres visuelt via en animeret brugerflade.<br/><br/><a href='https://quiz-game.melanie-busse.de' target='_blank' class='bento-download-btn'>Gå til live-app</a>"
   }
 }

@@ -35,6 +35,9 @@
     "projectsTitle": "Projekter | Melanie Busse",
     "projectsDescription": "En oversigt over mine softwareprojekter. Lige fra store enterprise-applikationer for Bundesagentur für Arbeit til moderne, personlige React- og Next.js-projekter.",
 
+    "bootcampAppsTitle": "Bootcamp-apps & Fullstack-projekter | Melanie Busse",
+    "bootcampAppsDescription": "Udforsk fullstack-applikationerne fra mit intensiv-bootcamp – lige fra REST-API'er og Single Page Applications til containeriserede Docker-infrastrukturer.",
+
     "aboutTitle": "Om mig & Karriere | Melanie Busse",
     "aboutDescription": "Læs mere om min rejse som udvikler: 19 års it-erfaring, solid Java-ekspertise og den nyeste fullstack-uddannelse.",
 
