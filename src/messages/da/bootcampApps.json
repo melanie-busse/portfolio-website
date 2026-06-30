@@ -2,6 +2,10 @@
   "headline": "Bootcamp-apps",
   "introText": "Her finder du en oversigt over de fullstack-applikationer, der blev udviklet under intensivprogrammet og udrullet på en dedikeret vServer-infrastruktur.",
 
+  "hideAndSeek": {
+    "title": "Hide and Seek – Multiplayer-spil i realtid",
+    "description": "Et hæsblæsende online multiplayer-spil baseret på det klassiske gemmeleg. Udviklet som en højtydende fullstack-applikation i et monorepo med et responsivt React-frontend (styret via Styled Components) og et effektivt NestJS-backend. Spillet leverer lynhurtig realtidskommunikation via Socket.io til synkronisering af spillerpositioner, spiltilstande og en automatisk matchmaking-kø.<br/><br/><a href='https://hide-and-seek.melanie-busse.de' target='_blank' class='bento-download-btn'>Gå til live-app</a>"
+  },
   "darkbay": {
     "title": "DarkBay – Digitalt auktionshus",
     "description": "En fuldt funktionel fullstack-auktionsplatform til pirater. Udviklet som en højtydende Single Page Application med et Angular-frontend og et robust NestJS-backend i et monorepo. Applikationen har sikker JWT-autentificering, realtidsvalidering og en relationel MariaDB-databaseforbindelse via TypeORM.<br/><br/><a href='https://darkbay.melanie-busse.de' target='_blank' class='bento-download-btn'>Gå til live-app</a>"

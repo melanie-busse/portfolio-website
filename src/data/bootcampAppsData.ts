@@ -11,58 +11,64 @@ import {
 
 export const bootcampAppsData = [
   {
+    id: "hide-and-seek",
+    gridArea: "1 / 1 / 2 / 5",
+    icon: FaGamepad,
+    translationKey: "bootcampApps.hideAndSeek",
+    badges: ["React", "NestJS", "TypeScript", "Socket.io", "Styled Components", "Docker"],
+  },
+  {
     id: "darkbay",
-    gridArea: "1 / 1 / 2 / 3",
+    gridArea: "2 / 1 / 3 / 3",
     icon: FaGavel,
     translationKey: "bootcampApps.darkbay",
     badges: ["Angular", "NestJS", "TypeScript", "TypeORM", "MariaDB", "Docker"],
   },
   {
     id: "cyber-chat",
-    gridArea: "1 / 3 / 2 / 5",
+    gridArea: "2 / 3 / 3 / 5",
     icon: FaTerminal,
     translationKey: "bootcampApps.cyber-chat",
     badges: ["NestJS", "TypeScript", "Swagger", "JWT", "REST-API", "Docker"],
   },
   {
     id: "it-library",
-    gridArea: "2 / 1 / 3 / 3",
+    gridArea: "3 / 1 / 4 / 3",
     icon: FaBookOpen,
     translationKey: "bootcampApps.itLibrary",
     badges: ["TypeScript", "HTML5", "CSS3", "REST-API", "Node.js"],
-    // Hinweis: Falls du hier das Objekt behalten musst, ändere es gerne zurück.
   },
   {
     id: "trail-guide",
-    gridArea: "2 / 3 / 3 / 5", // Zeile 2: Spalte 3 bis 5
+    gridArea: "3 / 3 / 4 / 5",
     icon: FaRoute,
     translationKey: "bootcampApps.trailGuide",
     badges: ["Node.js", "TypeScript", "Express", "SQLite", "Docker", "Nginx"],
   },
   {
     id: "theme-creator",
-    gridArea: "3 / 1 / 4 / 3", // Zeile 3: Spalte 1 bis 3
+    gridArea: "4 / 1 / 5 / 3",
     icon: FaPalette,
     translationKey: "bootcampApps.themeCreator",
     badges: ["React", "TypeScript", "TailwindCSS", "LocalStorage"],
   },
   {
     id: "rick-and-morty",
-    gridArea: "3 / 3 / 4 / 5", // Zeile 3: Spalte 3 bis 5
+    gridArea: "4 / 3 / 5 / 5",
     icon: FaUserAstronaut,
     translationKey: "bootcampApps.rickAndMorty",
     badges: ["React", "TypeScript", "REST-API", "TailwindCSS"],
   },
   {
     id: "art-gallery",
-    gridArea: "4 / 1 / 5 / 3", // Zeile 4: Spalte 1 bis 3
+    gridArea: "5 / 1 / 6 / 3",
     icon: FaImages,
     translationKey: "bootcampApps.artGallery",
     badges: ["JavaScript", "HTML5", "CSS3", "DOM-Manipulation"],
   },
   {
     id: "quiz-game",
-    gridArea: "4 / 3 / 5 / 5", // Zeile 4: Spalte 3 bis 5
+    gridArea: "5 / 3 / 6 / 5",
     icon: FaGamepad,
     translationKey: "bootcampApps.quizGame",
     badges: ["JavaScript", "HTML5", "CSS3", "JSON"],

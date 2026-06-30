@@ -2,6 +2,10 @@
   "headline": "Bootcamp-Apps",
   "introText": "Hier finden Sie eine Übersicht der Fullstack-Anwendungen, die im Rahmen des Intensivprogramms entwickelt und auf einer eigenen vServer-Infrastruktur bereitgestellt wurden.",
 
+  "hideAndSeek": {
+    "title": "Hide and Seek – Echtzeit-Multiplayer-Spiel",
+    "description": "Ein rasanter Online-Multiplayer-Klassiker basierend auf Versteckspielen. Entwickelt als performante Fullstack-Applikation im Monorepo mit einem responsiven React-Frontend (gestylt via Styled Components) und einem effizienten NestJS-Backend. Das Spiel bietet blitzschnelle Echtzeitkommunikation via Socket.io zur Live-Synchronisation von Spielerpositionen, Spielzuständen und einer automatischen Matchmaking-Warteschlange.<br/><br/><a href='https://hide-and-seek.melanie-busse.de' target='_blank' class='bento-download-btn'>Zur Live-App</a>"
+  },
   "darkbay": {
     "title": "DarkBay – Digitales Auktionshaus",
     "description": "Eine voll funktionsfähige Fullstack-Auktionsplattform für Piraten. Entwickelt als performante Single-Page-Application mit einem Angular-Frontend und einem robusten NestJS-Backend im Monorepo. Die Anwendung verfügt über eine sichere JWT-Authentifizierung, Echtzeit-Validierung und eine relationale MariaDB-Datenbankanbindung über TypeORM.<br/><br/><a href='https://darkbay.melanie-busse.de' target='_blank' class='bento-download-btn'>Zur Live-App</a>"

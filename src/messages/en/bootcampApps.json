@@ -2,6 +2,10 @@
   "headline": "Bootcamp Apps",
   "introText": "Here you will find an overview of the full-stack applications developed during the intensive program and deployed on a dedicated vServer infrastructure.",
 
+  "hideAndSeek": {
+    "title": "Hide and Seek – Real-Time Multiplayer Game",
+    "description": "A fast-paced online multiplayer game based on the classic playground hide and seek. Developed as a high-performance full-stack application within a monorepo, featuring a responsive React frontend (styled via Styled Components) and an efficient NestJS backend. The game delivers lightning-fast real-time communication via Socket.io to synchronize player positions, game states, and an automatic matchmaking queue.<br/><br/><a href='https://hide-and-seek.melanie-busse.de' target='_blank' class='bento-download-btn'>Go to live app</a>"
+  },
   "darkbay": {
     "title": "DarkBay – Digital Auction House",
     "description": "A fully functional full-stack auction platform for pirates. Developed as a high-performance Single Page Application with an Angular frontend and a robust NestJS backend within a monorepo. The application features secure JWT authentication, real-time validation, and a relational MariaDB database connection via TypeORM.<br/><br/><a href='https://darkbay.melanie-busse.de' target='_blank' class='bento-download-btn'>Go to Live App</a>"
