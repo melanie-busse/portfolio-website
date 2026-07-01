@@ -12,8 +12,8 @@
     "description": "Opsætning og administration af <strong>vServer-miljøer</strong> (Strato). Deployment af webprojekter via Docker og Nginx."
   },
   "aiAutomation": {
-    "title": "AI & Automatisering",
-    "description": "Integration af <strong>LLM'er</strong> i software-workflows. Udvikling af AI-baserede værktøjer og automatisering af processer. Realtidskommunikation og hændelsesstyrede arkitekturer."
+    "title": "Real-Time & Automation",
+    "description": "Udvikling af systemer med <strong>realtidskommunikation</strong> og hændelsesstyrede arkitekturer. Integration af <strong>LLM'er</strong> og AI-baserede værktøjer i softwareworkflows samt målrettet automatisering af processer."
   },
   "data": {
     "title": "Data",
