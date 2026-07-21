@@ -1,25 +1,25 @@
 {
-  "headline": "Documents & Certificates",
-  "introText": "Here you can find and download my complete application documents, academic degrees, and certificates regarding my current qualifications.",
+  "headline": "Dokumenter & Certifikater",
+  "introText": "Her kan du finde og hente mine samlede ansøgningsdokumenter, eksamensbeviser og certifikater vedrørende mine nuværende kvalifikationer.",
 
   "cvDe": {
-    "title": "Curriculum Vitae (DE)",
-    "description": "My current professional profile in German with a full focus on full-stack development, Java, and modern web infrastructures.<br/><br/><a href='/docs/Lebenslauf_Melanie_Busse_DE.pdf' download class='bento-download-btn'>Download (PDF)</a>"
+    "title": "CV (DE)",
+    "description": "Min nuværende faglige profil på tysk med fuldt fokus på full-stack udvikling, Java og moderne webinfrastrukturer.<br/><br/><a href='/docs/Lebenslauf_Melanie_Busse_DE.pdf' download class='bento-download-btn'>Hent (PDF)</a>"
   },
   "cvEn": {
-    "title": "Curriculum Vitae (EN)",
-    "description": "English version of my professional profile tailored for international teams or tech-focused roles.<br/><br/><a href='/docs/CV_Melanie_Busse_EN.pdf' download class='bento-download-btn'>Download (PDF)</a>"
+    "title": "CV (EN)",
+    "description": "Engelsk version af min faglige profil skræddersyet til internationale teams eller teknologifokuserede roller.<br/><br/><a href='/docs/CV_Melanie_Busse_EN.pdf' download class='bento-download-btn'>Hent (PDF)</a>"
   },
   "diplom": {
-    "title": "Degree Certificate",
-    "description": "Official academic degree from the University of Paderborn in Business Informatics (Diplom-Wirtschaftsinformatik).<br/><br/><a href='/docs/Diplomzeugnis_Melanie_Busse.pdf' target='_blank' rel='noopener noreferrer' class='bento-download-btn'>View (PDF)</a>"
+    "title": "Eksamensbevis",
+    "description": "Officielt akademisk eksamensbevis fra Universitetet i Paderborn i erhvervsinformatik (Diplom-Wirtschaftsinformatik).<br/><br/><a href='/docs/Diplomzeugnis_Melanie_Busse.pdf' target='_blank' rel='noopener noreferrer' class='bento-download-btn'>Se (PDF)</a>"
   },
   "zeugnisse": {
-    "title": "Employment References",
-    "description": "Collected reference letters and performance evaluations from my previous roles as a software developer.<br/><br/><a href='/docs/Arbeitszeugnisse_Melanie_Busse.pdf' target='_blank' rel='noopener noreferrer' class='bento-download-btn'>View (PDF)</a>"
+    "title": "Udtalelser & Anbefalinger",
+    "description": "Samlede anbefalinger og vurderinger fra mine tidligere stillinger som softwareudvikler.<br/><br/><a href='/docs/Arbeitszeugnisse_Melanie_Busse.pdf' target='_blank' rel='noopener noreferrer' class='bento-download-btn'>Se (PDF)</a>"
   },
   "bootcamp": {
-    "title": "Bootcamp Flyer & Curriculum",
-    "description": "Detailed overview of the intensively trained technologies and agile practices (Next.js, NestJS, Docker, TDD) during the training.<br/><br/><a href='/docs/Bootcamp_Curriculum.pdf' target='_blank' rel='noopener noreferrer' class='bento-download-btn'>View (PDF)</a>"
+    "title": "Bootcamp-folder & Læreplan",
+    "description": "Detaljeret overblik over de intensivt trænede teknologier og agile metoder (Next.js, NestJS, Docker, TDD) under uddannelsen.<br/><br/><a href='/docs/Bootcamp_Curriculum.pdf' target='_blank' rel='noopener noreferrer' class='bento-download-btn'>Se (PDF)</a>"
   }
 }

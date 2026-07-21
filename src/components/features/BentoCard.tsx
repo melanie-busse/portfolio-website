@@ -58,7 +58,7 @@ export default function BentoCard({ skill, $gridArea }: { skill: any; $gridArea?
 
 const CardHeader = styled.div`
   display: flex;
-  align-items: center; /* Zentriert Icon und Textblock vertikal */
+  align-items: center;
   gap: 1rem;
   margin-bottom: 1.5rem;
   width: 100%;

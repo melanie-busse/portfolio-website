@@ -4,7 +4,7 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import { useTranslations } from "next-intl";
 import { FaGithub, FaLinkedinIn } from "react-icons/fa6";
-import LanguageSwitcher from "@/components/layout/LanguageSwitcher"; // Icons importiert
+import LanguageSwitcher from "@/components/layout/LanguageSwitcher";
 
 export default function Navbar() {
   const router = useRouter();
@@ -23,14 +23,12 @@ export default function Navbar() {
           Melanie<span>Busse</span>
         </Logo>
 
-        {/* Hamburger Button für Mobile */}
         <Hamburger aria-label={t("nav.openMenu")} onClick={toggleMenu} $isOpen={isOpen}>
           <span />
           <span />
           <span />
         </Hamburger>
 
-        {/* Die Navigation (Desktop flach, Mobil als Overlay) */}
         <NavLinks $isOpen={isOpen}>
           <NavLink href="/" locale={locale} $active={isActive("/")} onClick={closeMenu}>
             {t("nav.skills")}
@@ -79,7 +77,7 @@ export default function Navbar() {
           {/* Social Media Links */}
           <SocialWrapper>
             <SocialIcon
-              href="https://github.com/dein-github-name" // TODO: Deine GitHub URL eintragen
+              href="https://github.com/melanie-busse"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="GitHub"
@@ -87,7 +85,7 @@ export default function Navbar() {
               <FaGithub />
             </SocialIcon>
             <SocialIcon
-              href="https://linkedin.com/in/dein-linkedin-name" // TODO: Deine LinkedIn URL eintragen
+              href="https://linkedin.com/in/melanie-busse"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="LinkedIn"

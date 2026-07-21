@@ -12,6 +12,7 @@ import Meta from "@/components/seo/Meta";
 
 export default function Projects() {
   const t = useTranslations("projects");
+
   return (
     <>
       <Meta titleKey="projectsTitle" descriptionKey="projectsDescription" />
@@ -20,6 +21,7 @@ export default function Projects() {
         <HeaderSection headline={t("headline")} text={t("introText")} />
         <Grid>
           {projectsData.map((project) => {
+            const period = project.period.replace("heute", t("present"));
             const mappedProjectAsSkill = {
               id: project.id,
               icon: project.icon,
@@ -30,7 +32,7 @@ export default function Projects() {
             return (
               <CardContainer key={project.id}>
                 <PeriodWrapper>
-                  <Period text={project.period} />
+                  <Period text={period} />
                 </PeriodWrapper>
                 <ProjectLink href={`/projects/${project.id}`} passHref>
                   <BentoCard skill={mappedProjectAsSkill} $gridArea="auto" />
