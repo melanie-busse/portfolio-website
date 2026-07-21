@@ -23,7 +23,7 @@ export const skillsData = [
       "Groovy",
       "JSP",
       "Hibernate",
-      "REST APIs",
+      "REST APIs / wtf_wikipedia",
       "Express",
       "NestJS",
       "OpenAPI / Swagger",

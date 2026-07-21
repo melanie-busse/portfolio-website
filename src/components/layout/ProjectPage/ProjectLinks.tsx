@@ -30,7 +30,7 @@ export default function ProjectLinks({ projectId }: ProjectLinksProps) {
       {isGithubValide && (
         <LinkButton href={githubLink} target="_blank" rel="noopener noreferrer">
           <LuGithub />
-          <span>Code auf GitHub</span>
+          <span>{t("viewCodeGithub")}</span>
         </LinkButton>
       )}
 
@@ -42,7 +42,7 @@ export default function ProjectLinks({ projectId }: ProjectLinksProps) {
           className="live-btn"
         >
           <LuExternalLink />
-          <span>Live Projekt ansehen</span>
+          <span>{t("viewLiveProject")}</span>
         </LinkButton>
       )}
     </LinksContainer>

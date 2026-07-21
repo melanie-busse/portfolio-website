@@ -14,6 +14,9 @@
   },
   "backToOverview": "Back to Overview",
   "viewLiveProject": "View Live Project",
+  "viewCodeGithub": "View Code on GitHub",
+  "present": "present",
+  "context": "context",
   "notFound": "Project not found",
 
   "items": {
@@ -168,8 +171,8 @@
     "zoo2-animalpark-manager": {
       "title": "Fullstack Web Application | Zoo 2 Community Manager",
       "company": "Personal Project & Bootcamp Recap",
-      "description": "Development of a specialized, multilingual management platform for the 'Zoo 2: Animal Park' gaming community, designed for strategic competition planning and inventory management.",
-      "leadText": "As my first major recap project, I developed a data-driven planning tool for the 'Zoo 2: Animal Park' player community. The platform aggregates game data and helps clubs make informed decisions for in-game competitions. As part of a continuous modernization process, I fully migrated the application from its original Next.js Pages Router architecture to the modern Next.js App Router using strict TypeScript to maximize performance through Server Components and guarantee absolute type safety.",
+      "description": "Development of a specialized, multilingual management platform for the 'Zoo 2: Animal Park' community for strategic competition planning, inventory management, and automated wiki imports.",
+      "leadText": "As my first major recap project, I developed a data-driven planning tool for the 'Zoo 2: Animal Park' player community. The platform aggregates game data, offers a demo mode for visitors, and helps club members make informed decisions for in-game competitions. As part of an ongoing modernization, I completely migrated the application from the original Next.js Pages Router architecture to the modern Next.js App Router with strict TypeScript to maximize performance via Server Components and guarantee type safety.",
       "links": {
         "github": "https://github.com/melanie-busse/zoo2-community-manager",
         "live": "https://zoo2.melanie-busse.de/"
@@ -179,38 +182,44 @@
           "id": "app-router-migration",
           "icon": "architecture",
           "title": "Migration to Next.js App Router & SWR",
-          "description": "Successful refactoring of the application from Pages Router to App Router. Integrated SWR for highly efficient client-side data fetching, caching, and automatic revalidation in the frontend."
+          "description": "Successful refactoring of the application from Pages Router to App Router. Integration of SWR for highly efficient client-side data fetching, caching, and automatic revalidation in the frontend."
+        },
+        {
+          "id": "mediawiki-data-sync",
+          "icon": "database",
+          "title": "Automated Fandom Wiki Sync",
+          "description": "Implementation of an automated import pipeline for animal stats, color variations, and breeding chances using wtf_wikipedia to parse unstructured wikitext directly into type-safe Prisma models."
+        },
+        {
+          "id": "read-only-demo-mode",
+          "icon": "frontend",
+          "title": "Mayor Login (Read-Only Demo)",
+          "description": "Development of a dedicated guest authentication mode ('Mayor'). Allows full exploration of all UI features while protecting the database from mutations via server-side guards."
         },
         {
           "id": "cloud-native-database",
           "icon": "database",
           "title": "Cloud-Native Serverless Database",
-          "description": "Migrated the relational data structures to TiDB Cloud, a highly available, distributed MySQL database architecture connected via Prisma ORM."
-        },
-        {
-          "id": "enhanced-ux-notifications",
-          "icon": "frontend",
-          "title": "Optimized UX & Rich Notifications",
-          "description": "Implemented an interactive UI using SweetAlert for visually appealing confirmation dialogs and Toastify for real-time feedback during user actions."
-        },
-        {
-          "id": "vercel-deployment",
-          "icon": "tools",
-          "title": "Serverless Deployment via Vercel",
-          "description": "Architected a fully automated deployment pipeline on Vercel, including optimization of serverless functions and environment variables."
+          "description": "Migration of the relational data structure to TiDB Cloud, a highly available, distributed MySQL database architecture connected via Prisma ORM."
         }
       ],
       "architecture": [
         {
           "id": "nextjs-app-router",
-          "title": "Next.js App Router & SWR Integration",
-          "description": "Modern routing and rendering model with hybrid Server and Client Components, combined with SWR for reactive UI updates without manual state management.",
+          "title": "Next.js App Router & SWR",
+          "description": "Modern routing and rendering model with hybrid server and client components, combined with SWR for reactive UI updates without manual state management.",
           "type": "frontend"
+        },
+        {
+          "id": "wiki-parser-pipeline",
+          "title": "Fandom Wiki Parser & ETL Pipeline",
+          "description": "Integration of wtf_wikipedia and Fandom REST APIs to dynamically fetch, transform, and sync game stats and color variants.",
+          "type": "backend"
         },
         {
           "id": "prisma-tidb-layer",
           "title": "Prisma ORM & TiDB Cloud Backend",
-          "description": "Type-safe data access to a distributed MySQL instance in the cloud, optimized for high-performance joins and fast aggregations.",
+          "description": "Type-safe data access layer for a distributed MySQL instance in the cloud, optimized for performant joins and fast aggregations.",
           "type": "backend"
         }
       ],
@@ -220,14 +229,14 @@
           "type": "backend",
           "badgeText": "Success",
           "title": "Data-Driven Club Strategy",
-          "description": "Successfully delivered an MVP that gives clubs a significant, measurable competitive advantage through automated score-scenario calculators."
+          "description": "Successful delivery of an MVP with synced wiki data that provides clubs with a significant competitive edge via automated points scenario calculators."
         },
         {
-          "id": "clean-code-typesafety",
-          "type": "tools",
-          "badgeText": "Quality",
-          "title": "Modern Cloud Architecture",
-          "description": "A robust, serverless tech stack on Vercel and TiDB Cloud, ensuring fault tolerance and error-free API data flows under TypeScript."
+          "id": "safe-demo-experience",
+          "type": "frontend",
+          "badgeText": "UX & Security",
+          "title": "Seamless Guest Experience",
+          "description": "The 'Mayor' mode allows recruiters and interested users to explore the app's full feature set while guaranteeing data integrity."
         }
       ],
       "stack": [
@@ -239,18 +248,18 @@
         { "name": "TiDB Cloud (MySQL)", "type": "backend" },
         { "name": "Node.js", "type": "backend" },
         { "name": "MySQL / MariaDB", "type": "backend" },
-        { "name": "REST APIs", "type": "backend" },
+        { "name": "REST APIs / wtf_wikipedia", "type": "backend" },
         { "name": "Prisma ORM", "type": "backend" },
-        { "name": "NextAuth.js (Discord OAuth)", "type": "backend" },
+        { "name": "NextAuth.js (Discord & Demo-Auth)", "type": "backend" },
         { "name": "Vercel Deployment", "type": "tools" },
         { "name": "IntelliJ / PhpStorm", "type": "tools" },
         { "name": "Git / GitHub", "type": "tools" },
-        { "name": "Datenbank-Integration", "type": "tools" }
+        { "name": "Database Integration", "type": "tools" }
       ],
       "deepDive": {
-        "filePath": "src/hooks/useCompetitionData.ts",
-        "context": "This custom hook demonstrates SWR integration in the Zoo Manager frontend to reactively fetch competition scenario calculations and provide feedback using Toastify.",
-        "code": "'use client';\n\nimport useSWR from 'swr';\nimport { toast } from 'react-toastify';\n\ninterface CalculationResult {\n  competitionId: string;\n  competitionName: string;\n  calculatedPoints: number;\n  status: string;\n}\n\nconst fetcher = (url: string) => fetch(url).then((res) => {\n  if (!res.ok) throw new Error('Calculation failed');\n  return res.json();\n});\n\nexport function useCompetitionData(competitionId: string) {\n  const { data, error, isLoading } = useSWR<CalculationResult>(\n    competitionId ? `/api/competitions/${competitionId}/calculate` : null,\n    fetcher,\n    {\n      onSuccess: () => toast.success('Scenario calculation successfully updated!'),\n      onError: () => toast.error('Error during automated point calculation.'),\n      revalidateOnFocus: false\n    }\n  );\n\n  return {\n    result: data,\n    isError: error,\n    isLoading\n  };\n}"
+        "filePath": "src/services/fandomService.ts",
+        "context": "Extract from fandomService: Uses wtf_wikipedia to parse tables for special coat colors and breeding chances from the wiki and sync them directly with Prisma database entries.",
+        "code": "import wtf from 'wtf_wikipedia';\nimport prisma from '@/lib/prisma';\n\nexport async function syncBreedingChancesFromApi(): Promise<void> {\n  const pageData = await fetchAnimalDetails('Special_Coats');\n  const wikitext = pageData?.wikitext?.['*'];\n  if (!wikitext) throw new Error('Could not load wikitext');\n\n  // wtf_wikipedia automatically converts the wiki table into JSON\n  const rawTables = wtf(wikitext).tables() as any;\n  const rows = rawTables[0]?.json({}) ?? [];\n\n  for (const row of rows) {\n    const cells = Object.values(row);\n    const animalName = cells[0]?.text?.trim();\n    const coatColor = cells[1]?.text?.trim();\n\n    if (!animalName || !coatColor) continue;\n\n    // Database lookup & update via Prisma\n    await prisma.specialCoat.updateMany({\n      where: { color: coatColor, animal: { name: animalName } },\n      data: {\n        chanceBaseWithoutParent: parseChanceToNumber(cells[4]?.text),\n        chanceBaseWithOneParent: parseChanceToNumber(cells[5]?.text),\n      },\n    });\n  }\n}"
       }
     },
     "neuefische-fullstack-bootcamp": {

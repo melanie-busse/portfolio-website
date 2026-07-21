@@ -23,9 +23,8 @@ export default function ProjectDeepDive({ projectId }: ProjectDeepDiveProps) {
     if (isMounted) {
       Prism.highlightAll();
     }
-  }, [isMounted, projectId]); // Triggert auch, wenn das Projekt gewechselt wird
+  }, [isMounted, projectId]);
 
-  // Wenn noch auf dem Server oder Daten fehlen, rendern wir nichts oder einen Platzhalter
   if (!isMounted) return null;
 
   const codeText = t.raw(`items.${projectId}.deepDive.code`) || "";
@@ -53,13 +52,12 @@ export default function ProjectDeepDive({ projectId }: ProjectDeepDiveProps) {
             ))}
           </LineNumbers>
           <PreCode>
-            {/* language-java sagt Prism, was zu tun ist */}
             <code className="language-java">{codeText}</code>
           </PreCode>
         </CodeArea>
 
         <ContextBox>
-          <ContextLabel>// Kontext</ContextLabel>
+          <ContextLabel>// {t("context")}</ContextLabel>
           <p>{contextText}</p>
         </ContextBox>
       </EditorContainer>

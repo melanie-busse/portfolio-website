@@ -26,10 +26,12 @@ export default function ProjectHeader({ project }: ProjectHeaderProps) {
   if (!project) return null;
 
   if (!isMounted) {
-    return <HeaderPlaceholder />;
+    return <HeaderPlaceholder suppressHydrationWarning />;
   }
 
   const IconComponent = project.icon;
+
+  const period = project.period.replace("heute", t("projects.present"));
 
   return (
     <HeaderWrapper>
@@ -40,7 +42,7 @@ export default function ProjectHeader({ project }: ProjectHeaderProps) {
 
       <HeaderContent>
         <TitleGroup>
-          <Period text={project.period} />
+          <Period text={period} />
           <MainTitle>{t(`projects.items.${project.id}.title`)}</MainTitle>
           <MetaContainer>
             <MetaItem>

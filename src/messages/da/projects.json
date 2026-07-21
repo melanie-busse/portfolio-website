@@ -14,6 +14,9 @@
   },
   "backToOverview": "Tilbage til oversigten",
   "viewLiveProject": "Se live projekt",
+  "viewCodeGithub": "Se koden på GitHub",
+  "present": "i dag",
+  "context": "Sammenhæng",
   "notFound": "Projektet blev ikke fundet",
 
   "items": {
@@ -167,8 +170,8 @@
     "zoo2-animalpark-manager": {
       "title": "Fullstack Webapplikation | Zoo 2 Community Manager",
       "company": "Personligt projekt & Bootcamp-Recap",
-      "description": "Udvikling af en specialiseret, flersproget administrationsplatform til 'Zoo 2: Animal Park'-spilfællesskabet, designet til strategisk konkurrenceplanlægning og lagerstyring.",
-      "leadText": "Som mit første store recap-projekt udviklede jeg et datadrevet planlægningsværktøj til 'Zoo 2: Animal Park'-spillerfællesskabet. Platformen samler spildata og hjælper klubber med at træffe velinformerede beslutninger i forbindelse med konkurrencer i spillet. Som en del af en løbende modernisering har jeg fuldstændig migreret applikationen fra den oprindelige Next.js Pages Router-arkitektur til den moderne Next.js App Router med strikt TypeScript for at maksimere ydeevnen via Server Components og garantere absolut typesikkerhed.",
+      "description": "Udvikling af en specialiseret, flersproget administrationsplatform til spillet 'Zoo 2: Animal Park' til strategisk konkurrenceplanlægning, lagerstyring og automatiseret wiki-import.",
+      "leadText": "Som mit første store recap-projekt udviklede jeg et datadrevet planlægningsværktøj til 'Zoo 2: Animal Park'-fællesskabet. Platformen samler spildata, tilbyder en demo-tilstand til besøgende og hjælper klubber med at træffe velinformerede beslutninger i spilkonkurrencer. Som en del af en løbende modernisering har jeg migreret applikationen fra den oprindelige Next.js Pages Router-arkitektur til den moderne Next.js App Router med strikt TypeScript for at maksimere ydeevnen via Server Components og garantere typesikkerhed.",
       "links": {
         "github": "https://github.com/melanie-busse/zoo2-community-manager",
         "live": "https://zoo2.melanie-busse.de/"
@@ -178,38 +181,44 @@
           "id": "app-router-migration",
           "icon": "architecture",
           "title": "Migration til Next.js App Router & SWR",
-          "description": "Succesfuld refactoring af applikationen fra Pages Router til App Router. Integration af SWR for yderst effektiv data-fetching på klientsiden, caching og automatisk revalidering i frontenden."
+          "description": "Vellykket refaktorering af applikationen fra Pages Router til App Router. Integration af SWR for højeffektiv datatagning på klientsiden, caching og automatisk revalidering i frontend."
+        },
+        {
+          "id": "mediawiki-data-sync",
+          "icon": "database",
+          "title": "Automatiseret Fandom Wiki Sync",
+          "description": "Implementering af en automatiseret importpipeline til dyredata, farvevarianter og avlschancer ved hjælp af wtf_wikipedia til at fortolke ustruktureret wikitekst direkte til typesikre Prisma-modeller."
+        },
+        {
+          "id": "read-only-demo-mode",
+          "icon": "frontend",
+          "title": "Borgmester-Login (Læseadgang-Demo)",
+          "description": "Udvikling af en særlig gæsteautentificeringstilstand ('Borgmester'). Gør det muligt at udforske alle UI-funktioner, mens databasen beskyttes mod ændringer via server-side guards."
         },
         {
           "id": "cloud-native-database",
           "icon": "database",
           "title": "Cloud-Native Serverless Database",
-          "description": "Migration af de relationelle datastrukturer til TiDB Cloud, en højt tilgængelig, distribueret MySQL-databasearkitektur, forbundet via Prisma ORM."
-        },
-        {
-          "id": "enhanced-ux-notifications",
-          "icon": "frontend",
-          "title": "Optimeret UX & Notifikationer",
-          "description": "Implementering af en interaktiv brugerflade med SweetAlert til visuelt flotte bekræftelsesdialoger og Toastify for realtidsfeedback ved brugerhandlinger."
-        },
-        {
-          "id": "vercel-deployment",
-          "icon": "tools",
-          "title": "Serverless Deployment på Vercel",
-          "description": "Arkitektur af en fuldautomatisk deployment-pipeline på Vercel, inklusive optimering af serverless functions og miljøvariabler (environment variables)."
+          "description": "Migration af den relationelle datastruktur til TiDB Cloud, en højtilgængelig, distributed MySQL-databasearkitektur forbundet via Prisma ORM."
         }
       ],
       "architecture": [
         {
           "id": "nextjs-app-router",
-          "title": "Next.js App Router & SWR-integration",
-          "description": "Moderne routing- og renderingsmodel med hybride Server- og Client-komponenter, kombineret med SWR for reaktive UI-opdateringer uden manuel state-styring.",
+          "title": "Next.js App Router & SWR",
+          "description": "Moderne routing- og rendering-model med hybride server- og klientkomponenter, kombineret med SWR for reaktive UI-opdateringer uden manuel state-håndtering.",
           "type": "frontend"
+        },
+        {
+          "id": "wiki-parser-pipeline",
+          "title": "Fandom Wiki Parser & ETL-Pipeline",
+          "description": "Integration af wtf_wikipedia og Fandom REST APIs til dynamisk at hente, transformere og synkronisere spilstatistikker og farvevarianter.",
+          "type": "backend"
         },
         {
           "id": "prisma-tidb-layer",
           "title": "Prisma ORM & TiDB Cloud Backend",
-          "description": "Typesikker dataadgang til en distribueret MySQL-instans i skyen, optimeret til højtydende joins og hurtige aggregeringer.",
+          "description": "Typesikkert dataadgangslag til en distribueret MySQL-instans i skyen, optimeret til hurtige joins og aggregeringer.",
           "type": "backend"
         }
       ],
@@ -218,15 +227,15 @@
           "id": "data-driven-advantage",
           "type": "backend",
           "badgeText": "Succes",
-          "title": "Datadrevet klubstrategi",
-          "description": "Succesfuld levering af en MVP, der giver klubber en betydelig, mærkbar strategisk fordel i spillet via automatiske pointscenarie-beregnere."
+          "title": "Datadrevet Klubstrategi",
+          "description": "Vellykket levering af en MVP med synkroniserede wiki-data, der giver klubber en betydelig konkurrencefordel via automatiske scenarieberegnere."
         },
         {
-          "id": "clean-code-typesafety",
-          "type": "tools",
-          "badgeText": "Kvalitet",
-          "title": "Moderne Cloud-Arkitektur",
-          "description": "Et robust, serverløst tech-stack på Vercel og TiDB Cloud, hvilket sikrer fejltoleranc og fejlfrie API-datastrømme under TypeScript."
+          "id": "safe-demo-experience",
+          "type": "frontend",
+          "badgeText": "UX & Sikkerhed",
+          "title": "Sømløs Oplevelse for Gæster",
+          "description": "'Borgmester'-tilstanden giver rekrutterere og interesserede mulighed for at teste alle funktioner, mens dataintegriteten opretholdes."
         }
       ],
       "stack": [
@@ -238,18 +247,18 @@
         { "name": "TiDB Cloud (MySQL)", "type": "backend" },
         { "name": "Node.js", "type": "backend" },
         { "name": "MySQL / MariaDB", "type": "backend" },
-        { "name": "REST APIs", "type": "backend" },
+        { "name": "REST APIs / wtf_wikipedia", "type": "backend" },
         { "name": "Prisma ORM", "type": "backend" },
-        { "name": "NextAuth.js (Discord OAuth)", "type": "backend" },
+        { "name": "NextAuth.js (Discord & Demo-Auth)", "type": "backend" },
         { "name": "Vercel Deployment", "type": "tools" },
         { "name": "IntelliJ / PhpStorm", "type": "tools" },
         { "name": "Git / GitHub", "type": "tools" },
-        { "name": "Datenbank-Integration", "type": "tools" }
+        { "name": "Databaseintegration", "type": "tools" }
       ],
       "deepDive": {
-        "filePath": "src/hooks/useCompetitionData.ts",
-        "context": "Denne custom hook viser integrationen af SWR i Zoo-Manager-frontenden for reaktivt at hente scenarieberegninger for konkurrencer og give feedback via Toastify.",
-        "code": "'use client';\n\nimport useSWR from 'swr';\nimport { toast } from 'react-toastify';\n\ninterface CalculationResult {\n  competitionId: string;\n  competitionName: string;\n  calculatedPoints: number;\n  status: string;\n}\n\nconst fetcher = (url: string) => fetch(url).then((res) => {\n  if (!res.ok) throw new Error('Kalkulation fejlede');\n  return res.json();\n});\n\nexport function useCompetitionData(competitionId: string) {\n  const { data, error, isLoading } = useSWR<CalculationResult>(\n    competitionId ? `/api/competitions/${competitionId}/calculate` : null,\n    fetcher,\n    {\n      onSuccess: () => toast.success('Scenarieberegning opdateret med succes!'),\n      onError: () => toast.error('Fejl under automatisk pointberegning.'),\n      revalidateOnFocus: false\n    }\n  );\n\n  return {\n    result: data,\n    isError: error,\n    isLoading\n  };\n}"
+        "filePath": "src/services/fandomService.ts",
+        "context": "Uddrag fra fandomService: Bruger wtf_wikipedia til at udtrække tabeller med specielle pelsfarver og avlschancer fra wikien og synkronisere dem direkte med Prisma-databaseposter.",
+        "code": "import wtf from 'wtf_wikipedia';\nimport prisma from '@/lib/prisma';\n\nexport async function syncBreedingChancesFromApi(): Promise<void> {\n  const pageData = await fetchAnimalDetails('Special_Coats');\n  const wikitext = pageData?.wikitext?.['*'];\n  if (!wikitext) throw new Error('Kunne ikke indlæse wikitext');\n\n  // wtf_wikipedia konverterer automatisk wiki-tabellen til JSON\n  const rawTables = wtf(wikitext).tables() as any;\n  const rows = rawTables[0]?.json({}) ?? [];\n\n  for (const row of rows) {\n    const cells = Object.values(row);\n    const animalName = cells[0]?.text?.trim();\n    const coatColor = cells[1]?.text?.trim();\n\n    if (!animalName || !coatColor) continue;\n\n    // Opslag og opdatering i databasen via Prisma\n    await prisma.specialCoat.updateMany({\n      where: { color: coatColor, animal: { name: animalName } },\n      data: {\n        chanceBaseWithoutParent: parseChanceToNumber(cells[4]?.text),\n        chanceBaseWithOneParent: parseChanceToNumber(cells[5]?.text),\n      },\n    });\n  }\n}"
       }
     },
     "neuefische-fullstack-bootcamp": {

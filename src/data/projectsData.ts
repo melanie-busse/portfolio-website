@@ -64,7 +64,13 @@ export const projectsData: ProjectEntry[] = [
         "SweetAlert / Toastify",
         "Responsive Design",
       ],
-      backend: ["Node.js", "MySQL / MariaDB", "Prisma ORM", "REST APIs", "NextAuth.js"],
+      backend: [
+        "Node.js",
+        "MySQL / MariaDB",
+        "Prisma ORM",
+        "REST APIs / wtf_wikipedia",
+        "NextAuth.js",
+      ],
       tools: [
         "IntelliJ",
         "Git / GitHub",
